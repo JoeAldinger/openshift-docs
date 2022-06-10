@@ -28266,9 +28266,6 @@
 <li><a href="#ocp-4-8-35">RHBA-2022:0872 - OpenShift Container Platform 4.8.35 bug fix and security update</a></li>
 <li><a href="#ocp-4-8-36">RHSA-2022:1154 - OpenShift Container Platform 4.8.36 bug fix and security update</a></li>
 <li><a href="#ocp-4-8-37">RHBA-2022:1369 - OpenShift Container Platform 4.8.37 bug fix update</a></li>
-<li><a href="#ocp-4-8-39">RHBA-2022:1427 - OpenShift Container Platform 4.8.39 bug fix update</a></li>
-<li><a href="#ocp-4-8-41">RHSA-2022:2272 - OpenShift Container Platform 4.8.41 bug fix and security update</a></li>
-<li><a href="#ocp-4-8-42">RHBA-2022:4737 - OpenShift Container Platform 4.8.42 bug fix update</a></li>
 </ul>
 </li>
 </ul>
@@ -31897,12 +31894,6 @@ registry.redhat.io/rhpam-7/rhpam-smartrouter-rhel8:7.9.0</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CPU manager</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GA</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Driver Toolkit</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -33172,7 +33163,15 @@ This update fixes the problem. The web console reads the <code>resource</code> p
 <p><a href="https://access.redhat.com/solutions/6834631">OpenShift Container Platform 4.8.35 container image list</a></p>
 </div>
 <div class="sect3">
-<h4 id="ocp-4-8-35-updating"><a class="anchor" href="#ocp-4-8-35-updating"></a>Updating</h4>
+<h4 id="ocp-4-8-35-bug-fixes"><a class="anchor" href="#ocp-4-8-35-bug-fixes"></a>Bug fixes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Previously, ExternalIPs were managed by Kubernetes. With this update, administrators will now have to direct traffic from externalIPs to the cluster by assigning a destination IP via a static route, some route protocol or by adding an IP to a node. For guidance see (<a href="https://access.redhat.com/solutions/6954851">KCS*</a>)(<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2076662"><strong>BZ#2076662</strong></a>)
+==== Updating</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>To update an existing OpenShift Container Platform 4.8 cluster to this latest release, see <a href="../updating/updating-cluster-cli.html">Updating a cluster within a minor version by using the CLI</a> for instructions.</p>
 </div>
@@ -33204,9 +33203,6 @@ This update fixes the problem. The web console reads the <code>resource</code> p
 </li>
 <li>
 <p>Previously, the <code>oc debug node</code> command did not have timeout specified on idle. Consequently, the users were never logged out of the cluster. With this update, a <code>TMOUT</code> environment variable for debug pods has been added to counter inactivity timeout. As a result, the session will be automatically terminated after <code>TMOUT</code> inactivity. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2066760"><strong>BZ#2066760</strong></a>)</p>
-</li>
-<li>
-<p>Previously, ExternalIPs were managed by Kubernetes. With this update, administrators will now have to direct traffic from externalIPs to the cluster by assigning a destination IP via a static route, some route protocol or by adding an IP to a node.For guidance see (<a href="https://access.redhat.com/solutions/6954851">KCS*</a>)(<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2076662"><strong>BZ#2076662</strong></a>)</p>
 </li>
 </ul>
 </div>
@@ -33246,88 +33242,6 @@ This update fixes the problem. The web console reads the <code>resource</code> p
 <h4 id="ocp-4-8-37-updating"><a class="anchor" href="#ocp-4-8-37-updating"></a>Updating</h4>
 <div class="paragraph">
 <p>To update an existing OpenShift Container Platform 4.8 cluster to this latest release, see <a href="../updating/updating-cluster-cli.html">Updating a cluster within a minor version by using the CLI</a> for instructions.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ocp-4-8-39"><a class="anchor" href="#ocp-4-8-39"></a>RHBA-2022:1427 - OpenShift Container Platform 4.8.39 bug fix update</h3>
-<div class="paragraph">
-<p>Issued: 2022-04-27</p>
-</div>
-<div class="paragraph">
-<p>OpenShift Container Platform release 4.8.39 is now available. The bug fixes that are included in the update are listed in the <a href="https://access.redhat.com/errata/RHBA-2022:1427">RHBA-2022:1427</a> advisory. The RPM packages that are included in the update are provided by the <a href="https://access.redhat.com/errata/RHBA-2022:1423">RHBA-2022:1423</a> advisory.</p>
-</div>
-<div class="paragraph">
-<p>Space precluded documenting all of the container images for this release in the advisory. See the following article for notes on the container images in this release:</p>
-</div>
-<div class="paragraph">
-<p><a href="https://access.redhat.com/solutions/6954669">OpenShift Container Platform 4.8.39 container image list</a></p>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-8-39-known-issues"><a class="anchor" href="#ocp-4-8-39-known-issues"></a>Known Issue</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Currently, upgrading from 4.8 to 4.9 is not available. OpenShift Container Platform users are advised to upgrade to the next version when it is available in the appropriate release channel. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2068601"><strong>BZ#2068601</strong></a>)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-8-39-updating"><a class="anchor" href="#ocp-4-8-39-updating"></a>Updating</h4>
-<div class="paragraph">
-<p>To update an existing OpenShift Container Platform 4.8 cluster to this latest release, see <a href="../updating/updating-cluster-cli.html">Updating a cluster within a minor version by using the CLI</a> for instructions.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ocp-4-8-41"><a class="anchor" href="#ocp-4-8-41"></a>RHSA-2022:2272 - OpenShift Container Platform 4.8.41 bug fix and security update</h3>
-<div class="paragraph">
-<p>Issued: 2022-05-25</p>
-</div>
-<div class="paragraph">
-<p>OpenShift Container Platform release 4.8.41, which includes security updates, is now available. The bug fixes that are included in the update are listed in the <a href="https://access.redhat.com/errata/RHSA-2022:2272">RHSA-2022:2272</a> advisory. The RPM packages that are included in the update are provided by the <a href="https://access.redhat.com/errata/RHBA-2022:2270">RHBA-2022:2270</a> advisory.</p>
-</div>
-<div class="paragraph">
-<p>Space precluded documenting all of the container images for this release in the advisory. See the following article for notes on the container images in this release:</p>
-</div>
-<div class="paragraph">
-<p><a href="https://access.redhat.com/solutions/6958678">OpenShift Container Platform 4.8.41 container image list</a></p>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-8-41-features"><a class="anchor" href="#ocp-4-8-41-features"></a>Features</h4>
-<div class="sect4">
-<h5 id="ocp-kubernetes-1-21-11-updates"><a class="anchor" href="#ocp-kubernetes-1-21-11-updates"></a>Updates from Kubernetes 1.21.11</h5>
-<div class="paragraph">
-<p>This update contains changes from Kubernetes 1.21.9 up to 1.21.11. More information can be found in the following changelogs: <a href="https://github.com/kubernetes/kubernetes/blob/release-1.21/CHANGELOG/CHANGELOG-1.21.md#downloads-for-v1219">1.21.9</a>, <a href="https://github.com/kubernetes/kubernetes/blob/release-1.21/CHANGELOG/CHANGELOG-1.21.md#downloads-for-v12110">1.21.10</a>, and <a href="https://github.com/kubernetes/kubernetes/blob/release-1.21/CHANGELOG/CHANGELOG-1.21.md#downloads-for-v12111">1.21.11</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-8-41-upgrading"><a class="anchor" href="#ocp-4-8-41-upgrading"></a>Upgrading</h4>
-<div class="paragraph">
-<p>To upgrade an existing OpenShift Container Platform 4.8 cluster to this latest release, see <a href="../updating/updating-cluster-cli.html">Updating a cluster using the CLI</a> for instructions.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ocp-4-8-42"><a class="anchor" href="#ocp-4-8-42"></a>RHBA-2022:4737 - OpenShift Container Platform 4.8.42 bug fix update</h3>
-<div class="paragraph">
-<p>Issued: 2022-06-01</p>
-</div>
-<div class="paragraph">
-<p>OpenShift Container Platform release 4.8.42 is now available. The bug fixes that are included in the update are listed in the <a href="https://access.redhat.com/errata/RHBA-2022:4737">RHBA-2022:4737</a> advisory. The RPM packages that are included in the update are provided by the <a href="https://access.redhat.com/errata/RHBA-2022:4736">RHBA-2022:4736</a> advisory.</p>
-</div>
-<div class="paragraph">
-<p>Space precluded documenting all of the container images for this release in the advisory. See the following article for notes on the container images in this release:</p>
-</div>
-<div class="paragraph">
-<p><a href="https://access.redhat.com/solutions/6961020">OpenShift Container Platform 4.8.42 container image list</a></p>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-8-42-upgrading"><a class="anchor" href="#ocp-4-8-42-upgrading"></a>Upgrading</h4>
-<div class="paragraph">
-<p>To upgrade an existing OpenShift Container Platform 4.8 cluster to this latest release, see <a href="../updating/updating-cluster-cli.html">Updating a cluster using the CLI</a> for instructions.</p>
 </div>
 </div>
 </div>
