@@ -406,6 +406,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../getting_started/kubernetes-overview.html">Kubernetes overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../getting_started/openshift-overview.html">OpenShift Container Platform overview</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -30802,30 +30815,6 @@
 
                 
 
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../../serverless/security/serverless-custom-tls-cert-domain-mapping.html">
-                      Using a custom TLS certificate for domain mapping
-                    </a>
-                  </li>
-
-                
-
               </ul>
             </li>
 
@@ -31877,6 +31866,21 @@ INFO[0044] Successfully upgraded to "memcached-operator.v0.0.2"</span></code></p
 <ol class="arabic">
 <li>
 <p>If you know that a specific bundle of your Operator is not supported and will not work correctly on OpenShift Container Platform later than a certain cluster version, configure the maximum version of OpenShift Container Platform that your Operator is compatible with. In your Operator project&#8217;s cluster service version (CSV), set the <code>olm.maxOpenShiftVersion</code> annotation to prevent administrators from upgrading their cluster before upgrading the installed Operator to a compatible version:</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must use <code>olm.maxOpenShiftVersion</code> annotation only if your Operator bundle version cannot work in later versions. Be aware that cluster admins cannot upgrade their clusters with your solution installed. If you do not provide later version and a valid upgrade path,
+cluster admins may uninstall your Operator and can upgrade the cluster version.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="listingblock">
 <div class="title">Example CSV with <code>olm.maxOpenShiftVersion</code> annotation</div>
 <div class="content">

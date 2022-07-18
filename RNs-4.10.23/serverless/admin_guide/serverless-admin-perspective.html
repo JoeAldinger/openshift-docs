@@ -406,6 +406,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../getting_started/kubernetes-overview.html">Kubernetes overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../getting_started/openshift-overview.html">OpenShift Container Platform overview</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -30802,30 +30815,6 @@
 
                 
 
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../../serverless/security/serverless-custom-tls-cert-domain-mapping.html">
-                      Using a custom TLS certificate for domain mapping
-                    </a>
-                  </li>
-
-                
-
               </ul>
             </li>
 
@@ -31214,6 +31203,7 @@
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
 <li><a href="#creating-serverless-apps-admin-console_serverless-admin-perspective">Creating serverless applications using the Administrator perspective</a></li>
+<li><a href="#serverless-domain-mapping-odc-admin_serverless-admin-perspective">Mapping a custom domain to a service by using the Administrator perspective</a></li>
 <li><a href="#serverless-creating-event-source-admin-web-console_serverless-admin-perspective">Creating an event source by using the Administrator perspective</a></li>
 <li><a href="#serverless-creating-broker-admin-web-console_serverless-admin-perspective">Creating a broker by using the Administrator perspective</a></li>
 <li><a href="#serverless-creating-trigger-admin-web-console_serverless-admin-perspective">Creating a trigger by using the Administrator perspective</a></li>
@@ -31304,6 +31294,143 @@
 <p>Click <strong>Create</strong>.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="serverless-domain-mapping-odc-admin_serverless-admin-perspective"><a class="anchor" href="#serverless-domain-mapping-odc-admin_serverless-admin-perspective"></a>Mapping a custom domain to a service by using the Administrator perspective</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Knative services are automatically assigned a default domain name based on your cluster configuration. For example, <code>&lt;service_name&gt;-&lt;namespace&gt;.example.com</code>. You can customize the domain for your Knative service by mapping a custom domain name that you own to a Knative service.</p>
+</div>
+<div class="paragraph">
+<p>You can do this by creating a <code>DomainMapping</code> resource for the service. You can also create multiple <code>DomainMapping</code> resources to map multiple domains and subdomains to a single service.</p>
+</div>
+<div class="paragraph">
+<p>If you have cluster administrator permissions, you can create a <code>DomainMapping</code> custom resource (CR) by using the <strong>Administrator</strong> perspective in the OpenShift Container Platform web console.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have logged in to the web console.</p>
+</li>
+<li>
+<p>You are in the <strong>Administrator</strong> perspective.</p>
+</li>
+<li>
+<p>You have installed the OpenShift Serverless Operator.</p>
+</li>
+<li>
+<p>You have installed Knative Serving.</p>
+</li>
+<li>
+<p>You have created a project or have access to a project with the appropriate roles and permissions to create applications and other workloads in OpenShift Container Platform.</p>
+</li>
+<li>
+<p>You have created a Knative service and control a custom domain that you want to map to that service.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Your custom domain must point to the IP address of the OpenShift Container Platform cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>CustomResourceDefinitions</strong> and use the search box to find the <strong>DomainMapping</strong> custom resource definition (CRD).</p>
+</li>
+<li>
+<p>Click the <strong>DomainMapping</strong> CRD, then navigate to the <strong>Instances</strong> tab.</p>
+</li>
+<li>
+<p>Click <strong>Create DomainMapping</strong>.</p>
+</li>
+<li>
+<p>Modify the YAML for the <code>DomainMapping</code> CR so that it includes the following information for your instance:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">serving.knative.dev/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">DomainMapping</span>
+<span class="na">metadata</span><span class="pi">:</span>
+ <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;domain_name&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+ <span class="na">namespace</span><span class="pi">:</span> <span class="s">&lt;namespace&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="na">spec</span><span class="pi">:</span>
+ <span class="na">ref</span><span class="pi">:</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;target_name&gt;</span> <i class="conum" data-value="3"></i><b>(3)</b>
+   <span class="na">kind</span><span class="pi">:</span> <span class="s">&lt;target_type&gt;</span> <i class="conum" data-value="4"></i><b>(4)</b>
+   <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">serving.knative.dev/v1</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The custom domain name that you want to map to the target CR.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The namespace of both the <code>DomainMapping</code> CR and the target CR.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The name of the target CR to map to the custom domain.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The type of CR being mapped to the custom domain.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Example domain mapping to a Knative service</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">serving.knative.dev/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">DomainMapping</span>
+<span class="na">metadata</span><span class="pi">:</span>
+ <span class="na">name</span><span class="pi">:</span> <span class="s">custom-ksvc-domain.example.com</span>
+ <span class="na">namespace</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">spec</span><span class="pi">:</span>
+ <span class="na">ref</span><span class="pi">:</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">example-service</span>
+   <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+   <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">serving.knative.dev/v1</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Access the custom domain by using a <code>curl</code> request. For example:</p>
+<div class="listingblock">
+<div class="title">Example command</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>curl custom-ksvc-domain.example.com</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">Hello OpenShift!</span></code></pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>

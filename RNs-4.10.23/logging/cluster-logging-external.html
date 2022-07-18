@@ -406,6 +406,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../getting_started/kubernetes-overview.html">Kubernetes overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../getting_started/openshift-overview.html">OpenShift Container Platform overview</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -30802,30 +30815,6 @@
 
                 
 
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../serverless/security/serverless-custom-tls-cert-domain-mapping.html">
-                      Using a custom TLS certificate for domain mapping
-                    </a>
-                  </li>
-
-                
-
               </ul>
             </li>
 
@@ -31221,7 +31210,11 @@
 <li><a href="#cluster-logging-collector-log-forwarding-supported-plugins-5-1_cluster-logging-external">Supported log data output types in OpenShift Logging 5.1</a></li>
 <li><a href="#cluster-logging-collector-log-forwarding-supported-plugins-5-2_cluster-logging-external">Supported log data output types in OpenShift Logging 5.2</a></li>
 <li><a href="#cluster-logging-collector-log-forward-es_cluster-logging-external">Forwarding logs to an external Elasticsearch instance</a></li>
-<li><a href="#cluster-logging-collector-log-forward-fluentd_cluster-logging-external">Forwarding logs using the Fluentd forward protocol</a></li>
+<li><a href="#cluster-logging-collector-log-forward-fluentd_cluster-logging-external">Forwarding logs using the Fluentd forward protocol</a>
+<ul class="sectlevel2">
+<li><a href="#cluster-logging-collector-log-forward-nano-precision">Enabling nanosecond precision for Logstash to ingest data from fluentd</a></li>
+</ul>
+</li>
 <li><a href="#cluster-logging-collector-log-forward-syslog_cluster-logging-external">Forwarding logs using the syslog protocol</a>
 <ul class="sectlevel2">
 <li><a href="#cluster-logging-collector-log-forward-examples-syslog-log-source">Adding log source information to message output</a></li>
@@ -32239,6 +32232,28 @@ If missing or empty, the system defaults are used.</p>
 </div>
 </li>
 </ol>
+</div>
+<div class="sect2">
+<h3 id="cluster-logging-collector-log-forward-nano-precision"><a class="anchor" href="#cluster-logging-collector-log-forward-nano-precision"></a>Enabling nanosecond precision for Logstash to ingest data from fluentd</h3>
+<div class="paragraph">
+<p>For Logstash to ingest log data from fluentd, you must enable nanosecond precision in the Logstash configuration file.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>In the Logstash configuration file,  set <code>nanosecond_precision</code> to <code>true</code>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example Logstash configuration file</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">input { tcp { codec =&gt;</span><span class="w"> </span>fluent <span class="o">{</span> nanosecond_precision <span class="o">=&gt;</span> <span class="nb">true</span> <span class="o">}</span> port <span class="o">=&gt;</span> 24114 <span class="o">}</span> <span class="o">}</span>
+<span class="go">filter { }
+</span><span class="gp">output { stdout { codec =&gt;</span><span class="w"> </span>rubydebug <span class="o">}</span> <span class="o">}</span></code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>

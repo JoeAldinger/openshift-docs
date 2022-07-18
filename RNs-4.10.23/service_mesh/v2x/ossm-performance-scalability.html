@@ -406,6 +406,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../getting_started/kubernetes-overview.html">Kubernetes overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../getting_started/openshift-overview.html">OpenShift Container Platform overview</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -30802,30 +30815,6 @@
 
                 
 
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../../serverless/security/serverless-custom-tls-cert-domain-mapping.html">
-                      Using a custom TLS certificate for domain mapping
-                    </a>
-                  </li>
-
-                
-
               </ul>
             </li>
 
@@ -31306,18 +31295,18 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>The upstream Istio community load tests mesh consists of <strong>1000</strong> services and <strong>2000</strong> sidecars with 70,000 mesh-wide requests per second.
-Running the tests using Istio 1.6.8, generated the following results:</p>
+Running the tests using Istio 1.12.3, generated the following results:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The Envoy proxy uses <strong>0.5 vCPU</strong> and <strong>50 MB memory</strong> per 1000 requests per second going through the proxy.</p>
+<p>The Envoy proxy uses <strong>0.35 vCPU</strong> and <strong>40 MB memory</strong> per 1000 requests per second going through the proxy.</p>
 </li>
 <li>
 <p>Istiod uses <strong>1 vCPU</strong> and <strong>1.5 GB</strong> of memory.</p>
 </li>
 <li>
-<p>The Envoy proxy adds <strong>3.12 ms</strong> to the 90th percentile latency.</p>
+<p>The Envoy proxy adds <strong>2.65 ms</strong> to the 90th percentile latency.</p>
 </li>
 <li>
 <p>The legacy <code>istio-telemetry</code> service (disabled by default in Service Mesh 2.0) uses <strong>0.6 vCPU</strong> per 1000 mesh-wide requests per second for deployments that use Mixer.
@@ -31391,7 +31380,7 @@ The CPU consumption scales with the following factors:</p>
 <div class="sect3">
 <h4 id="cpu-and-memory-consumption"><a class="anchor" href="#cpu-and-memory-consumption"></a>CPU and memory consumption</h4>
 <div class="paragraph">
-<p>Since the sidecar proxy performs additional work on the data path, it consumes CPU and memory. As of Istio 1.1, a proxy consumes about 0.6 vCPU per 1000 requests per second.</p>
+<p>Since the sidecar proxy performs additional work on the data path, it consumes CPU and memory. As of Istio 1.12.3, a proxy consumes about 0.5 vCPU per 1000 requests per second.</p>
 </div>
 <div class="paragraph">
 <p>The memory consumption of the proxy depends on the total configuration state the proxy holds.
@@ -31415,7 +31404,7 @@ This process adds to the queue wait time of the next request and affects average
 The actual tail latency depends on the traffic pattern.</p>
 </div>
 <div class="paragraph">
-<p>Inside the mesh, a request traverses the client-side proxy and then the server-side proxy. In the default configuration of Istio 1.6.8 (that is, Istio with telemetry v2), the two proxies add about 3.12 ms and 3.13 ms to the 90th and 99th percentile latency, respectively, over the baseline data plane latency.</p>
+<p>Inside the mesh, a request traverses the client-side proxy and then the server-side proxy. In the default configuration of Istio 1.12.3 (that is, Istio with telemetry v2), the two proxies add about 1.7 ms and 2.7 ms to the 90th and 99th percentile latency, respectively, over the baseline data plane latency.</p>
 </div>
 </div>
 </div>

@@ -406,6 +406,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../getting_started/kubernetes-overview.html">Kubernetes overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../getting_started/openshift-overview.html">OpenShift Container Platform overview</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -30802,30 +30815,6 @@
 
                 
 
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../../serverless/security/serverless-custom-tls-cert-domain-mapping.html">
-                      Using a custom TLS certificate for domain mapping
-                    </a>
-                  </li>
-
-                
-
               </ul>
             </li>
 
@@ -31545,12 +31534,12 @@ bridge-slave-eno2  f31c3353-54b7-48de-893a-02d2b34c4736  ethernet  eno2</span></
 <h2 id="retrieving-the-openshift-installer_ipi-install-installation-workflow"><a class="anchor" href="#retrieving-the-openshift-installer_ipi-install-installation-workflow"></a>Retrieving the OpenShift Container Platform installer</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Use the <code>latest-4.x</code> version of the installer to deploy the latest generally
-available version of OpenShift Container Platform:</p>
+<p>Use the <code>stable-4.x</code> version of the installer to deploy the generally
+available stable version of OpenShift Container Platform:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">export </span><span class="nv">VERSION</span><span class="o">=</span>latest-4.10
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">export </span><span class="nv">VERSION</span><span class="o">=</span>stable-4.10
 <span class="gp">export RELEASE_IMAGE=$</span><span class="o">(</span>curl <span class="nt">-s</span> https://mirror.openshift.com/pub/openshift-v4/clients/ocp/<span class="nv">$VERSION</span>/release.txt | <span class="nb">grep</span> <span class="s1">'Pull From: quay.io'</span> | <span class="nb">awk</span> <span class="nt">-F</span> <span class="s1">' '</span> <span class="s1">'{print $3}'</span><span class="o">)</span></code></pre>
 </div>
 </div>

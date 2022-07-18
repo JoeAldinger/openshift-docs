@@ -406,6 +406,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../getting_started/kubernetes-overview.html">Kubernetes overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../getting_started/openshift-overview.html">OpenShift Container Platform overview</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -30802,30 +30815,6 @@
 
                 
 
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../../serverless/security/serverless-custom-tls-cert-domain-mapping.html">
-                      Using a custom TLS certificate for domain mapping
-                    </a>
-                  </li>
-
-                
-
               </ul>
             </li>
 
@@ -31687,6 +31676,26 @@ Error from server (NotFound): brokers.eventing.knative.dev "default" not found</
 <h2 id="serverless-using-brokers-kafka"><a class="anchor" href="#serverless-using-brokers-kafka"></a>Kafka broker</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>The Knative Kafka broker is an Apache Kafka native implementation of the Knative broker API. It has a better integration with Kafka for the broker and trigger model over other broker types and reduces network hops.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Kafka broker, which is currently in Technology Preview, is not supported on FIPS.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The Knative Kafka broker stores incoming CloudEvents as Kafka records, using the binary content mode. This means that all CloudEvent attributes and extensions are mapped as headers on the Kafka record, while the <code>data</code> spec of the CloudEvent corresponds to the value of the Kafka record.</p>
+</div>
+<div class="paragraph">
 <p>If a cluster administrator has configured your OpenShift Serverless deployment to use Kafka as the default broker type, creating a broker by using the default settings creates a Kafka-based <code>Broker</code> object. If your OpenShift Serverless deployment is not configured to use Kafka broker as the default broker type, you can use one of the following procedures to create a Kafka-based broker.</p>
 </div>
 <div class="admonitionblock important">
@@ -31707,20 +31716,6 @@ the development process.</p>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview
 features, see <a href="https://access.redhat.com/support/offerings/techpreview/" class="bare">https://access.redhat.com/support/offerings/techpreview/</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The Kafka broker, which is currently in Technology Preview, is not supported on FIPS.</p>
 </div>
 </td>
 </tr>
