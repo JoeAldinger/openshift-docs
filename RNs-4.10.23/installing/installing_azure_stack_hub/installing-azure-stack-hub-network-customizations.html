@@ -32340,6 +32340,42 @@ accounts for the dramatically decreased machine performance.</p>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>compute.platform.azure.osDisk.diskSizeGB</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Azure disk size for the VM.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Integer that represents the size of the disk in GB. The default is <code>128</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>compute.platform.azure.osDisk.diskType</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Defines the type of disk.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>standard_LRS</code>, <code>premium_LRS</code>, or <code>standardSSD_LRS</code>. The default is <code>premium_LRS</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>controlPlane.platform.azure.osDisk.diskSizeGB</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Azure disk size for the VM.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Integer that represents the size of the disk in GB. The default is <code>1024</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>controlPlane.platform.azure.osDisk.diskType</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Defines the type of disk.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>premium_LRS</code> or <code>standardSSD_LRS</code>. The default is <code>premium_LRS</code>.</p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>platform.azure.armEndpoint</code></p></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>The URL of the Azure Resource Manager endpoint that your Azure Stack Hub operator provides.</p>
@@ -32436,13 +32472,22 @@ configuring user-defined routing.</p>
 <span class="na">credentialsMode</span><span class="pi">:</span> <span class="s">Manual</span>
 <span class="na">controlPlane</span><span class="pi">:</span>  <i class="conum" data-value="2"></i><b>(2)</b> <i class="conum" data-value="3"></i><b>(3)</b>
   <span class="na">name</span><span class="pi">:</span> <span class="s">master</span>
+  <span class="na">platform</span><span class="pi">:</span>
+    <span class="na">azure</span><span class="pi">:</span>
+      <span class="na">osDisk</span><span class="pi">:</span>
+        <span class="na">diskSizeGB</span><span class="pi">:</span> <span class="s">1024</span> <i class="conum" data-value="4"></i><b>(4)</b>
+        <span class="na">diskType</span><span class="pi">:</span> <span class="s">premium_LRS</span>
   <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
 <span class="na">compute</span><span class="pi">:</span> <i class="conum" data-value="2"></i><b>(2)</b>
 <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">worker</span>
-  <span class="na">platform</span><span class="pi">:</span> <span class="pi">{}</span>
+  <span class="na">platform</span><span class="pi">:</span>
+    <span class="na">azure</span><span class="pi">:</span>
+      <span class="na">osDisk</span><span class="pi">:</span>
+        <span class="na">diskSizeGB</span><span class="pi">:</span> <span class="s">512</span> <i class="conum" data-value="4"></i><b>(4)</b>
+        <span class="na">diskType</span><span class="pi">:</span> <span class="s">premium_LRS</span>
   <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
 <span class="na">metadata</span><span class="pi">:</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s">test-cluster</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="4"></i><b>(4)</b>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">test-cluster</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="5"></i><b>(5)</b>
 <span class="na">networking</span><span class="pi">:</span>
   <span class="na">clusterNetwork</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="na">cidr</span><span class="pi">:</span> <span class="s">10.128.0.0/14</span>
@@ -32454,17 +32499,17 @@ configuring user-defined routing.</p>
   <span class="pi">-</span> <span class="s">172.30.0.0/16</span>
 <span class="na">platform</span><span class="pi">:</span>
   <span class="na">azure</span><span class="pi">:</span>
-    <span class="na">armEndpoint</span><span class="pi">:</span> <span class="s">azurestack_arm_endpoint</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="5"></i><b>(5)</b>
-    <span class="na">baseDomainResourceGroupName</span><span class="pi">:</span> <span class="s">resource_group</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="6"></i><b>(6)</b>
-    <span class="na">region</span><span class="pi">:</span> <span class="s">azure_stack_local_region</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="7"></i><b>(7)</b>
-    <span class="na">resourceGroupName</span><span class="pi">:</span> <span class="s">existing_resource_group</span> <i class="conum" data-value="8"></i><b>(8)</b>
+    <span class="na">armEndpoint</span><span class="pi">:</span> <span class="s">azurestack_arm_endpoint</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="6"></i><b>(6)</b>
+    <span class="na">baseDomainResourceGroupName</span><span class="pi">:</span> <span class="s">resource_group</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="7"></i><b>(7)</b>
+    <span class="na">region</span><span class="pi">:</span> <span class="s">azure_stack_local_region</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="8"></i><b>(8)</b>
+    <span class="na">resourceGroupName</span><span class="pi">:</span> <span class="s">existing_resource_group</span> <i class="conum" data-value="9"></i><b>(9)</b>
     <span class="na">outboundType</span><span class="pi">:</span> <span class="s">Loadbalancer</span>
     <span class="na">cloudName</span><span class="pi">:</span> <span class="s">AzureStackCloud</span> <i class="conum" data-value="1"></i><b>(1)</b>
-    <span class="na">clusterOSimage</span><span class="pi">:</span> <span class="s">https://vhdsa.blob.example.example.com/vhd/rhcos-410.84.202112040202-0-azurestack.x86_64.vhd</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="9"></i><b>(9)</b>
-<span class="na">pullSecret</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{"auths":</span><span class="nv"> </span><span class="s">...}'</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="10"></i><b>(10)</b>
-<span class="na">fips</span><span class="pi">:</span> <span class="no">false</span> <i class="conum" data-value="11"></i><b>(11)</b>
-<span class="na">sshKey</span><span class="pi">:</span> <span class="s">ssh-ed25519 AAAA...</span> <i class="conum" data-value="12"></i><b>(12)</b>
-<span class="na">additionalTrustBundle</span><span class="pi">:</span> <span class="pi">|</span> <i class="conum" data-value="13"></i><b>(13)</b>
+    <span class="na">clusterOSimage</span><span class="pi">:</span> <span class="s">https://vhdsa.blob.example.example.com/vhd/rhcos-410.84.202112040202-0-azurestack.x86_64.vhd</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="10"></i><b>(10)</b>
+<span class="na">pullSecret</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{"auths":</span><span class="nv"> </span><span class="s">...}'</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="11"></i><b>(11)</b>
+<span class="na">fips</span><span class="pi">:</span> <span class="no">false</span> <i class="conum" data-value="12"></i><b>(12)</b>
+<span class="na">sshKey</span><span class="pi">:</span> <span class="s">ssh-ed25519 AAAA...</span> <i class="conum" data-value="13"></i><b>(13)</b>
+<span class="na">additionalTrustBundle</span><span class="pi">:</span> <span class="pi">|</span> <i class="conum" data-value="14"></i><b>(14)</b>
     <span class="s">-----BEGIN CERTIFICATE-----</span>
     <span class="s">&lt;MY_TRUSTED_CA_CERT&gt;</span>
     <span class="s">-----END CERTIFICATE-----</span></code></pre>
@@ -32486,34 +32531,38 @@ configuring user-defined routing.</p>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>The name of the cluster.</td>
+<td>You can specify the size of the disk to use in GB. Minimum recommendation for control plane nodes is 1024 GB.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
-<td>The Azure Resource Manager endpoint that your Azure Stack Hub operator provides.</td>
+<td>The name of the cluster.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>The name of the resource group that contains the DNS zone for your base domain.</td>
+<td>The Azure Resource Manager endpoint that your Azure Stack Hub operator provides.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="7"></i><b>7</b></td>
-<td>The name of your Azure Stack Hub local region.</td>
+<td>The name of the resource group that contains the DNS zone for your base domain.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="8"></i><b>8</b></td>
-<td>The name of an existing resource group to install your cluster to. If undefined, a new resource group is created for the cluster.</td>
+<td>The name of your Azure Stack Hub local region.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="9"></i><b>9</b></td>
-<td>The URL of a storage blob in the Azure Stack environment that contains an RHCOS VHD.</td>
+<td>The name of an existing resource group to install your cluster to. If undefined, a new resource group is created for the cluster.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="10"></i><b>10</b></td>
-<td>The pull secret required to authenticate your cluster.</td>
+<td>The URL of a storage blob in the Azure Stack environment that contains an RHCOS VHD.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="11"></i><b>11</b></td>
+<td>The pull secret required to authenticate your cluster.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="12"></i><b>12</b></td>
 <td>Whether to enable or disable FIPS mode. By default, FIPS mode is not enabled. If FIPS mode is enabled, the Red Hat Enterprise Linux CoreOS (RHCOS) machines that OpenShift Container Platform runs on bypass the default Kubernetes cryptography suite and use the cryptography modules that are provided with RHCOS instead.
 <div class="admonitionblock important">
 <table>
@@ -32531,7 +32580,7 @@ configuring user-defined routing.</p>
 </div></td>
 </tr>
 <tr>
-<td><i class="conum" data-value="12"></i><b>12</b></td>
+<td><i class="conum" data-value="13"></i><b>13</b></td>
 <td>You can optionally provide the <code>sshKey</code> value that you use to access the machines in your cluster.
 <div class="admonitionblock note">
 <table>
@@ -32549,7 +32598,7 @@ configuring user-defined routing.</p>
 </div></td>
 </tr>
 <tr>
-<td><i class="conum" data-value="13"></i><b>13</b></td>
+<td><i class="conum" data-value="14"></i><b>14</b></td>
 <td>If the Azure Stack Hub environment is using an internal Certificate Authority (CA), adding the CA certificate is required.</td>
 </tr>
 </table>

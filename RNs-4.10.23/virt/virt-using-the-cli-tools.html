@@ -31352,11 +31352,19 @@ resources.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl start &lt;vm_name&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Start a virtual machine. Optionally, start the virtual machine in a paused state by running <code>virtctl start --paused &lt;vm_name&gt;</code>. This enables you to interrupt the boot process from the VNC console.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start a virtual machine.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl start --paused &lt;vm_name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start a virtual machine in a paused state. This option enables you to interrupt the boot process from the VNC console.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl stop &lt;vm_name&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stop a virtual machine.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl stop &lt;vm_name&gt; --grace-period 0 --force</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Force stop a virtual machine. This option might cause data inconsistency or data loss.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl pause vm|vmi &lt;object_name&gt;</code></p></td>
@@ -31408,10 +31416,6 @@ the specified port of the node.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl version</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Display the client and server version information.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl help</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Display a descriptive list of <code>virtctl</code> commands.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtctl fslist &lt;vmi_name&gt;</code></p></td>

@@ -31931,7 +31931,7 @@
 <p>After creating/changing/deleting the <code>cacert</code> secret, the control plane <code>istiod</code> and <code>gateway</code> pods must be restarted so the changes go into effect. Use the following command to restart the pods:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nv">$ </span>oc <span class="nt">-n</span> istio-system delete pods <span class="nt">-l</span> <span class="s1">'app in (istiod,istio-ingressgateway, istio-egressgateway)'</span></code></pre>
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> istio-system delete pods <span class="nt">-l</span> <span class="s1">'app in (istiod,istio-ingressgateway, istio-egressgateway)'</span></code></pre>
 </div>
 </div>
 <div class="paragraph">

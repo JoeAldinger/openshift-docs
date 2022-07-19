@@ -32029,6 +32029,49 @@ unavailable without affecting the applications running on the cluster.</p>
 <p>Because etcd writes data to disk and persists proposals on disk, its performance depends on disk performance. Slow disks and disk activity from other processes can cause long fsync latencies. Those latencies can cause etcd to miss heartbeats, not commit new proposals to the disk on time, and ultimately experience request timeouts and temporary leader loss. Run etcd on machines that are backed by SSD or NVMe disks with low latency and high throughput. Consider single-level cell (SLC) solid-state drives (SSDs), which provide 1 bit per memory cell, are durable and reliable, and are ideal for write-intensive workloads.</p>
 </div>
 <div class="paragraph">
+<p>The following hard disk features provide optimal etcd performance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Low latency to support fast read operation.</p>
+</li>
+<li>
+<p>High-bandwidth writes for faster compactions and defragmentation.</p>
+</li>
+<li>
+<p>High-bandwidth reads for faster recovery from failures.</p>
+</li>
+<li>
+<p>Solid state drives as a minimum selection, however NVMe drives are preferred.</p>
+</li>
+<li>
+<p>Server-grade hardware from various manufacturers for increased reliability.</p>
+</li>
+<li>
+<p>RAID 0 technology for increased performance.</p>
+</li>
+<li>
+<p>Dedicated etcd drives. Do not place log files or other heavy workloads on etcd drives.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Avoid NAS or SAN setups, and spinning drives. Always benchmark using utilities such as <code>fio</code>. Continuously monitor the cluster performance as it increases.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Avoid using the Network File System (NFS) protocol.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
 <p>Some key metrics to monitor on a deployed OpenShift Container Platform cluster are p99 of etcd disk write ahead log duration and the number of etcd leader changes. Use Prometheus to track these metrics.</p>
 </div>
 <div class="ulist">
@@ -32098,6 +32141,14 @@ unavailable without affecting the applications running on the cluster.</p>
 </div>
 <div class="paragraph">
 <p>The <code>histogram_quantile(0.99, rate(etcd_network_peer_round_trip_time_seconds_bucket[2m]))</code> metric reports the round trip time for etcd to finish replicating the client requests between the members. Ensure that it is less than 50 ms.</p>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://access.redhat.com/solutions/4885641">How to use <code>fio</code> to check etcd disk performance in OpenShift Container Platform</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>

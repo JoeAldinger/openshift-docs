@@ -31550,6 +31550,20 @@
 <div class="paragraph">
 <p>OpenShift Container Platform Branch Build introduces support for installing a cluster on Azure Stack Hub using installer-provisioned infrastructure. This type of installation lets you use the installation program to deploy a cluster on infrastructure that the installation program provisions and the cluster maintains.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Beginning with OpenShift Container Platform 4.10.14, you can deploy control plane and compute nodes with the <code>premium_LRS</code>, <code>standardSSD_LRS</code>, or <code>standard_LRS</code> disk type. By default, the installation program deploys control plane and compute nodes with the <code>premium_LRS</code> disk type. In earlier 4.10 releases, only the <code>standard_LRS</code> disk type was supported.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>For more information, see <a href="../installing/installing_azure_stack_hub/installing-azure-stack-hub-default.html#installing-azure-stack-hub-default">Installing a cluster on Azure Stack Hub with an installer-provisioned infrastructure</a>.</p>
 </div>
@@ -35199,12 +35213,6 @@ This update fixes the problem by introducing client-go 1.22.
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{cgu-operator-full}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Web Terminal Operator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
@@ -35373,6 +35381,9 @@ oc patch clusterrolebinding <span class="k">${</span><span class="nv">clusterrol
 </li>
 <li>
 <p>For this release, the number of Alertmanager replicas in the monitoring stack was reduced from three to two. However, the persistent volume claim (PVC) for the removed third replica is not automatically removed as part of the upgrade process. After the upgrade, an administrator can remove this PVC manually from the Cluster Monitoring Operator. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2040131"><strong>BZ#2040131</strong></a>)</p>
+</li>
+<li>
+<p>In the default ZTP Argo CD configuration, cluster names cannot begin with <code>ztp</code>. Using names starting with <code>ztp</code> for clusters deployed with Zero Touch Provisioning (ZTP) results in provisioning not completing. As a workaround, ensure that either cluster names do not start with <code>ztp</code>, or adjust the Argo CD policy application namespace to a pattern that excludes the names of your clusters but still matches your policy namespace. For example, if your cluster names start with <code>ztp</code>, change the pattern in the Argo CD policy app configuration to something different, like <code>ztp-</code>. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2049154"><strong>BZ#2049154</strong></a>)</p>
 </li>
 <li>
 <p>Previously, the <code>oc adm must-gather</code> tool did not collect performance specific data when more than one <code>--image</code> argument was supplied. Files, including node and performance related files, were missing when the operation finished. The issue affects OpenShift Container Platform versions between 4.7 and 4.10. This issue can be resolved by executing the <code>oc adm must-gather</code> operation twice, once for each image. As a result, all expected files can be collected. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2018159"><strong>BZ#2018159</strong></a>)</p>
@@ -35848,6 +35859,12 @@ and recreate it without a BFD profile. (<a href="https://bugzilla.redhat.com/sho
 <p>With this update, the <a href="https://docs.openshift.com/container-platform/4.10/web_console/odc-about-web-terminal.html"><strong>Web Terminal Operator</strong></a> is now generally available.</p>
 </div>
 </div>
+<div class="sect4">
+<h5 id="ocp-4-10-14-aws-disk-types"><a class="anchor" href="#ocp-4-10-14-aws-disk-types"></a>Support for the AWS premium_LRS and standardSSD_LRS disk types</h5>
+<div class="paragraph">
+<p>With this update, you can deploy control plane and compute nodes with the <code>premium_LRS</code>, <code>standardSSD_LRS</code>, or <code>standard_LRS</code> disk type. By default, the installation program deploys control plane and compute nodes with the <code>premium_LRS</code> disk type. In earlier 4.10 releases, only the <code>standard_LRS</code> disk type was supported. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2079589"><strong>BZ#2079589</strong></a>)</p>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="ocp-4-10-14-updating"><a class="anchor" href="#ocp-4-10-14-updating"></a>Updating</h4>
@@ -36052,181 +36069,6 @@ and recreate it without a BFD profile. (<a href="https://bugzilla.redhat.com/sho
 <p><a href="https://access.redhat.com/solutions/6968082">OpenShift Container Platform 4.10.23 container image list</a></p>
 </div>
 <div class="sect3">
-<h4 id="ocp-4-10-23-features"><a class="anchor" href="#ocp-4-10-23-features"></a>Features</h4>
-
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-redfish-events"><a class="anchor" href="#ocp-4-10-23-redfish-events"></a>Low-latency Redfish hardware event delivery (Technology Preview)</h4>
-<div class="paragraph">
-<p>OpenShift Container Platform now provides a hardware event proxy that enables applications running on bare-metal clusters to respond quickly to Redfish hardware events, such as hardware changes and failures.</p>
-</div>
-<div class="paragraph">
-<p>The hardware event proxy supports a publish-subscribe service that allows relevant applications to consume hardware events detected by Redfish. The proxy must be running on hardware that supports Redfish v1.8 and higher. An Operator manages the lifecycle of the <code>hw-event-proxy</code> container.</p>
-</div>
-<div class="paragraph">
-<p>You can use a REST API to develop applications to consume and respond to events such as breaches of temperature thresholds, fan failure, disk loss, power outages, and memory failure. Reliable end-to-end messaging without persistent stores is based on the Advanced Message Queuing Protocol (AMQP). The latency of the messaging service is in the 10 millisecond range.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>This feature is supported for single node OpenShift clusters only.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-ztp-ga"><a class="anchor" href="#ocp-4-10-23-ztp-ga"></a>Zero touch provisioning is generally available</h4>
-<div class="paragraph">
-<p>Use zero touch provisioning (ZTP) to provision distributed units at new edge sites in a disconnected environment. This feature was previously introduced as a Technology Preview feature in OpenShift Container Platform 4.9 and is now generally available and enabled by default in OpenShift Container Platform 4.11. For more information, see <a href="../scalability_and_performance/ztp-deploying-disconnected.html">Deploying distributed units at scale in a disconnected environment</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-enhancements-iod"><a class="anchor" href="#ocp-4-10-23-enhancements-iod"></a>Indication of done for ZTP</h4>
-<div class="paragraph">
-<p>A new tool is available that simplifies the process of checking for a completed zero touch provisioning (ZTP) installation using the Red Hat Advanced Cluster Management (RHACM) static validator inform policy. It provides an Indication of done for ZTP installations by capturing the criteria for a completed installation and validating that it moves to a compliant state only when ZTP provisioning of the spoke cluster is complete.</p>
-</div>
-<div class="paragraph">
-<p>This policy can be used for deployments of single node clusters, three-node clusters, and standard clusters.
-To learn more about the validator inform policy, see <a href="../scalability_and_performance/ztp-deploying-disconnected.html#ztp-definition-of-done-for-ztp-installations_ztp-deploying-disconnected">Indication of done</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-enhancements-ztp"><a class="anchor" href="#ocp-4-10-23-enhancements-ztp"></a>Enhancements to ZTP</h4>
-<div class="paragraph">
-<p>For OpenShift Container Platform Branch Build, there are a number of updates that make it easier to configure the hub cluster and generate source CRs. New PTP and UEFI secure boot features for spoke clusters are also available. A summary of these features is below:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You can add or modify existing source CRs in the <code>ztp-site-generate</code> container, rebuild it, and make it available to the hub cluster, typically from the disconnected registry associated with the hub cluster.</p>
-</li>
-<li>
-<p>You can configure PTP fast events for vRAN clusters that are deployed using the GitOps zero touch provisioning (ZTP) pipeline.</p>
-</li>
-<li>
-<p>You can configure UEFI secure boot for vRAN clusters that are deployed using the GitOps ZTP pipeline.</p>
-</li>
-<li>
-<p>You can use {cgu-operator-full} to orchestrate the application of the configuration CRs to the hub cluster.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-multicluster-support-ztp"><a class="anchor" href="#ocp-4-10-23-multicluster-support-ztp"></a>ZTP support for multicluster deployment</h4>
-<div class="paragraph">
-<p>Zero touch provisioning (ZTP) provides support for multicluster deployment, including single node clusters, three-node clusters, and standard OpenShift clusters. This includes the installation of OpenShift and deployment of the distributed units (DUs) at scale. This gives you the ability to deploy nodes with master, worker, and master and worker roles.
-ZTP multinode support is implemented through the use of <code>SiteConfig</code> and <code>PolicyGenTemplate</code> custom resources (CRs). The overall flow is identical to the ZTP support for single node clusters, with some differentiation in configuration depending on the type of cluster:</p>
-</div>
-<div class="paragraph">
-<p>In the <code>SiteConfig</code> file:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Single node clusters must have exactly one entry in the <code>nodes</code> section.</p>
-</li>
-<li>
-<p>Three-node clusters must have exactly three entries defined in the <code>nodes</code> section.</p>
-</li>
-<li>
-<p>Standard OpenShift clusters must have exactly three entries in the <code>nodes</code> section with role: master and one or more additional entries with role: worker.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The <code>PolicyGenTemplate</code> file tells the Policy Generator where to categorize the generated policies. Example <code>PolicyGenTemplate</code> files provide you with example files to simplify your deployments:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The example common <code>PolicyGenTemplate</code> file is common across all types of clusters.</p>
-</li>
-<li>
-<p>Example group <code>PolicyGenTemplate</code> files for single node, three-node, and standard clusters are provided.</p>
-</li>
-<li>
-<p>Site-specific <code>PolicyGenTemplate</code> files specific to each site are provided.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>To learn more about multicluster deployment, see <a href="../scalability_and_performance/ztp-deploying-disconnected.html#ztp-deploying-a-site_ztp-deploying-disconnected">Deploying a site</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-ztp-insecure-os-image-support"><a class="anchor" href="#ocp-4-10-23-ztp-insecure-os-image-support"></a>Support for unsecured OS images with Assisted Installer</h4>
-<div class="paragraph">
-<p>This release includes the following warning when enabling TLS for the HTTPD server using the Assisted Installer in IPI or ZTP disconnected environments. When enabling TLS for the HTTPD server in these environments, you must confirm the root certificate is signed by an authority trusted by the client and verify the trusted certificate chain between your OpenShift Container Platform hub and spoke clusters and the HTTPD server. Using a server configured with an untrusted certificate prevents the images from being downloaded to the image creation service. Using untrusted HTTPS servers is not supported.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-known-issues"><a class="anchor" href="#ocp-4-10-23-known-issues"></a>Known issues</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>The Kubelet service monitor scrape interval is currently set to a hard-coded value. This means that there is less available CPU resources for workloads. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2035046"><strong>BZ#2035046</strong></a>)</p>
-</li>
-<li>
-<p>Deploying a single node OpenShift cluster for vRAN Distributed Units can take up to 4 hours. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2035036"><strong>BZ#2035036</strong></a>)</p>
-</li>
-<li>
-<p>Currently, if an RHACM policy was enforced to a target cluster, you can create a <code>ClusterGroupUpgrade</code> CR including that enforced policy again as a <code>managedPolicy</code> to the same target cluster. This should not be possible. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2044304"><strong>BZ#2044304</strong></a>)</p>
-</li>
-<li>
-<p>If a <code>ClusterGroupUpgrade</code> CR has a <code>blockingCR</code> specified, and that <code>blockingCR</code> fails silently, for example if there is a typo in the list of clusters, the <code>ClusterGroupUpgrade</code> CR is applied even though the <code>blockingCR</code> is not applied in the cluster. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2042601"><strong>BZ#2042601</strong></a>)</p>
-</li>
-<li>
-<p>If a <code>ClusterGroupUpgrade</code> CR validation fails for any reason, for example, because of an invalid spoke name, no status is available for the <code>ClusterGroupUpgrade</code> CR, as if the CR is disabled. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2040828"><strong>BZ#2040828</strong></a>)</p>
-</li>
-<li>
-<p>Currently, for <code>ClusterGroupUpgrade</code> CR state changes, there is only a single condition type available - <code>Ready</code>. The <code>Ready</code> condition can have a status of <code>True</code> or <code>False</code> only. This does not reflect the range of states the <code>ClusterGroupUpgrade</code> CR can be in. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2042596"><strong>BZ#2042596</strong></a>)</p>
-</li>
-<li>
-<p>When deploying a multi-node cluster on bare-metal nodes, the machine config pool (MCP) adds an additional CRI-O drop-in that circumvents the <a href="https://github.com/openshift-kni/cnf-features-deploy/blob/master/cnf-tests/README.md#container-mount-namespace">container mount namespace drop-in</a>. This results in CRI-O being in the base namespace while the kubelet is in the hidden namespace. All containers fail to get any kubelet-mounted filesystems, such as secrets and tokens. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2028590"><strong>BZ#2028590</strong></a>)</p>
-</li>
-<li>
-<p>Installing RHACM 2.5.0 in the customized namespace causes the <code>infrastructure-operator</code> pod to fail due to insufficient privileges. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2046554"><strong>BZ#2046554</strong></a>)</p>
-</li>
-<li>
-<p>OpenShift Container Platform limits object names to 63 characters. If a policy name defined in a <code>PolicyGenTemplate</code> CR approaches this limit, the {cgu-operator-full} cannot create child policies. When this occurs, the parent policy will remain in a <code>NonCompliant</code> state. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2057209"><strong>BZ#2057209</strong></a>)</p>
-</li>
-<li>
-<p>In the default ZTP Argo CD configuration, cluster names cannot begin with <code>ztp</code>. Using names starting with <code>ztp</code> for clusters deployed with Zero Touch Provisioning (ZTP) results in provisioning not completing. As a workaround, ensure that either cluster names do not start with <code>ztp</code>, or adjust the Argo CD policy application namespace to a pattern that excludes the names of your clusters but still matches your policy namespace. For example, if your cluster names start with <code>ztp</code>, change the pattern in the Argo CD policy app configuration to something different, like <code>ztp-</code>. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2049154"><strong>BZ#2049154</strong></a>)</p>
-</li>
-<li>
-<p>During a spoke cluster upgrade, one or more reconcile errors is recorded in the container log. The number of errors corresponds to the number of child policies. The error causes no noticeable impact to the cluster. The following is an example of the reconcile error:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">2022-01-21T00:14:44.697Z        INFO    controllers.ClusterGroupUpgrade Upgrade is completed
-</span><span class="gp">2022-01-21T00:14:44.892Z        ERROR   controller-runtime.manager.controller.clustergroupupgrade       Reconciler error        {"reconciler group": "ran.openshift.io", "reconciler kind": "ClusterGroupUpgrade", "name": "timeout", "namespace": "default", "error": "Operation cannot be fulfilled on clustergroupupgrades.ran.openshift.io \"timeout\": the object has been modified;</span><span class="w"> </span>please apply your changes to the latest version and try again<span class="s2">"}
-</span><span class="go">sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
-        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.9.2/pkg/internal/controller/controller.go:253
-sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
-        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.9.2/pkg/internal/controller/controller.go:214</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>(<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2043301"><strong>BZ#2043301</strong></a>)</p>
-</div>
-</li>
-<li>
-<p>During a spoke cluster upgrade from 4.9 to 4.10, with heavy workload running, the <code>kube-apiserver</code> pod can take longer than the expected time to start. As a result, the upgrade does not complete and the <code>kube-apiserver</code> rolls back to the previous version. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2064024"><strong>BZ#2064024</strong></a>)</p>
-</li>
-<li>
-<p>If you deploy the AMQ Interconnect Operator, pods run on IPv4 nodes only. The AMQ Interconnect Operator is not supported on IPv6 nodes. (<a href="https://issues.redhat.com/browse/ENTMQIC-3297"><strong>ENTMQIC-3297</strong></a>)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
 <h4 id="ocp-4-10-23-bug-fixes"><a class="anchor" href="#ocp-4-10-23-bug-fixes"></a>Bug fixes</h4>
 <div class="ulist">
 <ul>
@@ -36234,12 +36076,6 @@ sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2
 <p>Previously the Ingress Operator would detect changes made through the Ingress Controller and set the Ingress Operator’s “Upgradeable” status condition to “False” blocking upgrades. With this update, the Ingress Operator no longer blocks upgrades. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2097735"><strong>BZ#2097735</strong></a>)</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ocp-4-10-23-upgrading"><a class="anchor" href="#ocp-4-10-23-upgrading"></a>Updating</h4>
-<div class="paragraph">
-<p>To update an existing OpenShift Container Platform 4.10 cluster to this latest release, see <a href="../updating/updating-cluster-cli.html">Updating a cluster within a minor version by using the CLI</a> for instructions.</p>
 </div>
 </div>
 </div>
