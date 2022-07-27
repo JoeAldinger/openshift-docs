@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31675,8 +31725,17 @@ user-provisioned infrastructure on
 <a href="../installing/installing_ibm_z/installing-restricted-networks-ibm-z.html#installing-restricted-networks-ibm-z">IBM Z and LinuxONE with z/VM</a>, <a href="../installing/installing_ibm_z/installing-restricted-networks-ibm-z-kvm.html#installing-restricted-networks-ibm-z-kvm">IBM Z and LinuxONE with RHEL KVM</a>, <a href="../installing/installing_ibm_power/installing-restricted-networks-ibm-power.html#installing-restricted-networks-ibm-power">IBM Power</a>,
  or
 <a href="../installing/installing_bare_metal/installing-restricted-networks-bare-metal.html#installing-restricted-networks-bare-metal">bare metal</a>
-does not have full access to the internet, then
-<a href="../installing/disconnected_install/installing-mirroring-installation-images.html#installing-mirroring-installation-images">mirror the OpenShift Container Platform installation images</a> and install a cluster in a restricted network.</p>
+does not have full access to the internet, then mirror the OpenShift Container Platform installation images using one of the following methods and install a cluster in a restricted network.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../installing/disconnected_install/installing-mirroring-installation-images.html#installing-mirroring-installation-images">Mirroring images for a disconnected installation</a></p>
+</li>
+<li>
+<p><a href="../installing/disconnected_install/installing-mirroring-disconnected.html#installing-mirroring-disconnected">Mirroring images for a disconnected installation using the oc-mirror plug-in</a></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Install a cluster in an existing network</strong>: If you use an existing Virtual Private Cloud (VPC) in
@@ -31701,6 +31760,9 @@ Internet access is still required to access the cloud APIs and installation medi
 </li>
 <li>
 <p><strong><a href="../storage/persistent_storage/persistent-storage-ocs.html#red-hat-openshift-data-foundation">Install Red Hat OpenShift Data Foundation</a></strong>: You can install Red Hat OpenShift Data Foundation as an Operator to provide highly integrated and simplified persistent storage management for containers.</p>
+</li>
+<li>
+<p><strong><a href="../installing/installing_nutanix/preparing-to-install-on-nutanix.html#preparing-to-install-nutanix">Install a cluster on Nutanix</a></strong>: You can install a cluster on your Nutanix instance that uses installer-provisioned infrastructure. This type of installation lets you use the installation program to deploy a cluster on infrastructure that the installation program provisions and the cluster maintains.</p>
 </li>
 </ul>
 </div>
@@ -31861,6 +31923,9 @@ Use the Cluster Version Operator (CVO) to upgrade your OpenShift Container Platf
 <ul>
 <li>
 <p><strong><a href="../updating/updating-restricted-network-cluster.html#update-service-overview_updating-restricted-network-cluster">Understanding the OpenShift Update Service</a></strong>: Learn about installing and managing a local OpenShift Update Service for recommending OpenShift Container Platform updates in restricted network environments.</p>
+</li>
+<li>
+<p><strong><a href="../nodes/clusters/nodes-cluster-worker-latency-profiles.html#nodes-cluster-worker-latency-profiles">Improving cluster stability in high latency environments using worker latency profiles</a></strong>: If your network has latency issues, you can use one of three <em>worker latency profiles</em> to help ensure that your control plane does not accidentally evict pods in case it cannot reach a worker node. You can configure or modify the profile at any time during the life of the cluster.</p>
 </li>
 </ul>
 </div>

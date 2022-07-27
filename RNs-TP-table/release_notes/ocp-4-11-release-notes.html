@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31705,7 +31755,7 @@
 <div class="sect3">
 <h4 id="new-minimum-system-requirements-for-installing-openshift-container-platform-on-a-single-node"><a class="anchor" href="#new-minimum-system-requirements-for-installing-openshift-container-platform-on-a-single-node"></a>New minimum system requirements for installing OpenShift Container Platform on a single node</h4>
 <div class="paragraph">
-<p>This release updates the minimum system requirements for installing OpenShift Container Platform on a single node. When installing OpenShift Container Platform on a single node, you should configure a minimum of 16 GB of RAM. Specific workload requirements can require additional RAM. The complete list of supported platforms has been updated to include bare metal, vSphere, Red Hat OpenStack Platform (RHOSP), and Red Hat Virtualization platforms. In all cases, you must specify the <code>platform.none: {}</code> parameter in the <code>install-config.yaml</code> configuration file when the <code>openshift-installer</code> binary is being used to install single-node OpenShift.</p>
+<p>This release updates the minimum system requirements for installing OpenShift Container Platform on a single node. When installing OpenShift Container Platform on a single node, you should configure a minimum of 16 GB of RAM. Specific workload requirements can require additional RAM. The complete list of supported platforms has been updated to include bare metal, vSphere, Red Hat OpenStack Platform (RHOSP), and Red Hat Virtualization platforms. In all cases, you must specify the <code>platform.none: {}</code> parameter in the <code>install-config.yaml</code> configuration file when the <code>openshift-installer</code> binary is being used to install single-node Openshift.</p>
 </div>
 </div>
 <div class="sect3">
@@ -32738,12 +32788,12 @@ For more information, see <a href="../networking/external_dns_operator/nw-instal
 </div>
 </div>
 <div class="sect3">
-<h4 id="ocp-4-11-nodes-worker-nodes"><a class="anchor" href="#ocp-4-11-nodes-worker-nodes"></a>Worker nodes for single-node OpenShift clusters</h4>
+<h4 id="ocp-4-11-nodes-worker-nodes"><a class="anchor" href="#ocp-4-11-nodes-worker-nodes"></a>Worker nodes for single-node Openshift clusters</h4>
 <div class="paragraph">
-<p>You can now add worker nodes to single-node OpenShift clusters. This is useful for deployments in resource-constrained environments or at the network edge when you need to add additional capacity to your cluster.</p>
+<p>You can now add worker nodes to single-node Openshift clusters. This is useful for deployments in resource-constrained environments or at the network edge when you need to add additional capacity to your cluster.</p>
 </div>
 <div class="paragraph">
-<p>For more information, see <a href="../nodes/nodes/nodes-sno-worker-nodes.html#nodes-sno-worker-nodes">Worker nodes for single-node OpenShift clusters</a>.</p>
+<p>For more information, see <a href="../nodes/nodes/nodes-sno-worker-nodes.html#nodes-sno-worker-nodes">Worker nodes for single-node Openshift clusters</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -33031,6 +33081,12 @@ Before this release, you could not change the default value of <code>24h</code>.
 </table>
 </div>
 </div>
+<div class="sect3">
+<h4 id="ocp-4-11-PAO-to-NTO-docs"><a class="anchor" href="#ocp-4-11-PAO-to-NTO-docs"></a>Low latency tuning documentation updates</h4>
+<div class="paragraph">
+<p>In earlier version of OpenShift Container Platform, documentation for low latency tuning included references to the Performance Addon Operator. Since the Node Tuning Operator now provides low latency tuning, the documentation title changed from "Performance Addon Operator for low latency nodes" to "Low latency tuning", and multiple cross-references to this document were updated accordingly. For more information, see <a href="../scalability_and_performance/cnf-low-latency-tuning.html#cnf-low-latency-tuning">Low latency tuning</a>.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="ocp-4-11-backup-and-restore"><a class="anchor" href="#ocp-4-11-backup-and-restore"></a>Backup and restore</h3>
@@ -33177,13 +33233,13 @@ Before this release, you could not change the default value of <code>24h</code>.
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package manifest format (Operator Framework)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">REM</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">REM</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REM</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SQLite database format for Operator catalogs</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>oc adm catalog build</code></p></td>
@@ -33291,19 +33347,19 @@ Before this release, you could not change the default value of <code>24h</code>.
 <td class="tableblock halign-left valign-top"><p class="tableblock">vSphere 6.7 Update 2 or earlier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Virtual hardware version 13</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VMware ESXi 6.7 Update 2 or earlier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Minting credentials for Microsoft Azure clusters</p></td>
@@ -33313,9 +33369,9 @@ Before this release, you could not change the default value of <code>24h</code>.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Persistent storage using FlexVolume</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEP</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Automatic generation of service account token secrets</p></td>
@@ -33404,9 +33460,9 @@ As an alternative, click <strong>Observe</strong> in the OpenShift Container Pla
 </div>
 </div>
 <div class="sect3">
-<h4 id="ocp-4-11-openshiftsdn-sno-not-supported"><a class="anchor" href="#ocp-4-11-openshiftsdn-sno-not-supported"></a>Support for deploying single-node OpenShift with OpenShiftSDN has been removed</h4>
+<h4 id="ocp-4-11-openshiftsdn-sno-not-supported"><a class="anchor" href="#ocp-4-11-openshiftsdn-sno-not-supported"></a>Support for deploying single-node Openshift with OpenShiftSDN has been removed</h4>
 <div class="paragraph">
-<p>Support for deploying single-node OpenShift clusters with OpenShiftSDN has been removed with this release. OVN-Kubernetes is the default networking solution for single-node OpenShift deployments.</p>
+<p>Support for deploying single-node Openshift clusters with OpenShiftSDN has been removed with this release. OVN-Kubernetes is the default networking solution for single-node Openshift deployments.</p>
 </div>
 </div>
 </div>
@@ -34092,6 +34148,12 @@ With this update, the <code>tunbr</code> interface is now included in the list o
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Heterogeneous Clusters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hyperthreading-aware CPU manager policy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
@@ -34182,7 +34244,7 @@ With this update, the <code>tunbr</code> interface is now included in the list o
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Java-based Operator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java-based Operator SDK</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TP</p></td>
@@ -34307,6 +34369,9 @@ No workaround exists for this issue.
 </li>
 <li>
 <p>There is currently a known issue in the <strong>Add Helm Chart Repositories</strong> form to extend the Developer Catalog of a project. The <strong>Quick Start</strong> guides shows that you can add the <code>ProjectHelmChartRepository</code> CR in the desired namespace whereas it does not mention that to perform this you need permission from the kubeadmin. (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=2054197">BZ#2054197</a>)</p>
+</li>
+<li>
+<p>There is currently a known issue. If you create an instance of <code>ProjectHelmChartRepository</code> custom resource (CR) that uses TLS verification, you cannot list the repositories and perform Helm-related operations. There is currently no workaround for this issue. (<a href="https://issues.redhat.com/browse/HELM-343"><strong>HELM-343</strong></a>)</p>
 </li>
 </ul>
 </div>

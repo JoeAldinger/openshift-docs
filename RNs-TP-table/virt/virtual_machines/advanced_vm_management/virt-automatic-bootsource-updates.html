@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../../../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../../../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31581,7 +31631,9 @@
 <li><a href="#virt-enabling-bootsource-update_virt-automatic-bootsource-updates">Enabling automatic boot source updates</a></li>
 <li><a href="#virt-disabling-bootsource-update_virt-automatic-bootsource-updates">Disabling automatic boot source updates</a></li>
 <li><a href="#virt-reenabling-bootsource-update_virt-automatic-bootsource-updates">Re-enabling automatic boot source updates</a></li>
+<li><a href="#virt-configuring-storage-class-bootsource-update_virt-automatic-bootsource-updates">Configuring a storage class for custom boot source updates</a></li>
 <li><a href="#virt-autoupdate-custom-bootsource_virt-automatic-bootsource-updates">Enabling automatic updates on custom boot sources</a></li>
+<li><a href="#virt-disable-individual-bootsource-update_virt-automatic-bootsource-updates">Disabling an automatic update for a custom boot source</a></li>
 </ul>
 </div>
 <div class="paragraph">
@@ -31667,6 +31719,59 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="virt-configuring-storage-class-bootsource-update_virt-automatic-bootsource-updates"><a class="anchor" href="#virt-configuring-storage-class-bootsource-update_virt-automatic-bootsource-updates"></a>Configuring a storage class for custom boot source updates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You must configure a storage class that allows automatic updating for custom boot sources.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Choose the appropriate method to configure a storage class:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit the <code>HyperConverged</code> custom resource (CR) and define a <code>storageClassName</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">hco.kubevirt.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">HyperConverged</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">kubevirt-hyperconverged</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">dataImportCronTemplates</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">rhel8-image-cron</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">template</span><span class="pi">:</span>
+        <span class="na">spec</span><span class="pi">:</span>
+          <span class="na">storageClassName</span><span class="pi">:</span> <span class="s">&lt;storage_class_name&gt;</span>
+<span class="nn">...</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set a default storage class by running the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">oc patch storageclass &lt;current_default_storage_class&gt;</span><span class="w"> </span><span class="nt">-p</span> <span class="s1">'{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">oc patch storageclass &lt;appropriate_storage_class&gt;</span><span class="w"> </span><span class="nt">-p</span> <span class="s1">'{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'</span></code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="virt-autoupdate-custom-bootsource_virt-automatic-bootsource-updates"><a class="anchor" href="#virt-autoupdate-custom-bootsource_virt-automatic-bootsource-updates"></a>Enabling automatic updates on custom boot sources</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -31739,6 +31844,37 @@
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="virt-disable-individual-bootsource-update_virt-automatic-bootsource-updates"><a class="anchor" href="#virt-disable-individual-bootsource-update_virt-automatic-bootsource-updates"></a>Disabling an automatic update for a custom boot source</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can reduce the number of logs on disconnected environments or reduce resource usage by disabling the automatic imports and updates for an individual custom boot source.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Edit the <code>HyperConverged</code> custom resource (CR) and disable updates for a custom boot source by setting the <code>dataimportcrontemplate.kubevirt.io/enable</code> annotation in the CR to <code>false</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">hco.kubevirt.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">HyperConverged</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">kubevirt-hyperconverged</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">dataImportCronTemplates</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">annotations</span><span class="pi">:</span>
+        <span class="s">dataimportcrontemplate.kubevirt.io/enable</span><span class="pi">:</span> <span class="no">false</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">rhel8-image-cron</span>
+<span class="nn">...</span></code></pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>

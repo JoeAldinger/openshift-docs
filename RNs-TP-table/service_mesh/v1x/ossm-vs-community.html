@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31640,7 +31690,7 @@
 <div class="sect2">
 <h3 id="ossm-mt-vs-clusterwide_ossm-vs-istio-v1x"><a class="anchor" href="#ossm-mt-vs-clusterwide_ossm-vs-istio-v1x"></a>Multitenancy versus cluster-wide installations</h3>
 <div class="paragraph">
-<p>The main difference between a multitenant installation and a cluster-wide installation is the scope of privileges used by the control plane deployments, for example, Galley and Pilot. The components no longer use cluster-scoped Role Based Access Control (RBAC) resource <code>ClusterRoleBinding</code>.</p>
+<p>The main difference between a multitenant installation and a cluster-wide installation is the scope of privileges used by istod. The components no longer use cluster-scoped Role Based Access Control (RBAC) resource <code>ClusterRoleBinding</code>.</p>
 </div>
 <div class="paragraph">
 <p>Every project in the <code>ServiceMeshMemberRoll</code> <code>members</code> list will have a <code>RoleBinding</code> for each service account associated with the control plane deployment and each control plane deployment will only watch those member projects. Each member project has a <code>maistra.io/member-of</code> label added to it, where the <code>member-of</code> value is the project containing the control plane installation.</p>

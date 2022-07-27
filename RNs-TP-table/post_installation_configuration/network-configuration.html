@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31626,6 +31676,7 @@
 <li><a href="#installation-osp-kuryr-port-pools_post-install-network-configuration">Kuryr ports pools</a></li>
 <li><a href="#installation-osp-kuryr-settings-active_post-install-network-configuration">Adjusting Kuryr ports pool settings in active deployments on RHOSP</a></li>
 <li><a href="#nw-osp-enabling-ovs-offload_post-install-network-configuration">Enabling OVS hardware offloading</a></li>
+<li><a href="#nw-osp-hardware-offload-attaching-network_post-install-network-configuration">Attaching an OVS hardware offloading network</a></li>
 </ul>
 </li>
 </ul>
@@ -33576,29 +33627,6 @@ of 1 second, which is too short for the kubelet&#8217;s probes to succeed in som
 </div>
 <div class="sect2">
 <h3 id="nw-osp-enabling-ovs-offload_post-install-network-configuration"><a class="anchor" href="#nw-osp-enabling-ovs-offload_post-install-network-configuration"></a>Enabling OVS hardware offloading</h3>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>OVS hardware offloading is a Technology Preview feature only. Technology Preview features
-are not supported with Red Hat production service level agreements (SLAs) and
-might not be functionally complete. Red Hat does not recommend using them
-in production. These features provide early access to upcoming product
-features, enabling customers to test functionality and provide feedback during
-the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview
-features, see <a href="https://access.redhat.com/support/offerings/techpreview/" class="bare">https://access.redhat.com/support/offerings/techpreview/</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>For clusters that run on Red Hat OpenStack Platform (RHOSP), you can enable <a href="https://www.openvswitch.org/">Open vSwitch (OVS)</a> hardware offloading.</p>
 </div>
@@ -33622,14 +33650,6 @@ features, see <a href="https://access.redhat.com/support/offerings/techpreview/"
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
-<li>
-<p>From a command line, enter the following command to disable the admission webhook:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc patch sriovoperatorconfig default <span class="nt">--type</span><span class="o">=</span>merge <span class="nt">-n</span> openshift-sriov-network-operator <span class="nt">--patch</span> <span class="s1">'{ "spec": { "enableOperatorWebhook": false } }'</span></code></pre>
-</div>
-</div>
-</li>
 <li>
 <p>Create an <code>SriovNetworkNodePolicy</code> policy for the two <code>hw-offload</code> type VF interfaces that are on your cluster:</p>
 <div class="listingblock">
@@ -33745,21 +33765,72 @@ features, see <a href="https://access.redhat.com/support/offerings/techpreview/"
   <span class="na">annotations</span><span class="pi">:</span>
     <span class="s">irq-load-balancing.crio.io</span><span class="pi">:</span> <span class="s">disable</span>
     <span class="s">cpu-quota.crio.io</span><span class="pi">:</span> <span class="s">disable</span>
-    <span class="s">k8s.v1.cni.cncf.io/networks</span><span class="pi">:</span> <span class="s1">'</span><span class="s">[</span>
-      <span class="s">{</span>
-       <span class="s">"name":</span><span class="nv"> </span><span class="s">"hwoffload9",</span>
-       <span class="s">"namespace":</span><span class="nv"> </span><span class="s">"default"</span>
-      <span class="s">},</span>
-      <span class="s">{</span>
-       <span class="s">"name":</span><span class="nv"> </span><span class="s">"hwoffload10",</span>
-       <span class="s">"namespace":</span><span class="nv"> </span><span class="s">"default"</span>
-      <span class="s">}</span>
-    <span class="s">]'</span>
+    <span class="s">k8s.v1.cni.cncf.io/resourceName</span><span class="pi">:</span> <span class="s">openshift.io/hwoffload9</span>
+    <span class="s">k8s.v1.cni.cncf.io/resourceName</span><span class="pi">:</span> <span class="s">openshift.io/hwoffload10</span>
 <span class="na">spec</span><span class="pi">:</span>
   <span class="na">restartPolicy</span><span class="pi">:</span> <span class="s">Never</span>
   <span class="na">containers</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">dpdk-testpmd</span>
     <span class="na">image</span><span class="pi">:</span> <span class="s">quay.io/krister/centos8_nfv-container-dpdk-testpmd:latest</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="nw-osp-hardware-offload-attaching-network_post-install-network-configuration"><a class="anchor" href="#nw-osp-hardware-offload-attaching-network_post-install-network-configuration"></a>Attaching an OVS hardware offloading network</h3>
+<div class="paragraph">
+<p>You can attach an Open vSwitch (OVS) hardware offloading network to your cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Your cluster is installed and running.</p>
+</li>
+<li>
+<p>You provisioned an OVS hardware offloading network on Red Hat OpenStack Platform (RHOSP) to use with your cluster.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a file named <code>network.yaml</code> from the following template:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">spec</span><span class="pi">:</span>
+  <span class="na">additionalNetworks</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">hwoffload1</span>
+    <span class="na">namespace</span><span class="pi">:</span> <span class="s">cnf</span>
+    <span class="na">rawCNIConfig</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{</span><span class="nv"> </span><span class="s">"cniVersion":</span><span class="nv"> </span><span class="s">"0.3.1",</span><span class="nv"> </span><span class="s">"name":</span><span class="nv"> </span><span class="s">"hwoffload1",</span><span class="nv"> </span><span class="s">"type":</span><span class="nv"> </span><span class="s">"host-device","pciBusId":</span><span class="nv"> </span><span class="s">"0000:00:05.0",</span><span class="nv"> </span><span class="s">"ipam":</span><span class="nv"> </span><span class="s">{}}'</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">Raw</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>pciBusId</code></dt>
+<dd>
+<p>Specifies the device that is connected to the offloading network. If you do not have it, you can find this value by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc describe SriovNetworkNodeState <span class="nt">-n</span> openshift-sriov-network-operator</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>From a command line, enter the following command to patch your cluster with the file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc apply <span class="nt">-f</span> network.yaml</code></pre>
 </div>
 </div>
 </li>

@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31568,7 +31618,7 @@
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
-            Workload partitioning on single-node OpenShift
+            Workload partitioning on single-node Openshift
           </h1>
         </div>
         
@@ -31582,7 +31632,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>In resource-constrained environments, such as single-node OpenShift deployments, it is advantageous to reserve most of the CPU resources for your own workloads and configure OpenShift Container Platform to run on a fixed number of CPUs within the host. In these environments, management workloads, including the control plane, need to be configured to use fewer resources than they might by default in normal clusters. You can isolate the OpenShift Container Platform services, cluster management workloads, and infrastructure pods to run on a reserved set of CPUs.</p>
+<p>In resource-constrained environments, such as single-node Openshift deployments, it is advantageous to reserve most of the CPU resources for your own workloads and configure OpenShift Container Platform to run on a fixed number of CPUs within the host. In these environments, management workloads, including the control plane, need to be configured to use fewer resources than they might by default in normal clusters. You can isolate the OpenShift Container Platform services, cluster management workloads, and infrastructure pods to run on a reserved set of CPUs.</p>
 </div>
 <div class="paragraph">
 <p>When you use workload partitioning, the CPU resources used by OpenShift Container Platform for cluster management are isolated to a partitioned set of CPU resources on a single-node cluster. This partitioning isolates cluster management functions to the defined number of CPUs. All cluster management functions operate solely on that <code>cpuset</code> configuration.</p>
@@ -31619,7 +31669,7 @@ for each defined CPU pool, or workload-type. Kubelet advertises these new resour
 <h2 id="sno-du-enabling-workload-partitioning_sno-du-enabling-workload-partitioning-on-single-node-openshift"><a class="anchor" href="#sno-du-enabling-workload-partitioning_sno-du-enabling-workload-partitioning-on-single-node-openshift"></a>Enabling workload partitioning</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A key feature to enable as part of a single-node OpenShift installation is workload partitioning. This limits the cores allowed to run platform services, maximizing the CPU core for application payloads. You must configure workload partitioning at cluster installation time.</p>
+<p>A key feature to enable as part of a single-node Openshift installation is workload partitioning. This limits the cores allowed to run platform services, maximizing the CPU core for application payloads. You must configure workload partitioning at cluster installation time.</p>
 </div>
 <div class="admonitionblock note">
 <table>

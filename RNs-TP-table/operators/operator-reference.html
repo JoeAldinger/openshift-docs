@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31578,6 +31628,7 @@
 <div id="toc" class="toc">
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
+<li><a href="#baremetal-event-relay_platform-operators-ref">Bare Metal Event Relay</a></li>
 <li><a href="#cloud-credential-operator_platform-operators-ref">Cloud Credential Operator</a></li>
 <li><a href="#cluster-authentication-operator_platform-operators-ref">Cluster Authentication Operator</a></li>
 <li><a href="#cluster-autoscaler-operator_platform-operators-ref">Cluster Autoscaler Operator</a></li>
@@ -31634,16 +31685,78 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="cloud-credential-operator_platform-operators-ref"><a class="anchor" href="#cloud-credential-operator_platform-operators-ref"></a>Cloud Credential Operator</h2>
+<h2 id="baremetal-event-relay_platform-operators-ref"><a class="anchor" href="#baremetal-event-relay_platform-operators-ref"></a>Bare Metal Event Relay</h2>
 <div class="sectionbody">
 <h3 id="purpose" class="discrete">Purpose</h3>
+<div class="paragraph">
+<p>The OpenShift Bare Metal Event Relay manages the life-cycle of the Bare Metal Event Relay. The Bare Metal Event Relay enables you to configure the types of cluster event that are monitored using Redfish hardware events.</p>
+</div>
+<h3 id="configuration-objects" class="discrete">Configuration Objects</h3>
+<div class="paragraph">
+<p>You can use this command to edit the configuration after installation: for example, the webhook port.
+You can edit configuration objects with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> <span class="o">[</span>namespace] edit cm hw-event-proxy-operator-manager-config</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">apiVersion: controller-runtime.sigs.k8s.io/v1alpha1
+kind: ControllerManagerConfig
+health:
+  healthProbeBindAddress: :8081
+metrics:
+  bindAddress: 127.0.0.1:8080
+webhook:
+  port: 9443
+leaderElection:
+  leaderElect: true
+  resourceName: 6e7a703c.redhat-cne.org</span></code></pre>
+</div>
+</div>
+<h3 id="project" class="discrete">Project</h3>
+<div class="paragraph">
+<p><a href="https://github.com/redhat-cne/hw-event-proxy-operator">hw-event-proxy-operator</a></p>
+</div>
+<h3 id="crd" class="discrete">CRD</h3>
+<div class="paragraph">
+<p>The proxy enables applications running on bare-metal clusters to respond quickly to Redfish hardware changes and failures such as breaches of temperature thresholds, fan failure, disk loss, power outages, and memory failure, reported using the HardwareEvent CR.</p>
+</div>
+<div class="paragraph">
+<p><code>hardwareevents.event.redhat-cne.org</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scope: Namespaced</p>
+</li>
+<li>
+<p>CR: HardwareEvent</p>
+</li>
+<li>
+<p>Validation: Yes</p>
+</li>
+</ul>
+</div>
+<h3 id="additional-resources" class="discrete">Additional Resources</h3>
+<div class="paragraph">
+<p>You can learn more in the topic <a href="../monitoring/using-rfhe.html">Monitoring Redfish hardware events</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-credential-operator_platform-operators-ref"><a class="anchor" href="#cloud-credential-operator_platform-operators-ref"></a>Cloud Credential Operator</h2>
+<div class="sectionbody">
+<h3 id="purpose-2" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cloud Credential Operator (CCO) manages cloud provider credentials as Kubernetes custom resource definitions (CRDs). The CCO syncs on <code>CredentialsRequest</code> custom resources (CRs) to allow OpenShift Container Platform components to request cloud provider credentials with the specific permissions that are required for the cluster to run.</p>
 </div>
 <div class="paragraph">
 <p>By setting different values for the <code>credentialsMode</code> parameter in the <code>install-config.yaml</code> file, the CCO can be configured to operate in several different modes. If no mode is specified, or the <code>credentialsMode</code> parameter is set to an empty string (<code>""</code>), the CCO operates in its default mode.</p>
 </div>
-<h3 id="project" class="discrete">Project</h3>
+<h3 id="project-2" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cloud-credential-operator">openshift-cloud-credential-operator</a></p>
 </div>
@@ -31668,7 +31781,7 @@
 </li>
 </ul>
 </div>
-<h3 id="configuration-objects" class="discrete">Configuration objects</h3>
+<h3 id="configuration-objects-2" class="discrete">Configuration objects</h3>
 <div class="paragraph">
 <p>No configuration required.</p>
 </div>
@@ -31688,7 +31801,7 @@
 <div class="sect1">
 <h2 id="cluster-authentication-operator_platform-operators-ref"><a class="anchor" href="#cluster-authentication-operator_platform-operators-ref"></a>Cluster Authentication Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-2" class="discrete">Purpose</h3>
+<h3 id="purpose-3" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Authentication Operator installs and maintains the <code>Authentication</code> custom resource in a cluster and can be viewed with:</p>
 </div>
@@ -31697,7 +31810,7 @@
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get clusteroperator authentication <span class="nt">-o</span> yaml</code></pre>
 </div>
 </div>
-<h3 id="project-2" class="discrete">Project</h3>
+<h3 id="project-3" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-authentication-operator">cluster-authentication-operator</a></p>
 </div>
@@ -31706,11 +31819,11 @@
 <div class="sect1">
 <h2 id="cluster-autoscaler-operator_platform-operators-ref"><a class="anchor" href="#cluster-autoscaler-operator_platform-operators-ref"></a>Cluster Autoscaler Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-3" class="discrete">Purpose</h3>
+<h3 id="purpose-4" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Autoscaler Operator manages deployments of the OpenShift Cluster Autoscaler using the <code>cluster-api</code> provider.</p>
 </div>
-<h3 id="project-3" class="discrete">Project</h3>
+<h3 id="project-4" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-autoscaler-operator">cluster-autoscaler-operator</a></p>
 </div>
@@ -31730,7 +31843,7 @@
 <div class="sect1">
 <h2 id="cluster-cloud-controller-manager-operator_platform-operators-ref"><a class="anchor" href="#cluster-cloud-controller-manager-operator_platform-operators-ref"></a>Cluster Cloud Controller Manager Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-4" class="discrete">Purpose</h3>
+<h3 id="purpose-5" class="discrete">Purpose</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -31767,7 +31880,7 @@
 <div class="paragraph">
 <p>By default, the Operator exposes Prometheus metrics through the <code>metrics</code> service.</p>
 </div>
-<h3 id="project-4" class="discrete">Project</h3>
+<h3 id="project-5" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-cloud-controller-manager-operator">cluster-cloud-controller-manager-operator</a></p>
 </div>
@@ -31776,7 +31889,7 @@
 <div class="sect1">
 <h2 id="cluster-config-operator_platform-operators-ref"><a class="anchor" href="#cluster-config-operator_platform-operators-ref"></a>Cluster Config Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-5" class="discrete">Purpose</h3>
+<h3 id="purpose-6" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Config Operator performs the following tasks related to <code>config.openshift.io</code>:</p>
 </div>
@@ -31793,7 +31906,7 @@
 </li>
 </ul>
 </div>
-<h3 id="project-5" class="discrete">Project</h3>
+<h3 id="project-6" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-config-operator">cluster-config-operator</a></p>
 </div>
@@ -31802,11 +31915,11 @@
 <div class="sect1">
 <h2 id="cluster-csi-snapshot-controller-operator_platform-operators-ref"><a class="anchor" href="#cluster-csi-snapshot-controller-operator_platform-operators-ref"></a>Cluster CSI Snapshot Controller Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-6" class="discrete">Purpose</h3>
+<h3 id="purpose-7" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster CSI Snapshot Controller Operator installs and maintains the CSI Snapshot Controller. The CSI Snapshot Controller is responsible for watching the <code>VolumeSnapshot</code> CRD objects and manages the creation and deletion lifecycle of volume snapshots.</p>
 </div>
-<h3 id="project-6" class="discrete">Project</h3>
+<h3 id="project-7" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-csi-snapshot-controller-operator">cluster-csi-snapshot-controller-operator</a></p>
 </div>
@@ -31815,7 +31928,7 @@
 <div class="sect1">
 <h2 id="cluster-image-registry-operator_platform-operators-ref"><a class="anchor" href="#cluster-image-registry-operator_platform-operators-ref"></a>Cluster Image Registry Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-7" class="discrete">Purpose</h3>
+<h3 id="purpose-8" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Image Registry Operator manages a singleton instance of the OpenShift Container Platform registry. It manages all configuration of the registry, including creating storage.</p>
 </div>
@@ -31828,7 +31941,7 @@
 <div class="paragraph">
 <p>The Cluster Image Registry Operator runs in the <code>openshift-image-registry</code> namespace and it also manages the registry instance in that location. All configuration and workload resources for the registry reside in that namespace.</p>
 </div>
-<h3 id="project-7" class="discrete">Project</h3>
+<h3 id="project-8" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-image-registry-operator">cluster-image-registry-operator</a></p>
 </div>
@@ -31837,7 +31950,7 @@
 <div class="sect1">
 <h2 id="cluster-machine-approver-operator_platform-operators-ref"><a class="anchor" href="#cluster-machine-approver-operator_platform-operators-ref"></a>Cluster Machine Approver Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-8" class="discrete">Purpose</h3>
+<h3 id="purpose-9" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Machine Approver Operator automatically approves the CSRs requested for a new worker node after cluster installation.</p>
 </div>
@@ -31855,7 +31968,7 @@
 </tr>
 </table>
 </div>
-<h3 id="project-8" class="discrete">Project</h3>
+<h3 id="project-9" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-machine-approver">cluster-machine-approver-operator</a></p>
 </div>
@@ -31864,11 +31977,11 @@
 <div class="sect1">
 <h2 id="cluster-monitoring-operator_platform-operators-ref"><a class="anchor" href="#cluster-monitoring-operator_platform-operators-ref"></a>Cluster Monitoring Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-9" class="discrete">Purpose</h3>
+<h3 id="purpose-10" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Monitoring Operator manages and updates the Prometheus-based cluster monitoring stack deployed on top of OpenShift Container Platform.</p>
 </div>
-<h3 id="project-9" class="discrete">Project</h3>
+<h3 id="project-10" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-monitoring-operator">openshift-monitoring</a></p>
 </div>
@@ -31941,7 +32054,7 @@
 </li>
 </ul>
 </div>
-<h3 id="configuration-objects-2" class="discrete">Configuration objects</h3>
+<h3 id="configuration-objects-3" class="discrete">Configuration objects</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> openshift-monitoring edit cm cluster-monitoring-config</code></pre>
@@ -31952,7 +32065,7 @@
 <div class="sect1">
 <h2 id="cluster-network-operator_platform-operators-ref"><a class="anchor" href="#cluster-network-operator_platform-operators-ref"></a>Cluster Network Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-10" class="discrete">Purpose</h3>
+<h3 id="purpose-11" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Network Operator installs and upgrades the networking components on an OpenShift Container Platform cluster.</p>
 </div>
@@ -31961,7 +32074,7 @@
 <div class="sect1">
 <h2 id="cluster-samples-operator_platform-operators-ref"><a class="anchor" href="#cluster-samples-operator_platform-operators-ref"></a>Cluster Samples Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-11" class="discrete">Purpose</h3>
+<h3 id="purpose-12" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Samples Operator manages the sample image streams and templates stored in the <code>openshift</code> namespace.</p>
 </div>
@@ -32002,7 +32115,7 @@
 <div class="paragraph">
 <p>Upon deletion of the samples resource, the Cluster Samples Operator recreates the resource using the default configuration.</p>
 </div>
-<h3 id="project-10" class="discrete">Project</h3>
+<h3 id="project-11" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-samples-operator">cluster-samples-operator</a></p>
 </div>
@@ -32011,11 +32124,11 @@
 <div class="sect1">
 <h2 id="cluster-storage-operator_platform-operators-ref"><a class="anchor" href="#cluster-storage-operator_platform-operators-ref"></a>Cluster Storage Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-12" class="discrete">Purpose</h3>
+<h3 id="purpose-13" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Cluster Storage Operator sets OpenShift Container Platform cluster-wide storage defaults. It ensures a default storage class exists for OpenShift Container Platform clusters.</p>
 </div>
-<h3 id="project-11" class="discrete">Project</h3>
+<h3 id="project-12" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-storage-operator">cluster-storage-operator</a></p>
 </div>
@@ -32039,8 +32152,8 @@
 <div class="sect1">
 <h2 id="cluster-version-operator_platform-operators-ref"><a class="anchor" href="#cluster-version-operator_platform-operators-ref"></a>Cluster Version Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-13" class="discrete">Purpose</h3>
-<h3 id="project-12" class="discrete">Project</h3>
+<h3 id="purpose-14" class="discrete">Purpose</h3>
+<h3 id="project-13" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-version-operator">cluster-version-operator</a></p>
 </div>
@@ -32049,11 +32162,11 @@
 <div class="sect1">
 <h2 id="console-operator_platform-operators-ref"><a class="anchor" href="#console-operator_platform-operators-ref"></a>Console Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-14" class="discrete">Purpose</h3>
+<h3 id="purpose-15" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Console Operator installs and maintains the OpenShift Container Platform web console on a cluster.</p>
 </div>
-<h3 id="project-13" class="discrete">Project</h3>
+<h3 id="project-14" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/console-operator">console-operator</a></p>
 </div>
@@ -32062,7 +32175,7 @@
 <div class="sect1">
 <h2 id="dns-operator_platform-operators-ref"><a class="anchor" href="#dns-operator_platform-operators-ref"></a>DNS Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-15" class="discrete">Purpose</h3>
+<h3 id="purpose-16" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The DNS Operator deploys and manages CoreDNS to provide a name resolution service to pods that enables DNS-based Kubernetes Service discovery in OpenShift Container Platform.</p>
 </div>
@@ -32082,7 +32195,7 @@
 <div class="paragraph">
 <p>The DNS Operator manages CoreDNS as a Kubernetes daemon set exposed as a service with a static IP. CoreDNS runs on all nodes in the cluster.</p>
 </div>
-<h3 id="project-14" class="discrete">Project</h3>
+<h3 id="project-15" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-dns-operator">cluster-dns-operator</a></p>
 </div>
@@ -32091,11 +32204,11 @@
 <div class="sect1">
 <h2 id="etcd-cluster-operator_platform-operators-ref"><a class="anchor" href="#etcd-cluster-operator_platform-operators-ref"></a>etcd cluster Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-16" class="discrete">Purpose</h3>
+<h3 id="purpose-17" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The etcd cluster Operator automates etcd cluster scaling, enables etcd monitoring and metrics, and simplifies disaster recovery procedures.</p>
 </div>
-<h3 id="project-15" class="discrete">Project</h3>
+<h3 id="project-16" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-etcd-operator/">cluster-etcd-operator</a></p>
 </div>
@@ -32120,7 +32233,7 @@
 </li>
 </ul>
 </div>
-<h3 id="configuration-objects-3" class="discrete">Configuration objects</h3>
+<h3 id="configuration-objects-4" class="discrete">Configuration objects</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc edit etcd cluster</code></pre>
@@ -32131,11 +32244,11 @@
 <div class="sect1">
 <h2 id="ingress-operator_platform-operators-ref"><a class="anchor" href="#ingress-operator_platform-operators-ref"></a>Ingress Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-17" class="discrete">Purpose</h3>
+<h3 id="purpose-18" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Ingress Operator configures and manages the OpenShift Container Platform router.</p>
 </div>
-<h3 id="project-16" class="discrete">Project</h3>
+<h3 id="project-17" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-ingress-operator">openshift-ingress-operator</a></p>
 </div>
@@ -32160,7 +32273,7 @@
 </li>
 </ul>
 </div>
-<h3 id="configuration-objects-4" class="discrete">Configuration objects</h3>
+<h3 id="configuration-objects-5" class="discrete">Configuration objects</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -32217,11 +32330,11 @@
 <div class="sect1">
 <h2 id="insights-operator_platform-operators-ref"><a class="anchor" href="#insights-operator_platform-operators-ref"></a>Insights Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-18" class="discrete">Purpose</h3>
+<h3 id="purpose-19" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Insights Operator gathers OpenShift Container Platform configuration data and sends it to Red Hat. The data is used to produce proactive insights recommendations about potential issues that a cluster might be exposed to. These insights are communicated to cluster administrators through Insights Advisor on <a href="https://console.redhat.com/">console.redhat.com</a>.</p>
 </div>
-<h3 id="project-17" class="discrete">Project</h3>
+<h3 id="project-18" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/insights-operator">insights-operator</a></p>
 </div>
@@ -32246,11 +32359,11 @@
 <div class="sect1">
 <h2 id="kube-apiserver-operator_platform-operators-ref"><a class="anchor" href="#kube-apiserver-operator_platform-operators-ref"></a>Kubernetes API Server Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-19" class="discrete">Purpose</h3>
+<h3 id="purpose-20" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Kubernetes API Server Operator manages and updates the Kubernetes API server deployed on top of OpenShift Container Platform. The Operator is based on the OpenShift Container Platform <code>library-go</code> framework and it is installed using the Cluster Version Operator (CVO).</p>
 </div>
-<h3 id="project-18" class="discrete">Project</h3>
+<h3 id="project-19" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-kube-apiserver-operator">openshift-kube-apiserver-operator</a></p>
 </div>
@@ -32275,7 +32388,7 @@
 </li>
 </ul>
 </div>
-<h3 id="configuration-objects-5" class="discrete">Configuration objects</h3>
+<h3 id="configuration-objects-6" class="discrete">Configuration objects</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc edit kubeapiserver</code></pre>
@@ -32286,7 +32399,7 @@
 <div class="sect1">
 <h2 id="kube-controller-manager-operator_platform-operators-ref"><a class="anchor" href="#kube-controller-manager-operator_platform-operators-ref"></a>Kubernetes Controller Manager Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-20" class="discrete">Purpose</h3>
+<h3 id="purpose-21" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Kubernetes Controller Manager Operator manages and updates the Kubernetes Controller Manager deployed on top of OpenShift Container Platform. The Operator is based on OpenShift Container Platform <code>library-go</code> framework and it is installed via the Cluster Version Operator (CVO).</p>
 </div>
@@ -32312,7 +32425,7 @@
 <div class="paragraph">
 <p>By default, the Operator exposes Prometheus metrics through the <code>metrics</code> service.</p>
 </div>
-<h3 id="project-19" class="discrete">Project</h3>
+<h3 id="project-20" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-kube-controller-manager-operator">cluster-kube-controller-manager-operator</a></p>
 </div>
@@ -32321,7 +32434,7 @@
 <div class="sect1">
 <h2 id="cluster-kube-scheduler-operator_platform-operators-ref"><a class="anchor" href="#cluster-kube-scheduler-operator_platform-operators-ref"></a>Kubernetes Scheduler Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-21" class="discrete">Purpose</h3>
+<h3 id="purpose-22" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Kubernetes Scheduler Operator manages and updates the Kubernetes Scheduler deployed on top of OpenShift Container Platform. The Operator is based on the OpenShift Container Platform <code>library-go</code> framework and it is installed with the Cluster Version Operator (CVO).</p>
 </div>
@@ -32347,7 +32460,7 @@
 <div class="paragraph">
 <p>By default, the Operator exposes Prometheus metrics through the metrics service.</p>
 </div>
-<h3 id="project-20" class="discrete">Project</h3>
+<h3 id="project-21" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-kube-scheduler-operator">cluster-kube-scheduler-operator</a></p>
 </div>
@@ -32373,11 +32486,11 @@
 <div class="sect1">
 <h2 id="cluster-kube-storage-version-migrator-operator_platform-operators-ref"><a class="anchor" href="#cluster-kube-storage-version-migrator-operator_platform-operators-ref"></a>Kubernetes Storage Version Migrator Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-22" class="discrete">Purpose</h3>
+<h3 id="purpose-23" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Kubernetes Storage Version Migrator Operator detects changes of the default storage version, creates migration requests for resource types when the storage version changes, and processes migration requests.</p>
 </div>
-<h3 id="project-21" class="discrete">Project</h3>
+<h3 id="project-22" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-kube-storage-version-migrator-operator">cluster-kube-storage-version-migrator-operator</a></p>
 </div>
@@ -32386,11 +32499,11 @@
 <div class="sect1">
 <h2 id="machine-api-operator_platform-operators-ref"><a class="anchor" href="#machine-api-operator_platform-operators-ref"></a>Machine API Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-23" class="discrete">Purpose</h3>
+<h3 id="purpose-24" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Machine API Operator manages the lifecycle of specific purpose custom resource definitions (CRD), controllers, and RBAC objects that extend the Kubernetes API. This declares the desired state of machines in a cluster.</p>
 </div>
-<h3 id="project-22" class="discrete">Project</h3>
+<h3 id="project-23" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/machine-api-operator">machine-api-operator</a></p>
 </div>
@@ -32413,7 +32526,7 @@
 <div class="sect1">
 <h2 id="machine-config-operator_platform-operators-ref"><a class="anchor" href="#machine-config-operator_platform-operators-ref"></a>Machine Config Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-24" class="discrete">Purpose</h3>
+<h3 id="purpose-25" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Machine Config Operator manages and applies configuration and updates of the base operating system and container runtime, including everything between the kernel and kubelet.</p>
 </div>
@@ -32436,7 +32549,7 @@
 </li>
 </ul>
 </div>
-<h3 id="project-23" class="discrete">Project</h3>
+<h3 id="project-24" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/machine-config-operator">openshift-machine-config-operator</a></p>
 </div>
@@ -32445,11 +32558,11 @@
 <div class="sect1">
 <h2 id="marketplace-operator_platform-operators-ref"><a class="anchor" href="#marketplace-operator_platform-operators-ref"></a>Marketplace Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-25" class="discrete">Purpose</h3>
+<h3 id="purpose-26" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Marketplace Operator is a conduit to bring off-cluster Operators to your cluster.</p>
 </div>
-<h3 id="project-24" class="discrete">Project</h3>
+<h3 id="project-25" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/operator-framework/operator-marketplace">operator-marketplace</a></p>
 </div>
@@ -32458,7 +32571,7 @@
 <div class="sect1">
 <h2 id="about-node-tuning-operator_platform-operators-ref"><a class="anchor" href="#about-node-tuning-operator_platform-operators-ref"></a>Node Tuning Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-26" class="discrete">Purpose</h3>
+<h3 id="purpose-27" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The Node Tuning Operator helps you manage node-level tuning by orchestrating the TuneD daemon and achieves low latency performance by using the Performance Profile controller. The majority of high-performance applications require some level of kernel tuning. The Node Tuning Operator provides a unified management interface to users of node-level sysctls and more flexibility to add custom tuning specified by user needs.</p>
 </div>
@@ -32501,7 +32614,7 @@
 </tr>
 </table>
 </div>
-<h3 id="project-25" class="discrete">Project</h3>
+<h3 id="project-26" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-node-tuning-operator">cluster-node-tuning-operator</a></p>
 </div>
@@ -32518,11 +32631,11 @@
 <div class="sect1">
 <h2 id="openshift-apiserver-operator_platform-operators-ref"><a class="anchor" href="#openshift-apiserver-operator_platform-operators-ref"></a>OpenShift API Server Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-27" class="discrete">Purpose</h3>
+<h3 id="purpose-28" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The OpenShift API Server Operator installs and maintains the <code>openshift-apiserver</code> on a cluster.</p>
 </div>
-<h3 id="project-26" class="discrete">Project</h3>
+<h3 id="project-27" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-openshift-apiserver-operator">openshift-apiserver-operator</a></p>
 </div>
@@ -32552,7 +32665,7 @@
 <div class="sect1">
 <h2 id="cluster-openshift-controller-manager-operator_platform-operators-ref"><a class="anchor" href="#cluster-openshift-controller-manager-operator_platform-operators-ref"></a>OpenShift Controller Manager Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-28" class="discrete">Purpose</h3>
+<h3 id="purpose-29" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The OpenShift Controller Manager Operator installs and maintains the <code>OpenShiftControllerManager</code> custom resource in a cluster and can be viewed with:</p>
 </div>
@@ -32569,7 +32682,7 @@
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get crd openshiftcontrollermanagers.operator.openshift.io <span class="nt">-o</span> yaml</code></pre>
 </div>
 </div>
-<h3 id="project-27" class="discrete">Project</h3>
+<h3 id="project-28" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/cluster-openshift-controller-manager-operator">cluster-openshift-controller-manager-operator</a></p>
 </div>
@@ -32821,11 +32934,11 @@
 <div class="sect1">
 <h2 id="openshift-service-ca-operator_platform-operators-ref"><a class="anchor" href="#openshift-service-ca-operator_platform-operators-ref"></a>OpenShift Service CA Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-29" class="discrete">Purpose</h3>
+<h3 id="purpose-30" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The OpenShift Service CA Operator mints and manages serving certificates for Kubernetes services.</p>
 </div>
-<h3 id="project-28" class="discrete">Project</h3>
+<h3 id="project-29" class="discrete">Project</h3>
 <div class="paragraph">
 <p><a href="https://github.com/openshift/service-ca-operator">openshift-service-ca-operator</a></p>
 </div>
@@ -32834,7 +32947,7 @@
 <div class="sect1">
 <h2 id="vsphere-problem-detector-operator_platform-operators-ref"><a class="anchor" href="#vsphere-problem-detector-operator_platform-operators-ref"></a>vSphere Problem Detector Operator</h2>
 <div class="sectionbody">
-<h3 id="purpose-30" class="discrete">Purpose</h3>
+<h3 id="purpose-31" class="discrete">Purpose</h3>
 <div class="paragraph">
 <p>The vSphere Problem Detector Operator checks clusters that are deployed on vSphere for common installation and misconfiguration issues that are related to storage.</p>
 </div>

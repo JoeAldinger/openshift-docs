@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31568,7 +31618,7 @@
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
-            Adding worker nodes to single-node OpenShift clusters
+            Adding worker nodes to single-node Openshift clusters
           </h1>
         </div>
         
@@ -31578,7 +31628,7 @@
 <div id="toc" class="toc">
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
-<li><a href="#ai-sno-requirements-for-installing-worker-nodes_add-workers">Requirements for installing single-node OpenShift worker nodes</a></li>
+<li><a href="#ai-sno-requirements-for-installing-worker-nodes_add-workers">Requirements for installing single-node Openshift worker nodes</a></li>
 <li><a href="#sno-adding-worker-nodes-to-sno-clusters_add-workers">Adding worker nodes using the Assisted Installer and OpenShift Cluster Manager</a></li>
 <li><a href="#adding-worker-nodes-using-the-assisted-installer-api">Adding worker nodes using the Assisted Installer API</a>
 <ul class="sectlevel2">
@@ -31586,12 +31636,12 @@
 <li><a href="#ai-adding-worker-nodes-to-cluster_add-workers">Adding worker nodes using the Assisted Installer REST API</a></li>
 </ul>
 </li>
-<li><a href="#sno-adding-worker-nodes-to-single-node-clusters-manually_add-workers">Adding worker nodes to single-node OpenShift clusters manually</a></li>
+<li><a href="#sno-adding-worker-nodes-to-single-node-clusters-manually_add-workers">Adding worker nodes to single-node Openshift clusters manually</a></li>
 <li><a href="#installation-approve-csrs_add-workers">Approving the certificate signing requests for your machines</a></li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Single-node OpenShift clusters reduce the host prerequisites for deployment to a single host. This is useful for deployments in constrained environments or at the network edge. However, sometimes you need to add additional capacity to your cluster, for example, in telecommunications and network edge scenarios. In these scenarios, you can add worker nodes to the single-node cluster.</p>
+<p>Single-node Openshift clusters reduce the host prerequisites for deployment to a single host. This is useful for deployments in constrained environments or at the network edge. However, sometimes you need to add additional capacity to your cluster, for example, in telecommunications and network edge scenarios. In these scenarios, you can add worker nodes to the single-node cluster.</p>
 </div>
 <div class="paragraph">
 <p>There are several ways that you can add worker nodes to a single-node cluster. You can add worker nodes to a cluster manually, using <a href="https://console.redhat.com/openshift/assisted-installer/clusters">Red Hat OpenShift Cluster Manager</a>, or by using the Assisted Installer REST API directly.</p>
@@ -31604,7 +31654,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Adding worker nodes does not expand the cluster control plane, and it does not provide high availability to your cluster. For single-node OpenShift clusters, high availability is handled by failing over to another site. It is not recommended to add a large number of worker nodes to a single-node cluster.</p>
+<p>Adding worker nodes does not expand the cluster control plane, and it does not provide high availability to your cluster. For single-node Openshift clusters, high availability is handled by failing over to another site. It is not recommended to add a large number of worker nodes to a single-node cluster.</p>
 </div>
 </td>
 </tr>
@@ -31627,10 +31677,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="ai-sno-requirements-for-installing-worker-nodes_add-workers"><a class="anchor" href="#ai-sno-requirements-for-installing-worker-nodes_add-workers"></a>Requirements for installing single-node OpenShift worker nodes</h2>
+<h2 id="ai-sno-requirements-for-installing-worker-nodes_add-workers"><a class="anchor" href="#ai-sno-requirements-for-installing-worker-nodes_add-workers"></a>Requirements for installing single-node Openshift worker nodes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To install a single-node OpenShift worker node, you must address the following requirements:</p>
+<p>To install a single-node Openshift worker node, you must address the following requirements:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -31638,7 +31688,7 @@
 <p><strong>Administration host:</strong> You must have a computer to prepare the ISO and to monitor the installation.</p>
 </li>
 <li>
-<p><strong>Production-grade server:</strong> Installing single-node OpenShift worker nodes requires a server with sufficient resources to run OpenShift Container Platform services and a production workload.</p>
+<p><strong>Production-grade server:</strong> Installing single-node Openshift worker nodes requires a server with sufficient resources to run OpenShift Container Platform services and a production workload.</p>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Minimum resource requirements</caption>
 <colgroup>
@@ -31686,7 +31736,7 @@
 </div>
 </li>
 <li>
-<p><strong>Networking:</strong> The worker node server must have access to the internet or access to a local registry if it is not connected to a routable network. The worker node server must have a DHCP reservation or a static IP address and be able to access the single-node OpenShift cluster Kubernetes API, ingress route, and cluster node domain names. You must configure the DNS to resolve the IP address to each of the following fully qualified domain names (FQDN) for the single-node OpenShift cluster:</p>
+<p><strong>Networking:</strong> The worker node server must have access to the internet or access to a local registry if it is not connected to a routable network. The worker node server must have a DHCP reservation or a static IP address and be able to access the single-node Openshift cluster Kubernetes API, ingress route, and cluster node domain names. You must configure the DNS to resolve the IP address to each of the following fully qualified domain names (FQDN) for the single-node Openshift cluster:</p>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Required DNS records</caption>
 <colgroup>
@@ -31754,7 +31804,7 @@
 <h2 id="sno-adding-worker-nodes-to-sno-clusters_add-workers"><a class="anchor" href="#sno-adding-worker-nodes-to-sno-clusters_add-workers"></a>Adding worker nodes using the Assisted Installer and OpenShift Cluster Manager</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can add worker nodes to single-node OpenShift clusters that were created on <a href="https://console.redhat.com">Red Hat OpenShift Cluster Manager</a> using the <a href="https://console.redhat.com/openshift/assisted-installer/clusters/~new">Assisted Installer</a>.</p>
+<p>You can add worker nodes to single-node Openshift clusters that were created on <a href="https://console.redhat.com">Red Hat OpenShift Cluster Manager</a> using the <a href="https://console.redhat.com/openshift/assisted-installer/clusters/~new">Assisted Installer</a>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -31764,7 +31814,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Adding worker nodes to single-node OpenShift clusters is only supported for clusters running OpenShift Container Platform version 4.11 and up.</p>
+<p>Adding worker nodes to single-node Openshift clusters is only supported for clusters running OpenShift Container Platform version 4.11 and up.</p>
 </div>
 </td>
 </tr>
@@ -31774,7 +31824,7 @@
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Have access to a single-node OpenShift cluster installed using <a href="https://console.redhat.com/openshift/assisted-installer/clusters/~new">Assisted Installer</a>.</p>
+<p>Have access to a single-node Openshift cluster installed using <a href="https://console.redhat.com/openshift/assisted-installer/clusters/~new">Assisted Installer</a>.</p>
 </li>
 <li>
 <p>Install the OpenShift CLI (<code>oc</code>).</p>
@@ -31824,7 +31874,7 @@
 <h2 id="adding-worker-nodes-using-the-assisted-installer-api"><a class="anchor" href="#adding-worker-nodes-using-the-assisted-installer-api"></a>Adding worker nodes using the Assisted Installer API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can add worker nodes to single-node OpenShift clusters using the Assisted Installer REST API. Before you add worker nodes, you must log in to <a href="https://console.redhat.com/openshift/token/show">OpenShift Cluster Manager</a> and authenticate against the API.</p>
+<p>You can add worker nodes to single-node Openshift clusters using the Assisted Installer REST API. Before you add worker nodes, you must log in to <a href="https://console.redhat.com/openshift/token/show">OpenShift Cluster Manager</a> and authenticate against the API.</p>
 </div>
 <div class="sect2">
 <h3 id="ai-authenticating-against-ai-rest-api_add-workers"><a class="anchor" href="#ai-authenticating-against-ai-rest-api_add-workers"></a>Authenticating against the Assisted Installer REST API</h3>
@@ -31964,7 +32014,7 @@
 </div>
 </li>
 <li>
-<p>Import the single-node OpenShift cluster by running the following commands:</p>
+<p>Import the single-node Openshift cluster by running the following commands:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -32358,16 +32408,16 @@ compute-1.example.com          Ready    worker          11m   v1.24.0+beaaed6</s
 </div>
 </div>
 <div class="sect1">
-<h2 id="sno-adding-worker-nodes-to-single-node-clusters-manually_add-workers"><a class="anchor" href="#sno-adding-worker-nodes-to-single-node-clusters-manually_add-workers"></a>Adding worker nodes to single-node OpenShift clusters manually</h2>
+<h2 id="sno-adding-worker-nodes-to-single-node-clusters-manually_add-workers"><a class="anchor" href="#sno-adding-worker-nodes-to-single-node-clusters-manually_add-workers"></a>Adding worker nodes to single-node Openshift clusters manually</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can add a worker node to a single-node OpenShift cluster manually by booting the worker node from Red Hat Enterprise Linux CoreOS (RHCOS) ISO and using the cluster <code>worker.ign</code> file to join the new worker node to the cluster.</p>
+<p>You can add a worker node to a single-node Openshift cluster manually by booting the worker node from Red Hat Enterprise Linux CoreOS (RHCOS) ISO and using the cluster <code>worker.ign</code> file to join the new worker node to the cluster.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Install a single-node OpenShift cluster on bare metal.</p>
+<p>Install a single-node Openshift cluster on bare metal.</p>
 </li>
 <li>
 <p>Install the OpenShift CLI (<code>oc</code>).</p>

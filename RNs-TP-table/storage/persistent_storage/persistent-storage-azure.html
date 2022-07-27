@@ -14107,6 +14107,30 @@
 
 
                   <li>
+                    <a class="" href="../../cicd/pipelines/using-pipelines-as-code.html">
+                      Using Pipelines as Code
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../cicd/pipelines/working-with-pipelines-using-the-developer-perspective.html">
                       Working with OpenShift Pipelines using the Developer perspective
                     </a>
@@ -18985,6 +19009,19 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
+            <li><a class="" href="../../monitoring/using-rfhe.html">Monitoring bare-metal events</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
             <li><a class="" href="../../monitoring/accessing-third-party-monitoring-apis.html">Accessing third-party monitoring APIs</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -19238,6 +19275,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../../scalability_and_performance/scaling-worker-latency-profiles.html">Improving cluster stability in high latency environments using worker latency profiles</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../scalability_and_performance/cnf-talm-for-cluster-upgrades.html">Topology Aware Lifecycle Manager for cluster updates</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -31581,9 +31631,9 @@
 <li><a href="#storage-create-azure-storage-class_persistent-storage-azure">Creating the Azure storage class</a></li>
 <li><a href="#creating-the-persistent-volume-claim">Creating the persistent volume claim</a></li>
 <li><a href="#volume-format-azure_persistent-storage-azure">Volume format</a></li>
-<li><a href="#machineset-azure-ultra-disk_persistent-storage-azure">Machine sets that deploy machines on ultra disks using PVCs</a>
+<li><a href="#machineset-azure-ultra-disk_persistent-storage-azure">Machine sets that deploy machines with ultra disks using PVCs</a>
 <ul class="sectlevel2">
-<li><a href="#machineset-creating-azure-ultra-disk_persistent-storage-azure">Creating machines on ultra disks by using machine sets</a></li>
+<li><a href="#machineset-creating-azure-ultra-disk_persistent-storage-azure">Creating machines with ultra disks by using machine sets</a></li>
 <li><a href="#machineset-troubleshooting-azure-ultra-disk_persistent-storage-azure">Troubleshooting resources for machine sets that enable ultra disks</a></li>
 </ul>
 </li>
@@ -31794,13 +31844,13 @@ OpenShift Container Platform formats them before the first use.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="machineset-azure-ultra-disk_persistent-storage-azure"><a class="anchor" href="#machineset-azure-ultra-disk_persistent-storage-azure"></a>Machine sets that deploy machines on ultra disks using PVCs</h2>
+<h2 id="machineset-azure-ultra-disk_persistent-storage-azure"><a class="anchor" href="#machineset-azure-ultra-disk_persistent-storage-azure"></a>Machine sets that deploy machines with ultra disks using PVCs</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can create a machine set running on Azure that deploys machines on ultra disks. Ultra disks are high-performance storage that are intended for use with the most demanding data workloads.</p>
+<p>You can create a machine set running on Azure that deploys machines with ultra disks. Ultra disks are high-performance storage that are intended for use with the most demanding data workloads.</p>
 </div>
 <div class="paragraph">
-<p>Both the in-tree plug-in and CSI driver support using PVCs to enable ultra disks. You can also deploy machines on ultra disks as data disks without creating a PVC.</p>
+<p>Both the in-tree plug-in and CSI driver support using PVCs to enable ultra disks. You can also deploy machines with ultra disks as data disks without creating a PVC.</p>
 </div>
 <div class="ulist _additional-resources">
 <div class="title">Additional resources</div>
@@ -31817,9 +31867,9 @@ OpenShift Container Platform formats them before the first use.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="machineset-creating-azure-ultra-disk_persistent-storage-azure"><a class="anchor" href="#machineset-creating-azure-ultra-disk_persistent-storage-azure"></a>Creating machines on ultra disks by using machine sets</h3>
+<h3 id="machineset-creating-azure-ultra-disk_persistent-storage-azure"><a class="anchor" href="#machineset-creating-azure-ultra-disk_persistent-storage-azure"></a>Creating machines with ultra disks by using machine sets</h3>
 <div class="paragraph">
-<p>You can deploy machines on ultra disks on Azure by editing your machine set YAML file.</p>
+<p>You can deploy machines with ultra disks on Azure by editing your machine set YAML file.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -31840,7 +31890,7 @@ OpenShift Container Platform formats them before the first use.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>&lt;machine-set-name&gt;</code> is the machine set that you want to provision machines on ultra disks.</p>
+<p>where <code>&lt;machine-set-name&gt;</code> is the machine set that you want to provision machines with ultra disks.</p>
 </div>
 </li>
 <li>
