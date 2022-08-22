@@ -27364,9 +27364,6 @@ During the migration, you must reboot every node in your cluster.</p>
 <p>While performing the migration, your cluster is unavailable and workloads might be interrupted.
 Perform the migration only when an interruption in service is acceptable.</p>
 </div>
-<div class="paragraph">
-<p>You must configure hybrid networking with OVN-Kubernetes during the installation of your cluster. You cannot switch to hybrid networking after the installation process.</p>
-</div>
 </td>
 </tr>
 </table>
@@ -27516,11 +27513,14 @@ You cannot change the service network address block during the migration.
 <p>You must configure hybrid networking with OVN-Kubernetes during the installation of your cluster. You cannot switch to hybrid networking after the installation process.</p>
 </div>
 <div class="paragraph">
-<p>In addition the hybrid  OVNKubernetes cluster is a requirement for Windows Machine Config Operator (WMCO)</p>
+<p>In addition, the hybrid  OVNKubernetes cluster is a requirement for Windows Machine Config Operator (WMCO)</p>
 </div>
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>To customize either of the previously noted settings, enter and customize the following command. If you do not need to change the default value, omit the key from the patch.</p>
@@ -27536,6 +27536,9 @@ You cannot change the service network address block during the migration.
 <span class="gp">          "genevePort":&lt;port&gt;</span><span class="w">
 </span><span class="go">    }}}}'</span></code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>+</p>
 </div>
 <div class="openblock">
 <div class="content">
@@ -27553,8 +27556,11 @@ You cannot change the service network address block during the migration.
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>+
+.Example patch command to update <code>mtu</code> field</p>
+</div>
 <div class="listingblock">
-<div class="title">Example patch command to update <code>mtu</code> field</div>
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc patch Network.operator.openshift.io cluster <span class="nt">--type</span><span class="o">=</span>merge <span class="se">\</span>
   <span class="nt">--patch</span> <span class="s1">'{
@@ -27565,7 +27571,8 @@ You cannot change the service network address block during the migration.
     }}}}'</span></code></pre>
 </div>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Wait until the Multus daemon set rollout completes.</p>
 <div class="listingblock">
