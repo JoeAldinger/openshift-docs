@@ -11033,7 +11033,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -28473,7 +28473,10 @@
 <h2 id="upgrading-control-plane"><a class="anchor" href="#upgrading-control-plane"></a>Upgrading the Service Mesh control plane</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You must manually update the control plane for minor and major releases.</p>
+<p>You must manually update the control plane for minor and major releases. The community Istio project recommends canary upgrades, Red Hat OpenShift Service Mesh only supports in-place upgrades. Red Hat OpenShift Service Mesh requires that you upgrade from each minor release to the next minor release in sequence. For example, you must upgrade from version 2.0 to version 2.1, and then upgrade to version 2.2. You cannot update from Red Hat OpenShift Service Mesh 2.0 to 2.2 directly.</p>
+</div>
+<div class="paragraph">
+<p>When you upgrade the service mesh control plane, all Operator managed resources, for example gateways, are also upgraded.</p>
 </div>
 <div class="sect2">
 <h3 id="ossm-upgrade-21-22-changes_ossm-upgrade"><a class="anchor" href="#ossm-upgrade-21-22-changes_ossm-upgrade"></a>Upgrade changes from version 2.1 to version 2.2</h3>

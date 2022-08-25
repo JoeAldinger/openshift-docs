@@ -11033,7 +11033,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -28187,10 +28187,10 @@
 <ul class="sectlevel1">
 <li><a href="#investigating-kernel-crashes">Investigating kernel crashes</a>
 <ul class="sectlevel2">
-<li><a href="#enabling-kdump">Enabling kdump</a></li>
-<li><a href="#enabling-kdump-on-day-1">Enabling kdump on day-1</a></li>
-<li><a href="#testing-the-kdump-configuration">Testing the kdump configuration</a></li>
-<li><a href="#analyzing-a-core-dump">Analyzing a core dump</a></li>
+<li><a href="#enabling-kdump_troubleshooting-operating-system-issues">Enabling kdump</a></li>
+<li><a href="#enabling-kdump-day-one_troubleshooting-operating-system-issues">Enabling kdump on day-1</a></li>
+<li><a href="#testing-kdump-configuration">Testing the kdump configuration</a></li>
+<li><a href="#analyzing-core-dumps">Analyzing a core dump</a></li>
 </ul>
 </li>
 </ul>
@@ -28203,8 +28203,6 @@
 <div class="sect1">
 <h2 id="investigating-kernel-crashes"><a class="anchor" href="#investigating-kernel-crashes"></a>Investigating kernel crashes</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="enabling-kdump"><a class="anchor" href="#enabling-kdump"></a>Enabling kdump</h3>
 <div class="paragraph">
 <p>The <code>kdump</code> service, included in <code>kexec-tools</code>, provides a crash-dumping mechanism. You can use this service to save the contents of the system&#8217;s memory for later analysis.</p>
 </div>
@@ -28215,12 +28213,14 @@
 <p>For more information about the support scope of Red Hat Technology Preview
 features, see <a href="https://access.redhat.com/support/offerings/techpreview/" class="bare">https://access.redhat.com/support/offerings/techpreview/</a>.</p>
 </div>
+<div class="sect2">
+<h3 id="enabling-kdump_troubleshooting-operating-system-issues"><a class="anchor" href="#enabling-kdump_troubleshooting-operating-system-issues"></a>Enabling kdump</h3>
 <div class="paragraph">
 <p>RHCOS ships with <code>kexec-tools</code>, but manual configuration is required to enable <code>kdump</code>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Procedure</div>
-<p>Perform the following steps to enable <code>kdump</code> on RHCOS.</p>
+<p>Perform the following steps to enable <code>kdump</code> on RHCOS:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -28254,7 +28254,7 @@ Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat
 </div>
 </li>
 <li>
-<p>Enable the <code>kdump</code> systemd service.</p>
+<p>Enable the <code>kdump</code> systemd service:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">#</span><span class="w"> </span>systemctl <span class="nb">enable </span>kdump.service</code></pre>
@@ -28262,7 +28262,7 @@ Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat
 </div>
 </li>
 <li>
-<p>Reboot your system.</p>
+<p>Reboot your system:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">#</span><span class="w"> </span>systemctl reboot</code></pre>
@@ -28276,7 +28276,7 @@ Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat
 </div>
 </div>
 <div class="sect2">
-<h3 id="enabling-kdump-on-day-1"><a class="anchor" href="#enabling-kdump-on-day-1"></a>Enabling kdump on day-1</h3>
+<h3 id="enabling-kdump-day-one_troubleshooting-operating-system-issues"><a class="anchor" href="#enabling-kdump-day-one_troubleshooting-operating-system-issues"></a>Enabling kdump on day-1</h3>
 <div class="paragraph">
 <p>The <code>kdump</code> service is intended to be enabled per node to debug kernel problems. Because there are costs to having <code>kdump</code> enabled, and these costs accumulate with each additional <code>kdump</code>-enabled node, it is recommended that <code>kdump</code> only be enabled on each node as needed. Potential costs of enabling <code>kdump</code> on each node include:</p>
 </div>
@@ -28310,7 +28310,7 @@ Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">variant</span><span class="pi">:</span> <span class="s">openshift</span>
-<span class="na">version</span><span class="pi">:</span> <span class="s">4.8.0</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s">Branch Build.0</span>
 <span class="na">metadata</span><span class="pi">:</span>
   <span class="na">name</span><span class="pi">:</span> <span class="s">99-worker-kdump</span> <i class="conum" data-value="1"></i><b>(1)</b>
   <span class="na">labels</span><span class="pi">:</span>
@@ -28377,7 +28377,7 @@ Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat
 <p>Put the YAML file into manifests during cluster setup. You can also create this <code>MachineConfig</code> object after cluster setup with the YAML file:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp"> $</span><span class="w"> </span>oc create <span class="nt">-f</span> ./99-worker-kdump.yaml</code></pre>
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc create <span class="nt">-f</span> ./99-worker-kdump.yaml</code></pre>
 </div>
 </div>
 </li>
@@ -28385,18 +28385,32 @@ Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat
 </div>
 </div>
 <div class="sect2">
-<h3 id="testing-the-kdump-configuration"><a class="anchor" href="#testing-the-kdump-configuration"></a>Testing the kdump configuration</h3>
+<h3 id="testing-kdump-configuration"><a class="anchor" href="#testing-kdump-configuration"></a>Testing the kdump configuration</h3>
 <div class="paragraph">
-<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel#testing-the-kdump-configuration_configuring-kdump-on-the-command-line">Testing the kdump configuration</a> section in the RHEL documentation for <code>kdump</code>.</p>
+<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel#testing-the-kdump-configuration_configuring-kdump-on-the-command-line">Testing the kdump configuration</a> section in the RHEL documentation for kdump.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="analyzing-a-core-dump"><a class="anchor" href="#analyzing-a-core-dump"></a>Analyzing a core dump</h3>
+<h3 id="analyzing-core-dumps"><a class="anchor" href="#analyzing-core-dumps"></a>Analyzing a core dump</h3>
 <div class="paragraph">
-<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/analyzing-a-core-dump_managing-monitoring-and-updating-the-kernel">Analyzing a core dump</a> section in the RHEL documentation for <code>kdump</code>.</p>
+<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/analyzing-a-core-dump_managing-monitoring-and-updating-the-kernel">Analyzing a core dump</a> section in the RHEL documentation for kdump.</p>
 </div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is recommended to perform vmcore analysis on a separate RHEL system.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="additional-resources_investigating-kernel-crashes" class="discrete _additional-resources">Additional resources</h3>
+<div class="ulist">
 <ul>
 <li>
 <p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel">Setting up kdump in RHEL</a></p>
@@ -28408,10 +28422,10 @@ Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat
 <p>kdump.conf(5) — a manual page for the <code>/etc/kdump.conf</code> configuration file containing the full documentation of available options</p>
 </li>
 <li>
-<p>kexec(8) — a manual page for <code>kexec</code></p>
+<p>kexec(8) — a manual page for the <code>kexec</code> package</p>
 </li>
 <li>
-<p><a href="https://access.redhat.com/site/solutions/6038">Red Hat Knowledgebase article</a> regarding <code>kexec</code> and <code>kdump</code>.</p>
+<p><a href="https://access.redhat.com/site/solutions/6038">Red Hat Knowledgebase article</a> regarding kexec and kdump</p>
 </li>
 </ul>
 </div>

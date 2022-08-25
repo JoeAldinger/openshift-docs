@@ -11033,7 +11033,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -28195,7 +28195,7 @@
 </li>
 <li><a href="#operators-overview_control-plane">Operators in OpenShift Container Platform</a>
 <ul class="sectlevel2">
-<li><a href="#platform-operators_control-plane">Platform Operators</a></li>
+<li><a href="#cluster-operators_control-plane">Cluster Operators</a></li>
 <li><a href="#olm-operators_control-plane">Add-on Operators</a></li>
 </ul>
 </li>
@@ -28505,7 +28505,7 @@ one active leader at a time.</p></td>
 <div class="ulist">
 <ul>
 <li>
-<p>Platform Operators, which are managed by the Cluster Version Operator (CVO), are installed by default to perform cluster functions.</p>
+<p>Cluster Operators, which are managed by the Cluster Version Operator (CVO), are installed by default to perform cluster functions.</p>
 </li>
 <li>
 <p>Optional add-on Operators, which are managed by Operator Lifecycle Manager (OLM), can be made accessible for users to run in their applications.</p>
@@ -28513,18 +28513,18 @@ one active leader at a time.</p></td>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="platform-operators_control-plane"><a class="anchor" href="#platform-operators_control-plane"></a>Platform Operators</h3>
+<h3 id="cluster-operators_control-plane"><a class="anchor" href="#cluster-operators_control-plane"></a>Cluster Operators</h3>
 <div class="paragraph">
-<p>In OpenShift Container Platform, all cluster functions are divided into a series of default <em>platform Operators</em>, also known as cluster Operators. Platform Operators manage a particular area of cluster functionality, such as cluster-wide application logging, management of the Kubernetes control plane, or the machine provisioning system.</p>
+<p>In OpenShift Container Platform, all cluster functions are divided into a series of default <em>cluster Operators</em>. Cluster Operators manage a particular area of cluster functionality, such as cluster-wide application logging, management of the Kubernetes control plane, or the machine provisioning system.</p>
 </div>
 <div class="paragraph">
-<p>Platform Operators are defined by a <code>ClusterOperator</code> object, which cluster administrators can view in the OpenShift Container Platform web console from the <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong> page. Each platform Operator provides a simple API for determining cluster functionality. The Operator hides the details of managing the lifecycle of that component. Operators can manage a single component or tens of components, but the end goal is always to reduce operational burden by automating common actions.</p>
+<p>Cluster Operators are represented by a <code>ClusterOperator</code> object, which cluster administrators can view in the OpenShift Container Platform web console from the <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong> page. Each cluster Operator provides a simple API for determining cluster functionality. The Operator hides the details of managing the lifecycle of that component. Operators can manage a single component or tens of components, but the end goal is always to reduce operational burden by automating common actions.</p>
 </div>
 <div class="ulist _additional-resources">
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p><a href="../operators/operator-reference.html#platform-operators-ref">Platform Operators reference</a></p>
+<p><a href="../operators/operator-reference.html#cluster-operators-ref">Cluster Operators reference</a></p>
 </li>
 </ul>
 </div>
@@ -28551,7 +28551,7 @@ one active leader at a time.</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>OLM does not manage the platform Operators that comprise the OpenShift Container Platform architecture.</p>
+<p>OLM does not manage the cluster Operators that comprise the OpenShift Container Platform architecture.</p>
 </div>
 </td>
 </tr>
