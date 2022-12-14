@@ -13,38 +13,27 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
   <title>Event delivery - Develop | Serverless | OpenShift Container Platform Branch Build</title>
-  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css">
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet" />
-  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
-  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css">
-  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen, print" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet" />
+  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet"  media="screen"/>
+  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"/>
+  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css"/>
+  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet"  media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/print.css" rel="stylesheet" type="text/css" media="print"/>
   <!--[if IE]><link rel="shortcut icon" href="https://assets.openshift.net/content/subdomain/favicon.ico"><![endif]-->
   <!-- or, set /favicon.ico for IE10 win -->
   <meta content="OpenShift" name="application-name">
   <meta content="#000000" name="msapplication-TileColor">
   <meta content="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" name="msapplication-TileImage">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <!-- Adobe DTM -->
+  <script src="//www.redhat.com/dtm.js" type="text/javascript"></script>
+  <!-- End Adobe DTM -->
 
   <script id="trustarc" src="https://static.redhat.com/libs/redhat/marketing/latest/trustarc/trustarc.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
         rel="stylesheet">
-  <script>
-
-    function getPDF() {
-      var element = document.getElementsByClassName('main');
-      
-      var opt = {
-        margin:       10,
-        filename:     'serverless/develop/serverless-event-delivery.pdf',
-        html2canvas:  { windowWidth: 650 },
-        image:        { type: 'jpeg', quality: 0.98 }
-      };
-      html2pdf().set(opt).from(element[0]).save();
-    }
-  </script>
 
 </head>
 
@@ -222,7 +211,7 @@
         <a href="https://github.com/openshift/openshift-docs/issues/new?title=[enterprise-Branch Build] Issue in file serverless/develop/serverless-event-delivery.adoc">
           <span class="material-icons-outlined" title="Open an issue">bug_report</span>
         </a>
-        <a href="javascript: void(0);" onclick="getPDF();"><span class="material-icons-outlined" title="Download PDF (may take a while for large pages)">picture_as_pdf</span></a>
+        <a href="javascript: void(0);" onclick="window.print()"><span class="material-icons-outlined" title="Print page (Save as PDF)">picture_as_pdf</span></a>
         
         
       </span>
@@ -5871,6 +5860,54 @@
 
 
                   <li>
+                    <a class="" href="../../security/certificate_types_descriptions/aggregated-api-client-certificates.html">
+                      Aggregated API client certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../security/certificate_types_descriptions/machine-config-operator-certificates.html">
+                      Machine Config Operator certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../security/certificate_types_descriptions/user-provided-certificates-for-default-ingress.html">
                       User-provided certificates for default ingress
                     </a>
@@ -6832,7 +6869,7 @@
 
                   <li>
                     <a class="" href="../../authentication/identity_providers/configuring-htpasswd-identity-provider.html">
-                      Configuring an HTPasswd identity provider
+                      Configuring an htpasswd identity provider
                     </a>
                   </li>
 
@@ -11067,7 +11104,7 @@
 
                   <li>
                     <a class="" href="../../operators/admin/olm-upgrading-operators.html">
-                      Upgrading installed Operators
+                      Updating installed Operators
                     </a>
                   </li>
 
@@ -11769,7 +11806,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -13441,21 +13478,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../applications/index.html">Building applications overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-0">
-                <span id="sgSpan-17-0" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
+                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
                   &nbsp;Projects
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-0" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13541,15 +13591,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
-                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-2">
+                <span id="sgSpan-17-2" class="fa fa-caret-right"></span>
                   &nbsp;Creating applications
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-2" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13648,15 +13698,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-3">
-                <span id="sgSpan-17-3" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
+                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
                   &nbsp;Connecting applications to services
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-3" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13886,15 +13936,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
-                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
+                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
                   &nbsp;Working with Helm charts
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14004,15 +14054,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
-                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
+                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
                   &nbsp;Deployments
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14122,15 +14172,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
-                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-7">
+                <span id="sgSpan-17-7" class="fa fa-caret-right"></span>
                   &nbsp;Quotas
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-7" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -15711,6 +15761,30 @@
 
                 
 
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../nodes/nodes/nodes-nodes-creating-infrastructure-nodes.html">
+                      Creating infrastructure nodes
+                    </a>
+                  </li>
+
+                
+
               </ul>
             </li>
 
@@ -17281,19 +17355,6 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../scalability_and_performance/recommended-install-practices.html">Recommended installation practices</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
             <li><a class="" href="../../scalability_and_performance/recommended-host-practices.html">Recommended host practices</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -17477,6 +17538,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../../scalability_and_performance/cnf-performance-addon-operator-for-low-latency-nodes.html">Performance Addon Operator for low latency nodes</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../scalability_and_performance/cnf-performing-platform-verification-latency-tests.html">Performing latency tests for platform verification</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -17721,6 +17795,30 @@
 
 
                   <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-release-notes.html">
+                      OADP release notes
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-features-plugins.html">
                       OADP features and plugins
                     </a>
@@ -17748,11 +17846,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-1">
-                    <span id="ssgSpan-26-3-1" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
+                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
                     &nbsp;Installing and configuring OADP
                   </a>
-                  <ul id="topicSubSubGroup-26-3-1" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17848,11 +17946,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
-                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-3">
+                    <span id="ssgSpan-26-3-3" class="fa fa-caret-right"></span>
                     &nbsp;Backing up and restoring
                   </a>
-                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-3" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17897,6 +17995,54 @@
                   <li>
                     <a class="" href="../../backup_and_restore/application_backup_and_restore/troubleshooting.html">
                       Troubleshooting
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-api.html">
+                      OADP API
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-advanced-topics.html">
+                      Advanced OADP features and functionalities
                     </a>
                   </li>
 
@@ -26173,6 +26319,16 @@
 
 
                     <li>
+                      <a class="" href="../../virt/virtual_machines/advanced_vm_management/virt-working-with-resource-quotas-for-vms.html" style="padding-left: 70px;">
+                        Working with resource quotas for virtual machines
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
                       <a class="" href="../../virt/virtual_machines/advanced_vm_management/virt-specifying-nodes-for-vms.html" style="padding-left: 70px;">
                         Specifying nodes for virtual machines
                       </a>
@@ -26445,6 +26601,16 @@
                     <li>
                       <a class="" href="../../virt/virtual_machines/vm_networking/virt-using-the-default-pod-network-with-virt.html" style="padding-left: 70px;">
                         Configuring the virtual machine for the default pod network
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
+                      <a class="" href="../../virt/virtual_machines/vm_networking/virt-creating-service-vm.html" style="padding-left: 70px;">
+                        Creating a service to expose a virtual machine
                       </a>
                     </li>
 
@@ -27553,7 +27719,7 @@
 
                   <li>
                     <a class="" href="../../virt/logging_events_monitoring/virt-collecting-virt-data.html">
-                      Collecting OpenShift Virtualization data for Red Hat Support
+                      Collecting data for Red Hat Support
                     </a>
                   </li>
 
@@ -27692,6 +27858,30 @@
                   <li>
                     <a class="" href="../../serverless/discover/knative-event-sources.html">
                       Event sources
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../serverless/discover/serverless-brokers.html">
+                      Brokers
                     </a>
                   </li>
 
@@ -28333,7 +28523,7 @@
 
                   <li>
                     <a class="" href="../../serverless/develop/serverless-using-brokers.html">
-                      Brokers
+                      Creating brokers
                     </a>
                   </li>
 
@@ -28688,6 +28878,30 @@
 
 
                   <li>
+                    <a class="" href="../../serverless/security/serverless-config-tls.html">
+                      Configuring TLS authentication
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../serverless/security/serverless-ossm-with-kourier-jwt.html">
                       Configuring JSON Web Token authentication for Knative services
                     </a>
@@ -28784,6 +28998,30 @@
                   <li>
                     <a class="" href="../../serverless/functions/serverless-functions-getting-started.html">
                       Getting started with functions
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../serverless/functions/serverless-functions-on-cluster-builds.html">
+                      On-cluster function building and deploying
                     </a>
                   </li>
 
@@ -29117,6 +29355,9 @@
           </div>
         </div>
       </div>
+      <div class="print-logo" style="display:none;">
+        <img src="https://www.redhat.com/cms/managed-files/Logo-Red_Hat-OpenShift-A-Standard-RGB_0_0.svg" alt="print logo"/>
+      </div>
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
@@ -29130,53 +29371,34 @@
 <div id="toc" class="toc">
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
-<li><a href="#serverless-event-delivery-component-behaviors_serverless-event-delivery">Event delivery behavior for Knative Eventing channels</a>
+<li><a href="#serverless-event-delivery-component-behaviors_serverless-event-delivery">Event delivery behavior patterns for channels and brokers</a>
 <ul class="sectlevel2">
-<li><a href="#serverless-event-delivery-component-behaviors-kafka-channels_serverless-event-delivery">Event delivery behavior for Knative Kafka channels</a></li>
-<li><a href="#serverless-event-delivery-component-behaviors-status-codes_serverless-event-delivery">Delivery failure status codes</a></li>
+<li><a href="#serverless-event-delivery-component-behaviors-kafka_serverless-event-delivery">Knative Kafka channels and brokers</a></li>
 </ul>
 </li>
 <li><a href="#serverless-event-delivery-parameters_serverless-event-delivery">Configurable event delivery parameters</a></li>
-<li><a href="#serverless-subscription-event-delivery-config_serverless-event-delivery">Configuring event delivery failure parameters using subscriptions</a></li>
+<li><a href="#serverless-configuring-event-delivery-examples_serverless-event-delivery">Examples of configuring event delivery parameters</a></li>
+<li><a href="#trigger-event-delivery-config_serverless-event-delivery">Configuring event delivery ordering for triggers</a></li>
 </ul>
 </div>
 <div class="paragraph">
-<p>You can configure event delivery parameters for Knative Eventing that are applied in cases where an event fails to be delivered by a <a href="../../serverless/develop/serverless-subs.html#serverless-subs">subscription</a> or <a href="../../serverless/develop/serverless-triggers.html#serverless-triggers">trigger</a> to a subscriber. Event delivery parameters are configured individually per subscriber.</p>
+<p>You can configure event delivery parameters that are applied in cases where an event fails to be delivered to an event sink. Configuring event delivery parameters, including a dead letter sink, ensures that any events that fail to be delivered to an event sink are retried. Otherwise, undelivered events are dropped.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="serverless-event-delivery-component-behaviors_serverless-event-delivery"><a class="anchor" href="#serverless-event-delivery-component-behaviors_serverless-event-delivery"></a>Event delivery behavior for Knative Eventing channels</h2>
+<h2 id="serverless-event-delivery-component-behaviors_serverless-event-delivery"><a class="anchor" href="#serverless-event-delivery-component-behaviors_serverless-event-delivery"></a>Event delivery behavior patterns for channels and brokers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Different Knative Eventing channel types have their own behavior patterns that are followed for event delivery. Developers can set event delivery parameters in the subscription configuration to ensure that any events that fail to be delivered from channels to an event sink are retried. You must also configure a dead letter sink for subscriptions if you want to provide a sink where events that are not eventually delivered can be stored, otherwise undelivered events are dropped.</p>
+<p>Different channel and broker types have their own behavior patterns that are followed for event delivery.</p>
 </div>
 <div class="sect2">
-<h3 id="serverless-event-delivery-component-behaviors-kafka-channels_serverless-event-delivery"><a class="anchor" href="#serverless-event-delivery-component-behaviors-kafka-channels_serverless-event-delivery"></a>Event delivery behavior for Knative Kafka channels</h3>
+<h3 id="serverless-event-delivery-component-behaviors-kafka_serverless-event-delivery"><a class="anchor" href="#serverless-event-delivery-component-behaviors-kafka_serverless-event-delivery"></a>Knative Kafka channels and brokers</h3>
 <div class="paragraph">
-<p>If an event is successfully delivered to a Kafka channel or broker receiver, the receiver responds with a <code>202</code> status code, which means that the event has been safely stored inside a Kafka topic and is not lost. If the receiver responds with any other status code, the event is not safely stored, and steps must be taken by the user to resolve this issue.</p>
+<p>If an event is successfully delivered to a Kafka channel or broker receiver, the receiver responds with a <code>202</code> status code, which means that the event has been safely stored inside a Kafka topic and is not lost.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="serverless-event-delivery-component-behaviors-status-codes_serverless-event-delivery"><a class="anchor" href="#serverless-event-delivery-component-behaviors-status-codes_serverless-event-delivery"></a>Delivery failure status codes</h3>
 <div class="paragraph">
-<p>The channel or broker receiver can respond with the following status codes if an event fails to be delivered:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>500</code></dt>
-<dd>
-<p>This is a generic status code which means that the event was not delivered successfully.</p>
-</dd>
-<dt class="hdlist1"><code>404</code></dt>
-<dd>
-<p>This status code means that the channel or broker the event is being delivered to does not exist, or that the <code>Host</code> header is incorrect.</p>
-</dd>
-<dt class="hdlist1"><code>400</code></dt>
-<dd>
-<p>This status code means that the event being sent to the receiver is invalid.</p>
-</dd>
-</dl>
+<p>If the receiver responds with any other status code, the event is not safely stored, and steps must be taken by the user to resolve the issue.</p>
 </div>
 </div>
 </div>
@@ -29185,16 +29407,13 @@
 <h2 id="serverless-event-delivery-parameters_serverless-event-delivery"><a class="anchor" href="#serverless-event-delivery-parameters_serverless-event-delivery"></a>Configurable event delivery parameters</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Knative Eventing provides configuration parameters that can be used to control what happens to events in cases where events fail to be delivered. For example, you can configure Knative to retry sending events that failed to be consumed, or forward these events to a dead letter sink.</p>
-</div>
-<div class="paragraph">
 <p>The following parameters can be configured for event delivery:</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Dead letter sink</dt>
 <dd>
-<p>You can configure the <code>deadLetterSink</code> delivery parameter so that if an event fails to be delivered it is sent to the specified event sink.</p>
+<p>You can configure the <code>deadLetterSink</code> delivery parameter so that if an event fails to be delivered, it is stored in the specified event sink. Undelivered events that are not stored in a dead letter sink are dropped. The dead letter sink be any addressable object that conforms to the Knative Eventing sink contract, such as a Knative service, a Kubernetes service, or a URI.</p>
 </dd>
 <dt class="hdlist1">Retries</dt>
 <dd>
@@ -29202,21 +29421,82 @@
 </dd>
 <dt class="hdlist1">Back off delay</dt>
 <dd>
-<p>You can set the <code>backoffDelay</code> delivery parameter to specify the time delay before an event delivery retry is attempted after a failure. The duration of the <code>backoffDelay</code> parameter is specified using the <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601</a> format.</p>
+<p>You can set the <code>backoffDelay</code> delivery parameter to specify the time delay before an event delivery retry is attempted after a failure. The duration of the <code>backoffDelay</code> parameter is specified using the <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601</a> format. For example, <code>PT1S</code> specifies a 1 second delay.</p>
 </dd>
 <dt class="hdlist1">Back off policy</dt>
 <dd>
-<p>The <code>backoffPolicy</code> delivery parameter can be used to specify the retry back off policy. The policy can be specified as either <code>linear</code> or <code>exponential</code>. When using the <code>linear</code> back off policy, the back off delay is the time interval specified between retries. When using the <code>exponential</code> backoff policy, the back off delay is equal to <code>backoffDelay*2^&lt;numberOfRetries&gt;</code>.</p>
+<p>The <code>backoffPolicy</code> delivery parameter can be used to specify the retry back off policy. The policy can be specified as either <code>linear</code> or <code>exponential</code>. When using the <code>linear</code> back off policy, the back off delay is equal to <code>backoffDelay * &lt;numberOfRetries&gt;</code>. When using the <code>exponential</code> backoff policy, the back off delay is equal to <code>backoffDelay*2^&lt;numberOfRetries&gt;</code>.</p>
 </dd>
 </dl>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="serverless-subscription-event-delivery-config_serverless-event-delivery"><a class="anchor" href="#serverless-subscription-event-delivery-config_serverless-event-delivery"></a>Configuring event delivery failure parameters using subscriptions</h2>
+<h2 id="serverless-configuring-event-delivery-examples_serverless-event-delivery"><a class="anchor" href="#serverless-configuring-event-delivery-examples_serverless-event-delivery"></a>Examples of configuring event delivery parameters</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>After you have created a channel and an event sink, you can create a subscription to enable event delivery. You can configure event delivery parameters for individual subscriptions by modifying the <code>delivery</code> settings for a <code>Subscription</code> object. Knative Eventing provides configuration parameters for subscriptions that you can use to control what happens to events in cases where events fail to be delivered.</p>
+<p>You can configure event delivery parameters for <code>Broker</code>, <code>Trigger</code>, <code>Channel</code>, and <code>Subscription</code> objects. If you configure event delivery parameters for a broker or channel, these parameters are propagated to triggers or subscriptions created for those objects. You can also set event delivery parameters for triggers or subscriptions to override the settings for the broker or channel.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>Broker</code> object</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">eventing.knative.dev/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Broker</span>
+<span class="na">metadata</span><span class="pi">:</span>
+<span class="nn">...</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">delivery</span><span class="pi">:</span>
+    <span class="na">deadLetterSink</span><span class="pi">:</span>
+      <span class="na">ref</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">eventing.knative.dev/v1alpha1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">KafkaSink</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;sink_name&gt;</span>
+    <span class="na">backoffDelay</span><span class="pi">:</span> <span class="s">&lt;duration&gt;</span>
+    <span class="na">backoffPolicy</span><span class="pi">:</span> <span class="s">&lt;policy_type&gt;</span>
+    <span class="na">retry</span><span class="pi">:</span> <span class="s">&lt;integer&gt;</span>
+<span class="nn">...</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>Trigger</code> object</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">eventing.knative.dev/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Trigger</span>
+<span class="na">metadata</span><span class="pi">:</span>
+<span class="nn">...</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">broker</span><span class="pi">:</span> <span class="s">&lt;broker_name&gt;</span>
+  <span class="na">delivery</span><span class="pi">:</span>
+    <span class="na">deadLetterSink</span><span class="pi">:</span>
+      <span class="na">ref</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">serving.knative.dev/v1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;sink_name&gt;</span>
+    <span class="na">backoffDelay</span><span class="pi">:</span> <span class="s">&lt;duration&gt;</span>
+    <span class="na">backoffPolicy</span><span class="pi">:</span> <span class="s">&lt;policy_type&gt;</span>
+    <span class="na">retry</span><span class="pi">:</span> <span class="s">&lt;integer&gt;</span>
+<span class="nn">...</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>Channel</code> object</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">messaging.knative.dev/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Channel</span>
+<span class="na">metadata</span><span class="pi">:</span>
+<span class="nn">...</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">delivery</span><span class="pi">:</span>
+    <span class="na">deadLetterSink</span><span class="pi">:</span>
+      <span class="na">ref</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">serving.knative.dev/v1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;sink_name&gt;</span>
+    <span class="na">backoffDelay</span><span class="pi">:</span> <span class="s">&lt;duration&gt;</span>
+    <span class="na">backoffPolicy</span><span class="pi">:</span> <span class="s">&lt;policy_type&gt;</span>
+    <span class="na">retry</span><span class="pi">:</span> <span class="s">&lt;integer&gt;</span>
+<span class="nn">...</span></code></pre>
+</div>
 </div>
 <div class="listingblock">
 <div class="title">Example <code>Subscription</code> object</div>
@@ -29224,42 +29504,93 @@
 <pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">messaging.knative.dev/v1</span>
 <span class="na">kind</span><span class="pi">:</span> <span class="s">Subscription</span>
 <span class="na">metadata</span><span class="pi">:</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;subscription_name&gt;</span>
-  <span class="na">namespace</span><span class="pi">:</span> <span class="s">&lt;subscription_namespace&gt;</span>
+<span class="nn">...</span>
 <span class="na">spec</span><span class="pi">:</span>
+  <span class="na">channel</span><span class="pi">:</span>
+    <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">messaging.knative.dev/v1</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Channel</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;channel_name&gt;</span>
   <span class="na">delivery</span><span class="pi">:</span>
-    <span class="na">deadLetterSink</span><span class="pi">:</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="na">deadLetterSink</span><span class="pi">:</span>
       <span class="na">ref</span><span class="pi">:</span>
         <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">serving.knative.dev/v1</span>
         <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
         <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;sink_name&gt;</span>
-    <span class="na">backoffDelay</span><span class="pi">:</span> <span class="s">&lt;duration&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
-    <span class="na">backoffPolicy</span><span class="pi">:</span> <span class="s">&lt;policy_type&gt;</span> <i class="conum" data-value="3"></i><b>(3)</b>
-    <span class="na">retry</span><span class="pi">:</span> <span class="s">&lt;integer&gt;</span> <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+    <span class="na">backoffDelay</span><span class="pi">:</span> <span class="s">&lt;duration&gt;</span>
+    <span class="na">backoffPolicy</span><span class="pi">:</span> <span class="s">&lt;policy_type&gt;</span>
+    <span class="na">retry</span><span class="pi">:</span> <span class="s">&lt;integer&gt;</span>
+<span class="nn">...</span></code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Configuration settings to enable using a dead letter sink. This tells the subscription what happens to events that cannot be delivered to the subscriber.
+</div>
+</div>
+<div class="sect1">
+<h2 id="trigger-event-delivery-config_serverless-event-delivery"><a class="anchor" href="#trigger-event-delivery-config_serverless-event-delivery"></a>Configuring event delivery ordering for triggers</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>When this is configured, events that fail to be delivered are sent to the dead letter sink destination. The destination can be a Knative service or a URI.</p>
-</div></td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>You can set the <code>backoffDelay</code> delivery parameter to specify the time delay before an event delivery retry is attempted after a failure. The duration of the <code>backoffDelay</code> parameter is specified using the <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601</a> format. For example, <code>PT1S</code> specifies a 1 second delay.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The <code>backoffPolicy</code> delivery parameter can be used to specify the retry back off policy. The policy can be specified as either <code>linear</code> or <code>exponential</code>. When using the <code>linear</code> back off policy, the back off delay is the time interval specified between retries. When using the <code>exponential</code> back off policy, the back off delay is equal to <code>backoffDelay*2^&lt;numberOfRetries&gt;</code>.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>The number of times that event delivery is retried before the event is sent to the dead letter sink.</td>
-</tr>
-</table>
+<p>If you are using a Kafka broker, you can configure the delivery order of events from triggers to event sinks.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The OpenShift Serverless Operator, Knative Eventing, and Knative Kafka are installed on your OpenShift Container Platform cluster.</p>
+</li>
+<li>
+<p>Kafka broker is enabled for use on your cluster, and you have created a Kafka broker.</p>
+</li>
+<li>
+<p>You have created a project or have access to a project with the appropriate roles and permissions to create applications and other workloads in OpenShift Container Platform.</p>
+</li>
+<li>
+<p>You have installed the OpenShift (<code>oc</code>) CLI.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create or modify a <code>Trigger</code> object and set the <code>kafka.eventing.knative.dev/delivery.order</code> annotation:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">eventing.knative.dev/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Trigger</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;trigger_name&gt;</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+     <span class="s">kafka.eventing.knative.dev/delivery.order</span><span class="pi">:</span> <span class="s">ordered</span>
+<span class="nn">...</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The supported consumer delivery guarantees are:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>unordered</code></dt>
+<dd>
+<p>An unordered consumer is a non-blocking consumer that delivers messages unordered, while preserving proper offset management.</p>
+</dd>
+<dt class="hdlist1"><code>ordered</code></dt>
+<dd>
+<p>An ordered consumer is a per-partition blocking consumer that waits for a successful response from the CloudEvent subscriber before it delivers the next message of the partition.</p>
+<div class="paragraph">
+<p>The default ordering guarantee is <code>unordered</code>.</p>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the <code>Trigger</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc apply <span class="nt">-f</span> &lt;filename&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -29600,5 +29931,4 @@ if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pag
   </script>
 
 </body>
-
 </html>

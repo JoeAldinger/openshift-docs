@@ -13,38 +13,27 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
   <title>Recommended host practices | Scalability and performance | OpenShift Container Platform Branch Build</title>
-  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css">
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet" />
-  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
-  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css">
-  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen, print" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet" />
+  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet"  media="screen"/>
+  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"/>
+  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css"/>
+  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet"  media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/print.css" rel="stylesheet" type="text/css" media="print"/>
   <!--[if IE]><link rel="shortcut icon" href="https://assets.openshift.net/content/subdomain/favicon.ico"><![endif]-->
   <!-- or, set /favicon.ico for IE10 win -->
   <meta content="OpenShift" name="application-name">
   <meta content="#000000" name="msapplication-TileColor">
   <meta content="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" name="msapplication-TileImage">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <!-- Adobe DTM -->
+  <script src="//www.redhat.com/dtm.js" type="text/javascript"></script>
+  <!-- End Adobe DTM -->
 
   <script id="trustarc" src="https://static.redhat.com/libs/redhat/marketing/latest/trustarc/trustarc.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
         rel="stylesheet">
-  <script>
-
-    function getPDF() {
-      var element = document.getElementsByClassName('main');
-      
-      var opt = {
-        margin:       10,
-        filename:     'scalability_and_performance/recommended-host-practices.pdf',
-        html2canvas:  { windowWidth: 650 },
-        image:        { type: 'jpeg', quality: 0.98 }
-      };
-      html2pdf().set(opt).from(element[0]).save();
-    }
-  </script>
 
 </head>
 
@@ -209,7 +198,7 @@
         
       </li>
       <li class="hidden-xs active">
-        <a href="../scalability_and_performance/recommended-install-practices.html">Scalability and performance</a>
+        <a href="../scalability_and_performance/recommended-host-practices.html">Scalability and performance</a>
       </li>
       
       <li class="hidden-xs active">
@@ -222,7 +211,7 @@
         <a href="https://github.com/openshift/openshift-docs/issues/new?title=[enterprise-Branch Build] Issue in file scalability_and_performance/recommended-host-practices.adoc">
           <span class="material-icons-outlined" title="Open an issue">bug_report</span>
         </a>
-        <a href="javascript: void(0);" onclick="getPDF();"><span class="material-icons-outlined" title="Download PDF (may take a while for large pages)">picture_as_pdf</span></a>
+        <a href="javascript: void(0);" onclick="window.print()"><span class="material-icons-outlined" title="Print page (Save as PDF)">picture_as_pdf</span></a>
         
         
       </span>
@@ -5871,6 +5860,54 @@
 
 
                   <li>
+                    <a class="" href="../security/certificate_types_descriptions/aggregated-api-client-certificates.html">
+                      Aggregated API client certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../security/certificate_types_descriptions/machine-config-operator-certificates.html">
+                      Machine Config Operator certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../security/certificate_types_descriptions/user-provided-certificates-for-default-ingress.html">
                       User-provided certificates for default ingress
                     </a>
@@ -6832,7 +6869,7 @@
 
                   <li>
                     <a class="" href="../authentication/identity_providers/configuring-htpasswd-identity-provider.html">
-                      Configuring an HTPasswd identity provider
+                      Configuring an htpasswd identity provider
                     </a>
                   </li>
 
@@ -11067,7 +11104,7 @@
 
                   <li>
                     <a class="" href="../operators/admin/olm-upgrading-operators.html">
-                      Upgrading installed Operators
+                      Updating installed Operators
                     </a>
                   </li>
 
@@ -11769,7 +11806,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -13441,21 +13478,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../applications/index.html">Building applications overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-0">
-                <span id="sgSpan-17-0" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
+                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
                   &nbsp;Projects
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-0" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13541,15 +13591,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
-                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-2">
+                <span id="sgSpan-17-2" class="fa fa-caret-right"></span>
                   &nbsp;Creating applications
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-2" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13648,15 +13698,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-3">
-                <span id="sgSpan-17-3" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
+                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
                   &nbsp;Connecting applications to services
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-3" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13886,15 +13936,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
-                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
+                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
                   &nbsp;Working with Helm charts
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14004,15 +14054,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
-                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
+                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
                   &nbsp;Deployments
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14122,15 +14172,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
-                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-7">
+                <span id="sgSpan-17-7" class="fa fa-caret-right"></span>
                   &nbsp;Quotas
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-7" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -15711,6 +15761,30 @@
 
                 
 
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../nodes/nodes/nodes-nodes-creating-infrastructure-nodes.html">
+                      Creating infrastructure nodes
+                    </a>
+                  </li>
+
+                
+
               </ul>
             </li>
 
@@ -17281,19 +17355,6 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../scalability_and_performance/recommended-install-practices.html">Recommended installation practices</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
             <li><a class=" active" href="../scalability_and_performance/recommended-host-practices.html">Recommended host practices</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -17477,6 +17538,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../scalability_and_performance/cnf-performance-addon-operator-for-low-latency-nodes.html">Performance Addon Operator for low latency nodes</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../scalability_and_performance/cnf-performing-platform-verification-latency-tests.html">Performing latency tests for platform verification</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -17721,6 +17795,30 @@
 
 
                   <li>
+                    <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-release-notes.html">
+                      OADP release notes
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-features-plugins.html">
                       OADP features and plugins
                     </a>
@@ -17748,11 +17846,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-1">
-                    <span id="ssgSpan-26-3-1" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
+                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
                     &nbsp;Installing and configuring OADP
                   </a>
-                  <ul id="topicSubSubGroup-26-3-1" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17848,11 +17946,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
-                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-3">
+                    <span id="ssgSpan-26-3-3" class="fa fa-caret-right"></span>
                     &nbsp;Backing up and restoring
                   </a>
-                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-3" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17897,6 +17995,54 @@
                   <li>
                     <a class="" href="../backup_and_restore/application_backup_and_restore/troubleshooting.html">
                       Troubleshooting
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-api.html">
+                      OADP API
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-advanced-topics.html">
+                      Advanced OADP features and functionalities
                     </a>
                   </li>
 
@@ -26173,6 +26319,16 @@
 
 
                     <li>
+                      <a class="" href="../virt/virtual_machines/advanced_vm_management/virt-working-with-resource-quotas-for-vms.html" style="padding-left: 70px;">
+                        Working with resource quotas for virtual machines
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
                       <a class="" href="../virt/virtual_machines/advanced_vm_management/virt-specifying-nodes-for-vms.html" style="padding-left: 70px;">
                         Specifying nodes for virtual machines
                       </a>
@@ -26445,6 +26601,16 @@
                     <li>
                       <a class="" href="../virt/virtual_machines/vm_networking/virt-using-the-default-pod-network-with-virt.html" style="padding-left: 70px;">
                         Configuring the virtual machine for the default pod network
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
+                      <a class="" href="../virt/virtual_machines/vm_networking/virt-creating-service-vm.html" style="padding-left: 70px;">
+                        Creating a service to expose a virtual machine
                       </a>
                     </li>
 
@@ -27553,7 +27719,7 @@
 
                   <li>
                     <a class="" href="../virt/logging_events_monitoring/virt-collecting-virt-data.html">
-                      Collecting OpenShift Virtualization data for Red Hat Support
+                      Collecting data for Red Hat Support
                     </a>
                   </li>
 
@@ -27692,6 +27858,30 @@
                   <li>
                     <a class="" href="../serverless/discover/knative-event-sources.html">
                       Event sources
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../serverless/discover/serverless-brokers.html">
+                      Brokers
                     </a>
                   </li>
 
@@ -28333,7 +28523,7 @@
 
                   <li>
                     <a class="" href="../serverless/develop/serverless-using-brokers.html">
-                      Brokers
+                      Creating brokers
                     </a>
                   </li>
 
@@ -28688,6 +28878,30 @@
 
 
                   <li>
+                    <a class="" href="../serverless/security/serverless-config-tls.html">
+                      Configuring TLS authentication
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../serverless/security/serverless-ossm-with-kourier-jwt.html">
                       Configuring JSON Web Token authentication for Knative services
                     </a>
@@ -28784,6 +28998,30 @@
                   <li>
                     <a class="" href="../serverless/functions/serverless-functions-getting-started.html">
                       Getting started with functions
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../serverless/functions/serverless-functions-on-cluster-builds.html">
+                      On-cluster function building and deploying
                     </a>
                   </li>
 
@@ -29116,6 +29354,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="print-logo" style="display:none;">
+        <img src="https://www.redhat.com/cms/managed-files/Logo-Red_Hat-OpenShift-A-Standard-RGB_0_0.svg" alt="print logo"/>
       </div>
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
@@ -29934,46 +30175,68 @@ unavailable without affecting the applications running on the cluster.</p>
 <h2 id="recommended-etcd-practices_recommended-host-practices"><a class="anchor" href="#recommended-etcd-practices_recommended-host-practices"></a>Recommended etcd practices</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For large and dense clusters, etcd can suffer from poor performance if the keyspace grows too large and exceeds the space quota. Periodically maintain and defragment etcd to free up space in the data store. Monitor Prometheus for etcd metrics and defragment it when required; otherwise, etcd can raise a cluster-wide alarm that puts the cluster into a maintenance mode that accepts only key reads and deletes.</p>
+<p>Because etcd writes data to disk and persists proposals on disk, its performance depends on disk performance.
+Although etcd is not particularly I/O intensive, it requires a low latency block device for optimal performance and stability. Because etcd&#8217;s consensus protocol depends on persistently storing metadata to a log (WAL), etcd is sensitive to disk-write latency. Slow disks and disk activity from other processes can cause long fsync latencies.</p>
+</div>
+<div class="paragraph">
+<p>Those latencies can cause etcd to miss heartbeats, not commit new proposals to the disk on time, and ultimately experience request timeouts and temporary leader loss. High write latencies also lead to a OpenShift API slowness, which affects cluster performance. Because of these reasons, avoid colocating other workloads on the control-plane nodes.</p>
+</div>
+<div class="paragraph">
+<p>In terms of latency, run etcd on top of a block device that can write at least 50 IOPS of 8000 bytes long sequentially. That is, with a latency of 20ms, keep in mind that uses fdatasync to synchronize each write in the WAL. For heavy loaded clusters, sequential 500 IOPS of 8000 bytes (2 ms) are recommended. To measure those numbers, you can use a benchmarking tool, such as fio.</p>
+</div>
+<div class="paragraph">
+<p>To achieve such performance, run etcd on machines that are backed by SSD or NVMe disks with low latency and high throughput. Consider single-level cell (SLC) solid-state drives (SSDs), which provide 1 bit per memory cell, are durable and reliable, and are ideal for write-intensive workloads.</p>
+</div>
+<div class="paragraph">
+<p>The following hard disk features provide optimal etcd performance:</p>
 </div>
 <div class="ulist">
-<div class="title">Monitor these key metrics:</div>
 <ul>
 <li>
-<p><code>etcd_server_quota_backend_bytes</code>, which is the current quota limit</p>
+<p>Low latency to support fast read operation.</p>
 </li>
 <li>
-<p><code>etcd_mvcc_db_total_size_in_use_in_bytes</code>, which indicates the actual database usage after a history compaction</p>
+<p>High-bandwidth writes for faster compactions and defragmentation.</p>
 </li>
 <li>
-<p><code>etcd_debugging_mvcc_db_total_size_in_bytes</code>, which shows the database size, including free space waiting for defragmentation</p>
+<p>High-bandwidth reads for faster recovery from failures.</p>
+</li>
+<li>
+<p>Solid state drives as a minimum selection, however NVMe drives are preferred.</p>
+</li>
+<li>
+<p>Server-grade hardware from various manufacturers for increased reliability.</p>
+</li>
+<li>
+<p>RAID 0 technology for increased performance.</p>
+</li>
+<li>
+<p>Dedicated etcd drives. Do not place log files or other heavy workloads on etcd drives.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For more information about defragmenting etcd, see the "Defragmenting etcd data" section.</p>
+<p>Avoid NAS or SAN setups and spinning drives. Always benchmark by using utilities such as fio. Continuously monitor the cluster performance as it increases.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Because etcd writes data to disk and persists proposals on disk, its performance depends on disk performance. Slow disks and disk activity from other processes can cause long fsync latencies. Those latencies can cause etcd to miss heartbeats, not commit new proposals to the disk on time, and ultimately experience request timeouts and temporary leader loss. Run etcd on machines that are backed by SSD or NVMe disks with low latency and high throughput. Consider single-level cell (SLC) solid-state drives (SSDs), which provide 1 bit per memory cell, are durable and reliable, and are ideal for write-intensive workloads.</p>
+<p>Avoid using the Network File System (NFS) protocol or other network based file systems.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Some key metrics to monitor on a deployed OpenShift Container Platform cluster are p99 of etcd disk write ahead log duration and the number of etcd leader changes. Use Prometheus to track these metrics.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>etcd_disk_wal_fsync_duration_seconds_bucket</code> metric reports the etcd disk fsync duration.</p>
-</li>
-<li>
-<p>The <code>etcd_server_leader_changes_seen_total</code> metric reports the leader changes.</p>
-</li>
-<li>
-<p>To rule out a slow disk and confirm that the disk is reasonably fast, verify that the 99th percentile of the <code>etcd_disk_wal_fsync_duration_seconds_bucket</code> is less than 10 ms.</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
-<p>To validate the hardware for etcd before or after you create the OpenShift Container Platform cluster, you can use an I/O benchmarking tool called fio.</p>
+<p>To validate the hardware for etcd before or after you create the OpenShift Container Platform cluster, you can use fio.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -30019,7 +30282,20 @@ unavailable without affecting the applications running on the cluster.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The output reports whether the disk is fast enough to host etcd by comparing the 99th percentile of the fsync metric captured from the run to see if it is less than 10 ms.</p>
+<p>The output reports whether the disk is fast enough to host etcd by comparing the 99th percentile of the fsync metric captured from the run to see if it is less than 20 ms. A few of the most important etcd metrics that might affected by I/O performance are as follow:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>etcd_disk_wal_fsync_duration_seconds_bucket</code> metric reports the etcd&#8217;s WAL fsync duration</p>
+</li>
+<li>
+<p><code>etcd_disk_backend_commit_duration_seconds_bucket</code>  metric reports the etcd backend commit latency duration</p>
+</li>
+<li>
+<p><code>etcd_server_leader_changes_seen_total</code> metric reports the leader changes</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Because etcd replicates the requests among all the members, its performance strongly depends on network input/output (I/O) latency. High network latencies result in etcd heartbeats taking longer than the election timeout, which results in leader elections that are disruptive to the cluster. A key metric to monitor on a deployed OpenShift Container Platform cluster is the 99th percentile of etcd network peer latency on each etcd cluster member. Use Prometheus to track the metric.</p>
@@ -30032,6 +30308,25 @@ unavailable without affecting the applications running on the cluster.</p>
 <div class="sect1">
 <h2 id="etcd-defrag_recommended-host-practices"><a class="anchor" href="#etcd-defrag_recommended-host-practices"></a>Defragmenting etcd data</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>For large and dense clusters, etcd can suffer from poor performance if the keyspace grows too large and exceeds the space quota. Periodically maintain and defragment etcd to free up space in the data store. Monitor Prometheus for etcd metrics and defragment it when required; otherwise, etcd can raise a cluster-wide alarm that puts the cluster into a maintenance mode that accepts only key reads and deletes.</p>
+</div>
+<div class="paragraph">
+<p>Monitor these key metrics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>etcd_server_quota_backend_bytes</code>, which is the current quota limit</p>
+</li>
+<li>
+<p><code>etcd_mvcc_db_total_size_in_use_in_bytes</code>, which indicates the actual database usage after a history compaction</p>
+</li>
+<li>
+<p><code>etcd_debugging_mvcc_db_total_size_in_bytes</code>, which shows the database size, including free space waiting for defragmentation</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>Defragment etcd data to reclaim disk space after events that cause disk fragmentation, such as etcd history compaction.</p>
 </div>
@@ -30105,6 +30400,9 @@ backend store fragmented: 39.33 %, dbSize:
 <h3 id="manual-defrag-etcd-data_recommended-host-practices"><a class="anchor" href="#manual-defrag-etcd-data_recommended-host-practices"></a>Manual defragmentation</h3>
 <div class="paragraph">
 <p>You can monitor the <code>etcd_db_total_size_in_bytes</code> metric to determine whether manual defragmentation is necessary.</p>
+</div>
+<div class="paragraph">
+<p>You can also determine whether defragmentation is needed by checking the etcd database size in MB that will be freed by defragmentation with the PromQL expression: <code>(etcd_mvcc_db_total_size_in_bytes - etcd_mvcc_db_total_size_in_use_in_bytes)/1024/1024</code></p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -30346,13 +30644,19 @@ Use 'oc describe pod/etcd-ip-10-0-159-225.example.redhat.com -n openshift-etcd' 
 <h2 id="infrastructure-moving-monitoring_recommended-host-practices"><a class="anchor" href="#infrastructure-moving-monitoring_recommended-host-practices"></a>Moving the monitoring solution</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>By default, the Prometheus Cluster Monitoring stack, which contains Prometheus, Grafana, and AlertManager, is deployed to provide cluster monitoring. It is managed by the Cluster Monitoring Operator. To move its components to different machines, you create and apply a custom config map.</p>
+<p>The monitoring stack includes multiple components, including Prometheus, Grafana, and Alertmanager.
+The Cluster Monitoring Operator manages this stack. To redeploy the monitoring stack to infrastructure nodes, you can create and apply a custom config map.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Save the following <code>ConfigMap</code> definition as the <code>cluster-monitoring-configmap.yaml</code> file:</p>
+<p>Edit the <code>cluster-monitoring-config</code> config map and change the <code>nodeSelector</code> to use the <code>infra</code> label:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc edit configmap cluster-monitoring-config <span class="nt">-n</span> openshift-monitoring</code></pre>
+</div>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
@@ -30363,44 +30667,104 @@ Use 'oc describe pod/etcd-ip-10-0-159-225.example.redhat.com -n openshift-etcd' 
 <span class="na">data</span><span class="pi">:</span>
   <span class="s">config.yaml</span><span class="pi">:</span> <span class="pi">|+</span>
     <span class="s">alertmanagerMain:</span>
-      <span class="s">nodeSelector:</span>
+      <span class="s">nodeSelector: </span><i class="conum" data-value="1"></i><b>(1)</b>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">prometheusK8s:</span>
       <span class="s">nodeSelector:</span>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">prometheusOperator:</span>
       <span class="s">nodeSelector:</span>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">grafana:</span>
       <span class="s">nodeSelector:</span>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">k8sPrometheusAdapter:</span>
       <span class="s">nodeSelector:</span>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">kubeStateMetrics:</span>
       <span class="s">nodeSelector:</span>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">telemeterClient:</span>
       <span class="s">nodeSelector:</span>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">openshiftStateMetrics:</span>
       <span class="s">nodeSelector:</span>
         <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span>
     <span class="s">thanosQuerier:</span>
       <span class="s">nodeSelector:</span>
-        <span class="s">node-role.kubernetes.io/infra: ""</span></code></pre>
+        <span class="s">node-role.kubernetes.io/infra: ""</span>
+      <span class="s">tolerations:</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoSchedule</span>
+      <span class="s">- key: node-role.kubernetes.io/infra</span>
+        <span class="s">value: reserved</span>
+        <span class="s">effect: NoExecute</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Running this config map forces the components of the monitoring stack to redeploy to infrastructure nodes.</p>
-</div>
-</li>
-<li>
-<p>Apply the new config map:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc create <span class="nt">-f</span> cluster-monitoring-configmap.yaml</code></pre>
-</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add a <code>nodeSelector</code> parameter with the appropriate value to the component you want to move. You can use a <code>nodeSelector</code> in the format shown or use <code>&lt;key&gt;: &lt;value&gt;</code> pairs, based on the value specified for the node.  If you added a taint to the infrasructure node, also add a matching toleration.</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
@@ -30489,9 +30853,6 @@ Use 'oc describe pod/etcd-ip-10-0-159-225.example.redhat.com -n openshift-etcd' 
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc edit configs.imageregistry.operator.openshift.io/cluster</code></pre>
 </div>
 </div>
-</li>
-<li>
-<p>Modify the <code>spec</code> section of the object to resemble the following YAML:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">spec</span><span class="pi">:</span>
@@ -30505,9 +30866,24 @@ Use 'oc describe pod/etcd-ip-10-0-159-225.example.redhat.com -n openshift-etcd' 
         <span class="na">weight</span><span class="pi">:</span> <span class="m">100</span>
   <span class="na">logLevel</span><span class="pi">:</span> <span class="s">Normal</span>
   <span class="na">managementState</span><span class="pi">:</span> <span class="s">Managed</span>
-  <span class="na">nodeSelector</span><span class="pi">:</span>
-    <span class="s">node-role.kubernetes.io/infra</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span></code></pre>
+  <span class="na">nodeSelector</span><span class="pi">:</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="s">node-role.kubernetes.io/infra</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+  <span class="na">tolerations</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">effect</span><span class="pi">:</span> <span class="s">NoSchedule</span>
+    <span class="na">key</span><span class="pi">:</span> <span class="s">node-role.kubernetes.io/infra</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s">reserved</span>
+  <span class="pi">-</span> <span class="na">effect</span><span class="pi">:</span> <span class="s">NoExecute</span>
+    <span class="na">key</span><span class="pi">:</span> <span class="s">node-role.kubernetes.io/infra</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s">reserved</span></code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add a <code>nodeSelector</code> parameter with the appropriate value to the component you want to move. You can use a <code>nodeSelector</code> in the format shown or use <code>&lt;key&gt;: &lt;value&gt;</code> pairs, based on the value specified for the node.  If you added a taint to the infrasructure node, also add a matching toleration.</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
@@ -30602,17 +30978,29 @@ Use 'oc describe pod/etcd-ip-10-0-159-225.example.redhat.com -n openshift-etcd' 
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc edit ingresscontroller default <span class="nt">-n</span> openshift-ingress-operator</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Add the <code>nodeSelector</code> stanza that references the <code>infra</code> label to the <code>spec</code> section, as shown:</p>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">spec</span><span class="pi">:</span>
     <span class="na">nodePlacement</span><span class="pi">:</span>
-      <span class="na">nodeSelector</span><span class="pi">:</span>
+      <span class="na">nodeSelector</span><span class="pi">:</span> <i class="conum" data-value="1"></i><b>(1)</b>
         <span class="na">matchLabels</span><span class="pi">:</span>
-          <span class="s">node-role.kubernetes.io/infra</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span></code></pre>
+          <span class="s">node-role.kubernetes.io/infra</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">tolerations</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">effect</span><span class="pi">:</span> <span class="s">NoSchedule</span>
+      <span class="na">key</span><span class="pi">:</span> <span class="s">node-role.kubernetes.io/infra</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">reserved</span>
+    <span class="pi">-</span> <span class="na">effect</span><span class="pi">:</span> <span class="s">NoExecute</span>
+      <span class="na">key</span><span class="pi">:</span> <span class="s">node-role.kubernetes.io/infra</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">reserved</span></code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add a <code>nodeSelector</code> parameter with the appropriate value to the component you want to move. You can use a <code>nodeSelector</code> in the format shown or use <code>&lt;key&gt;: &lt;value&gt;</code> pairs, based on the value specified for the node. If you added a taint to the infrastructure node, also add a matching toleration.</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
@@ -31102,5 +31490,4 @@ if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pag
   </script>
 
 </body>
-
 </html>

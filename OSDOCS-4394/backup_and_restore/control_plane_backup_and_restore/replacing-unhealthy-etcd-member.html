@@ -13,38 +13,27 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
   <title>Replacing an unhealthy etcd member - Control plane backup and restore | Backup and restore | OpenShift Container Platform Branch Build</title>
-  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css">
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet" />
-  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
-  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css">
-  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen, print" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet" />
+  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet"  media="screen"/>
+  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"/>
+  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css"/>
+  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet"  media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/print.css" rel="stylesheet" type="text/css" media="print"/>
   <!--[if IE]><link rel="shortcut icon" href="https://assets.openshift.net/content/subdomain/favicon.ico"><![endif]-->
   <!-- or, set /favicon.ico for IE10 win -->
   <meta content="OpenShift" name="application-name">
   <meta content="#000000" name="msapplication-TileColor">
   <meta content="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" name="msapplication-TileImage">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <!-- Adobe DTM -->
+  <script src="//www.redhat.com/dtm.js" type="text/javascript"></script>
+  <!-- End Adobe DTM -->
 
   <script id="trustarc" src="https://static.redhat.com/libs/redhat/marketing/latest/trustarc/trustarc.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
         rel="stylesheet">
-  <script>
-
-    function getPDF() {
-      var element = document.getElementsByClassName('main');
-      
-      var opt = {
-        margin:       10,
-        filename:     'backup_and_restore/control_plane_backup_and_restore/replacing-unhealthy-etcd-member.pdf',
-        html2canvas:  { windowWidth: 650 },
-        image:        { type: 'jpeg', quality: 0.98 }
-      };
-      html2pdf().set(opt).from(element[0]).save();
-    }
-  </script>
 
 </head>
 
@@ -222,7 +211,7 @@
         <a href="https://github.com/openshift/openshift-docs/issues/new?title=[enterprise-Branch Build] Issue in file backup_and_restore/control_plane_backup_and_restore/replacing-unhealthy-etcd-member.adoc">
           <span class="material-icons-outlined" title="Open an issue">bug_report</span>
         </a>
-        <a href="javascript: void(0);" onclick="getPDF();"><span class="material-icons-outlined" title="Download PDF (may take a while for large pages)">picture_as_pdf</span></a>
+        <a href="javascript: void(0);" onclick="window.print()"><span class="material-icons-outlined" title="Print page (Save as PDF)">picture_as_pdf</span></a>
         
         
       </span>
@@ -5871,6 +5860,54 @@
 
 
                   <li>
+                    <a class="" href="../../security/certificate_types_descriptions/aggregated-api-client-certificates.html">
+                      Aggregated API client certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../security/certificate_types_descriptions/machine-config-operator-certificates.html">
+                      Machine Config Operator certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../security/certificate_types_descriptions/user-provided-certificates-for-default-ingress.html">
                       User-provided certificates for default ingress
                     </a>
@@ -6832,7 +6869,7 @@
 
                   <li>
                     <a class="" href="../../authentication/identity_providers/configuring-htpasswd-identity-provider.html">
-                      Configuring an HTPasswd identity provider
+                      Configuring an htpasswd identity provider
                     </a>
                   </li>
 
@@ -11067,7 +11104,7 @@
 
                   <li>
                     <a class="" href="../../operators/admin/olm-upgrading-operators.html">
-                      Upgrading installed Operators
+                      Updating installed Operators
                     </a>
                   </li>
 
@@ -11769,7 +11806,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -13441,21 +13478,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../applications/index.html">Building applications overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-0">
-                <span id="sgSpan-17-0" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
+                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
                   &nbsp;Projects
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-0" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13541,15 +13591,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
-                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-2">
+                <span id="sgSpan-17-2" class="fa fa-caret-right"></span>
                   &nbsp;Creating applications
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-2" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13648,15 +13698,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-3">
-                <span id="sgSpan-17-3" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
+                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
                   &nbsp;Connecting applications to services
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-3" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13886,15 +13936,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
-                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
+                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
                   &nbsp;Working with Helm charts
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14004,15 +14054,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
-                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
+                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
                   &nbsp;Deployments
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14122,15 +14172,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
-                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-7">
+                <span id="sgSpan-17-7" class="fa fa-caret-right"></span>
                   &nbsp;Quotas
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-7" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -15711,6 +15761,30 @@
 
                 
 
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../nodes/nodes/nodes-nodes-creating-infrastructure-nodes.html">
+                      Creating infrastructure nodes
+                    </a>
+                  </li>
+
+                
+
               </ul>
             </li>
 
@@ -17281,19 +17355,6 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../scalability_and_performance/recommended-install-practices.html">Recommended installation practices</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
             <li><a class="" href="../../scalability_and_performance/recommended-host-practices.html">Recommended host practices</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -17477,6 +17538,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../../scalability_and_performance/cnf-performance-addon-operator-for-low-latency-nodes.html">Performance Addon Operator for low latency nodes</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../scalability_and_performance/cnf-performing-platform-verification-latency-tests.html">Performing latency tests for platform verification</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -17721,6 +17795,30 @@
 
 
                   <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-release-notes.html">
+                      OADP release notes
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-features-plugins.html">
                       OADP features and plugins
                     </a>
@@ -17748,11 +17846,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-1">
-                    <span id="ssgSpan-26-3-1" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
+                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
                     &nbsp;Installing and configuring OADP
                   </a>
-                  <ul id="topicSubSubGroup-26-3-1" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17848,11 +17946,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
-                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-3">
+                    <span id="ssgSpan-26-3-3" class="fa fa-caret-right"></span>
                     &nbsp;Backing up and restoring
                   </a>
-                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-3" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17897,6 +17995,54 @@
                   <li>
                     <a class="" href="../../backup_and_restore/application_backup_and_restore/troubleshooting.html">
                       Troubleshooting
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-api.html">
+                      OADP API
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-advanced-topics.html">
+                      Advanced OADP features and functionalities
                     </a>
                   </li>
 
@@ -26173,6 +26319,16 @@
 
 
                     <li>
+                      <a class="" href="../../virt/virtual_machines/advanced_vm_management/virt-working-with-resource-quotas-for-vms.html" style="padding-left: 70px;">
+                        Working with resource quotas for virtual machines
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
                       <a class="" href="../../virt/virtual_machines/advanced_vm_management/virt-specifying-nodes-for-vms.html" style="padding-left: 70px;">
                         Specifying nodes for virtual machines
                       </a>
@@ -26445,6 +26601,16 @@
                     <li>
                       <a class="" href="../../virt/virtual_machines/vm_networking/virt-using-the-default-pod-network-with-virt.html" style="padding-left: 70px;">
                         Configuring the virtual machine for the default pod network
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
+                      <a class="" href="../../virt/virtual_machines/vm_networking/virt-creating-service-vm.html" style="padding-left: 70px;">
+                        Creating a service to expose a virtual machine
                       </a>
                     </li>
 
@@ -27553,7 +27719,7 @@
 
                   <li>
                     <a class="" href="../../virt/logging_events_monitoring/virt-collecting-virt-data.html">
-                      Collecting OpenShift Virtualization data for Red Hat Support
+                      Collecting data for Red Hat Support
                     </a>
                   </li>
 
@@ -27692,6 +27858,30 @@
                   <li>
                     <a class="" href="../../serverless/discover/knative-event-sources.html">
                       Event sources
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../serverless/discover/serverless-brokers.html">
+                      Brokers
                     </a>
                   </li>
 
@@ -28333,7 +28523,7 @@
 
                   <li>
                     <a class="" href="../../serverless/develop/serverless-using-brokers.html">
-                      Brokers
+                      Creating brokers
                     </a>
                   </li>
 
@@ -28688,6 +28878,30 @@
 
 
                   <li>
+                    <a class="" href="../../serverless/security/serverless-config-tls.html">
+                      Configuring TLS authentication
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../serverless/security/serverless-ossm-with-kourier-jwt.html">
                       Configuring JSON Web Token authentication for Knative services
                     </a>
@@ -28784,6 +28998,30 @@
                   <li>
                     <a class="" href="../../serverless/functions/serverless-functions-getting-started.html">
                       Getting started with functions
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../serverless/functions/serverless-functions-on-cluster-builds.html">
+                      On-cluster function building and deploying
                     </a>
                   </li>
 
@@ -29117,6 +29355,9 @@
           </div>
         </div>
       </div>
+      <div class="print-logo" style="display:none;">
+        <img src="https://www.redhat.com/cms/managed-files/Logo-Red_Hat-OpenShift-A-Standard-RGB_0_0.svg" alt="print logo"/>
+      </div>
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
@@ -29137,6 +29378,7 @@
 <ul class="sectlevel2">
 <li><a href="#restore-replace-stopped-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy etcd member whose machine is not running or whose node is not ready</a></li>
 <li><a href="#restore-replace-crashlooping-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy etcd member whose etcd pod is crashlooping</a></li>
+<li><a href="#restore-replace-stopped-baremetal-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy bare metal etcd member whose machine is not running or whose node is not ready</a></li>
 </ul>
 </li>
 </ul>
@@ -29424,6 +29666,9 @@ etcd-ip-10-0-154-204.ec2.internal                3/3     Running     0          
 </li>
 <li>
 <p><a href="../../backup_and_restore/control_plane_backup_and_restore/replacing-unhealthy-etcd-member.html#restore-replace-crashlooping-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy etcd member whose etcd pod is crashlooping</a></p>
+</li>
+<li>
+<p><a href="../../backup_and_restore/control_plane_backup_and_restore/replacing-unhealthy-etcd-member.html#restore-replace-stopped-baremetal-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy stopped baremetal etcd member</a></p>
 </li>
 </ul>
 </div>
@@ -29762,26 +30007,6 @@ clustername-8qw5l-worker-us-east-1c-pkg26   Running   m4.large    us-east-1   us
 </div>
 </div>
 </li>
-<li>
-<p>Remove the <code>metadata.annotations</code> and <code>metadata.generation</code> fields:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">annotations</span><span class="pi">:</span>
-    <span class="s">machine.openshift.io/instance-state</span><span class="pi">:</span> <span class="s">running</span>
-  <span class="s">...</span>
-  <span class="na">generation</span><span class="pi">:</span> <span class="s">2</span></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Remove the <code>metadata.resourceVersion</code> and <code>metadata.uid</code> fields:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">resourceVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">13291"</span>
-  <span class="na">uid</span><span class="pi">:</span> <span class="s">a282eb70-40a2-4e89-8009-d05dd420d31a</span></code></pre>
-</div>
-</div>
-</li>
 </ol>
 </div>
 </li>
@@ -30023,7 +30248,7 @@ etcd-ip-10-0-154-204.ec2.internal                3/3     Running     0          
 </div>
 </li>
 <li>
-<p>Change your root directory to the host:</p>
+<p>Change your root directory to <code>/host</code>:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-4.2#</span><span class="w"> </span><span class="nb">chroot</span> /host</code></pre>
@@ -30280,6 +30505,814 @@ https://10.0.164.97:2379 is healthy: successfully committed proposal: took = 16.
 </div>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="restore-replace-stopped-baremetal-etcd-member_replacing-unhealthy-etcd-member"><a class="anchor" href="#restore-replace-stopped-baremetal-etcd-member_replacing-unhealthy-etcd-member"></a>Replacing an unhealthy bare metal etcd member whose machine is not running or whose node is not ready</h3>
+<div class="paragraph">
+<p>This procedure details the steps to replace a bare metal etcd member that is unhealthy either because the machine is not running or because the node is not ready.</p>
+</div>
+<div class="paragraph">
+<p>If you are running installer-provisioned infrastructure or you used the Machine API to create your machines, follow these steps. Otherwise you must create the new control plane node using the same method that was used to originally create it.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have identified the unhealthy bare metal etcd member.</p>
+</li>
+<li>
+<p>You have verified that either the machine is not running or the node is not ready.</p>
+</li>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have taken an etcd backup.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must take an etcd backup before performing this procedure so that your cluster can be restored if you encounter any issues.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Verify and remove the unhealthy member.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Choose a pod that is <em>not</em> on the affected node:</p>
+<div class="paragraph">
+<p>In a terminal that has access to the cluster as a <code>cluster-admin</code> user, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get pods <span class="nt">-n</span> openshift-etcd <span class="nt">-o</span> wide | <span class="nb">grep </span>etcd | <span class="nb">grep</span> <span class="nt">-v</span> guard</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">etcd-openshift-control-plane-0   5/5   Running   11   3h56m   192.168.10.9   openshift-control-plane-0  &lt;none&gt;</span><span class="w">           </span>&lt;none&gt;
+<span class="gp">etcd-openshift-control-plane-1   5/5   Running   0    3h54m   192.168.10.10   openshift-control-plane-1   &lt;none&gt;</span><span class="w">           </span>&lt;none&gt;
+<span class="gp">etcd-openshift-control-plane-2   5/5   Running   0    3h58m   192.168.10.11   openshift-control-plane-2   &lt;none&gt;</span><span class="w">           </span>&lt;none&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Connect to the running etcd container, passing in the name of a pod that is not on the affected node:</p>
+<div class="paragraph">
+<p>In a terminal that has access to the cluster as a <code>cluster-admin</code> user, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc rsh <span class="nt">-n</span> openshift-etcd etcd-openshift-control-plane-0</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>View the member list:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-4.2#</span><span class="w"> </span>etcdctl member list <span class="nt">-w</span> table</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">+------------------+---------+--------------------+---------------------------+---------------------------+---------------------+
+| ID               | STATUS  | NAME                      | PEER ADDRS                  | CLIENT ADDRS                | IS LEARNER |
++------------------+---------+--------------------+---------------------------+---------------------------+---------------------+
+| 7a8197040a5126c8 | started | openshift-control-plane-2 | https://192.168.10.11:2380/ | https://192.168.10.11:2379/ | false |
+| 8d5abe9669a39192 | started | openshift-control-plane-1 | https://192.168.10.10:2380/ | https://192.168.10.10:2379/ | false |
+| cc3830a72fc357f9 | started | openshift-control-plane-0 | https://192.168.10.9:2380/ | https://192.168.10.9:2379/   | false |
++------------------+---------+--------------------+---------------------------+---------------------------+---------------------+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Take note of the ID and the name of the unhealthy etcd member, because these values are required later in the procedure. The <code>etcdctl endpoint health</code> command will list the removed member until the replacement procedure is completed and the new member is added.</p>
+</div>
+</li>
+<li>
+<p>Remove the unhealthy etcd member by providing the ID to the <code>etcdctl member remove</code> command:</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Be sure to remove the correct etcd member; removing a good etcd member might lead to quorum loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-4.2#</span><span class="w"> </span>etcdctl member remove 7a8197040a5126c8</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">Member 7a8197040a5126c8 removed from cluster b23536c33f2cdd1b</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>View the member list again and verify that the member was removed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-4.2#</span><span class="w"> </span>etcdctl member list <span class="nt">-w</span> table</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">+------------------+---------+--------------------+---------------------------+---------------------------+-------------------------+
+| ID               | STATUS  | NAME                      | PEER ADDRS                  | CLIENT ADDRS                | IS LEARNER |
++------------------+---------+--------------------+---------------------------+---------------------------+-------------------------+
+| 7a8197040a5126c8 | started | openshift-control-plane-2 | https://192.168.10.11:2380/ | https://192.168.10.11:2379/ | false |
+| 8d5abe9669a39192 | started | openshift-control-plane-1 | https://192.168.10.10:2380/ | https://192.168.10.10:2379/ | false |
++------------------+---------+--------------------+---------------------------+---------------------------+-------------------------+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can now exit the node shell.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After you remove the member, the cluster might be unreachable for a short time while the remaining etcd instances reboot.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Remove the old secrets for the unhealthy etcd member that was removed by running the following commands.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>List the secrets for the unhealthy etcd member that was removed.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get secrets <span class="nt">-n</span> openshift-etcd | <span class="nb">grep </span>openshift-control-plane-2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pass in the name of the unhealthy etcd member that you took note of earlier in this procedure.</p>
+</div>
+<div class="paragraph">
+<p>There is a peer, serving, and metrics secret as shown in the following output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">etcd-peer-openshift-control-plane-2             kubernetes.io/tls   2   134m
+etcd-serving-metrics-openshift-control-plane-2  kubernetes.io/tls   2   134m
+etcd-serving-openshift-control-plane-2          kubernetes.io/tls   2   134m</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the secrets for the unhealthy etcd member that was removed.</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Delete the peer secret:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete secret etcd-peer-openshift-control-plane-2 <span class="nt">-n</span> openshift-etcd
+<span class="go">
+secret "etcd-peer-openshift-control-plane-2" deleted</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the serving secret:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete secret etcd-serving-metrics-openshift-control-plane-2 <span class="nt">-n</span> openshift-etcd
+<span class="go">
+secret "etcd-serving-metrics-openshift-control-plane-2" deleted</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the metrics secret:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete secret etcd-serving-openshift-control-plane-2 <span class="nt">-n</span> openshift-etcd
+<span class="go">
+secret "etcd-serving-openshift-control-plane-2" deleted</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Delete the control plane machine.</p>
+<div class="paragraph">
+<p>If you are running installer-provisioned infrastructure, or you used the Machine API to create your machines, follow these steps. Otherwise, you must create the new control plane node using the same method that was used to originally create it.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Obtain the machine for the unhealthy member.</p>
+<div class="paragraph">
+<p>In a terminal that has access to the cluster as a <code>cluster-admin</code> user, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get machines <span class="nt">-n</span> openshift-machine-api <span class="nt">-o</span> wide</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME                              PHASE     TYPE   REGION   ZONE   AGE     NODE                               PROVIDERID                                                                                              STATE
+examplecluster-control-plane-0    Running                          3h11m   openshift-control-plane-0   baremetalhost:///openshift-machine-api/openshift-control-plane-0/da1ebe11-3ff2-41c5-b099-0aa41222964e   externally provisioned <i class="conum" data-value="1"></i><b>(1)</b>
+examplecluster-control-plane-1    Running                          3h11m   openshift-control-plane-1   baremetalhost:///openshift-machine-api/openshift-control-plane-1/d9f9acbc-329c-475e-8d81-03b20280a3e1   externally provisioned
+examplecluster-control-plane-2    Running                          3h11m   openshift-control-plane-2   baremetalhost:///openshift-machine-api/openshift-control-plane-2/3354bdac-61d8-410f-be5b-6a395b056135   externally provisioned
+examplecluster-compute-0          Running                          165m    openshift-compute-0         baremetalhost:///openshift-machine-api/openshift-compute-0/3d685b81-7410-4bb3-80ec-13a31858241f         provisioned
+examplecluster-compute-1          Running                          165m    openshift-compute-1         baremetalhost:///openshift-machine-api/openshift-compute-1/0fdae6eb-2066-4241-91dc-e7ea72ab13b9         provisioned</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This is the control plane machine for the unhealthy node, <code>examplecluster-control-plane-2</code>.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Save the machine configuration to a file on your file system:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get machine examplecluster-control-plane-2 <span class="se">\ </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="gp">    -n openshift-machine-api \
+    -o yaml \
+    &gt;</span><span class="w"> </span>new-master-machine.yaml</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specify the name of the control plane machine for the unhealthy node.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Edit the <code>new-master-machine.yaml</code> file that was created in the previous step to assign a new name and remove unnecessary fields.</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Remove the entire <code>status</code> section:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">status</span><span class="pi">:</span>
+  <span class="na">addresses</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">address</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">InternalIP</span>
+  <span class="pi">-</span> <span class="na">address</span><span class="pi">:</span> <span class="s">fe80::4adf:37ff:feb0:8aa1%ens1f1.373</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">InternalDNS</span>
+  <span class="pi">-</span> <span class="na">address</span><span class="pi">:</span> <span class="s">fe80::4adf:37ff:feb0:8aa1%ens1f1.371</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">Hostname</span>
+  <span class="na">lastUpdated</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2020-04-20T17:44:29Z"</span>
+  <span class="na">nodeRef</span><span class="pi">:</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Machine</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">fe80::4adf:37ff:feb0:8aa1%ens1f1.372</span>
+    <span class="na">uid</span><span class="pi">:</span> <span class="s">acca4411-af0d-4387-b73e-52b2484295ad</span>
+  <span class="na">phase</span><span class="pi">:</span> <span class="s">Running</span>
+  <span class="na">providerStatus</span><span class="pi">:</span>
+    <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">machine.openshift.io/v1beta1</span>
+    <span class="na">conditions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">lastProbeTime</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2020-04-20T16:53:50Z"</span>
+      <span class="na">lastTransitionTime</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2020-04-20T16:53:50Z"</span>
+      <span class="na">message</span><span class="pi">:</span> <span class="s">machine successfully created</span>
+      <span class="na">reason</span><span class="pi">:</span> <span class="s">MachineCreationSucceeded</span>
+      <span class="na">status</span><span class="pi">:</span> <span class="s2">"</span><span class="s">True"</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">MachineCreation</span>
+    <span class="na">instanceId</span><span class="pi">:</span> <span class="s">i-0fdb85790d76d0c3f</span>
+    <span class="na">instanceState</span><span class="pi">:</span> <span class="s">stopped</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Machine</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Change the <code>metadata.name</code> field to a new name.</p>
+<div class="paragraph">
+<p>It is recommended to keep the same base name as the old machine and change the ending number to the next available number. In this example, <code>examplecluster-control-plane-2</code> is changed to <code>examplecluster-control-plane-3</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">machine.openshift.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Machine</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="s">...</span>
+  <span class="s">name</span><span class="pi">:</span> <span class="s">examplecluster-control-plane-3</span>
+  <span class="s">...</span></code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Remove the <code>spec.providerID</code> field:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">providerID</span><span class="pi">:</span> <span class="s">baremetalhost:///openshift-machine-api/openshift-control-plane-2/3354bdac-61d8-410f-be5b-6a395b056135</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the <code>metadata.annotations</code> and <code>metadata.generation</code> fields:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="s">machine.openshift.io/instance-state</span><span class="pi">:</span> <span class="s">externally provisioned</span>
+  <span class="s">...</span>
+  <span class="na">generation</span><span class="pi">:</span> <span class="s">2</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the <code>spec.conditions</code>, <code>spec.lastUpdated</code>, <code>spec.nodeRef</code> and <code>spec.phase</code> fields:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">lastTransitionTime</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2022-08-03T08:40:36Z"</span>
+<span class="na">message</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Drain</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">currently</span><span class="nv"> </span><span class="s">blocked</span><span class="nv"> </span><span class="s">by:</span><span class="nv"> </span><span class="s">[{Name:EtcdQuorumOperator</span><span class="nv"> </span><span class="s">Owner:clusteroperator/etcd}]'</span>
+<span class="na">reason</span><span class="pi">:</span> <span class="s">HookPresent</span>
+<span class="na">severity</span><span class="pi">:</span> <span class="s">Warning</span>
+<span class="na">status</span><span class="pi">:</span> <span class="s2">"</span><span class="s">False"</span>
+
+<span class="na">type</span><span class="pi">:</span> <span class="s">Drainable</span>
+<span class="na">lastTransitionTime</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2022-08-03T08:39:55Z"</span>
+<span class="na">status</span><span class="pi">:</span> <span class="s2">"</span><span class="s">True"</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">InstanceExists</span>
+
+<span class="na">lastTransitionTime</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2022-08-03T08:36:37Z"</span>
+<span class="na">status</span><span class="pi">:</span> <span class="s2">"</span><span class="s">True"</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">Terminable</span>
+<span class="na">lastUpdated</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2022-08-03T08:40:36Z"</span>
+<span class="na">nodeRef</span><span class="pi">:</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Node</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">openshift-control-plane-2</span>
+<span class="na">uid</span><span class="pi">:</span> <span class="s">788df282-6507-4ea2-9a43-24f237ccbc3c</span>
+<span class="na">phase</span><span class="pi">:</span> <span class="s">Running</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Ensure that the Bare Metal Operator is available by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get clusteroperator baremetal</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME        VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
+baremetal   4.11.3    True        False         False      3d15h</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the machine of the unhealthy member using this command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete machine <span class="nt">-n</span> openshift-machine-api examplecluster-control-plane-2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If deletion of the machine is delayed for any reason or the command is obstructed and delayed, you can force deletion by removing the machine object finalizer field.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not interrupt machine deletion by pressing <code>Ctrl+c</code>. You must allow the command to proceed to completion. Open a new terminal window to edit and delete the finalizer fields.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc edit machine <span class="nt">-n</span> openshift-machine-api examplecluster-control-plane-2</code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Find and delete the fields:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">finalizers:
+- machine.machine.openshift.io</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Save your changes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">machine.machine.openshift.io/examplecluster-control-plane-2 edited</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the machine was deleted by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get machines <span class="nt">-n</span> openshift-machine-api <span class="nt">-o</span> wide</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME                              PHASE     TYPE   REGION   ZONE   AGE     NODE                                 PROVIDERID                                                                                       STATE
+examplecluster-control-plane-0    Running                          3h11m   openshift-control-plane-0   baremetalhost:///openshift-machine-api/openshift-control-plane-0/da1ebe11-3ff2-41c5-b099-0aa41222964e   externally provisioned
+examplecluster-control-plane-1    Running                          3h11m   openshift-control-plane-1   baremetalhost:///openshift-machine-api/openshift-control-plane-1/d9f9acbc-329c-475e-8d81-03b20280a3e1   externally provisioned
+examplecluster-compute-0          Running                          165m    openshift-compute-0         baremetalhost:///openshift-machine-api/openshift-compute-0/3d685b81-7410-4bb3-80ec-13a31858241f         provisioned
+examplecluster-compute-1          Running                          165m    openshift-compute-1         baremetalhost:///openshift-machine-api/openshift-compute-1/0fdae6eb-2066-4241-91dc-e7ea72ab13b9         provisioned</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Remove the old <code>BareMetalHost</code> object with this command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete bmh openshift-control-plane-2 <span class="nt">-n</span> openshift-machine-api</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">baremetalhost.metal3.io "openshift-control-plane-2" deleted</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After you remove the <code>BareMetalHost</code> and <code>Machine</code> objects, then the <code>Machine</code> controller automatically deletes the <code>Node</code> object.</p>
+</div>
+<div class="paragraph">
+<p>If, after deletion of the <code>BareMetalHost</code> object, the machine node requires excessive time for deletion, the machine node can be deleted using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete node openshift-control-plane-2
+<span class="go">
+node "openshift-control-plane-2" deleted</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify the node has been deleted:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get nodes
+<span class="go">
+NAME                     STATUS ROLES   AGE   VERSION
+openshift-control-plane-0 Ready master 3h24m v1.24.0+9546431
+openshift-control-plane-1 Ready master 3h24m v1.24.0+9546431
+openshift-compute-0       Ready worker 176m v1.24.0+9546431
+openshift-compute-1       Ready worker 176m v1.24.0+9546431</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the new <code>BareMetalHost</code> object and the secret to store the BMC credentials:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh"> | oc apply -f -
+</span><span class="go">apiVersion: v1
+kind: Secret
+metadata:
+  name: openshift-control-plane-2-bmc-secret
+  namespace: openshift-machine-api
+data:
+</span><span class="gp">  password: &lt;password&gt;</span><span class="w">
+</span><span class="gp">  username: &lt;username&gt;</span><span class="w">
+</span><span class="go">type: Opaque
+---
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  name: openshift-control-plane-2
+  namespace: openshift-machine-api
+spec:
+  automatedCleaningMode: disabled
+  bmc:
+    address: redfish://10.46.61.18:443/redfish/v1/Systems/1
+    credentialsName: openshift-control-plane-2-bmc-secret
+    disableCertificateVerification: true
+  bootMACAddress: 48:df:37:b0:8a:a0
+  bootMode: UEFI
+  externallyProvisioned: false
+  online: true
+  rootDeviceHints:
+    deviceName: /dev/sda
+  userData:
+    name: master-user-data-managed
+    namespace: openshift-machine-api
+EOF</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The username and password can be found from the other bare metal host&#8217;s secrets. The protocol to use in <code>bmc:address</code> can be taken from other bmh objects.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you reuse the <code>BareMetalHost</code> object definition from an existing control plane host, do not leave the <code>externallyProvisioned</code> field set to <code>true</code>.</p>
+</div>
+<div class="paragraph">
+<p>Existing control plane <code>BareMetalHost</code> objects may have the <code>externallyProvisioned</code> flag set to <code>true</code> if they were provisioned by the OpenShift Container Platform installation program.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After the inspection is complete, the <code>BareMetalHost</code> object is created and available to be provisioned.</p>
+</div>
+</li>
+<li>
+<p>Verify the creation process using available <code>BareMetalHost</code> objects:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get bmh <span class="nt">-n</span> openshift-machine-api
+<span class="go">
+NAME                      STATE                  CONSUMER                      ONLINE ERROR   AGE
+openshift-control-plane-0 externally provisioned examplecluster-control-plane-0 true         4h48m
+openshift-control-plane-1 externally provisioned examplecluster-control-plane-1 true         4h48m
+openshift-control-plane-2 available              examplecluster-control-plane-3 true         47m
+openshift-compute-0       provisioned            examplecluster-compute-0       true         4h48m
+openshift-compute-1       provisioned            examplecluster-compute-1       true         4h48m</span></code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create the new control plane machine using the <code>new-master-machine.yaml</code> file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc apply <span class="nt">-f</span> new-master-machine.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the new machine has been created:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get machines <span class="nt">-n</span> openshift-machine-api <span class="nt">-o</span> wide</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME                                   PHASE     TYPE   REGION   ZONE   AGE     NODE                              PROVIDERID                                                                                            STATE
+examplecluster-control-plane-0         Running                          3h11m   openshift-control-plane-0   baremetalhost:///openshift-machine-api/openshift-control-plane-0/da1ebe11-3ff2-41c5-b099-0aa41222964e   externally provisioned <i class="conum" data-value="1"></i><b>(1)</b>
+examplecluster-control-plane-1         Running                          3h11m   openshift-control-plane-1   baremetalhost:///openshift-machine-api/openshift-control-plane-1/d9f9acbc-329c-475e-8d81-03b20280a3e1   externally provisioned
+examplecluster-control-plane-2         Running                          3h11m   openshift-control-plane-2   baremetalhost:///openshift-machine-api/openshift-control-plane-2/3354bdac-61d8-410f-be5b-6a395b056135   externally provisioned
+examplecluster-compute-0               Running                          165m    openshift-compute-0         baremetalhost:///openshift-machine-api/openshift-compute-0/3d685b81-7410-4bb3-80ec-13a31858241f         provisioned
+examplecluster-compute-1               Running                          165m    openshift-compute-1         baremetalhost:///openshift-machine-api/openshift-compute-1/0fdae6eb-2066-4241-91dc-e7ea72ab13b9         provisioned</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The new machine, <code>clustername-8qw5l-master-3</code> is being created and is ready after the phase changes from <code>Provisioning</code> to <code>Running</code>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>It should take a few minutes for the new machine to be created. The etcd cluster Operator will automatically sync when the machine or node returns to a healthy state.</p>
+</div>
+</li>
+<li>
+<p>Verify that the bare metal host becomes provisioned and no error reported by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get bmh <span class="nt">-n</span> openshift-machine-api</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get bmh <span class="nt">-n</span> openshift-machine-api
+<span class="go">NAME                      STATE                  CONSUMER                       ONLINE ERROR AGE
+openshift-control-plane-0 externally provisioned examplecluster-control-plane-0 true         4h48m
+openshift-control-plane-1 externally provisioned examplecluster-control-plane-1 true         4h48m
+openshift-control-plane-2 provisioned            examplecluster-control-plane-3 true          47m
+openshift-compute-0       provisioned            examplecluster-compute-0       true         4h48m
+openshift-compute-1       provisioned            examplecluster-compute-1       true         4h48m</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the new node is added and in a ready state by running this command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get nodes</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get nodes
+<span class="go">NAME                     STATUS ROLES   AGE   VERSION
+openshift-control-plane-0 Ready master 4h26m v1.24.0+9546431
+openshift-control-plane-1 Ready master 4h26m v1.24.0+9546431
+openshift-control-plane-2 Ready master 12m   v1.24.0+9546431
+openshift-compute-0       Ready worker 3h58m v1.24.0+9546431
+openshift-compute-1       Ready worker 3h58m v1.24.0+9546431</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that all etcd pods are running properly.</p>
+<div class="paragraph">
+<p>In a terminal that has access to the cluster as a <code>cluster-admin</code> user, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get pods <span class="nt">-n</span> openshift-etcd <span class="nt">-o</span> wide | <span class="nb">grep </span>etcd | <span class="nb">grep</span> <span class="nt">-v</span> guard</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">etcd-openshift-control-plane-0      5/5     Running     0     105m
+etcd-openshift-control-plane-1      5/5     Running     0     107m
+etcd-openshift-control-plane-2      5/5     Running     0     103m</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the output from the previous command only lists two pods, you can manually force an etcd redeployment. In a terminal that has access to the cluster as a <code>cluster-admin</code> user, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc patch etcd cluster <span class="nt">-p</span><span class="o">=</span><span class="s1">'{"spec": {"forceRedeploymentReason": "recovery-'</span><span class="s2">"</span><span class="si">$(</span> <span class="nb">date</span> <span class="nt">--rfc-3339</span><span class="o">=</span>ns <span class="si">)</span><span class="s2">"</span><span class="s1">'"}}'</span> <span class="nt">--type</span><span class="o">=</span>merge <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>forceRedeploymentReason</code> value must be unique, which is why a timestamp is appended.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To verify there are exactly three etcd members, connect to the running etcd container, passing in the name of a pod that was not on the affected node. In a terminal that has access to the cluster as a <code>cluster-admin</code> user, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc rsh <span class="nt">-n</span> openshift-etcd etcd-openshift-control-plane-0</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>View the member list:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-4.2#</span><span class="w"> </span>etcdctl member list <span class="nt">-w</span> table</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">+------------------+---------+--------------------+---------------------------+---------------------------+-----------------+
+|        ID        | STATUS  |        NAME        |        PEER ADDRS         |       CLIENT ADDRS        |    IS LEARNER    |
++------------------+---------+--------------------+---------------------------+---------------------------+-----------------+
+| 7a8197040a5126c8 | started | openshift-control-plane-2 | https://192.168.10.11:2380 | https://192.168.10.11:2379 |   false |
+| 8d5abe9669a39192 | started | openshift-control-plane-1 | https://192.168.10.10:2380 | https://192.168.10.10:2379 |   false |
+| cc3830a72fc357f9 | started | openshift-control-plane-0 | https://192.168.10.9:2380 | https://192.168.10.9:2379 |     false |
++------------------+---------+--------------------+---------------------------+---------------------------+-----------------+</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the output from the previous command lists more than three etcd members, you must carefully remove the unwanted member.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Verify that all etcd members are healthy by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">#</span><span class="w"> </span>etcdctl endpoint health <span class="nt">--cluster</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">https://192.168.10.10:2379 is healthy: successfully committed proposal: took = 8.973065ms
+https://192.168.10.9:2379 is healthy: successfully committed proposal: took = 11.559829ms
+https://192.168.10.11:2379 is healthy: successfully committed proposal: took = 11.665203ms</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Validate that all nodes are at the latest revision by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get etcd <span class="nt">-o</span><span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range.items[0].status.conditions[?(@.type=="NodeInstallerProgressing")]}{.reason}{"\n"}{.message}{"\n"}'</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="nowrap">AllNodesAtLatestRevision</pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -30621,5 +31654,4 @@ if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pag
   </script>
 
 </body>
-
 </html>

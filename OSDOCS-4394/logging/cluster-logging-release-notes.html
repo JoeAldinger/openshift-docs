@@ -13,38 +13,27 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
   <title>Release notes | Logging | OpenShift Container Platform Branch Build</title>
-  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css">
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet" />
-  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
-  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css">
-  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen, print" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet" />
+  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet"  media="screen"/>
+  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"/>
+  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css"/>
+  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet"  media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/print.css" rel="stylesheet" type="text/css" media="print"/>
   <!--[if IE]><link rel="shortcut icon" href="https://assets.openshift.net/content/subdomain/favicon.ico"><![endif]-->
   <!-- or, set /favicon.ico for IE10 win -->
   <meta content="OpenShift" name="application-name">
   <meta content="#000000" name="msapplication-TileColor">
   <meta content="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" name="msapplication-TileImage">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <!-- Adobe DTM -->
+  <script src="//www.redhat.com/dtm.js" type="text/javascript"></script>
+  <!-- End Adobe DTM -->
 
   <script id="trustarc" src="https://static.redhat.com/libs/redhat/marketing/latest/trustarc/trustarc.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
         rel="stylesheet">
-  <script>
-
-    function getPDF() {
-      var element = document.getElementsByClassName('main');
-      
-      var opt = {
-        margin:       10,
-        filename:     'logging/cluster-logging-release-notes.pdf',
-        html2canvas:  { windowWidth: 650 },
-        image:        { type: 'jpeg', quality: 0.98 }
-      };
-      html2pdf().set(opt).from(element[0]).save();
-    }
-  </script>
 
 </head>
 
@@ -222,7 +211,7 @@
         <a href="https://github.com/openshift/openshift-docs/issues/new?title=[enterprise-Branch Build] Issue in file logging/cluster-logging-release-notes.adoc">
           <span class="material-icons-outlined" title="Open an issue">bug_report</span>
         </a>
-        <a href="javascript: void(0);" onclick="getPDF();"><span class="material-icons-outlined" title="Download PDF (may take a while for large pages)">picture_as_pdf</span></a>
+        <a href="javascript: void(0);" onclick="window.print()"><span class="material-icons-outlined" title="Print page (Save as PDF)">picture_as_pdf</span></a>
         
         
       </span>
@@ -5871,6 +5860,54 @@
 
 
                   <li>
+                    <a class="" href="../security/certificate_types_descriptions/aggregated-api-client-certificates.html">
+                      Aggregated API client certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../security/certificate_types_descriptions/machine-config-operator-certificates.html">
+                      Machine Config Operator certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../security/certificate_types_descriptions/user-provided-certificates-for-default-ingress.html">
                       User-provided certificates for default ingress
                     </a>
@@ -6832,7 +6869,7 @@
 
                   <li>
                     <a class="" href="../authentication/identity_providers/configuring-htpasswd-identity-provider.html">
-                      Configuring an HTPasswd identity provider
+                      Configuring an htpasswd identity provider
                     </a>
                   </li>
 
@@ -11067,7 +11104,7 @@
 
                   <li>
                     <a class="" href="../operators/admin/olm-upgrading-operators.html">
-                      Upgrading installed Operators
+                      Updating installed Operators
                     </a>
                   </li>
 
@@ -11769,7 +11806,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -13441,21 +13478,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../applications/index.html">Building applications overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-0">
-                <span id="sgSpan-17-0" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
+                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
                   &nbsp;Projects
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-0" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13541,15 +13591,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
-                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-2">
+                <span id="sgSpan-17-2" class="fa fa-caret-right"></span>
                   &nbsp;Creating applications
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-2" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13648,15 +13698,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-3">
-                <span id="sgSpan-17-3" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
+                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
                   &nbsp;Connecting applications to services
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-3" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13886,15 +13936,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
-                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
+                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
                   &nbsp;Working with Helm charts
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14004,15 +14054,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
-                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
+                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
                   &nbsp;Deployments
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14122,15 +14172,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
-                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-7">
+                <span id="sgSpan-17-7" class="fa fa-caret-right"></span>
                   &nbsp;Quotas
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-7" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -15711,6 +15761,30 @@
 
                 
 
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../nodes/nodes/nodes-nodes-creating-infrastructure-nodes.html">
+                      Creating infrastructure nodes
+                    </a>
+                  </li>
+
+                
+
               </ul>
             </li>
 
@@ -17281,19 +17355,6 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../scalability_and_performance/recommended-install-practices.html">Recommended installation practices</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
             <li><a class="" href="../scalability_and_performance/recommended-host-practices.html">Recommended host practices</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -17477,6 +17538,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../scalability_and_performance/cnf-performance-addon-operator-for-low-latency-nodes.html">Performance Addon Operator for low latency nodes</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../scalability_and_performance/cnf-performing-platform-verification-latency-tests.html">Performing latency tests for platform verification</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -17721,6 +17795,30 @@
 
 
                   <li>
+                    <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-release-notes.html">
+                      OADP release notes
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-features-plugins.html">
                       OADP features and plugins
                     </a>
@@ -17748,11 +17846,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-1">
-                    <span id="ssgSpan-26-3-1" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
+                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
                     &nbsp;Installing and configuring OADP
                   </a>
-                  <ul id="topicSubSubGroup-26-3-1" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17848,11 +17946,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
-                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-3">
+                    <span id="ssgSpan-26-3-3" class="fa fa-caret-right"></span>
                     &nbsp;Backing up and restoring
                   </a>
-                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-3" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17897,6 +17995,54 @@
                   <li>
                     <a class="" href="../backup_and_restore/application_backup_and_restore/troubleshooting.html">
                       Troubleshooting
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-api.html">
+                      OADP API
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../backup_and_restore/application_backup_and_restore/oadp-advanced-topics.html">
+                      Advanced OADP features and functionalities
                     </a>
                   </li>
 
@@ -26173,6 +26319,16 @@
 
 
                     <li>
+                      <a class="" href="../virt/virtual_machines/advanced_vm_management/virt-working-with-resource-quotas-for-vms.html" style="padding-left: 70px;">
+                        Working with resource quotas for virtual machines
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
                       <a class="" href="../virt/virtual_machines/advanced_vm_management/virt-specifying-nodes-for-vms.html" style="padding-left: 70px;">
                         Specifying nodes for virtual machines
                       </a>
@@ -26445,6 +26601,16 @@
                     <li>
                       <a class="" href="../virt/virtual_machines/vm_networking/virt-using-the-default-pod-network-with-virt.html" style="padding-left: 70px;">
                         Configuring the virtual machine for the default pod network
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
+                      <a class="" href="../virt/virtual_machines/vm_networking/virt-creating-service-vm.html" style="padding-left: 70px;">
+                        Creating a service to expose a virtual machine
                       </a>
                     </li>
 
@@ -27553,7 +27719,7 @@
 
                   <li>
                     <a class="" href="../virt/logging_events_monitoring/virt-collecting-virt-data.html">
-                      Collecting OpenShift Virtualization data for Red Hat Support
+                      Collecting data for Red Hat Support
                     </a>
                   </li>
 
@@ -27692,6 +27858,30 @@
                   <li>
                     <a class="" href="../serverless/discover/knative-event-sources.html">
                       Event sources
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../serverless/discover/serverless-brokers.html">
+                      Brokers
                     </a>
                   </li>
 
@@ -28333,7 +28523,7 @@
 
                   <li>
                     <a class="" href="../serverless/develop/serverless-using-brokers.html">
-                      Brokers
+                      Creating brokers
                     </a>
                   </li>
 
@@ -28688,6 +28878,30 @@
 
 
                   <li>
+                    <a class="" href="../serverless/security/serverless-config-tls.html">
+                      Configuring TLS authentication
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../serverless/security/serverless-ossm-with-kourier-jwt.html">
                       Configuring JSON Web Token authentication for Knative services
                     </a>
@@ -28784,6 +28998,30 @@
                   <li>
                     <a class="" href="../serverless/functions/serverless-functions-getting-started.html">
                       Getting started with functions
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../serverless/functions/serverless-functions-on-cluster-builds.html">
+                      On-cluster function building and deploying
                     </a>
                   </li>
 
@@ -29117,6 +29355,9 @@
           </div>
         </div>
       </div>
+      <div class="print-logo" style="display:none;">
+        <img src="https://www.redhat.com/cms/managed-files/Logo-Red_Hat-OpenShift-A-Standard-RGB_0_0.svg" alt="print logo"/>
+      </div>
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
@@ -29130,6 +29371,62 @@
 <div id="toc" class="toc">
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
+<li><a href="#cluster-logging-release-notes-5-5-4_cluster-logging-release-notes-v5x">Logging 5.5.4</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-5-4-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-5-4-CVEs">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-5-3_cluster-logging-release-notes-v5x">Logging 5.5.3</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-5-3-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-5-3-cves_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-5-2_cluster-logging-release-notes-v5x">Logging 5.5.2</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-5-2-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-5-2-cves_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-5-1">Logging 5.5.1</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-5-1-enhancements_cluster-logging-release-notes-v5x">Enhancements</a></li>
+<li><a href="#openshift-logging-5-5-1-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-5-1-cves_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-5-0">Logging 5.5</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-5-0-enhancements">Enhancements</a></li>
+<li><a href="#openshift-logging-5-5-0-bug-fixes">Bug fixes</a></li>
+<li><a href="#cves">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-4-8_cluster-logging-release-notes-v5x">Logging 5.4.8</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-4-8-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-4-8-CVEs">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-4-6_cluster-logging-release-notes-v5x">Logging 5.4.6</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-4-6-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-4-6-cves_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-4-5_cluster-logging-release-notes-v5x">Logging 5.4.5</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-4-5-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-4-5-cves_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-4-4">Logging 5.4.4</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-4-4-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-4-4-cves">CVEs</a></li>
+</ul>
+</li>
 <li><a href="#cluster-logging-release-notes-5-4-3">Logging 5.4.3</a>
 <ul class="sectlevel2">
 <li><a href="#openshift-logging-elasticsearch-dep">Elasticsearch Operator deprecation notice</a></li>
@@ -29143,19 +29440,43 @@
 <li><a href="#openshift-logging-5-4-2-CVEs">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-4-1">Logging 5.4.1</a>
+<li><a href="#cluster-logging-release-notes-5-4-1_cluster-logging-release-notes-v5x">Logging 5.4.1</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-4-1-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-4-1-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-4-1-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-4-1-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-4-0">Logging 5.4</a>
+<li><a href="#cluster-logging-release-notes-5-4-0_cluster-logging-release-notes-v5x">Logging 5.4</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-4-0-tech-prev">Technology Previews</a></li>
+<li><a href="#openshift-logging-5-4-0-tech-prev_cluster-logging-release-notes-v5x">Technology Previews</a></li>
 <li><a href="#cluster-logging-about-vector">About Vector</a></li>
 <li><a href="#cluster-logging-about-loki">About Loki</a></li>
-<li><a href="#openshift-logging-5-4-0-bug-fixes">Bug fixes</a></li>
-<li><a href="#cves">CVEs</a></li>
+<li><a href="#openshift-logging-5-4-0-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#cves-2">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-3-13_cluster-logging-release-notes-v5x">Logging 5.3.13</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-3-13-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-13-CVEs">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-3-12_cluster-logging-release-notes-v5x">Logging 5.3.12</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-3-12-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-12-cves_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-3-11_cluster-logging-release-notes-v5x">Logging 5.3.11</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-3-11-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-11-cves_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-3-10">Logging 5.3.10</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-3-10-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-10-cves">CVEs</a></li>
 </ul>
 </li>
 <li><a href="#cluster-logging-release-notes-5-3-9">Logging 5.3.9</a>
@@ -29170,54 +29491,60 @@
 <li><a href="#openshift-logging-5-3-8-CVEs">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-3-7">OpenShift Logging 5.3.7</a>
+<li><a href="#cluster-logging-release-notes-5-3-7_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.7</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-7-bug-fixes">Bug fixes</a></li>
-<li><a href="#cves-2">CVEs</a></li>
-</ul>
-</li>
-<li><a href="#cluster-logging-release-notes-5-3-6">OpenShift Logging 5.3.6</a>
-<ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-6-bug-fixes">Bug fixes</a></li>
-</ul>
-</li>
-<li><a href="#cluster-logging-release-notes-5-3-5">OpenShift Logging 5.3.5</a>
-<ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-5-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-7-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
 <li><a href="#cves-3">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-3-4">OpenShift Logging 5.3.4</a>
+<li><a href="#cluster-logging-release-notes-5-3-6_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.6</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-4-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-6-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-3-5_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.5</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-3-5-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
 <li><a href="#cves-4">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-3-3">OpenShift Logging 5.3.3</a>
+<li><a href="#cluster-logging-release-notes-5-3-4_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.4</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-3-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-4-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
 <li><a href="#cves-5">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-3-2">OpenShift Logging 5.3.2</a>
+<li><a href="#cluster-logging-release-notes-5-3-3_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.3</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-2-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-3-2-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-3-3-bug-fixes">Bug fixes</a></li>
+<li><a href="#cves-6">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-3-1">OpenShift Logging 5.3.1</a>
+<li><a href="#cluster-logging-release-notes-5-3-2_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.2</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-1-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-3-1-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-3-2-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-2-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-3-0">OpenShift Logging 5.3.0</a>
+<li><a href="#cluster-logging-release-notes-5-3-1_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.1</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-3-0-new-features-and-enhancements">New features and enhancements</a></li>
-<li><a href="#openshift-logging-5-3-0-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-3-0-known-issues">Known issues</a></li>
-<li><a href="#openshift-logging-5-3-0-deprecated-removed-features">Deprecated and removed features</a></li>
-<li><a href="#openshift-logging-5-3-0-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-3-1-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-1-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-3-0_cluster-logging-release-notes-v5x">OpenShift Logging 5.3.0</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-3-0-new-features-and-enhancements_cluster-logging-release-notes-v5x">New features and enhancements</a></li>
+<li><a href="#openshift-logging-5-3-0-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-3-0-known-issues_cluster-logging-release-notes-v5x">Known issues</a></li>
+<li><a href="#openshift-logging-5-3-0-deprecated-removed-features_cluster-logging-release-notes-v5x">Deprecated and removed features</a></li>
+<li><a href="#openshift-logging-5-3-0-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
+</ul>
+</li>
+<li><a href="#cluster-logging-release-notes-5-2-13">Logging 5.2.13</a>
+<ul class="sectlevel2">
+<li><a href="#openshift-logging-5-2-13-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-13-cves">CVEs</a></li>
 </ul>
 </li>
 <li><a href="#cluster-logging-release-notes-5-2-12">Logging 5.2.12</a>
@@ -29232,80 +29559,775 @@
 <li><a href="#openshift-logging-5-2-11-CVEs">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-10">OpenShift Logging 5.2.10</a>
+<li><a href="#cluster-logging-release-notes-5-2-10_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.10</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-10-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-10-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-10-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-10-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-9">OpenShift Logging 5.2.9</a>
+<li><a href="#cluster-logging-release-notes-5-2-9_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.9</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-9-bug-fixes">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-9-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-8">OpenShift Logging 5.2.8</a>
+<li><a href="#cluster-logging-release-notes-5-2-8_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.8</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-8-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-8-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-8-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-8-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-7">OpenShift Logging 5.2.7</a>
+<li><a href="#cluster-logging-release-notes-5-2-7_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.7</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-7-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-7-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-7-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-7-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-6">OpenShift Logging 5.2.6</a>
+<li><a href="#cluster-logging-release-notes-5-2-6_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.6</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-6-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-6-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-6-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-6-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-5">OpenShift Logging 5.2.5</a>
+<li><a href="#cluster-logging-release-notes-5-2-5_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.5</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-5-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-5-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-5-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-5-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-4">OpenShift Logging 5.2.4</a>
+<li><a href="#cluster-logging-release-notes-5-2-4_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.4</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-4-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-4-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-4-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-4-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-3">OpenShift Logging 5.2.3</a>
+<li><a href="#cluster-logging-release-notes-5-2-3_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.3</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-3-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-3-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-3-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-3-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-2">OpenShift Logging 5.2.2</a>
+<li><a href="#cluster-logging-release-notes-5-2-2_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.2</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-2-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-2-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-2-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-2-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-1">OpenShift Logging 5.2.1</a>
+<li><a href="#cluster-logging-release-notes-5-2-1_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.1</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-1-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-1-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-1-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-1-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
-<li><a href="#cluster-logging-release-notes-5-2-0">OpenShift Logging 5.2.0</a>
+<li><a href="#cluster-logging-release-notes-5-2-0_cluster-logging-release-notes-v5x">OpenShift Logging 5.2.0</a>
 <ul class="sectlevel2">
-<li><a href="#openshift-logging-5-2-0-new-features-and-enhancements">New features and enhancements</a></li>
-<li><a href="#openshift-logging-5-2-0-bug-fixes">Bug fixes</a></li>
-<li><a href="#openshift-logging-5-2-0-known-issues">Known issues</a></li>
-<li><a href="#openshift-logging-5-2-0-deprecated-removed-features">Deprecated and removed features</a></li>
-<li><a href="#openshift-logging-5-2-0-legacy-forwarding">Forwarding logs using the legacy Fluentd and legacy syslog methods have been deprecated</a></li>
-<li><a href="#openshift-logging-5-2-0-CVEs">CVEs</a></li>
+<li><a href="#openshift-logging-5-2-0-new-features-and-enhancements_cluster-logging-release-notes-v5x">New features and enhancements</a></li>
+<li><a href="#openshift-logging-5-2-0-bug-fixes_cluster-logging-release-notes-v5x">Bug fixes</a></li>
+<li><a href="#openshift-logging-5-2-0-known-issues_cluster-logging-release-notes-v5x">Known issues</a></li>
+<li><a href="#openshift-logging-5-2-0-deprecated-removed-features_cluster-logging-release-notes-v5x">Deprecated and removed features</a></li>
+<li><a href="#openshift-logging-5-2-0-legacy-forwarding_cluster-logging-release-notes-v5x">Forwarding logs using the legacy Fluentd and legacy syslog methods have been deprecated</a></li>
+<li><a href="#openshift-logging-5-2-0-CVEs_cluster-logging-release-notes-v5x">CVEs</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="cluster-logging-ocp-compatibility" class="paragraph">
+<div id="cluster-logging-ocp-compatibility_cluster-logging-release-notes-v5x" class="paragraph">
 <div class="title">Logging Compatibility</div>
 <p>The logging subsystem for Red Hat OpenShift is provided as an installable component, with a distinct release cycle from the core OpenShift Container Platform. The <a href="https://access.redhat.com/support/policy/updates/openshift#logging">Red Hat OpenShift Container Platform Life Cycle Policy</a> outlines release compatibility.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-5-4_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-5-4_cluster-logging-release-notes-v5x"></a>Logging 5.5.4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:7434">RHSA-2022:7434-OpenShift Logging Bug Fix Release 5.5.4</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-4-bug-fixes"><a class="anchor" href="#openshift-logging-5-5-4-bug-fixes"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, an error in the query parser of the logging view plugin caused parts of the logs query to disappear if the query contained curly brackets <code>{}</code>. This made the queries invalid, leading to errors being returned for valid queries. With this update, the parser correctly handles these queries. (<a href="https://issues.redhat.com/browse/LOG-3042">LOG-3042</a>)</p>
+</li>
+<li>
+<p>Before this update, the Operator could enter a loop of removing and recreating the collector daemonset while the Elasticsearch or Kibana deployments changed their status. With this update, a fix in the status handling of the Operator resolves the issue. (<a href="https://issues.redhat.com/browse/LOG-3049">LOG-3049</a>)</p>
+</li>
+<li>
+<p>Before this update, no alerts were implemented to support the collector implementation of Vector. This change adds Vector alerts and deploys separate alerts, depending upon the chosen collector implementation. (<a href="https://issues.redhat.com/browse/LOG-3127">LOG-3127</a>)</p>
+</li>
+<li>
+<p>Before this update, the secret creation component of the Elasticsearch Operator modified internal secrets constantly. With this update, the existing secret is properly handled. (<a href="https://issues.redhat.com/browse/LOG-3138">LOG-3138</a>)</p>
+</li>
+<li>
+<p>Before this update, a prior refactoring of the logging <code>must-gather</code> scripts removed the expected location for the artifacts. This update reverts that change to write artifacts to the <code>/must-gather</code> folder. (<a href="https://issues.redhat.com/browse/LOG-3213">LOG-3213</a>)</p>
+</li>
+<li>
+<p>Before this update, on certain clusters, the Prometheus exporter would bind on IPv4 instead of IPv6. After this update, Fluentd detects the IP version and binds to <code>0.0.0.0</code> for IPv4 or <code>[::]</code> for IPv6. (<a href="https://issues.redhat.com/browse/LOG-3162">LOG-3162</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-4-CVEs"><a class="anchor" href="#openshift-logging-5-5-4-CVEs"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2020-35525">CVE-2020-35525</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2020-35527">CVE-2020-35527</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-0494">CVE-2022-0494</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1353">CVE-2022-1353</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2509">CVE-2022-2509</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2588">CVE-2022-2588</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-3515">CVE-2022-3515</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21618">CVE-2022-21618</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21619">CVE-2022-21619</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21624">CVE-2022-21624</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21626">CVE-2022-21626</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21628">CVE-2022-21628</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-23816">CVE-2022-23816</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-23825">CVE-2022-23825</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29900">CVE-2022-29900</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29901">CVE-2022-29901</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32149">CVE-2022-32149</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-37434">CVE-2022-37434</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-40674">CVE-2022-40674</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-5-3_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-5-3_cluster-logging-release-notes-v5x"></a>Logging 5.5.3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:6858">OpenShift Logging Bug Fix Release 5.5.3</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-3-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-5-3-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, log entries that had structured messages included the original message field, which made the entry larger. This update removes the message field for structured logs to reduce the increased size. (<a href="https://issues.redhat.com/browse/LOG-2759">LOG-2759</a>)</p>
+</li>
+<li>
+<p>Before this update, the collector configuration excluded logs from <code>collector</code>, <code>default-log-store</code>, and <code>visualization</code>  pods, but was unable to exclude logs archived in a <code>.gz</code> file. With this update, archived logs stored as <code>.gz</code> files of <code>collector</code>, <code>default-log-store</code>, and <code>visualization</code> pods are also excluded. (<a href="https://issues.redhat.com/browse/LOG-2844">LOG-2844</a>)</p>
+</li>
+<li>
+<p>Before this update, when requests to an unavailable pod were sent through the gateway, no alert would warn of the disruption. With this update, individual alerts will generate if the gateway has issues completing a write or read request. (<a href="https://issues.redhat.com/browse/LOG-2884">LOG-2884</a>)</p>
+</li>
+<li>
+<p>Before this update, pod metadata could be altered by fluent plugins because the values passed through the pipeline by reference. This update ensures each log message receives a copy of the pod metadata so each message processes independently. (<a href="https://issues.redhat.com/browse/LOG-3046">LOG-3046</a>)</p>
+</li>
+<li>
+<p>Before this update, selecting <strong>unknown</strong> severity in the OpenShift Console Logs view excluded logs with a <code>level=unknown</code> value. With this update, logs without level and with <code>level=unknown</code> values are visible when filtering by <strong>unknown</strong> severity. (<a href="https://issues.redhat.com/browse/LOG-3062">LOG-3062</a>)</p>
+</li>
+<li>
+<p>Before this update, log records sent to Elasticsearch had an extra field named <code>write-index</code> that contained the name of the index to which the logs needed to be sent. This field is not a part of the data model. After this update, this field is no longer sent. (<a href="https://issues.redhat.com/browse/LOG-3075">LOG-3075</a>)</p>
+</li>
+<li>
+<p>With the introduction of the new built-in <a href="https://cloud.redhat.com/blog/pod-security-admission-in-openshift-4.11">Pod Security Admission Controller</a>, Pods not configured in accordance with the enforced security standards defined globally or on the namespace level cannot run. With this update, the Operator and collectors allow privileged execution and run without security audit warnings or errors. (<a href="https://issues.redhat.com/browse/LOG-3077">LOG-3077</a>)</p>
+</li>
+<li>
+<p>Before this update, the Operator removed any custom outputs defined in the <code>ClusterLogForwarder</code> custom resource when using LokiStack as the default log storage. With this update, the Operator merges custom outputs with the default outputs when processing the <code>ClusterLogForwarder</code> custom resource. (<a href="https://issues.redhat.com/browse/LOG-3095">LOG-3095</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-3-cves_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-5-3-cves_cluster-logging-release-notes-v5x"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2015-20107">CVE-2015-20107</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-0391">CVE-2022-0391</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2526">CVE-2022-2526</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21123">CVE-2022-21123</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21125">CVE-2022-21125</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21166">CVE-2022-21166</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29154">CVE-2022-29154</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32206">CVE-2022-32206</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32208">CVE-2022-32208</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-34903">CVE-2022-34903</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-5-2_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-5-2_cluster-logging-release-notes-v5x"></a>Logging 5.5.2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:6559">OpenShift Logging Bug Fix Release 5.5.2</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-2-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-5-2-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, alerting rules for the Fluentd collector did not adhere to the OpenShift Container Platform monitoring style guidelines. This update modifies those alerts to include the namespace label, resolving the issue. (<a href="https://issues.redhat.com/browse/LOG-1823">LOG-1823</a>)</p>
+</li>
+<li>
+<p>Before this update, the index management rollover script failed to generate a new index name whenever there was more than one hyphen character in the name of the index. With this update, index names generate correctly. (<a href="https://issues.redhat.com/browse/LOG-2644">LOG-2644</a>)</p>
+</li>
+<li>
+<p>Before this update, the Kibana route was setting a <code>caCertificate</code> value without a certificate present. With this update, no <code>caCertificate</code> value is set. (<a href="https://issues.redhat.com/browse/LOG-2661">LOG-2661</a>)</p>
+</li>
+<li>
+<p>Before this update, a change in the collector dependencies caused it to issue a warning message for unused parameters. With this update, removing unused configuration parameters resolves the issue. (<a href="https://issues.redhat.com/browse/LOG-2859">LOG-2859</a>)</p>
+</li>
+<li>
+<p>Before this update, pods created for deployments that Loki Operator created were mistakenly scheduled on nodes with non-Linux operating systems, if such nodes were available in the cluster the Operator was running in. With this update, the Operator attaches an additional node-selector to the pod definitions which only allows scheduling the pods on Linux-based nodes. (<a href="https://issues.redhat.com/browse/LOG-2895">LOG-2895</a>)</p>
+</li>
+<li>
+<p>Before this update,  the OpenShift Console Logs view did not filter logs by severity due to a LogQL parser issue in the LokiStack gateway. With this update, a parser fix resolves the issue and the OpenShift Console Logs view can filter by severity. (<a href="https://issues.redhat.com/browse/LOG-2908">LOG-2908</a>)</p>
+</li>
+<li>
+<p>Before this update, a refactoring of the Fluentd collector plugins removed the timestamp field for events. This update restores the timestamp field, sourced from the event&#8217;s received time. (<a href="https://issues.redhat.com/browse/LOG-2923">LOG-2923</a>)</p>
+</li>
+<li>
+<p>Before this update, absence of a <code>level</code> field in audit logs caused an error in vector logs. With this update, the addition of a <code>level</code> field in the audit log record resolves the issue. (<a href="https://issues.redhat.com/browse/LOG-2961">LOG-2961</a>)</p>
+</li>
+<li>
+<p>Before this update, if you deleted the Kibana Custom Resource, the OpenShift Container Platform web console continued displaying a link to Kibana. With this update, removing the Kibana Custom Resource also removes that link. (<a href="https://issues.redhat.com/browse/LOG-3053">LOG-3053</a>)</p>
+</li>
+<li>
+<p>Before this update, each rollover job created empty indices when the <code>ClusterLogForwarder</code> custom resource had JSON parsing defined. With this update, new indices are not empty. (<a href="https://issues.redhat.com/browse/LOG-3063">LOG-3063</a>)</p>
+</li>
+<li>
+<p>Before this update, when the user deleted the LokiStack after an update to Loki Operator 5.5 resources originally created by Loki Operator 5.4 remained. With this update, the resources' owner-references point to the 5.5 LokiStack. (<a href="https://issues.redhat.com/browse/LOG-2945">LOG-2945</a>)</p>
+</li>
+<li>
+<p>Before this update, a user was not able to view the application logs of namespaces they have access to. With this update, the Loki Operator automatically creates a cluster role and cluster role binding allowing users to read application logs. (<a href="https://issues.redhat.com/browse/LOG-2918">LOG-2918</a>)</p>
+</li>
+<li>
+<p>Before this update, users with cluster-admin privileges were not able to properly view infrastructure and audit logs using the logging console. With this update, the authorization check has been extended to also recognize users in cluster-admin and dedicated-admin groups as admins. (<a href="https://issues.redhat.com/browse/LOG-2970">LOG-2970</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-2-cves_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-5-2-cves_cluster-logging-release-notes-v5x"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2015-20107">CVE-2015-20107</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-0391">CVE-2022-0391</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21123">CVE-2022-21123</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21125">CVE-2022-21125</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21166">CVE-2022-21166</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29154">CVE-2022-29154</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32206">CVE-2022-32206</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32208">CVE-2022-32208</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-34903">CVE-2022-34903</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-5-1"><a class="anchor" href="#cluster-logging-release-notes-5-5-1"></a>Logging 5.5.1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:6344">OpenShift Logging Bug Fix Release 5.5.1</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-1-enhancements_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-5-1-enhancements_cluster-logging-release-notes-v5x"></a>Enhancements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>This enhancement adds an <strong>Aggregated Logs</strong> tab to the <strong>Pod Details</strong> page of the OpenShift Container Platform web console when the Logging Console Plug-in is in use. This enhancement is only available on OpenShift Container Platform 4.10 and later. (<a href="https://issues.redhat.com/browse/LOG-2647">LOG-2647</a>)</p>
+</li>
+<li>
+<p>This enhancement adds Google Cloud Logging as an output option for log forwarding. (<a href="https://issues.redhat.com/browse/LOG-1482">LOG-1482</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-1-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-5-1-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, the Operator did not ensure that the pod was ready, which caused the cluster to reach an inoperable state during a cluster restart. With this update, the Operator marks new pods as ready before continuing to a new pod during a restart, which resolves the issue. (<a href="https://issues.redhat.com/browse/LOG-2745">LOG-2745</a>)</p>
+</li>
+<li>
+<p>Before this update, Fluentd would sometimes not recognize that the Kubernetes platform rotated the log file and would no longer read log messages. This update corrects that by setting the configuration parameter suggested by the upstream development team. (<a href="https://issues.redhat.com/browse/LOG-2995">LOG-2995</a>)</p>
+</li>
+<li>
+<p>Before this update, the addition of multi-line error detection caused internal routing to change and forward records to the wrong destination. With this update, the internal routing is correct. (<a href="https://issues.redhat.com/browse/LOG-2801">LOG-2801</a>)</p>
+</li>
+<li>
+<p>Before this update, changing the OpenShift Container Platform web console&#8217;s refresh interval created an error when the <strong>Query</strong> field was empty. With this update, changing the interval is not an available option when the <strong>Query</strong> field is empty. (<a href="https://issues.redhat.com/browse/LOG-2917">LOG-2917</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-1-cves_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-5-1-cves_cluster-logging-release-notes-v5x"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1705">CVE-2022-1705</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2526">CVE-2022-2526</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29154">CVE-2022-29154</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-30631">CVE-2022-30631</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32148">CVE-2022-32148</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32206">CVE-2022-32206</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32208">CVE-2022-32208</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-5-0"><a class="anchor" href="#cluster-logging-release-notes-5-5-0"></a>Logging 5.5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following advisories are available for Logging 5.5:<a href="https://access.redhat.com/errata/RHSA-2022:6051">Release 5.5</a></p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-0-enhancements"><a class="anchor" href="#openshift-logging-5-5-0-enhancements"></a>Enhancements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>With this update, you can forward structured logs from different containers within the same pod to different indices. To use this feature, you must configure the pipeline with multi-container support and annotate the pods. (<a href="https://issues.redhat.com/browse/LOG-1296">LOG-1296</a>)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>JSON formatting of logs varies by application. Because creating too many indices impacts performance, limit your use of this feature to creating indices for logs that have incompatible JSON formats. Use queries to separate logs from different namespaces, or applications with compatible JSON formats.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>With this update, you can filter logs with Elasticsearch outputs by using the Kubernetes common labels, <code>app.kubernetes.io/component</code>, <code>app.kubernetes.io/managed-by</code>, <code>app.kubernetes.io/part-of</code>, and <code>app.kubernetes.io/version</code>. Non-Elasticsearch output types can use all labels included in <code>kubernetes.labels</code>. (<a href="https://issues.redhat.com/browse/LOG-2388">LOG-2388</a>)</p>
+</li>
+<li>
+<p>With this update, clusters with AWS Security Token Service (STS) enabled may use STS authentication to forward logs to Amazon CloudWatch. (<a href="https://issues.redhat.com/browse/LOG-1976">LOG-1976</a>)</p>
+</li>
+<li>
+<p>With this update, the 'LokiOperator' Operator and Vector collector move from Technical Preview to General Availability. Full feature parity with prior releases are pending, and some APIs remain Technical Previews. See the <strong>Logging with the LokiStack</strong> section for details.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-5-0-bug-fixes"><a class="anchor" href="#openshift-logging-5-5-0-bug-fixes"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, clusters configured to forward logs to Amazon CloudWatch wrote rejected log files to temporary storage, causing cluster instability over time. With this update, chunk backup for all storage options has been disabled, resolving the issue. (<a href="https://issues.redhat.com/browse/LOG-2746">LOG-2746</a>)</p>
+</li>
+<li>
+<p>Before this update, the Operator was using versions of some APIs that are deprecated and planned for removal in future versions of OpenShift Container Platform. This update moves dependencies to the supported API versions. (<a href="https://issues.redhat.com/browse/LOG-2656">LOG-2656</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Before this update, the Operator was using versions of some APIs that are deprecated and planned for removal in future versions of OpenShift Container Platform. This update moves dependencies to the supported API versions. (<a href="https://issues.redhat.com/browse/LOG-2656">LOG-2656</a>)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, multiple <code>ClusterLogForwarder</code> pipelines configured for multiline error detection caused the collector to go into a <code>crashloopbackoff</code> error state. This update fixes the issue where multiple configuration sections had the same unique ID. (<a href="https://issues.redhat.com/browse/LOG-2241">LOG-2241</a>)</p>
+</li>
+<li>
+<p>Before this update, the collector could not save non UTF-8 symbols to the Elasticsearch storage logs. With this update the collector encodes non UTF-8 symbols, resolving the issue. (<a href="https://issues.redhat.com/browse/LOG-2203">LOG-2203</a>)</p>
+</li>
+<li>
+<p>Before this update, non-latin characters displayed incorrectly in Kibana. With this update, Kibana displays all valid UTF-8 symbols correctly. (<a href="https://issues.redhat.com/browse/LOG-2784">LOG-2784</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cves"><a class="anchor" href="#cves"></a>CVEs</h3>
+<div id="openshift-logging-5-5-0-CVEs" class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2021-38561">CVE-2021-38561</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1012">CVE-2022-1012</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1292">CVE-2022-1292</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1586">CVE-2022-1586</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1785">CVE-2022-1785</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1897">CVE-2022-1897</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1927">CVE-2022-1927</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2068">CVE-2022-2068</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2097">CVE-2022-2097</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21698">CVE-2022-21698</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-30631">CVE-2022-30631</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32250">CVE-2022-32250</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-4-8_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-4-8_cluster-logging-release-notes-v5x"></a>Logging 5.4.8</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:7435">RHSA-2022:7435-OpenShift Logging Bug Fix Release 5.4.8</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-8-bug-fixes"><a class="anchor" href="#openshift-logging-5-4-8-bug-fixes"></a>Bug fixes</h3>
+<div class="paragraph">
+<p>None.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-8-CVEs"><a class="anchor" href="#openshift-logging-5-4-8-CVEs"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2016-3709">CVE-2016-3709</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2020-35525">CVE-2020-35525</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2020-35527">CVE-2020-35527</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2020-36518">CVE-2020-36518</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1304">CVE-2022-1304</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2509">CVE-2022-2509</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-3515">CVE-2022-3515</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-22624">CVE-2022-22624</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-22628">CVE-2022-22628</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-22629">CVE-2022-22629</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-22662">CVE-2022-22662</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-26700">CVE-2022-26700</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-26709">CVE-2022-26709</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-26710">CVE-2022-26710</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-26716">CVE-2022-26716</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-26717">CVE-2022-26717</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-26719">CVE-2022-26719</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-30293">CVE-2022-30293</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32149">CVE-2022-32149</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-37434">CVE-2022-37434</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-40674">CVE-2022-40674</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-42003">CVE-2022-42003</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-42004">CVE-2022-42004</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-4-6_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-4-6_cluster-logging-release-notes-v5x"></a>Logging 5.4.6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:6558">OpenShift Logging Bug Fix Release 5.4.6</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-6-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-6-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, Fluentd would sometimes not recognize that the Kubernetes platform rotated the log file and would no longer read log messages. This update corrects that by setting the configuration parameter suggested by the upstream development team. (<a href="https://issues.redhat.com/browse/LOG-2792">LOG-2792</a>)</p>
+</li>
+<li>
+<p>Before this update, each rollover job created empty indices when the <code>ClusterLogForwarder</code> custom resource had JSON parsing defined. With this update, new indices are not empty. (<a href="https://issues.redhat.com/browse/LOG-2823">LOG-2823</a>)</p>
+</li>
+<li>
+<p>Before this update, if you deleted the Kibana Custom Resource, the OpenShift Container Platform web console continued displaying a link to Kibana. With this update, removing the Kibana Custom Resource also removes that link. (<a href="https://issues.redhat.com/browse/LOG-3054">LOG-3054</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-6-cves_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-6-cves_cluster-logging-release-notes-v5x"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2015-20107">CVE-2015-20107</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-0391">CVE-2022-0391</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21123">CVE-2022-21123</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21125">CVE-2022-21125</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21166">CVE-2022-21166</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29154">CVE-2022-29154</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32206">CVE-2022-32206</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32208">CVE-2022-32208</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-34903">CVE-2022-34903</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-4-5_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-4-5_cluster-logging-release-notes-v5x"></a>Logging 5.4.5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:6183">RHSA-2022:6183-OpenShift Logging Bug Fix Release 5.4.5</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-5-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-5-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, the Operator did not ensure that the pod was ready, which caused the cluster to reach an inoperable state during a cluster restart. With this update, the Operator marks new pods as ready before continuing to a new pod during a restart, which resolves the issue. (<a href="https://issues.redhat.com/browse/LOG-2881">LOG-2881</a>)</p>
+</li>
+<li>
+<p>Before this update, the addition of multi-line error detection caused internal routing to change and forward records to the wrong destination. With this update, the internal routing is correct. (<a href="https://issues.redhat.com/browse/LOG-2946">LOG-2946</a>)</p>
+</li>
+<li>
+<p>Before this update, the Operator could not decode index setting JSON responses with a quoted Boolean value and would result in an error. With this update, the Operator can properly decode this JSON response. (<a href="https://issues.redhat.com/browse/LOG-3009">LOG-3009</a>)</p>
+</li>
+<li>
+<p>Before this update, Elasticsearch index templates defined the fields for labels with the wrong types. This change updates those templates to match the expected types forwarded by the log collector. (<a href="https://issues.redhat.com/browse/LOG-2972">LOG-2972</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-5-cves_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-5-cves_cluster-logging-release-notes-v5x"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1292">CVE-2022-1292</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1586">CVE-2022-1586</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1785">CVE-2022-1785</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1897">CVE-2022-1897</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1927">CVE-2022-1927</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2068">CVE-2022-2068</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2097">CVE-2022-2097</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-30631">CVE-2022-30631</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-4-4"><a class="anchor" href="#cluster-logging-release-notes-5-4-4"></a>Logging 5.4.4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:5907">RHBA-2022:5907-OpenShift Logging Bug Fix Release 5.4.4</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-4-bug-fixes"><a class="anchor" href="#openshift-logging-5-4-4-bug-fixes"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, non-latin characters displayed incorrectly in Elasticsearch. With this update, Elasticsearch displays all valid UTF-8 symbols correctly. (<a href="https://issues.redhat.com/browse/LOG-2794">LOG-2794</a>)</p>
+</li>
+<li>
+<p>Before this update, non-latin characters displayed incorrectly in Fluentd. With this update, Fluentd displays all valid UTF-8 symbols correctly. (<a href="https://issues.redhat.com/browse/LOG-2657">LOG-2657</a>)</p>
+</li>
+<li>
+<p>Before this update, the metrics server for the collector attempted to bind to the address using a value exposed by an environment value.  This change modifies the configuration to bind to any available interface. (<a href="https://issues.redhat.com/browse/LOG-2821">LOG-2821</a>)</p>
+</li>
+<li>
+<p>Before this update, the <code>cluster-logging</code> Operator relied on the cluster to create a secret. This cluster behavior changed in OpenShift Container Platform 4.11, which caused logging deployments to fail. With this update, the <code>cluster-logging</code> Operator resolves the issue by creating the secret if needed. (<a href="https://issues.redhat.com/browse/LOG-2840">LOG-2840</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-4-4-cves"><a class="anchor" href="#openshift-logging-5-4-4-cves"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21540">CVE-2022-21540</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21541">CVE-2022-21541</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-34169">CVE-2022-34169</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -29577,13 +30599,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-4-1"><a class="anchor" href="#cluster-logging-release-notes-5-4-1"></a>Logging 5.4.1</h2>
+<h2 id="cluster-logging-release-notes-5-4-1_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-4-1_cluster-logging-release-notes-v5x"></a>Logging 5.4.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:2216">RHSA-2022:2216-OpenShift Logging Bug Fix Release 5.4.1</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-4-1-bug-fixes"><a class="anchor" href="#openshift-logging-5-4-1-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-4-1-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-1-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -29605,7 +30627,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-4-1-CVEs"><a class="anchor" href="#openshift-logging-5-4-1-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-4-1-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-1-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -29664,14 +30686,14 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-4-0"><a class="anchor" href="#cluster-logging-release-notes-5-4-0"></a>Logging 5.4</h2>
+<h2 id="cluster-logging-release-notes-5-4-0_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-4-0_cluster-logging-release-notes-v5x"></a>Logging 5.4</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following advisories are available for logging 5.4:
 <a href="https://access.redhat.com/errata/RHSA-2022:1461">Logging subsystem for Red Hat OpenShift Release 5.4</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-4-0-tech-prev"><a class="anchor" href="#openshift-logging-5-4-0-tech-prev"></a>Technology Previews</h3>
+<h3 id="openshift-logging-5-4-0-tech-prev_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-0-tech-prev_cluster-logging-release-notes-v5x"></a>Technology Previews</h3>
 <div id="cluster-logging-vector-tech-preview_cluster-logging-release-notes-v5x" class="admonitionblock important">
 <table>
 <tr>
@@ -29912,7 +30934,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-4-0-bug-fixes"><a class="anchor" href="#openshift-logging-5-4-0-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-4-0-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-4-0-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -29973,8 +30995,8 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="cves"><a class="anchor" href="#cves"></a>CVEs</h3>
-<div id="openshift-logging-5-4-0-CVEs" class="ulist">
+<h3 id="cves-2"><a class="anchor" href="#cves-2"></a>CVEs</h3>
+<div id="openshift-logging-5-4-0-CVEs_cluster-logging-release-notes-v5x" class="ulist">
 <ul>
 <li>
 <p><a href="https://access.redhat.com/security/cve/CVE-2022-0759">CVE-2022-0759</a></p>
@@ -29998,6 +31020,264 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-3-13_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-13_cluster-logging-release-notes-v5x"></a>Logging 5.3.13</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:6882">RHSA-2022:68828-OpenShift Logging Bug Fix Release 5.3.13</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-13-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-13-bug-fixes"></a>Bug fixes</h3>
+<div class="paragraph">
+<p>None.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-13-CVEs"><a class="anchor" href="#openshift-logging-5-3-13-CVEs"></a>CVEs</h3>
+<details>
+<summary class="title">Click to expand CVEs</summary>
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2020-35525">CVE-2020-35525</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2020-35527">CVE-2020-35527</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-0494">CVE-2022-0494</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1353">CVE-2022-1353</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2509">CVE-2022-2509</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2588">CVE-2022-2588</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-3515">CVE-2022-3515</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21618">CVE-2022-21618</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21619">CVE-2022-21619</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21624">CVE-2022-21624</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21626">CVE-2022-21626</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21628">CVE-2022-21628</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-23816">CVE-2022-23816</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-23825">CVE-2022-23825</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29900">CVE-2022-29900</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29901">CVE-2022-29901</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32149">CVE-2022-32149</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-37434">CVE-2022-37434</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-39399">CVE-2022-39399</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-40674">CVE-2022-40674</a></p>
+</li>
+</ul>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-3-12_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-12_cluster-logging-release-notes-v5x"></a>Logging 5.3.12</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:6560">OpenShift Logging Bug Fix Release 5.3.12</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-12-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-12-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
+<div class="paragraph">
+<p>None.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-12-cves_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-12-cves_cluster-logging-release-notes-v5x"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2015-20107">CVE-2015-20107</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-0391">CVE-2022-0391</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21123">CVE-2022-21123</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21125">CVE-2022-21125</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21166">CVE-2022-21166</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29154">CVE-2022-29154</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32206">CVE-2022-32206</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-32208">CVE-2022-32208</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-34903">CVE-2022-34903</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-3-11_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-11_cluster-logging-release-notes-v5x"></a>Logging 5.3.11</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:6182">OpenShift Logging Bug Fix Release 5.3.11</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-11-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-11-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Before this update, the Operator did not ensure that the pod was ready, which caused the cluster to reach an inoperable state during a cluster restart. With this update, the Operator marks new pods as ready before continuing to a new pod during a restart, which resolves the issue. (<a href="https://issues.redhat.com/browse/LOG-2871">LOG-2871</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-11-cves_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-11-cves_cluster-logging-release-notes-v5x"></a>CVEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1292">CVE-2022-1292</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1586">CVE-2022-1586</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1785">CVE-2022-1785</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1897">CVE-2022-1897</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1927">CVE-2022-1927</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2068">CVE-2022-2068</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-2097">CVE-2022-2097</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-30631">CVE-2022-30631</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-release-notes-5-3-10"><a class="anchor" href="#cluster-logging-release-notes-5-3-10"></a>Logging 5.3.10</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:5908">RHSA-2022:5908-OpenShift Logging Bug Fix Release 5.3.10</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-10-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-10-bug-fixes"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2100495">BZ-2100495</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-3-10-cves"><a class="anchor" href="#openshift-logging-5-3-10-cves"></a>CVEs</h3>
+<details>
+<summary class="title">Click to expand CVEs</summary>
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2021-38561">CVE-2021-38561</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2021-40528">CVE-2021-40528</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1271">CVE-2022-1271</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1621">CVE-2022-1621</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1629">CVE-2022-1629</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21540">CVE-2022-21540</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21541">CVE-2022-21541</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-22576">CVE-2022-22576</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-25313">CVE-2022-25313</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-25314">CVE-2022-25314</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-27774">CVE-2022-27774</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-27776">CVE-2022-27776</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-27782">CVE-2022-27782</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29824">CVE-2022-29824</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-34169">CVE-2022-34169</a></p>
+</li>
+</ul>
+</div>
+</div>
+</details>
 </div>
 </div>
 </div>
@@ -30238,13 +31518,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-7"><a class="anchor" href="#cluster-logging-release-notes-5-3-7"></a>OpenShift Logging 5.3.7</h2>
+<h2 id="cluster-logging-release-notes-5-3-7_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-7_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.7</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:2217">RHSA-2022:2217 OpenShift Logging Bug Fix Release 5.3.7</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-7-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-7-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-3-7-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-7-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30263,8 +31543,8 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="cves-2"><a class="anchor" href="#cves-2"></a>CVEs</h3>
-<details id="openshift-logging-5-3-7-CVEs">
+<h3 id="cves-3"><a class="anchor" href="#cves-3"></a>CVEs</h3>
+<details id="openshift-logging-5-3-7-CVEs_cluster-logging-release-notes-v5x">
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
 <div class="ulist">
@@ -30325,13 +31605,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-6"><a class="anchor" href="#cluster-logging-release-notes-5-3-6"></a>OpenShift Logging 5.3.6</h2>
+<h2 id="cluster-logging-release-notes-5-3-6_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-6_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.6</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:1377">RHBA-2022:1377 OpenShift Logging Bug Fix Release 5.3.6</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-6-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-6-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-3-6-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-6-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30346,13 +31626,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-5"><a class="anchor" href="#cluster-logging-release-notes-5-3-5"></a>OpenShift Logging 5.3.5</h2>
+<h2 id="cluster-logging-release-notes-5-3-5_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-5_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.5</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:0721">RHSA-2022:0721 OpenShift Logging Bug Fix Release 5.3.5</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-5-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-5-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-3-5-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-5-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30362,8 +31642,8 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="cves-3"><a class="anchor" href="#cves-3"></a>CVEs</h3>
-<details id="openshift-logging-5-3-5-CVEs">
+<h3 id="cves-4"><a class="anchor" href="#cves-4"></a>CVEs</h3>
+<details id="openshift-logging-5-3-5-CVEs_cluster-logging-release-notes-v5x">
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
 <div class="ulist">
@@ -30403,13 +31683,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-4"><a class="anchor" href="#cluster-logging-release-notes-5-3-4"></a>OpenShift Logging 5.3.4</h2>
+<h2 id="cluster-logging-release-notes-5-3-4_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-4_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.4</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:0411">RHBA-2022:0411 OpenShift Logging Bug Fix Release 5.3.4</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-4-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-4-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-3-4-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-4-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30425,8 +31705,8 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="cves-4"><a class="anchor" href="#cves-4"></a>CVEs</h3>
-<details id="openshift-logging-5-3-4-CVEs">
+<h3 id="cves-5"><a class="anchor" href="#cves-5"></a>CVEs</h3>
+<details id="openshift-logging-5-3-4-CVEs_cluster-logging-release-notes-v5x">
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
 <div class="ulist">
@@ -30511,7 +31791,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-3"><a class="anchor" href="#cluster-logging-release-notes-5-3-3"></a>OpenShift Logging 5.3.3</h2>
+<h2 id="cluster-logging-release-notes-5-3-3_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-3_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.3</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:0227">RHSA-2022:0227 OpenShift Logging Bug Fix Release 5.3.3</a></p>
@@ -30530,8 +31810,8 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="cves-5"><a class="anchor" href="#cves-5"></a>CVEs</h3>
-<details id="openshift-logging-5-3-3-CVEs">
+<h3 id="cves-6"><a class="anchor" href="#cves-6"></a>CVEs</h3>
+<details id="openshift-logging-5-3-3-CVEs_cluster-logging-release-notes-v5x">
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
 <div class="ulist">
@@ -30564,13 +31844,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-2"><a class="anchor" href="#cluster-logging-release-notes-5-3-2"></a>OpenShift Logging 5.3.2</h2>
+<h2 id="cluster-logging-release-notes-5-3-2_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-2_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.2</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:0044">RHSA-2022:0044 OpenShift Logging Bug Fix Release 5.3.2</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-2-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-2-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-3-2-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-2-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30586,7 +31866,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-2-CVEs"><a class="anchor" href="#openshift-logging-5-3-2-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-3-2-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-2-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -30629,13 +31909,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-1"><a class="anchor" href="#cluster-logging-release-notes-5-3-1"></a>OpenShift Logging 5.3.1</h2>
+<h2 id="cluster-logging-release-notes-5-3-1_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-1_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2021:5129">RHSA-2021:5129 OpenShift Logging Bug Fix Release 5.3.1</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-1-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-1-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-3-1-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-1-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30651,7 +31931,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-1-CVEs"><a class="anchor" href="#openshift-logging-5-3-1-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-3-1-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-1-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -30873,13 +32153,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-3-0"><a class="anchor" href="#cluster-logging-release-notes-5-3-0"></a>OpenShift Logging 5.3.0</h2>
+<h2 id="cluster-logging-release-notes-5-3-0_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-3-0_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.3.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2021:4627">RHSA-2021:4627 OpenShift Logging Bug Fix Release 5.3.0</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-0-new-features-and-enhancements"><a class="anchor" href="#openshift-logging-5-3-0-new-features-and-enhancements"></a>New features and enhancements</h3>
+<h3 id="openshift-logging-5-3-0-new-features-and-enhancements_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-0-new-features-and-enhancements_cluster-logging-release-notes-v5x"></a>New features and enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30889,7 +32169,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-0-bug-fixes"><a class="anchor" href="#openshift-logging-5-3-0-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-3-0-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-0-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30914,7 +32194,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-0-known-issues"><a class="anchor" href="#openshift-logging-5-3-0-known-issues"></a>Known issues</h3>
+<h3 id="openshift-logging-5-3-0-known-issues_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-0-known-issues_cluster-logging-release-notes-v5x"></a>Known issues</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -30932,7 +32212,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-0-deprecated-removed-features"><a class="anchor" href="#openshift-logging-5-3-0-deprecated-removed-features"></a>Deprecated and removed features</h3>
+<h3 id="openshift-logging-5-3-0-deprecated-removed-features_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-0-deprecated-removed-features_cluster-logging-release-notes-v5x"></a>Deprecated and removed features</h3>
 <div class="paragraph">
 <p>Some features available in previous releases have been deprecated or removed.</p>
 </div>
@@ -30940,7 +32220,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 <p>Deprecated functionality is still included in OpenShift Logging and continues to be supported; however, it will be removed in a future release of this product and is not recommended for new deployments.</p>
 </div>
 <div class="sect3">
-<h4 id="openshift-logging-5-3-0-legacy-forwarding"><a class="anchor" href="#openshift-logging-5-3-0-legacy-forwarding"></a>Forwarding logs using the legacy Fluentd and legacy syslog methods have been removed</h4>
+<h4 id="openshift-logging-5-3-0-legacy-forwarding_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-0-legacy-forwarding_cluster-logging-release-notes-v5x"></a>Forwarding logs using the legacy Fluentd and legacy syslog methods have been removed</h4>
 <div class="paragraph">
 <p>In OpenShift Logging 5.3, the legacy methods of forwarding logs to Syslog and Fluentd are removed. Bug fixes and support are provided through the end of the OpenShift Logging 5.2 life cycle. After which, no new feature enhancements are made.</p>
 </div>
@@ -30959,14 +32239,14 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="openshift-logging-5-3-0-legacy-forwarding-config"><a class="anchor" href="#openshift-logging-5-3-0-legacy-forwarding-config"></a>Configuration mechanisms for legacy forwarding methods have been removed</h4>
+<h4 id="openshift-logging-5-3-0-legacy-forwarding-config_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-0-legacy-forwarding-config_cluster-logging-release-notes-v5x"></a>Configuration mechanisms for legacy forwarding methods have been removed</h4>
 <div class="paragraph">
 <p>In OpenShift Logging 5.3, the legacy configuration mechanism for log forwarding is removed: You cannot forward logs using the legacy Fluentd method and legacy Syslog method. Use the standard log forwarding methods instead.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-3-0-CVEs"><a class="anchor" href="#openshift-logging-5-3-0-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-3-0-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-3-0-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -31301,6 +32581,81 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="cluster-logging-release-notes-5-2-13"><a class="anchor" href="#cluster-logging-release-notes-5-2-13"></a>Logging 5.2.13</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:5909">RHSA-2022:5909-OpenShift Logging Bug Fix Release 5.2.13</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-2-13-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-13-bug-fixes"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2100495">BZ-2100495</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="openshift-logging-5-2-13-cves"><a class="anchor" href="#openshift-logging-5-2-13-cves"></a>CVEs</h3>
+<details>
+<summary class="title">Click to expand CVEs</summary>
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2021-38561">CVE-2021-38561</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2021-40528">CVE-2021-40528</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1271">CVE-2022-1271</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1621">CVE-2022-1621</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-1629">CVE-2022-1629</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21540">CVE-2022-21540</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-21541">CVE-2022-21541</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-22576">CVE-2022-22576</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-25313">CVE-2022-25313</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-25314">CVE-2022-25314</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-27774">CVE-2022-27774</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-27776">CVE-2022-27776</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-27782">CVE-2022-27782</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-29824">CVE-2022-29824</a></p>
+</li>
+<li>
+<p><a href="https://access.redhat.com/security/cve/CVE-2022-34169">CVE-2022-34169</a></p>
+</li>
+</ul>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="cluster-logging-release-notes-5-2-12"><a class="anchor" href="#cluster-logging-release-notes-5-2-12"></a>Logging 5.2.12</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -31537,13 +32892,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-10"><a class="anchor" href="#cluster-logging-release-notes-5-2-10"></a>OpenShift Logging 5.2.10</h2>
+<h2 id="cluster-logging-release-notes-5-2-10_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-10_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.10</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>This release includes <a href="https://access.redhat.com/errata/"> OpenShift Logging Bug Fix Release 5.2.10</a>]</p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-10-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-10-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-10-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-10-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -31562,7 +32917,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-10-CVEs"><a class="anchor" href="#openshift-logging-5-2-10-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-10-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-10-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -31621,13 +32976,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-9"><a class="anchor" href="#cluster-logging-release-notes-5-2-9"></a>OpenShift Logging 5.2.9</h2>
+<h2 id="cluster-logging-release-notes-5-2-9_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-9_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.9</h2>
 <div class="sectionbody">
 <div class="paragraph _abstract">
 <p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:1375">RHBA-2022:1375 OpenShift Logging Bug Fix Release 5.2.9</a>]</p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-9-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-9-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-9-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-9-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -31639,13 +32994,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-8"><a class="anchor" href="#cluster-logging-release-notes-5-2-8"></a>OpenShift Logging 5.2.8</h2>
+<h2 id="cluster-logging-release-notes-5-2-8_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-8_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.8</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:0728">RHSA-2022:0728 OpenShift Logging Bug Fix Release 5.2.8</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-8-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-8-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-8-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-8-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -31655,7 +33010,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-8-CVEs"><a class="anchor" href="#openshift-logging-5-2-8-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-8-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-8-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -31689,13 +33044,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-7"><a class="anchor" href="#cluster-logging-release-notes-5-2-7"></a>OpenShift Logging 5.2.7</h2>
+<h2 id="cluster-logging-release-notes-5-2-7_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-7_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.7</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHBA-2022:0478">RHBA-2022:0478 OpenShift Logging Bug Fix Release 5.2.7</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-7-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-7-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-7-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-7-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -31708,7 +33063,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-7-CVEs"><a class="anchor" href="#openshift-logging-5-2-7-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-7-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-7-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -31749,13 +33104,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-6"><a class="anchor" href="#cluster-logging-release-notes-5-2-6"></a>OpenShift Logging 5.2.6</h2>
+<h2 id="cluster-logging-release-notes-5-2-6_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-6_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.6</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:0230">RHSA-2022:0230 OpenShift Logging Bug Fix Release 5.2.6</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-6-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-6-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-6-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-6-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -31768,7 +33123,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-6-CVEs"><a class="anchor" href="#openshift-logging-5-2-6-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-6-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-6-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -31802,13 +33157,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-5"><a class="anchor" href="#cluster-logging-release-notes-5-2-5"></a>OpenShift Logging 5.2.5</h2>
+<h2 id="cluster-logging-release-notes-5-2-5_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-5_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.5</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2022:0043">RHSA-2022:0043 OpenShift Logging Bug Fix Release 5.2.5</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-5-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-5-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-5-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-5-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -31818,7 +33173,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-5-CVEs"><a class="anchor" href="#openshift-logging-5-2-5-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-5-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-5-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -31844,13 +33199,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-4"><a class="anchor" href="#cluster-logging-release-notes-5-2-4"></a>OpenShift Logging 5.2.4</h2>
+<h2 id="cluster-logging-release-notes-5-2-4_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-4_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.4</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2021:5127">RHSA-2021:5127 OpenShift Logging Bug Fix Release 5.2.4</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-4-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-4-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-4-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-4-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -31866,7 +33221,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-4-CVEs"><a class="anchor" href="#openshift-logging-5-2-4-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-4-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-4-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -32060,13 +33415,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-3"><a class="anchor" href="#cluster-logging-release-notes-5-2-3"></a>OpenShift Logging 5.2.3</h2>
+<h2 id="cluster-logging-release-notes-5-2-3_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-3_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.3</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHSA-2021:4032">RHSA-2021:4032 OpenShift Logging Bug Fix Release 5.2.3</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-3-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-3-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-3-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-3-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -32079,7 +33434,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-3-CVEs"><a class="anchor" href="#openshift-logging-5-2-3-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-3-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-3-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -32230,13 +33585,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-2"><a class="anchor" href="#cluster-logging-release-notes-5-2-2"></a>OpenShift Logging 5.2.2</h2>
+<h2 id="cluster-logging-release-notes-5-2-2_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-2_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.2</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHBA-2021:3747">RHBA-2021:3747 OpenShift Logging Bug Fix Release 5.2.2</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-2-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-2-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-2-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-2-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -32252,7 +33607,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-2-CVEs"><a class="anchor" href="#openshift-logging-5-2-2-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-2-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-2-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -32290,13 +33645,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-1"><a class="anchor" href="#cluster-logging-release-notes-5-2-1"></a>OpenShift Logging 5.2.1</h2>
+<h2 id="cluster-logging-release-notes-5-2-1_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-1_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHBA-2021:3550">RHBA-2021:3550 OpenShift Logging Bug Fix Release 5.2.1</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-1-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-1-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-1-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-1-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -32306,7 +33661,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-1-CVEs"><a class="anchor" href="#openshift-logging-5-2-1-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-1-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-1-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <div class="paragraph">
 <p>(None)</p>
 </div>
@@ -32314,13 +33669,13 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-release-notes-5-2-0"><a class="anchor" href="#cluster-logging-release-notes-5-2-0"></a>OpenShift Logging 5.2.0</h2>
+<h2 id="cluster-logging-release-notes-5-2-0_cluster-logging-release-notes-v5x"><a class="anchor" href="#cluster-logging-release-notes-5-2-0_cluster-logging-release-notes-v5x"></a>OpenShift Logging 5.2.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This release includes <a href="https://access.redhat.com/errata/RHBA-2021:3393">RHBA-2021:3393 OpenShift Logging Bug Fix Release 5.2.0</a></p>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-0-new-features-and-enhancements"><a class="anchor" href="#openshift-logging-5-2-0-new-features-and-enhancements"></a>New features and enhancements</h3>
+<h3 id="openshift-logging-5-2-0-new-features-and-enhancements_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-0-new-features-and-enhancements_cluster-logging-release-notes-v5x"></a>New features and enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -32336,7 +33691,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 <p>This enhancement enables you to use a username and password to authenticate a log forwarding connection to an external Elasticsearch instance. For example, if you cannot use mutual TLS (mTLS) because a third-party operates the Elasticsearch instance, you can use HTTP or HTTPS and set a secret that contains the username and password. For more information, see <a href="../logging/cluster-logging-external.html#cluster-logging-collector-log-forward-es_cluster-logging-external">Forwarding logs to an external Elasticsearch instance</a>. (<a href="https://issues.redhat.com/browse/LOG-1022">LOG-1022</a>)</p>
 </li>
 <li>
-<p>With this update, you can collect OVN network policy audit logs for forwarding to a logging server. For more information, see <a href="../logging/cluster-logging-external.html#cluster-logging-collecting-ovn-audit-logs_cluster-logging-external">Collecting OVN network policy audit logs</a>. (<a href="https://issues.redhat.com/browse/LOG-1526">LOG-1526</a>)</p>
+<p>With this update, you can collect OVN network policy audit logs for forwarding to a logging server. (<a href="https://issues.redhat.com/browse/LOG-1526">LOG-1526</a>)</p>
 </li>
 <li>
 <p>By default, the data model introduced in OpenShift Container Platform 4.5 gave logs from different namespaces a single index in common. This change made it harder to see which namespaces produced the most logs.</p>
@@ -32354,7 +33709,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-0-bug-fixes"><a class="anchor" href="#openshift-logging-5-2-0-bug-fixes"></a>Bug fixes</h3>
+<h3 id="openshift-logging-5-2-0-bug-fixes_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-0-bug-fixes_cluster-logging-release-notes-v5x"></a>Bug fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -32424,7 +33779,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-0-known-issues"><a class="anchor" href="#openshift-logging-5-2-0-known-issues"></a>Known issues</h3>
+<h3 id="openshift-logging-5-2-0-known-issues_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-0-known-issues_cluster-logging-release-notes-v5x"></a>Known issues</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -32442,7 +33797,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-0-deprecated-removed-features"><a class="anchor" href="#openshift-logging-5-2-0-deprecated-removed-features"></a>Deprecated and removed features</h3>
+<h3 id="openshift-logging-5-2-0-deprecated-removed-features_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-0-deprecated-removed-features_cluster-logging-release-notes-v5x"></a>Deprecated and removed features</h3>
 <div class="paragraph">
 <p>Some features available in previous releases have been deprecated or removed.</p>
 </div>
@@ -32451,7 +33806,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-0-legacy-forwarding"><a class="anchor" href="#openshift-logging-5-2-0-legacy-forwarding"></a>Forwarding logs using the legacy Fluentd and legacy syslog methods have been deprecated</h3>
+<h3 id="openshift-logging-5-2-0-legacy-forwarding_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-0-legacy-forwarding_cluster-logging-release-notes-v5x"></a>Forwarding logs using the legacy Fluentd and legacy syslog methods have been deprecated</h3>
 <div class="paragraph">
 <p>From OpenShift Container Platform 4.6 to the present, forwarding logs by using the following legacy methods have been deprecated and will be removed in a future release:</p>
 </div>
@@ -32480,7 +33835,7 @@ scrapes the <code>openshift-operators-redhat</code> namespace.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="openshift-logging-5-2-0-CVEs"><a class="anchor" href="#openshift-logging-5-2-0-CVEs"></a>CVEs</h3>
+<h3 id="openshift-logging-5-2-0-CVEs_cluster-logging-release-notes-v5x"><a class="anchor" href="#openshift-logging-5-2-0-CVEs_cluster-logging-release-notes-v5x"></a>CVEs</h3>
 <details>
 <summary class="title">Click to expand CVEs</summary>
 <div class="content">
@@ -32848,5 +34203,4 @@ if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pag
   </script>
 
 </body>
-
 </html>

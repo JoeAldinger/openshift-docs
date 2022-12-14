@@ -13,38 +13,27 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
   <title>About Schedule and quota APIs - Schedule and quota APIs | API reference | OpenShift Container Platform Branch Build</title>
-  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css">
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet" />
-  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
-  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css">
-  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen, print" />
-  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet" />
+  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/search.css" rel="stylesheet" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/autumn.css" rel="stylesheet"  media="screen"/>
+  <link href="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"/>
+  <link href="https://assets.openshift.net/content/subdomain/favicon32x32.png" rel="shortcut icon" type="text/css"/>
+  <link href="https://assets.openshift.net/content/osh-nav-footer.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/docs.css" rel="stylesheet"  media="screen"/>
+  <link href="https://docs.openshift.com/container-platform/4.1/_stylesheets/print.css" rel="stylesheet" type="text/css" media="print"/>
   <!--[if IE]><link rel="shortcut icon" href="https://assets.openshift.net/content/subdomain/favicon.ico"><![endif]-->
   <!-- or, set /favicon.ico for IE10 win -->
   <meta content="OpenShift" name="application-name">
   <meta content="#000000" name="msapplication-TileColor">
   <meta content="https://assets.openshift.net/content/subdomain/touch-icon-precomposed.png" name="msapplication-TileImage">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <!-- Adobe DTM -->
+  <script src="//www.redhat.com/dtm.js" type="text/javascript"></script>
+  <!-- End Adobe DTM -->
 
   <script id="trustarc" src="https://static.redhat.com/libs/redhat/marketing/latest/trustarc/trustarc.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
         rel="stylesheet">
-  <script>
-
-    function getPDF() {
-      var element = document.getElementsByClassName('main');
-      
-      var opt = {
-        margin:       10,
-        filename:     'rest_api/schedule_and_quota_apis/schedule-and-quota-apis-index.pdf',
-        html2canvas:  { windowWidth: 650 },
-        image:        { type: 'jpeg', quality: 0.98 }
-      };
-      html2pdf().set(opt).from(element[0]).save();
-    }
-  </script>
 
 </head>
 
@@ -222,7 +211,7 @@
         <a href="https://github.com/openshift/openshift-docs/issues/new?title=[enterprise-Branch Build] Issue in file rest_api/schedule_and_quota_apis/schedule-and-quota-apis-index.adoc">
           <span class="material-icons-outlined" title="Open an issue">bug_report</span>
         </a>
-        <a href="javascript: void(0);" onclick="getPDF();"><span class="material-icons-outlined" title="Download PDF (may take a while for large pages)">picture_as_pdf</span></a>
+        <a href="javascript: void(0);" onclick="window.print()"><span class="material-icons-outlined" title="Print page (Save as PDF)">picture_as_pdf</span></a>
         
         
       </span>
@@ -5871,6 +5860,54 @@
 
 
                   <li>
+                    <a class="" href="../../security/certificate_types_descriptions/aggregated-api-client-certificates.html">
+                      Aggregated API client certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../security/certificate_types_descriptions/machine-config-operator-certificates.html">
+                      Machine Config Operator certificates
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../security/certificate_types_descriptions/user-provided-certificates-for-default-ingress.html">
                       User-provided certificates for default ingress
                     </a>
@@ -6832,7 +6869,7 @@
 
                   <li>
                     <a class="" href="../../authentication/identity_providers/configuring-htpasswd-identity-provider.html">
-                      Configuring an HTPasswd identity provider
+                      Configuring an htpasswd identity provider
                     </a>
                   </li>
 
@@ -11067,7 +11104,7 @@
 
                   <li>
                     <a class="" href="../../operators/admin/olm-upgrading-operators.html">
-                      Upgrading installed Operators
+                      Updating installed Operators
                     </a>
                   </li>
 
@@ -11769,7 +11806,7 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../operators/operator-reference.html">Platform Operators reference</a></li>
+            <li><a class="" href="../../operators/operator-reference.html">Cluster Operators reference</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
       </ul>
@@ -13441,21 +13478,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../applications/index.html">Building applications overview</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-0">
-                <span id="sgSpan-17-0" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
+                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
                   &nbsp;Projects
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-0" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13541,15 +13591,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-1">
-                <span id="sgSpan-17-1" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-2">
+                <span id="sgSpan-17-2" class="fa fa-caret-right"></span>
                   &nbsp;Creating applications
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-1" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-2" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13648,15 +13698,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-3">
-                <span id="sgSpan-17-3" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
+                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
                   &nbsp;Connecting applications to services
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-3" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -13886,15 +13936,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-4">
-                <span id="sgSpan-17-4" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
+                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
                   &nbsp;Working with Helm charts
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-4" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14004,15 +14054,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-5">
-                <span id="sgSpan-17-5" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
+                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
                   &nbsp;Deployments
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-5" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -14122,15 +14172,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-6">
-                <span id="sgSpan-17-6" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-17-7">
+                <span id="sgSpan-17-7" class="fa fa-caret-right"></span>
                   &nbsp;Quotas
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-17-6" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-17-7" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -15711,6 +15761,30 @@
 
                 
 
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../nodes/nodes/nodes-nodes-creating-infrastructure-nodes.html">
+                      Creating infrastructure nodes
+                    </a>
+                  </li>
+
+                
+
               </ul>
             </li>
 
@@ -17281,19 +17355,6 @@
 
             <!-- ^ this establishs whether we are reading this current page -->
 
-            <li><a class="" href="../../scalability_and_performance/recommended-install-practices.html">Recommended installation practices</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
             <li><a class="" href="../../scalability_and_performance/recommended-host-practices.html">Recommended host practices</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
@@ -17477,6 +17538,19 @@
             <!-- ^ this establishs whether we are reading this current page -->
 
             <li><a class="" href="../../scalability_and_performance/cnf-performance-addon-operator-for-low-latency-nodes.html">Performance Addon Operator for low latency nodes</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../scalability_and_performance/cnf-performing-platform-verification-latency-tests.html">Performing latency tests for platform verification</a></li>
             <!--  if active, then highlight it,  otherwise nothing to do -->
 
 
@@ -17721,6 +17795,30 @@
 
 
                   <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-release-notes.html">
+                      OADP release notes
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-features-plugins.html">
                       OADP features and plugins
                     </a>
@@ -17748,11 +17846,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-1">
-                    <span id="ssgSpan-26-3-1" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
+                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
                     &nbsp;Installing and configuring OADP
                   </a>
-                  <ul id="topicSubSubGroup-26-3-1" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17848,11 +17946,11 @@
                 
 
                 <li class="nav-header">
-                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-2">
-                    <span id="ssgSpan-26-3-2" class="fa fa-caret-right"></span>
+                  <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubSubGroup-26-3-3">
+                    <span id="ssgSpan-26-3-3" class="fa fa-caret-right"></span>
                     &nbsp;Backing up and restoring
                   </a>
-                  <ul id="topicSubSubGroup-26-3-2" class="nav-tertiary list-unstyled collapse">
+                  <ul id="topicSubSubGroup-26-3-3" class="nav-tertiary list-unstyled collapse">
 
                     <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
 
@@ -17897,6 +17995,54 @@
                   <li>
                     <a class="" href="../../backup_and_restore/application_backup_and_restore/troubleshooting.html">
                       Troubleshooting
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-api.html">
+                      OADP API
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../backup_and_restore/application_backup_and_restore/oadp-advanced-topics.html">
+                      Advanced OADP features and functionalities
                     </a>
                   </li>
 
@@ -26173,6 +26319,16 @@
 
 
                     <li>
+                      <a class="" href="../../virt/virtual_machines/advanced_vm_management/virt-working-with-resource-quotas-for-vms.html" style="padding-left: 70px;">
+                        Working with resource quotas for virtual machines
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
                       <a class="" href="../../virt/virtual_machines/advanced_vm_management/virt-specifying-nodes-for-vms.html" style="padding-left: 70px;">
                         Specifying nodes for virtual machines
                       </a>
@@ -26445,6 +26601,16 @@
                     <li>
                       <a class="" href="../../virt/virtual_machines/vm_networking/virt-using-the-default-pod-network-with-virt.html" style="padding-left: 70px;">
                         Configuring the virtual machine for the default pod network
+                      </a>
+                    </li>
+
+
+                    <!-- list all topics within Welcome 3 here. Note that we are not coding this for more subtopics here -->
+
+
+                    <li>
+                      <a class="" href="../../virt/virtual_machines/vm_networking/virt-creating-service-vm.html" style="padding-left: 70px;">
+                        Creating a service to expose a virtual machine
                       </a>
                     </li>
 
@@ -27553,7 +27719,7 @@
 
                   <li>
                     <a class="" href="../../virt/logging_events_monitoring/virt-collecting-virt-data.html">
-                      Collecting OpenShift Virtualization data for Red Hat Support
+                      Collecting data for Red Hat Support
                     </a>
                   </li>
 
@@ -27692,6 +27858,30 @@
                   <li>
                     <a class="" href="../../serverless/discover/knative-event-sources.html">
                       Event sources
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../serverless/discover/serverless-brokers.html">
+                      Brokers
                     </a>
                   </li>
 
@@ -28333,7 +28523,7 @@
 
                   <li>
                     <a class="" href="../../serverless/develop/serverless-using-brokers.html">
-                      Brokers
+                      Creating brokers
                     </a>
                   </li>
 
@@ -28688,6 +28878,30 @@
 
 
                   <li>
+                    <a class="" href="../../serverless/security/serverless-config-tls.html">
+                      Configuring TLS authentication
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../serverless/security/serverless-ossm-with-kourier-jwt.html">
                       Configuring JSON Web Token authentication for Knative services
                     </a>
@@ -28784,6 +28998,30 @@
                   <li>
                     <a class="" href="../../serverless/functions/serverless-functions-getting-started.html">
                       Getting started with functions
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
+                    <a class="" href="../../serverless/functions/serverless-functions-on-cluster-builds.html">
+                      On-cluster function building and deploying
                     </a>
                   </li>
 
@@ -29116,6 +29354,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="print-logo" style="display:none;">
+        <img src="https://www.redhat.com/cms/managed-files/Logo-Red_Hat-OpenShift-A-Standard-RGB_0_0.svg" alt="print logo"/>
       </div>
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
@@ -29640,5 +29881,4 @@ if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pag
   </script>
 
 </body>
-
 </html>
