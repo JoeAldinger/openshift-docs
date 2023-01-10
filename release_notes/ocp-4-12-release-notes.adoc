@@ -1588,6 +1588,10 @@ sourceStrategy:
 
 * Previously, Operator Lifecycle Manager (OLM) would attempt to update namespaces to apply a label, even if the label was present on the namespace. Consequently, the update requests increased the workload in API and etcd services. With this update, OLM compares existing labels against the expected labels on a namespace before issuing an update. As a result, OLM no longer attempts to make unnecessary update requests on namespaces. (link:https://bugzilla.redhat.com/show_bug.cgi?id=2105045[*BZ#2105045*])
 
+* Previously, Operator Lifecycle Manager (OLM) would prevent minor cluster upgrades that should not be blocked based on a miscalculation of the `ClusterVersion` custom resources's `spec.DesiredVersion` field. With this update, OLM no longer prevents cluster upgrades when the upgrade should be supported. (link:https://bugzilla.redhat.com/show_bug.cgi?id=2097557[*BZ#2097557*])
+
+* Previously, the reconciler would update a resource's annotation without making a copy of the resource. This caused an error that would terminate the the reconciler process. With this update, the reconciler no longer terminates due the error. (link:https://bugzilla.redhat.com/show_bug.cgi?id=2105045[*BZ#2105045*])
+
 [discrete]
 [id="ocp-4-12-openshift-operator-sdk-bug-fixes"]
 ==== Operator SDK
@@ -1640,6 +1644,11 @@ sourceStrategy:
 [discrete]
 [id="ocp-4-12-storage-bug-fixes"]
 ==== Storage
+* Previously, checks for generic ephemeral volumes failed. With this update, checks for expandable volumes now include generic ephemeral volumes. (link:https://bugzilla.redhat.com/show_bug.cgi?id=2082773[*BZ#2082773*]
+
+* Previously, if more than one secret was present for vSphere, the vSphere CSI Operator randomly picked a secret and sometimes caused the Operator to restart. With this update, a warning appears when there is more than one secret on the vCenter CSI Operator. (link:https://bugzilla.redhat.com/show_bug.cgi?id=2108473[*BZ#2108473*])
+
+* Previously, {product-title} detachec a volume when a Container Storage Interface (CSI) driver was not able to unmount the volume from a node. Detaching a volume without unmount is not allowed by CSI specifications and drivers could enter `undocumented` state. With this update, CSI drivers are detached before unmount only on unhealthy nodes preventing the `undocumented` state. (link:https://bugzilla.redhat.com/show_bug.cgi?id=2049306[*BZ#2049306*])
 
 * Previously, there were missing annotations on the Manila CSI Driver Operator's VolumeSnapshotClass. Consequently, the Manila CSI snapshotter could not locate secrets, and could not create snapshots with the default VolumeSnapshotClass. This update fixes the issue so that secret names and namespaces are included in the default VolumeSnapshotClass. As a result, users can now create snapshots in the Manila CSI Driver Operator using the default VolumeSnapshotClass. (link:https://bugzilla.redhat.com/show_bug.cgi?id=2057637[*BZ#2057637*])
 
