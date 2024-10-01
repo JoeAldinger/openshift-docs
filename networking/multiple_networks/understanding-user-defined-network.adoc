@@ -61,4 +61,8 @@ include::modules/nw-udn-cr.adoc[leveloffset=+1]
 //include::modules
 
 //Examples for Layer2 and Layer3
-include::modules/nw-udn-examples.adoc[leveloffset=+2]
+//include::modules/nw-udn-examples.adoc[leveloffset=+2]
+
+//[role="_additional-resources"]
+//== Additional resources
+// * xr3f../virtual docs that point to live migration of vms for 4.18's GA.
