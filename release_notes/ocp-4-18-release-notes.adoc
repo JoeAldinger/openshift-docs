@@ -471,13 +471,20 @@ OVN-Kubernetes network traffic can be viewed with OVS sampling via the CLI for t
 * `NetworkPolicy`
 * `AdminNetworkPolicy`
 * `BaselineNetworkPolicy`
-* `UserDefinesdNetwork` isolation
+* `UserDefinedNetwork` isolation
 * `EgressFirewall`
 * Multicast ACLs.
 
 Checking OVN-Kubernetes network traffic with OVS sampling using the CLI is intended to help with packet tracing. It can also be used while the Network Observability Operator is installed.
 
 For more information, see xref:../networking/ovn_kubernetes_network_provider/ovn-kubernetes-troubleshooting-sources.adoc#nw-ovn-kubernetes-observability_ovn-kubernetes-sources-of-troubleshooting-information[Checking OVN-Kubernetes network traffic with OVS sampling using the CLI].
+
+[id="ocp-release-notes-networking-user-defined-network-segmentation_{context}"]
+==== User-defined network segmentation (Generally Available)
+
+With {product-title} {product-y}, user-defined network segmentation is generally available. User-defined networks (UDN) provide cluster administrators and users with highly customizable network configuration options for both primary and secondary network types. User-defined network segmentation is comprised of a namespace-scoped `UserDefinedNetwork` custom resource and a cluster-scoped `ClusterUserDefinedNetwork` custom resource.
+
+With UDNs, administrators can create tailored network topologies with enhanced isolation, IP address management for workloads, and advanced networking features. xr3f:../../networking/multiple_networks/understanding-multiple-networks.adoc#nw-udn-support-matrix-primary-secondary[Supporting] both Layer 2 and Layer 3 topology types, user-defined network segmentation enables a wide range of network architectures and topologies, enhancing network flexibility, security, and performance. For more information, see xref:../networking/multiple_networks/primary_networks/about-user-defined-networks.adoc#about-user-defined-networks[About user-defined networks].
 
 [id="ocp-release-notes-networking-dynamic-config-manager_{context}"]
 ==== The dynamic configuration manager is enabled by default (Technology Preview)
@@ -521,11 +528,11 @@ For more information, see  xref:../installing/install_config/configuring-firewal
 [id="ocp-release-notes-scalability-and-performance-cluster-compare_{context}"]
 ==== Cluster validation with the cluster-compare plugin
 
-The `cluster-compare` plugin is an OpenShift CLI (`oc`) plugin that compares a cluster configuration with a target configuration. The plugin reports configuration differences while suppressing expected variations by using configurable validation rules and templates. 
+The `cluster-compare` plugin is an OpenShift CLI (`oc`) plugin that compares a cluster configuration with a target configuration. The plugin reports configuration differences while suppressing expected variations by using configurable validation rules and templates.
 
 For example, the plugin can highlight unexpected differences, such as mismatched field values, missing resources, or version discrepancies, while ignoring expected differences, such as optional components or hardware-specific fields. This focused comparison makes it easier to assess cluster compliance with the target configuration.
 
-You can use the `cluster-compare` plugin in development, production, and support scenarios. 
+You can use the `cluster-compare` plugin in development, production, and support scenarios.
 
 For more information about the `cluster-compare` plugin, see xref:../scalability_and_performance/cluster-compare/understanding-the-cluster-compare-plugin.adoc#cluster-compare-overview_understanding-cluster-compare[Overview of the cluster-compare plugin].
 
@@ -1465,7 +1472,7 @@ In the following tables, features are marked with the following statuses:
 |User defined network segmentation
 |Not Available
 |Not Available
-|Technology Preview
+|Generally Available
 
 |Dynamic configuration manager
 |Not Available
