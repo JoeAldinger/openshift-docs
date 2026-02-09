@@ -27,11 +27,6 @@ include::modules/con-onprem-dns-coredns.adoc[leveloffset=+1]
 
 include::modules/proc-configure-onprem-dns-coredns.adoc[leveloffset=+1]
 
-[role="_additional-resources"]
-.Additional resources
-
-* link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/ingress_and_load_balancing/load-balancing-with-metallb[Load balancing with MetalLB]
-
 include::modules/con-about-token-based-rate-limiting.adoc[leveloffset=+1]
 
 include::modules/proc-configure-token-based-rate-limiting.adoc[leveloffset=+1]
@@ -44,5 +39,5 @@ include::modules/proc-app-dev-override-rlp.adoc[leveloffset=+1]
 [role="_additional-resources"]
 == Additional resources
 
-* link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.20/html/ingress_and_load_balancing/load-balancing-with-metallb[Load balancing with MetalLB]
+* link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/ingress_and_load_balancing/load-balancing-with-metallb[Load balancing with MetalLB]
 

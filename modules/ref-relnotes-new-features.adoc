@@ -12,9 +12,7 @@ You can use the new features and enhancements that are available with {product-t
 [id="rhcl-relnotes-coredns_{context}"]
 == CoreDNS integration for on-premise DNS is Generally Available
 
-{prodname} {version} provides integration with https://coredns.io/[CoreDNS] for on-premise DNS as a Generally Available feature. For more information, see the following
-
-// xref:../deployment/deployment.adoc#proc-configure-onprem-dns-coredns_rhcl-config-deploy-gateway-policies[Configure on-premise DNS with CoreDNS].
+{prodname} {version} provides integration with https://coredns.io/[CoreDNS] for on-premise DNS as a Generally Available feature. For more information, see xref:../deployment/deployment.adoc#proc-configure-onprem-dns-coredns_rhcl-config-deploy-gateway-policies[Configure on-premise DNS with CoreDNS].
 
 //TODO is this just 1.2? anything for 1.3?
 //* New custom policy extensions:
