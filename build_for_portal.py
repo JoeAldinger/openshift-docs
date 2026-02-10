@@ -1176,6 +1176,9 @@ def main():
     args = parser.parse_args()
     logging.basicConfig(format="%(message)s", level=logging.INFO, stream=sys.stdout)
 
+    if args.distro == "rhcl" and "toc::[]\n" in IGNORE_LINES:
+        IGNORE_LINES.remove("toc::[]\n")
+
     # Copy down the latest files
     if not args.no_upstream_fetch:
         log.info("Fetching the upstream sources")
