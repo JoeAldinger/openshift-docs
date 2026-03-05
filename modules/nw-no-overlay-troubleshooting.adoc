@@ -1,0 +1,52 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="nw-no-overlay-troubleshooting_{context}"]
+= Troubleshooting no-overlay mode
+
+[role="_abstract"]
+Verify BGP sessions, route advertisements, and network status to resolve no-overlay connectivity issues.
+
+.Prerequisites
+* You have cluster-admin privileges.
+* You configured no-overlay mode for the default network or a `ClusterUserDefinedNetwork` (CUDN) CR.
+
+.Procedure
+. Verify that FRR-K8s pods are running by running the following command:
++
+[source,terminal]
+----
+$ oc get pods -n openshift-frr-k8s
+----
+
+. Verify that route advertisements are accepted by running the following command:
++
+[source,terminal]
+----
+$ oc get routeadvertisements
+----
+
+. If you configured a no-overlay `ClusterUserDefinedNetwork` CR, check its status by running the following command:
++
+[source,terminal]
+----
+$ oc get clusteruserdefinednetwork <cudn_name> -o yaml
+----
++
+Replace `<cudn_name>` with name of your CUDN CR.
+
+. Check for BGP-related errors in the OVN-Kubernetes logs by entering the following command:
++
+[source,terminal]
+----
+$ oc logs -n openshift-ovn-kubernetes -l app=ovnkube-node
+----
+
+. Confirm that pod subnets are present in the node routing table by entering the following command:
++
+[source,terminal]
+----
+$ oc debug node/<node_name> -- chroot /host ip route
+----

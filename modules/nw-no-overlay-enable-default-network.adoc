@@ -1,0 +1,82 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="nw-no-overlay-enable-default-network_{context}"]
+= Enabling no-overlay mode for the default network
+
+[role="_abstract"]
+Configure the OVN-Kubernetes settings for the default network so east-west pod traffic uses BGP routes instead of Geneve encapsulation.
+
+.Prerequisites
+* You have cluster-admin privileges.
+* Your cluster is installed on bare-metal infrastructure with single-node zone interconnect mode.
+* You enabled BGP routing support for the cluster.
+* You deployed FRR-K8s on cluster nodes.
+
+[NOTE]
+====
+The following procedure can be used for managed or unmanaged routing. whether outbound SNAT should be enabled based on pod IP routability.
+====
+
+.Procedure
+. Edit the OVN-Kubernetes configuration by entering the following command:
++
+[source,terminal]
+----
+$ oc edit configmap/ovnkube-config -n openshift-ovn-kubernetes
+----
+
+.. For managed routing, in the `ovnkube.conf` data, set the no-overlay configuration. The following example shows managed routing:
++
+.Example no-overlay configuration for the default network
+[source,ini]
+----
+[default]
+transport = no-overlay
+
+[no-overlay]
+routing = managed
+outbound-snat = enabled
+
+[bgp-managed]
+topology = full-mesh
+as-number = 64512
+----
+
+.. For unmanaged routing, create a `RouteAdvertisements` CR that advertises the default network pod subnets. The following example uses an existing `FRRConfiguration` CR:
++
+.Example `RouteAdvertisements` CR for the default network
+[source,yaml]
+----
+apiVersion: k8s.ovn.org/v1
+kind: RouteAdvertisements
+metadata:
+  name: default
+spec:
+  nodeSelector: {}
+  frrConfigurationSelector:
+    matchLabels:
+      network: default
+  networkSelectors:
+  - networkSelectionType: DefaultNetwork
+  advertisements:
+  - PodNetwork
+----
+
+. Apply the `RouteAdvertisements` CR by entering the following command:
++
+[source,terminal]
+----
+$ oc apply -f <routeadvertisements_file>.yaml
+----
++
+Replace `<routeadvertisements_file>.yaml` with name of your `RouteAdvertisements` CR file.
+
+. Verify that the OVN-Kubernetes pods are running by entering the following command:
++
+[source,terminal]
+----
+$ oc get pods -n openshift-ovn-kubernetes
+----

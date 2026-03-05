@@ -1,0 +1,94 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="nw-no-overlay-enable-cudn_{context}"]
+= Creating a ClusterUserDefinedNetwork in no-overlay mode
+
+[role="_abstract"]
+Create a layer-3 `ClusterUserDefinedNetwork` custom resource (CR) with no-overlay transport so pods use BGP routes instead of encapsulation for east-west traffic.
+
+.Prerequisites
+* You have cluster-admin privileges.
+* Your cluster is installed on bare-metal infrastructure with single-node zone interconnect mode.
+* You enabled BGP routing support for the cluster.
+* You deployed FRR-K8s on cluster nodes.
+
+.Procedure
+. Create a `ClusterUserDefinedNetwork` CR that uses no-overlay transport, such as the following example:
++
+.Example `ClusterUserDefinedNetwork` CR for no-overlay mode
+[source,yaml]
+----
+apiVersion: k8s.ovn.org/v1
+kind: ClusterUserDefinedNetwork
+metadata:
+  name: high-perf-network
+spec:
+  namespaceSelector:
+    matchLabels:
+      app: performance-sensitive
+  network:
+    topology: Layer3
+    layer3:
+      role: Primary
+      mtu: 1500
+      subnets:
+      - cidr: 10.200.0.0/16
+        hostSubnet: 24
+    transport: "NoOverlay"
+    noOverlayOptions:
+      outboundSNAT: "Disabled"
+      routing: "Unmanaged"
+----
+
+. Apply the `ClusterUserDefinedNetwork` CR by entering the following command:
++
+[source,terminal]
+----
+$ oc apply -f <cudn_file>.yaml
+----
++
+Replace `<cudn_file>.yaml` with name of your `ClusterUserDefinedNetwork` CR file.
+
+. If you use unmanaged routing, create a `RouteAdvertisements` CR to advertise the CUDN pod subnets:
++
+.Example `RouteAdvertisements` CR for a CUDN
+[source,yaml]
+----
+apiVersion: k8s.ovn.org/v1
+kind: RouteAdvertisements
+metadata:
+  name: high-perf-network
+spec:
+  nodeSelector: {}
+  frrConfigurationSelector:
+    matchLabels:
+      network: high-perf-network
+  networkSelectors:
+  - networkSelectionType: ClusterUserDefinedNetwork
+    clusterUserDefinedNetworkSelector:
+      networkSelector:
+        matchLabels:
+          network: high-perf-network
+  advertisements:
+  - PodNetwork
+----
+
+. Apply the `RouteAdvertisements` CR by entering the following command:
++
+[source,terminal]
+----
+$ oc apply -f <routeadvertisements_file>.yaml
+----
++
+Replace `<routeadvertisements_file>.yaml` with name of your `RouteAdvertisements` CR file.
+
+. Verify that the no-overlay transport was accepted by entering the following command:
++
+[source,terminal]
+----
+$ oc get clusteruserdefinednetwork high-perf-network -o yaml
+----
+

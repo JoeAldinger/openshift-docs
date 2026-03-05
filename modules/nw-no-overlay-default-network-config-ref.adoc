@@ -1,0 +1,42 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="nw-no-overlay-default-network-config-ref_{context}"]
+= Default network no-overlay configuration reference
+
+[role="_abstract"]
+Review the OVN-Kubernetes no-overlay settings for the default network to choose routing mode and outbound SNAT behavior.
+
+The no-overlay configuration for the default network is set in the OVN-Kubernetes configuration file.
+
+`transport` in `[default]` section::
+Specifies the transport type for the default network. Use `no-overlay` to disable Geneve encapsulation.
+
+`routing` in `[no-overlay]` section::
+Specifies the routing mode for no-overlay traffic. Use `managed` for a full-mesh BGP fabric or `unmanaged` to manage routing externally.
+
+`outbound-snat` in `[no-overlay]` section::
+Specifies whether outbound pod traffic is SNATed to the node IP. Use `enabled` when pod IPs are not routable on the external network and `disabled` when they are routable.
+
+`topology` in `[bgp-managed]` section::
+Specifies the internal BGP topology when `routing = managed`. The supported value is `full-mesh`.
+
+`as-number` in `[bgp-managed]` section::
+Specifies the BGP autonomous system number for managed routing. If not set, the default is `64512`.
+
+.Example no-overlay configuration for the default network
+[source,ini]
+----
+[default]
+transport = no-overlay
+
+[no-overlay]
+routing = managed
+outbound-snat = enabled
+
+[bgp-managed]
+topology = full-mesh
+as-number = 64512
+----

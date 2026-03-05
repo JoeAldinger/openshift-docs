@@ -1,0 +1,52 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="nw-no-overlay-cudn-config-ref_{context}"]
+= ClusterUserDefinedNetwork no-overlay configuration reference
+
+[role="_abstract"]
+Review the no-overlay fields for a ClusterUserDefinedNetwork so you can define transport, routing mode, and outbound SNAT behavior.
+
+`transport`::
+Specifies the transport type for the network. Use `NoOverlay` to disable Geneve encapsulation.
+
+`noOverlayOptions`::
+Required when `transport` is `NoOverlay`. This object contains `routing` and `outboundSNAT` settings.
+
+`noOverlayOptions.routing`::
+Specifies the routing mode for the network. Use `Managed` for an OVN-Kubernetes managed fabric or `Unmanaged` to manage routing externally.
+
+`noOverlayOptions.outboundSNAT`::
+Specifies whether outbound pod traffic is SNATed. Use `Enabled` when pod IPs are not routable on the external network and `Disabled` when they are routable.
+
+`status.conditions[type="TransportAccepted"]`::
+Indicates whether no-overlay transport is configured and accepted for the network.
+
+.Example `ClusterUserDefinedNetwork` CR for no-overlay mode
+[source,yaml]
+----
+apiVersion: k8s.ovn.org/v1
+kind: ClusterUserDefinedNetwork
+metadata:
+  name: high-perf-network
+spec:
+  namespaceSelector:
+    matchLabels:
+      app: performance-sensitive
+  network:
+    topology: Layer3
+    layer3:
+      role: Primary
+      mtu: 1500
+      subnets:
+      - cidr: 10.200.0.0/16
+        hostSubnet: 24
+    transport: "NoOverlay"
+    noOverlayOptions:
+      outboundSNAT: "Disabled"
+      routing: "Unmanaged"
+----
++
+The `spec` field of a `ClusterUserDefinedNetwork` CR is immutable. You cannot change the `transport` configuration after the CR is created.

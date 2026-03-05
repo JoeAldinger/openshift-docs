@@ -1,0 +1,69 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="nw-no-overlay-configure-bgp-infrastructure_{context}"]
+= Configuring BGP infrastructure for no-overlay mode
+
+[role="_abstract"]
+Configure BGP peers and FRR-K8s so nodes can exchange pod subnet routes for no-overlay networks.
+
+.Prerequisites
+* You have cluster-admin privileges.
+* Your cluster is installed on bare-metal infrastructure with single-node zone interconnect mode.
+* You enabled BGP routing support for the cluster.
+* You deployed FRR-K8s on cluster nodes.
+
+.Procedure
+. Verify that the FRR-K8s pods are running by entering the following command:
++
+[source,terminal]
+----
+$ oc get pods -n openshift-frr-k8s
+----
+
+. If you plan to use unmanaged routing, create an `FRRConfiguration` custom resource (CR) that defines your BGP peers. The following example shows an external peer:
++
+.Example `FRRConfiguration` CR
+[source,yaml]
+----
+apiVersion: frrk8s.metallb.io/v1beta1
+kind: FRRConfiguration
+metadata:
+  name: external-peer
+  namespace: openshift-frr-k8s
+spec:
+  bgp:
+    routers:
+    - asn: 64512
+      neighbors:
+      - address: 192.0.2.1
+        asn: 64513
+        toReceive:
+          allowed:
+            mode: all
+----
+
+. Apply the `FRRConfiguration` CR by entering the following command:
++
+[source,terminal]
+----
+$ oc apply -f <frrconfiguration_file>.yaml
+----
++
+Replace `<frrconfiguration_file>.yaml` with name of your `FRRConfiguration` CR file.
+
+. Verify that the `FRRConfiguration` CR you created is deployed by running the following command:
++
+[source,terminal]
+----
+$ oc get frrconfiguration -n openshift-frr-k8s
+----
+
+. Confirm that BGP sessions are established by reviewing FRR-K8s logs with the following command:
++
+[source,terminal]
+----
+$ oc logs -n openshift-frr-k8s -l app=frr-k8s
+----

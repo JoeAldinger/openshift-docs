@@ -1,0 +1,25 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: CONCEPT
+[id="nw-no-overlay-planning_{context}"]
+= Planning no-overlay network architecture
+
+[role="_abstract"]
+Plan routing mode, BGP topology, and SNAT behavior so pod subnets are routable and the design scales for your cluster size.
+
+Routing mode::
+Managed routing creates a full-mesh BGP fabric between nodes and is simpler to operate, while unmanaged routing lets you control external peers and routing policies. For larger clusters or non-layer-2 topologies, unmanaged routing with external routers is typically more scalable.
+
+BGP topology::
+Choose a topology that fits your scale and infrastructure, such as full-mesh iBGP, route reflectors, eBGP with external routers, or a hybrid design.
+
+SNAT behavior::
+Enable outbound SNAT when pod IPs are not routable on the external network. Disable outbound SNAT when the underlay can route pod IPs directly.
+
+IP address planning::
+Allocate pod subnets and node subnets so they do not overlap with existing networks and can be advertised to your BGP fabric.
+
+VRF-lite considerations::
+If you plan to advertise multiple no-overlay `ClusterUserDefinedNetwork` custom resources (CRS) with overlapping pod subnets, design a VRF-lite approach so routes are isolated per network.

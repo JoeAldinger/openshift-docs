@@ -1,0 +1,27 @@
+// Module included in the following assemblies:
+//
+// * networking/advanced_networking/bgp_routing/no-overlay-mode-bgp-routing.adoc
+
+:_mod-docs-content-type: CONCEPT
+[id="nw-no-overlay-overview_{context}"]
+= About no-overlay mode for layer-3 networks
+
+[role="_abstract"]
+You can use no-overlay mode to route layer-3 pod traffic directly over the underlay with BGP, which reduces encapsulation overhead and improves east-west performance.
+
+No-overlay mode disables Geneve encapsulation for selected layer-3 networks and uses BGP-learned routes to forward pod traffic across nodes. A cluster can run overlay and no-overlay networks at the same time.
+
+Requirements::
+* A bare-metal cluster that uses the OVN-Kubernetes network plugin.
+* Single-node zone interconnect mode enabled for the cluster.
+* BGP routing enabled and FRR-K8s deployed.
+* Layer-3 networks only (the default network or a primary ClusterUserDefinedNetwork).
+
+Limitations::
+* No-overlay mode is not supported for layer-2 networks.
+* EgressIP, EgressService, IPsec, multicast, and multiple external gateways are not supported for no-overlay networks.
+* Switching an existing network between overlay and no-overlay modes is not supported.
+
+Supported gateway modes::
+* Local gateway mode.
+* Shared gateway mode.
