@@ -7,7 +7,7 @@
 = Creating a ClusterUserDefinedNetwork in no-overlay mode
 
 [role="_abstract"]
-Create a layer-3 `ClusterUserDefinedNetwork` custom resource (CR) with no-overlay transport so pods use BGP routes instead of encapsulation for east-west traffic.
+Create a layer-3 `ClusterUserDefinedNetwork` custom resource (CR) with no-overlay transport so pods use BGP routes instead of encapsulation for east-west traffic. You can use managed routing (full-mesh BGP between cluster nodes only, no external BGP routers) or unmanaged routing (advertise pod subnets to external BGP infrastructure).
 
 .Prerequisites
 * You have cluster-admin privileges.
@@ -16,9 +16,37 @@ Create a layer-3 `ClusterUserDefinedNetwork` custom resource (CR) with no-overla
 * You deployed FRR-K8s on cluster nodes.
 
 .Procedure
-. Create a `ClusterUserDefinedNetwork` CR that uses no-overlay transport, such as the following example:
+. Create a `ClusterUserDefinedNetwork` CR that uses no-overlay transport.
 +
-.Example `ClusterUserDefinedNetwork` CR for no-overlay mode
+* For *managed* routing (intra-cluster traffic only, no external BGP routers), set `routing: "Managed"`. You do not need to create a `RouteAdvertisements` CR; skip the steps that follow for RouteAdvertisements.
+* For *unmanaged* routing (advertise pod subnets to external BGP), set `routing: "Unmanaged"` and create a `RouteAdvertisements` CR in a later step.
++
+.Example `ClusterUserDefinedNetwork` CR for no-overlay mode with managed routing (no external BGP)
+[source,yaml]
+----
+apiVersion: k8s.ovn.org/v1
+kind: ClusterUserDefinedNetwork
+metadata:
+  name: high-perf-network
+spec:
+  namespaceSelector:
+    matchLabels:
+      app: performance-sensitive
+  network:
+    topology: Layer3
+    layer3:
+      role: Primary
+      mtu: 1500
+      subnets:
+      - cidr: 10.200.0.0/16
+        hostSubnet: 24
+    transport: "NoOverlay"
+    noOverlayOptions:
+      outboundSNAT: "Enabled"
+      routing: "Managed"
+----
++
+.Example `ClusterUserDefinedNetwork` CR for no-overlay mode with unmanaged routing
 [source,yaml]
 ----
 apiVersion: k8s.ovn.org/v1
@@ -52,7 +80,7 @@ $ oc apply -f <cudn_file>.yaml
 +
 Replace `<cudn_file>.yaml` with name of your `ClusterUserDefinedNetwork` CR file.
 
-. If you use unmanaged routing, create a `RouteAdvertisements` CR to advertise the CUDN pod subnets:
+. If you use unmanaged routing, create a `RouteAdvertisements` CR to advertise the CUDN pod subnets to your external BGP infrastructure:
 +
 .Example `RouteAdvertisements` CR for a CUDN
 [source,yaml]

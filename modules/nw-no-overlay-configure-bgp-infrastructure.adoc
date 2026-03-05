@@ -45,23 +45,23 @@ spec:
             mode: all
 ----
 
-. Apply the `FRRConfiguration` CR by entering the following command:
+.. Apply the `FRRConfiguration` CR by entering the following command:
 +
 [source,terminal]
 ----
 $ oc apply -f <frrconfiguration_file>.yaml
 ----
 +
-Replace `<frrconfiguration_file>.yaml` with name of your `FRRConfiguration` CR file.
+Replace `<frrconfiguration_file>.yaml` with the name of your `FRRConfiguration` CR file.
 
-. Verify that the `FRRConfiguration` CR you created is deployed by running the following command:
+.. Verify that the `FRRConfiguration` CR you created is deployed by running the following command:
 +
 [source,terminal]
 ----
 $ oc get frrconfiguration -n openshift-frr-k8s
 ----
 
-. Confirm that BGP sessions are established by reviewing FRR-K8s logs with the following command:
+.. Confirm that BGP sessions are established by reviewing FRR-K8s logs with the following command:
 +
 [source,terminal]
 ----

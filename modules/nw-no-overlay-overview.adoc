@@ -11,6 +11,8 @@ You can use no-overlay mode to route layer-3 pod traffic directly over the under
 
 No-overlay mode disables Geneve encapsulation for selected layer-3 networks and uses BGP-learned routes to forward pod traffic across nodes. A cluster can run overlay and no-overlay networks at the same time.
 
+You can use no-overlay in two ways: with *managed* routing, OVN-Kubernetes creates a full-mesh BGP fabric between cluster nodes only, so no external BGP routers are required and pod routes are not advertised outside the cluster (intra-cluster traffic only). Managed routing requires nodes to be directly connected at Layer 2; it is not suitable for clusters with nodes in different subnets. With *unmanaged* routing, you configure external BGP peers and use `RouteAdvertisements` to advertise pod subnets to your existing BGP infrastructure.
+
 Requirements::
 * A bare-metal cluster that uses the OVN-Kubernetes network plugin.
 * Single-node zone interconnect mode enabled for the cluster.

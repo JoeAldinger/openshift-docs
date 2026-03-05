@@ -18,7 +18,7 @@ Specifies the transport type for the default network. Use `no-overlay` to disabl
 Specifies the routing mode for no-overlay traffic. Use `managed` for a full-mesh BGP fabric or `unmanaged` to manage routing externally.
 
 `outbound-snat` in `[no-overlay]` section::
-Specifies whether outbound pod traffic is SNATed to the node IP. Use `enabled` when pod IPs are not routable on the external network and `disabled` when they are routable.
+Specifies whether outbound pod traffic to the external network is SNATed to the node IP. Use `enabled` when pod IPs are not routable on the external network and `disabled` when they are routable. Pod-to-pod traffic within the cluster is never SNATed; traffic to node IPs, the Kubernetes API server, and DNS is always SNATed.
 
 `topology` in `[bgp-managed]` section::
 Specifies the internal BGP topology when `routing = managed`. The supported value is `full-mesh`.

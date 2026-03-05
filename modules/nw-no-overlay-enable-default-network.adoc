@@ -17,7 +17,7 @@ Configure the OVN-Kubernetes settings for the default network so east-west pod t
 
 [NOTE]
 ====
-The following procedure can be used for managed or unmanaged routing. whether outbound SNAT should be enabled based on pod IP routability.
+The following procedure supports both managed and unmanaged routing. Choose outbound SNAT based on whether pod IPs are routable on your external network: enable SNAT when they are not, disable when they are.
 ====
 
 .Procedure
@@ -45,7 +45,18 @@ topology = full-mesh
 as-number = 64512
 ----
 
-.. For unmanaged routing, create a `RouteAdvertisements` CR that advertises the default network pod subnets. The following example uses an existing `FRRConfiguration` CR:
+.. For unmanaged routing (when you advertise pod subnets to external BGP routers), in the `ovnkube.conf` data set the no-overlay configuration with `routing = unmanaged` and typically `outbound-snat = disabled` so pod IPs are routable on the external network. Then create a `RouteAdvertisements` CR that advertises the default network pod subnets.
++
+.Example no-overlay configuration for the default network (unmanaged routing)
+[source,ini]
+----
+[default]
+transport = no-overlay
+
+[no-overlay]
+routing = unmanaged
+outbound-snat = disabled
+----
 +
 .Example `RouteAdvertisements` CR for the default network
 [source,yaml]
@@ -64,8 +75,10 @@ spec:
   advertisements:
   - PodNetwork
 ----
++
+For managed routing, no `RouteAdvertisements` CR or external BGP peer configuration is required; skip the following step and verify that the OVN-Kubernetes pods are running.
 
-. Apply the `RouteAdvertisements` CR by entering the following command:
+. If you use unmanaged routing, apply the `RouteAdvertisements` CR by entering the following command:
 +
 [source,terminal]
 ----
