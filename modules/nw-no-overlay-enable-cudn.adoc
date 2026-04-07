@@ -18,6 +18,11 @@ Create a layer-3 `ClusterUserDefinedNetwork` custom resource (CR) with no-overla
 .Procedure
 . Create a `ClusterUserDefinedNetwork` CR that uses no-overlay transport.
 +
+[NOTE]
+====
+For a primary layer-3 `ClusterUserDefinedNetwork`, every namespace that matches `spec.namespaceSelector` must include the `k8s.ovn.org/primary-user-defined-network` label before workloads can use the network; that label can only be set when the namespace is created.
+====
++
 * For *managed* routing (intra-cluster traffic only, no external BGP routers), set `routing: "Managed"`. You do not need to create a `RouteAdvertisements` CR; skip the steps that follow for RouteAdvertisements.
 * For *unmanaged* routing (advertise pod subnets to external BGP), set `routing: "Unmanaged"` and create a `RouteAdvertisements` CR in a later step.
 +
@@ -53,6 +58,8 @@ apiVersion: k8s.ovn.org/v1
 kind: ClusterUserDefinedNetwork
 metadata:
   name: high-perf-network
+  labels:
+    network: high-perf-network
 spec:
   namespaceSelector:
     matchLabels:
@@ -95,7 +102,7 @@ spec:
     matchLabels:
       network: high-perf-network
   networkSelectors:
-  - networkSelectionType: ClusterUserDefinedNetwork
+  - networkSelectionType: ClusterUserDefinedNetworks
     clusterUserDefinedNetworkSelector:
       networkSelector:
         matchLabels:

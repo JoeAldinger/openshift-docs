@@ -7,7 +7,10 @@ include::_attributes/common-attributes.adoc[]
 toc::[]
 
 [role="_abstract"]
-To improve east-west performance on bare-metal clusters, configure no-overlay mode with BGP so pod traffic uses underlay routing instead of Geneve encapsulation.
+To improve east-west performance on bare-metal clusters, configure no-overlay mode with broad gateway protocol (BGP) so pod traffic uses underlay routing instead of Geneve encapsulation.
+
+:FeatureName: No-overlay mode with BGP
+include::snippets/technology-preview.adoc[leveloffset=+1]
 
 include::modules/nw-no-overlay-overview.adoc[leveloffset=+1]
 
@@ -32,3 +35,4 @@ include::modules/nw-no-overlay-troubleshooting.adoc[leveloffset=+1]
 * xref:about-bgp-routing.adoc#about-bgp-routing[About BGP routing]
 * xref:../route_advertisements/about-route-advertisements.adoc#about-route-advertisements[About route advertisements]
 * xref:../../multiple_networks/primary_networks/about-user-defined-networks.adoc#about-user-defined-networks[About user-defined networks]
+* xref:../../multiple_networks/primary_networks/about-user-defined-networks.adoc#considerations-for-cudn_user-defined-networks[Best practices for ClusterUserDefinedNetwork CRs]

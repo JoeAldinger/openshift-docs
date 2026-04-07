@@ -30,9 +30,9 @@ The fields for the `RouteAdvertisements` custom resource (CR) are described in t
 |`object`
 |Determines which `FRRConfiguration` CR the OVN-Kubernetes driven `FRRConfiguration` CR is based on.
 
-|`networkSelector`
-|`object`
-|Specifies which networks to advertise among default cluster network and cluster user defined networks (CUDNs).
+|`networkSelectors`
+|`array`
+|Specifies which networks to advertise among the default cluster network and cluster user-defined networks (CUDNs). Each entry sets `networkSelectionType` and the selector for that type (for example, `DefaultNetwork` or `ClusterUserDefinedNetworks` with `clusterUserDefinedNetworkSelector`).
 
 |`nodeSelector`
 |`object`
