@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: REFERENCE
 [id="nw-no-overlay-default-network-config-ref_{context}"]
-= Default network no-overlay configuration reference
+= Reference for default network underlay routing settings
 
 [role="_abstract"]
 Review the OVN-Kubernetes no-overlay settings for the default network to choose routing mode and outbound SNAT behavior.

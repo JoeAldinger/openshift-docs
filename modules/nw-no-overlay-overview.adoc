@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: CONCEPT
 [id="nw-no-overlay-overview_{context}"]
-= About no-overlay mode for layer-3 networks
+= Understand underlay routing for layer-3 networks with BGP
 
 [role="_abstract"]
 You can use no-overlay mode to route layer-3 pod traffic directly over the underlay with BGP, which reduces encapsulation overhead and improves east-west performance.

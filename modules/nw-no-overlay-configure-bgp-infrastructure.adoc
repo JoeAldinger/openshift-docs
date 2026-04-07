@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: PROCEDURE
 [id="nw-no-overlay-configure-bgp-infrastructure_{context}"]
-= Configuring BGP infrastructure for no-overlay mode
+= Set up BGP and FRR-K8s for underlay pod routing
 
 [role="_abstract"]
 Configure BGP peers and FRR-K8s so nodes can exchange pod subnet routes for no-overlay networks.

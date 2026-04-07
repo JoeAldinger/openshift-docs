@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: CONCEPT
 [id="nw-no-overlay-planning_{context}"]
-= Planning no-overlay network architecture
+= Plan underlay routing and BGP for your cluster
 
 [role="_abstract"]
 Plan routing mode, BGP topology, and SNAT behavior so pod subnets are routable and the design scales for your cluster size.

@@ -14,4 +14,4 @@ include::modules/nw-bgp-routing-enable.adoc[leveloffset=+1]
 [id="additional-resources_{context}"]
 == Additional resources
 
-* xref:../bgp_routing/no-overlay-mode-bgp-routing.adoc#no-overlay-mode-bgp-routing[No-overlay mode for layer-3 networks using BGP]
+* xref:../bgp_routing/no-overlay-mode-bgp-routing.adoc#no-overlay-mode-bgp-routing[Improve east-west performance by routing pods on the underlay with BGP]

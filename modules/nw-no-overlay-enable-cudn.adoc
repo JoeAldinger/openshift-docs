@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: PROCEDURE
 [id="nw-no-overlay-enable-cudn_{context}"]
-= Creating a ClusterUserDefinedNetwork in no-overlay mode
+= Create a ClusterUserDefinedNetwork that uses underlay routing
 
 [role="_abstract"]
 Create a layer-3 `ClusterUserDefinedNetwork` custom resource (CR) with no-overlay transport so pods use BGP routes instead of encapsulation for east-west traffic. You can use managed routing (full-mesh BGP between cluster nodes only, no external BGP routers) or unmanaged routing (advertise pod subnets to external BGP infrastructure).

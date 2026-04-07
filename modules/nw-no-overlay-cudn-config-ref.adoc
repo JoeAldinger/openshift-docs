@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: REFERENCE
 [id="nw-no-overlay-cudn-config-ref_{context}"]
-= ClusterUserDefinedNetwork no-overlay configuration reference
+= Reference for ClusterUserDefinedNetwork underlay routing settings
 
 [role="_abstract"]
 Review the no-overlay fields for a ClusterUserDefinedNetwork so you can define transport, routing mode, and outbound SNAT behavior.

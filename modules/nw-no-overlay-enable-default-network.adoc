@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: PROCEDURE
 [id="nw-no-overlay-enable-default-network_{context}"]
-= Enabling no-overlay mode for the default network
+= Enable underlay routing for the default cluster network
 
 [role="_abstract"]
 Configure the OVN-Kubernetes settings for the default network so east-west pod traffic uses BGP routes instead of Geneve encapsulation.

@@ -1,6 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="no-overlay-mode-bgp-routing"]
-= No-overlay mode for layer-3 networks using BGP
+= Improve east-west performance by routing pods on the underlay with BGP
 include::_attributes/common-attributes.adoc[]
 :context: no-overlay-mode-bgp-routing
 

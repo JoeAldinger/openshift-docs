@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: PROCEDURE
 [id="nw-no-overlay-troubleshooting_{context}"]
-= Troubleshooting no-overlay mode
+= Troubleshoot connectivity for pods that use underlay routing
 
 [role="_abstract"]
 Verify BGP sessions, route advertisements, and network status to resolve no-overlay connectivity issues.
