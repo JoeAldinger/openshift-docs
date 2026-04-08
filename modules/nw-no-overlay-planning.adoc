@@ -10,7 +10,7 @@
 Plan routing mode, BGP topology, and SNAT behavior so pod subnets are routable and the design scales for your cluster size.
 
 Routing mode::
-Managed routing creates a full-mesh BGP fabric between nodes and is simpler to operate; it requires nodes to be directly connected at Layer 2 and is not suitable for nodes in different subnets. Unmanaged routing lets you control external peers and routing policies and is typically used when integrating with external BGP or when nodes are not in the same L2 segment.
+Managed routing creates a full-mesh BGP fabric between nodes and is simpler to operate; it requires nodes to be directly connected at layer 2 and is not suitable for nodes in different subnets. Unmanaged routing lets you control external peers and routing policies and is typically used when integrating with external BGP or when nodes are not in the same layer 2 segment.
 
 BGP topology::
 Choose a topology that fits your scale and infrastructure, such as full-mesh iBGP, route reflectors, eBGP with external routers, or a hybrid design.

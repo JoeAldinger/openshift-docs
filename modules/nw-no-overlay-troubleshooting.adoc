@@ -21,16 +21,18 @@ Verify BGP sessions, route advertisements, and network status to resolve no-over
 $ oc get pods -n openshift-frr-k8s
 ----
 
-. If you use *unmanaged* routing, verify `RouteAdvertisements` by running the following command:
+. If you use unmanaged routing, verify `RouteAdvertisements` objects by running the following commands:
 +
 [source,terminal]
 ----
 $ oc describe routeadvertisements <routeadvertisements_name>
 ----
 +
-Replace `<routeadvertisements_name>` with the name of your `RouteAdvertisements` object. Review your no-overlay network: list resources, inspect conditions and events, and confirm that advertisements are accepted.
+Replace `<routeadvertisements_name>` with the name of your `RouteAdvertisements` object.
++
+The output should show `Accepted=True` in the `status` section.
 
-. If you use *managed* routing, you typically do not create `RouteAdvertisements` yourself for intra-cluster-only designs; if pod connectivity fails, continue with the remaining steps in this procedure.
+. If you use managed routing, you typically do not create `RouteAdvertisements` yourself for intra-cluster-only designs; if pod connectivity fails, continue with the remaining steps in this procedure.
 
 . If you configured a no-overlay `ClusterUserDefinedNetwork` CR, check its status by running the following command:
 +
@@ -39,7 +41,7 @@ Replace `<routeadvertisements_name>` with the name of your `RouteAdvertisements`
 $ oc get clusteruserdefinednetwork <cudn_name> -o yaml
 ----
 +
-Replace `<cudn_name>` with name of your CUDN CR.
+Replace `<cudn_name>` with the name of your CUDN CR.
 
 . Check for BGP-related errors in the OVN-Kubernetes logs by entering the following command:
 +

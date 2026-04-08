@@ -16,7 +16,7 @@ Specifies the transport type for the network. Use `NoOverlay` to disable Geneve 
 Required when `transport` is `NoOverlay`. This object contains `routing` and `outboundSNAT` settings.
 
 `noOverlayOptions.routing`::
-Specifies the routing mode for the network. Use `Managed` for an OVN-Kubernetes managed fabric or `Unmanaged` to manage routing externally.
+Specifies the routing mode for the network. Use `Managed` for an OVN-Kubernetes-managed fabric or `Unmanaged` to manage routing externally.
 
 `noOverlayOptions.outboundSNAT`::
 Specifies whether outbound pod traffic is SNATed. Use `Enabled` when pod IPs are not routable on the external network and `Disabled` when they are routable.

@@ -78,7 +78,7 @@ spec:
 +
 [NOTE]
 ====
-For unmanaged routing on the default network, the cluster must have at least one `RouteAdvertisements` object that selects the default network (`networkSelectionType: DefaultNetwork`) and includes `PodNetwork` under `spec.advertisements`. OVN-Kubernetes uses this configuration when advertising pod subnets to your BGP infrastructure.
+For unmanaged routing on the default network, the cluster must have at least one `RouteAdvertisements` object that selects the default network (`networkSelectionType: DefaultNetwork`), lists `PodNetwork` in `spec.advertisements`, and reports `Accepted=True` in status. OVN-Kubernetes uses this configuration when advertising pod subnets to your BGP infrastructure.
 ====
 +
 For managed routing, no `RouteAdvertisements` CR or external BGP peer configuration is required; skip the following step and verify that the OVN-Kubernetes pods are running.
@@ -90,7 +90,7 @@ For managed routing, no `RouteAdvertisements` CR or external BGP peer configurat
 $ oc apply -f <routeadvertisements_file>.yaml
 ----
 +
-Replace `<routeadvertisements_file>.yaml` with name of your `RouteAdvertisements` CR file.
+Replace `<routeadvertisements_file>.yaml` with the name of your `RouteAdvertisements` CR file.
 
 . Verify that the OVN-Kubernetes pods are running by entering the following command:
 +
