@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command" class="book toc2 toc-left navmap-has-right-toc">
+<body id="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -571,6 +571,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
+</li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
@@ -852,8 +854,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
@@ -868,29 +868,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html"><span class="toc-current">Create a mirror registry with mirror registry for Red Hat OpenShift</span></a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html"><span class="toc-current">Prerequisites</span></a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -988,7 +990,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1138,7 +1140,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1615,8 +1617,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html">About the Node Health Check Operator</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
@@ -1741,83 +1741,45 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-about-mirror-registry_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">About the mirror registry</a></li><li class="level-4"><a href="#installation-mirror-repository_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring the Red Hat OpenShift Container Platform image repository</a></li><li class="level-4"><a href="#olm-mirror-catalog_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring Operator catalogs for use with disconnected clusters</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mirror-registry-introduction_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift introduction</a></li><li class="level-5"><a href="#mirror-registry-limitations_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift limitations</a></li><li class="level-4"><a href="#prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Prerequisites for creating a mirror registry</a></li><li class="level-4"><a href="#configuring-rootless-podman_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Configuring rootless Podman networking</a></li><li class="level-4"><a href="#mirror-registry-localhost_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a local host with mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-remote_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a remote host with mirror registry for Red Hat OpenShift</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Prerequisites</h3>
+<h3 id="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Create a mirror registry with mirror registry for Red Hat OpenShift</h3>
 <div class="paragraph _abstract">
-<p>You must meet several prerequisites before you can mirror images using the <code>oc adm release mirror</code> command.</p>
-</div>
-<div class="paragraph">
-<p>You must meet the following prerequisites:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You must have a container image registry that supports <a href="https://docs.docker.com/registry/spec/manifest-v2-2">Docker v2-2</a> in the location that will host the Red&#160;Hat OpenShift Container Platform cluster, such as one of the following registries:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.redhat.com/en/technologies/cloud-computing/quay">Red&#160;Hat Quay</a></p>
-</li>
-<li>
-<p><a href="https://jfrog.com/artifactory/">JFrog Artifactory</a></p>
-</li>
-<li>
-<p><a href="https://www.sonatype.com/products/repository-oss?topnav=true">Sonatype Nexus Repository</a></p>
-</li>
-<li>
-<p><a href="https://goharbor.io/">Harbor</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you have an entitlement to Red&#160;Hat Quay, see the documentation on deploying Red&#160;Hat Quay <a href="https://docs.redhat.com/en/documentation/red_hat_quay/3.9/html/deploy_red_hat_quay_for_proof-of-concept_non-production_purposes/index">for proof-of-concept purposes</a> or <a href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/deploying_the_red_hat_quay_operator_on_openshift_container_platform/index">by using the Red&#160;Hat Quay Operator</a>. If you need additional assistance selecting and installing a registry, contact your sales representative or Red Hat Support.</p>
-</div>
-</li>
-<li>
-<p>If you do not already have an existing solution for a container image registry, subscribers of Red&#160;Hat OpenShift Container Platform are provided a <a href="../disconnected/installing-mirroring-creating-registry.html#installing-mirroring-creating-registry">mirror registry for Red Hat OpenShift</a>. The <em>mirror registry for Red&#160;Hat OpenShift</em> is included with your subscription and is a small-scale container registry that can be used to mirror the required container images of Red&#160;Hat OpenShift Container Platform in disconnected installations.</p>
-</li>
-</ul>
+<p>To mirror container images for a disconnected installation, you need a local container registry. You can deploy the mirror registry for Red&#160;Hat OpenShift to quickly set up a supported registry that meets your mirroring needs.</p>
 </div>
 <div class="sect3">
-<h4 id="installation-about-mirror-registry_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">About the mirror registry</h4>
+<h4 id="mirror-registry-introduction_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift introduction</h4>
 <div class="paragraph _abstract">
-<p>You must have access to the internet to obtain the necessary container images. Using an alternative registry means that you place the mirror registry on a mirror host that has access to both your network and the internet.</p>
+<p>For disconnected deployments of Red&#160;Hat OpenShift Container Platform, a container registry is required to carry out the installation of the clusters.</p>
 </div>
 <div class="paragraph">
-<p>You can mirror the images that are required for Red&#160;Hat OpenShift Container Platform installation and subsequent product updates to a container mirror registry such as Red&#160;Hat Quay, JFrog Artifactory, Sonatype Nexus Repository, or Harbor. If you do not have access to a large-scale container registry, you can use the <em>mirror registry for Red&#160;Hat OpenShift</em>, a small-scale container registry included with Red&#160;Hat OpenShift Container Platform subscriptions.</p>
+<p>To run a production-grade registry service on such a cluster, you must create a separate registry deployment to install the first cluster. The <em>mirror registry for Red&#160;Hat OpenShift</em> addresses this need and is included in every Red&#160;Hat OpenShift Container Platform subscription. It is available for download on the "OpenShift console Downloads" page.</p>
 </div>
 <div class="paragraph">
-<p>You can use any container registry that supports Docker v2-2, such as Red&#160;Hat Quay, the <em>mirror registry for Red&#160;Hat OpenShift</em>, Artifactory, Sonatype Nexus Repository, or Harbor. Regardless of your chosen registry, the procedure to mirror content from Red Hat hosted sites on the internet to an isolated image registry is the same. After you mirror the content, you configure each cluster to retrieve this content from your mirror registry.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The OpenShift image registry cannot be used as the target registry because it does not support pushing without a tag, which is required during the mirroring process.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>The <em>mirror registry for Red&#160;Hat OpenShift</em> allows users to install a small-scale version of Red&#160;Hat Quay and its required components by using the <code>mirror-registry</code> command-line interface (CLI) tool. The <em>mirror registry for Red&#160;Hat OpenShift</em> is deployed automatically with pre-configured local storage and a local database. It also includes auto-generated user credentials and access permissions with a single set of inputs and no additional configuration choices to get started.</p>
 </div>
 <div class="paragraph">
-<p>If choosing a container registry that is not the <em>mirror registry for Red&#160;Hat OpenShift</em>, it must be reachable by every machine in the clusters that you provision. If the registry is unreachable, installation, updating, or normal operations such as workload relocation might fail. For that reason, you must run mirror registries in a highly available way, and the mirror registries must at least match the production availability of your Red&#160;Hat OpenShift Container Platform clusters.</p>
+<p>The <em>mirror registry for Red&#160;Hat OpenShift</em> provides a pre-determined network configuration and reports deployed component credentials and access URLs upon success. A limited set of optional configuration inputs such as fully qualified domain name (FQDN) services, superuser name and password, and custom TLS certificates are also provided. This provides users with a container registry so that they can easily create an offline mirror of all Red&#160;Hat OpenShift Container Platform release content when running Red&#160;Hat OpenShift Container Platform in restricted network environments.</p>
 </div>
 <div class="paragraph">
-<p>When you populate your mirror registry with Red&#160;Hat OpenShift Container Platform images, you can follow two scenarios. If you have a host that can access both the internet and your mirror registry, but not your cluster nodes, you can directly mirror the content from that machine. This process is referred to as <em>connected mirroring</em>. If you have no such host, you must mirror the images to a file system and then bring that host or removable media into your restricted environment. This process is referred to as <em>disconnected mirroring</em>.</p>
+<p>Use of the <em>mirror registry for Red&#160;Hat OpenShift</em> is optional if another container registry is already available in the install environment.</p>
 </div>
+<div class="sect4">
+<h5 id="mirror-registry-limitations_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift limitations</h5>
 <div class="paragraph">
-<p>For mirrored registries, to view the source of pulled images, you must review the <code>Trying to access</code> log entry in the CRI-O logs. Other methods to view the image pull source, such as using the <code>crictl images</code> command on a node, show the non-mirrored image name, even though the image is pulled from the mirrored location.</p>
+<p>The following limitations apply to the <em>mirror registry for Red&#160;Hat OpenShift</em>:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>mirror registry for Red&#160;Hat OpenShift</em> is not a highly-available registry and only local file system storage is supported. It is not intended to replace Red&#160;Hat Quay or the internal image registry for Red&#160;Hat OpenShift Container Platform.</p>
+</li>
+<li>
+<p>The <em>mirror registry for Red&#160;Hat OpenShift</em> is not intended to be a substitute for a production deployment of Red&#160;Hat Quay.</p>
+</li>
+<li>
+<p>The <em>mirror registry for Red&#160;Hat OpenShift</em> is only supported for hosting images that are required to install a disconnected Red&#160;Hat OpenShift Container Platform cluster, such as Release images or Red&#160;Hat Operator images. It uses local storage on your Red&#160;Hat Enterprise Linux (RHEL) machine, and storage supported by RHEL is supported by the <em>mirror registry for Red&#160;Hat OpenShift</em>.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1826,18 +1788,56 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Red&#160;Hat does not test third party registries with Red&#160;Hat OpenShift Container Platform.</p>
+<p>Because the <em>mirror registry for Red&#160;Hat OpenShift</em> uses local storage, you should remain aware of the storage usage consumed when mirroring images and use Red&#160;Hat Quay&#8217;s garbage collection feature to mitigate potential issues. For more information about this feature, see "Red&#160;Hat Quay garbage collection".</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+</li>
+<li>
+<p>Support for Red&#160;Hat product images that are pushed to the <em>mirror registry for Red&#160;Hat OpenShift</em> for bootstrapping purposes are covered by valid subscriptions for each respective product. For a list of exceptions to further enable the bootstrap experience, see "Self-managed Red&#160;Hat OpenShift sizing and subscription guide".</p>
+</li>
+<li>
+<p>Content built by customers should not be hosted by the <em>mirror registry for Red&#160;Hat OpenShift</em>.</p>
+</li>
+<li>
+<p>Using the <em>mirror registry for Red&#160;Hat OpenShift</em> with more than one cluster is discouraged because multiple clusters can create a single point of failure when updating your cluster fleet. Instead, use the <em>mirror registry for Red&#160;Hat OpenShift</em> to install a cluster that can host a production-grade, highly-available registry such as Red&#160;Hat Quay, which can serve Red&#160;Hat OpenShift Container Platform content to other clusters.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect3">
-<h4 id="installation-mirror-repository_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring the Red&#160;Hat OpenShift Container Platform image repository</h4>
+<h4 id="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Prerequisites for creating a mirror registry</h4>
 <div class="paragraph _abstract">
-<p>Mirror the Red&#160;Hat OpenShift Container Platform image repository to your registry to use during cluster installation or upgrade. Complete the following steps on the mirror host.</p>
+<p>There are several prerequisites that you must meet before you can create a mirror registry.</p>
 </div>
+<div class="paragraph">
+<p>The following prerequisites must be met:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An Red&#160;Hat OpenShift Container Platform subscription.</p>
+</li>
+<li>
+<p>Red&#160;Hat Enterprise Linux (RHEL) 8 and 9 with Podman 3.4.2 or later and OpenSSL installed. If you are using Podman 5.7 or later, see "Configuring rootless Podman networking".</p>
+</li>
+<li>
+<p>Fully qualified domain name for the Red&#160;Hat Quay service, which must resolve through a DNS server.</p>
+</li>
+<li>
+<p>Key-based SSH connectivity on the target host. SSH keys are automatically generated for local installs. For remote hosts, you must generate your own SSH keys.</p>
+</li>
+<li>
+<p>2 or more vCPUs.</p>
+</li>
+<li>
+<p>8 GB of RAM.</p>
+</li>
+<li>
+<p>About 12 GB for Red&#160;Hat OpenShift Container Platform {product-version} release images, or about 358 GB for Red&#160;Hat OpenShift Container Platform {product-version} release images and Red&#160;Hat OpenShift Container Platform {product-version} Red&#160;Hat Operator images.</p>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1845,31 +1845,43 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <img src="data:image/png;base64," alt="Important">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>The <code>oc adm release mirror</code> command is deprecated as of Red&#160;Hat OpenShift Container Platform 4.22 and will be removed in a future release.</p>
-</div>
-<div class="paragraph">
-<p>As an alternative, use the oc-mirror plugin v2.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Up to 1 TB per stream or more is suggested.</p>
+</li>
+<li>
+<p>These requirements are based on local testing results with only release images and Operator images. Storage requirements can vary based on your organization&#8217;s needs. You might require more space, for example, when you mirror multiple z-streams. You can use standard <a href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/use_red_hat_quay/index">Red&#160;Hat Quay functionality</a> or the proper <a href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html-single/red_hat_quay_api_guide/index#deletefulltag">API callout</a> to remove unnecessary images and free up space.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
 </table>
 </div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="configuring-rootless-podman_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Configuring rootless Podman networking</h4>
+<div class="paragraph _abstract">
+<p>To restore rootless Podman networking when the default <code>pasta</code> stack fails on Red&#160;Hat OpenShift Container Platform mirror or install hosts, you can set the default rootless network back to <code>slirp4netns</code> in the <code>/etc/containers/containers.conf</code> file, or in the user&#8217;s <code>~/.config/containers/container.conf</code> file.</p>
+</div>
+<div class="paragraph">
+<p>You might need to configure rootless Podman networking after upgrading to RHEL 9.5 or Podman 5.0. In these versions, the default networking stack changed from <code>slirp4netns</code> to <code>pasta</code>. As a result, systems that previously operated without a default route might no longer be able to establish network connectivity and could display the following error:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Error: pasta failed with exit code 1:
+External interface not usable</code></pre>
+</div>
+</div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Your mirror host has access to the internet.</p>
-</li>
-<li>
-<p>You configured a mirror registry to use in your restricted network and
-can access the certificate and credentials that you configured.</p>
-</li>
-<li>
-<p>You downloaded the <a href="https://console.redhat.com/openshift/install/pull-secret">pull secret from Red Hat OpenShift Cluster Manager</a> and modified it to include authentication to your mirror repository.</p>
-</li>
-<li>
-<p>If you use self-signed certificates, you have specified a Subject Alternative Name in the certificates.</p>
+<p>You have updated to RHEL 9.5 or Podman 5.0.</p>
 </li>
 </ul>
 </div>
@@ -1877,187 +1889,55 @@ can access the certificate and credentials that you configured.</p>
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Review the
-<a href="https://access.redhat.com/downloads/content/290/">Download Red&#160;Hat OpenShift Container Platform</a> page to determine the version of Red&#160;Hat OpenShift Container Platform that you want to install and determine the corresponding tag on the <a href="https://quay.io/repository/openshift-release-dev/ocp-release?tab=tags">Repository Tags</a> page.</p>
-</li>
-<li>
-<p>Set the following required environment variables:</p>
+<p>Use your preferred IDE to modify the <code>/etc/containers/containers.conf</code> or <code>~/.config/containers/container.conf</code> file.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Export the release version:</p>
+<p>To modify the <code>/etc/containers/containers.conf</code> file, enter the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ OCP_RELEASE=&lt;release_version&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ nano /etc/containers/containers.conf</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>For <code>&lt;release_version&gt;</code>, specify the tag that corresponds to the version of Red&#160;Hat OpenShift Container Platform to install, such as <code>4.21.1</code>.</p>
 </div>
 </li>
 <li>
-<p>Export the local registry name and host port:</p>
+<p>To modify the <code>~/.config/containers/container.conf</code> file, enter the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ LOCAL_REGISTRY='&lt;local_registry_host_name&gt;:&lt;local_registry_host_port&gt;'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ nano ~/.config/containers/container.conf</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>For <code>&lt;local_registry_host_name&gt;</code>, specify the registry domain name for your mirror repository, and for <code>&lt;local_registry_host_port&gt;</code>, specify the port that it serves content on.</p>
-</div>
-</li>
-<li>
-<p>Export the local repository name:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ LOCAL_REPOSITORY='&lt;local_repository_name&gt;'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For <code>&lt;local_repository_name&gt;</code>, specify the name of the repository to create in your registry, such as <code>ocp4/openshift4</code>.</p>
-</div>
-</li>
-<li>
-<p>Export the name of the repository to mirror:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ PRODUCT_REPO='openshift-release-dev'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For a production release, you must specify <code>openshift-release-dev</code>.</p>
-</div>
-</li>
-<li>
-<p>Export the path to your registry pull secret:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ LOCAL_SECRET_JSON='&lt;path_to_pull_secret&gt;'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For <code>&lt;path_to_pull_secret&gt;</code>, specify the absolute path to and file name of the pull secret for your mirror registry that you created.</p>
-</div>
-</li>
-<li>
-<p>Export the release mirror:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ RELEASE_NAME="ocp-release"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For a production release, you must specify <code>ocp-release</code>.</p>
-</div>
-</li>
-<li>
-<p>Export the type of architecture for your cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ARCHITECTURE=&lt;cluster_architecture&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Specify the architecture of the cluster, such as <code>x86_64</code>, <code>aarch64</code>, <code>s390x</code>, or <code>ppc64le</code>.</p>
-</div>
-</li>
-<li>
-<p>Export the path to the directory to host the mirrored images:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ REMOVABLE_MEDIA_PATH=&lt;path&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Specify the full path, including the initial forward slash (/) character.</p>
 </div>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Mirror the version images to the mirror registry:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If your mirror host does not have internet access, take the following actions:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Connect the removable media to a system that is connected to the internet.</p>
-</li>
-<li>
-<p>Review the images and configuration manifests to mirror:</p>
+<p>Add, or update, the <code>[network]</code> section as in the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release mirror -a ${LOCAL_SECRET_JSON}  \
-     --from=quay.io/${PRODUCT_REPO}/${RELEASE_NAME}:${OCP_RELEASE}-${ARCHITECTURE} \
-     --to=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY} \
-     --to-release-image=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE}-${ARCHITECTURE} --dry-run</code></pre>
+<pre class="highlight"><code class="language-text" data-lang="text"># ...
+[network]
+default_rootless_network_cmd = "slirp4netns"
+# ...</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Record the entire <code>imageContentSources</code> section from the output of the previous
-command. The information about your mirrors is unique to your mirrored repository, and you must add the <code>imageContentSources</code> section to the <code>install-config.yaml</code> file during installation.</p>
-</li>
-<li>
-<p>Mirror the images to a directory on the removable media:</p>
+<p>Restart the Podman system as the rootless user by entering the following command. Note that all containers must be stopped and restarted for the change to take effect.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release mirror -a ${LOCAL_SECRET_JSON} --to-dir=${REMOVABLE_MEDIA_PATH}/mirror quay.io/${PRODUCT_REPO}/${RELEASE_NAME}:${OCP_RELEASE}-${ARCHITECTURE}</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman system migrate</code></pre>
 </div>
-</div>
-</li>
-<li>
-<p>Take the media to the restricted network environment and upload the images to the local container registry.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc image mirror -a ${LOCAL_SECRET_JSON} --from-dir=${REMOVABLE_MEDIA_PATH}/mirror "file://openshift/release:${OCP_RELEASE}*" ${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For the <code>REMOVABLE_MEDIA_PATH</code> variable, you must use the same path that you specified when you mirrored the images.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Running the <code>oc image mirror</code> command might result in the following error: <code>error: unable to retrieve source image</code>. This error occurs when image indexes include references to images that no longer exist on the image registry. Image indexes might retain older references to allow users running those images an upgrade path to newer points on the upgrade graph. As a temporary workaround, you can use the <code>--skip-missing</code> option to bypass the error and continue downloading the image index. For more information, see <a href="https://access.redhat.com/solutions/6975305">Service Mesh Operator mirroring failed</a>.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </li>
 </ol>
 </div>
-</li>
-<li>
-<p>If the local container registry is connected to the mirror host, take the following actions:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Directly push the release images to the local registry by using following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release mirror -a ${LOCAL_SECRET_JSON}  \
-     --from=quay.io/${PRODUCT_REPO}/${RELEASE_NAME}:${OCP_RELEASE}-${ARCHITECTURE} \
-     --to=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY} \
-     --to-release-image=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE}-${ARCHITECTURE}</code></pre>
 </div>
+<div class="sect3">
+<h4 id="mirror-registry-localhost_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a local host with mirror registry for Red Hat OpenShift</h4>
+<div class="paragraph _abstract">
+<p>You can install the <em>mirror registry for Red&#160;Hat OpenShift</em> on a local host by using the <code>mirror-registry</code> installer tool. By doing so, users can create a local host registry running on port 443 for the purpose of storing a mirror of Red&#160;Hat OpenShift Container Platform images.</p>
 </div>
-<div class="paragraph">
-<p>This command pulls the release information as a digest, and its output includes the <code>imageContentSources</code> data that you require when you install your cluster.</p>
-</div>
-</li>
-<li>
-<p>Record the entire <code>imageContentSources</code> section from the output of the previous
-command. The information about your mirrors is unique to your mirrored repository, and you must add the <code>imageContentSources</code> section to the <code>install-config.yaml</code> file during installation.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2066,111 +1946,165 @@ command. The information about your mirrors is unique to your mirrored repositor
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The image name gets patched to Quay.io during the mirroring process, and the Podman images will show Quay.io in the registry on the bootstrap virtual machine.</p>
+<p>Installing the <em>mirror registry for Red&#160;Hat OpenShift</em> using the <code>mirror-registry</code> CLI tool makes several changes to your machine. After installation, a <code>$HOME/quay-install</code> directory is created, which has installation files, local storage, and the configuration bundle. Trusted SSH keys are generated in case the deployment target is the local host, and systemd files on the host machine are set up to ensure that container runtimes are persistent. Additionally, an initial user named <code>init</code> is created with an automatically generated password. All access credentials are printed at the end of the install routine.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Download the <code>mirror-registry.tar.gz</code> package for the latest version of the <em>mirror registry for Red&#160;Hat OpenShift</em> found on the <a href="https://console.redhat.com/openshift/downloads#tool-mirror-registry">OpenShift console <strong>Downloads</strong></a> page.</p>
 </li>
 <li>
-<p>To create the installation program that is based on the content that you
-mirrored, extract it and pin it to the release:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If your mirror host does not have internet access, run the following command:</p>
+<p>Install the <em>mirror registry for Red&#160;Hat OpenShift</em> on your local host with your current user account by using the <code>mirror-registry</code> tool. For a full list of available flags, see "mirror registry for Red&#160;Hat OpenShift flags".</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release extract -a ${LOCAL_SECRET_JSON} --icsp-file=&lt;file&gt; --command=openshift-install "${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE}-${ARCHITECTURE}" \
---insecure=true</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./mirror-registry install \
+  --quayHostname &lt;host_example_com&gt; \
+  --quayRoot &lt;example_directory_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the username and password generated during installation to log in to the registry by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login -u init \
+  -p &lt;password&gt; \
+  &lt;host_example_com&gt;:8443&gt; \
+  --tls-verify=false</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Optional: If you do not want to configure trust for the target registry, add the <code>--insecure=true</code> flag.</p>
+<p>You can avoid running <code>--tls-verify=false</code> by configuring your system to trust the generated rootCA certificates. See "Securing Red&#160;Hat Quay" and "Configuring the system to trust the certificate authority" for more information.</p>
 </div>
-</li>
-<li>
-<p>If the local container registry is connected to the mirror host, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release extract -a ${LOCAL_SECRET_JSON} --command=openshift-install "${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE}-${ARCHITECTURE}"</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Important">
+<img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>To ensure that you use the correct images for the version of Red&#160;Hat OpenShift Container Platform that you selected, you must extract the installation program from the mirrored content.</p>
-</div>
-<div class="paragraph">
-<p>You must perform this step on a machine with an active internet connection.</p>
+<p>You can also log in by accessing the UI at <code>https://&lt;host.example.com&gt;:8443</code> after installation.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </li>
-</ul>
-</div>
-</li>
 <li>
-<p>For clusters using installer-provisioned infrastructure, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install</code></pre>
+<p>You can mirror Red&#160;Hat OpenShift Container Platform images after logging in. Depending on your needs, see either the "Mirroring the Red&#160;Hat OpenShift Container Platform image repository" or the "Mirroring Operator catalogs for use with disconnected clusters" sections of this document.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If there are issues with images stored by the <em>mirror registry for Red&#160;Hat OpenShift</em> due to storage layer problems, you can re-mirror the Red&#160;Hat OpenShift Container Platform images, or reinstall mirror registry on more stable storage.</p>
 </div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect3">
-<h4 id="olm-mirror-catalog_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring Operator catalogs for use with disconnected clusters</h4>
+<h4 id="mirror-registry-remote_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a remote host with mirror registry for Red Hat OpenShift</h4>
 <div class="paragraph _abstract">
-<p>You can mirror the Operator contents of a Red Hat-provided catalog, or a custom catalog, into a container image registry using the <code>oc adm catalog mirror</code> command.</p>
+<p>You can install the <em>mirror registry for Red&#160;Hat OpenShift</em> on a remote host by using the <code>mirror-registry</code> tool. By doing so, users can create a registry to hold a mirror of Red&#160;Hat OpenShift Container Platform images.</p>
 </div>
-<div class="paragraph">
-<p>The target registry must support Docker v2-2. For a cluster on a restricted network, this registry can be one that the cluster has network access to, such as a mirror registry created during a restricted network cluster installation.</p>
-</div>
-<div class="admonitionblock important">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Important">
+<img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>The OpenShift image registry cannot be used as the target registry because it does not support pushing without a tag, which is required during the mirroring process.</p>
-</li>
-<li>
-<p>Running <code>oc adm catalog mirror</code> might result in the following error: <code>error: unable to retrieve source image</code>. This error occurs when image indexes include references to images that no longer exist on the image registry. Image indexes might retain older references to allow users running those images an upgrade path to newer points on the upgrade graph. As a temporary workaround, you can use the <code>--skip-missing</code> option to bypass the error and continue downloading the image index. For more information, see "Service Mesh Operator mirroring failed".</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Installing the <em>mirror registry for Red&#160;Hat OpenShift</em> using the <code>mirror-registry</code> CLI tool makes several changes to your machine. After installation, a <code>$HOME/quay-install</code> directory is created, which has installation files, local storage, and the configuration bundle. Trusted SSH keys are generated in case the deployment target is the local host, and systemd files on the host machine are set up to ensure that container runtimes are persistent. Additionally, an initial user named <code>init</code> is created with an automatically generated password. All access credentials are printed at the end of the install routine.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Download the <code>mirror-registry.tar.gz</code> package for the latest version of the <em>mirror registry for Red&#160;Hat OpenShift</em> found on the <a href="https://console.redhat.com/openshift/downloads#tool-mirror-registry">OpenShift console <strong>Downloads</strong></a> page.</p>
+</li>
+<li>
+<p>Install the <em>mirror registry for Red&#160;Hat OpenShift</em> on your local host with your current user account by using the <code>mirror-registry</code> tool. For a full list of available flags, see "mirror registry for Red&#160;Hat OpenShift flags".</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./mirror-registry install -v \
+  --targetHostname &lt;host_example_com&gt; \
+  --targetUsername &lt;example_user&gt; \
+  -k ~/.ssh/my_ssh_key \
+  --quayHostname &lt;host_example_com&gt; \
+  --quayRoot &lt;example_directory_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the username and password generated during installation to log in to the mirror registry by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login -u init \
+  -p &lt;password&gt; \
+  &lt;host_example_com&gt;:8443&gt; \
+  --tls-verify=false</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>The <code>oc adm catalog mirror</code> command also automatically mirrors the index image that is specified during the mirroring process, whether it be a Red Hat-provided index image or your own custom-built index image, to the target registry. You can then use the mirrored index image to create a catalog source that allows Operator Lifecycle Manager (OLM) to load the mirrored catalog onto your Red&#160;Hat OpenShift Container Platform cluster.</p>
+<p>You can avoid running <code>--tls-verify=false</code> by configuring your system to trust the generated rootCA certificates. See "Securing Red&#160;Hat Quay" and "Configuring the system to trust the certificate authority" for more information.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can also log in by accessing the UI at <code>https://&lt;host.example.com&gt;:8443</code> after installation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>You can mirror Red&#160;Hat OpenShift Container Platform images after logging in. Depending on your needs, see either the "Mirroring the Red&#160;Hat OpenShift Container Platform image repository" or the "Mirroring Operator catalogs for use with disconnected clusters" sections of this document.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If there are issues with images stored by the <em>mirror registry for Red&#160;Hat OpenShift</em> due to storage layer problems, you can re-mirror the Red&#160;Hat OpenShift Container Platform images, or reinstall mirror registry on more stable storage.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a> | ↑ Up: <a href="_disconnected_environments.html">Disconnected environments</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a> →</p>
+<p>← Previous: <a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a> | ↑ Up: <a href="_disconnected_environments.html">Disconnected environments</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a> →</p>
 </div>
 </div>
 <div id="footer">

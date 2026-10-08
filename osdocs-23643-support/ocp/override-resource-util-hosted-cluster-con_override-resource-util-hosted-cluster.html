@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="about-node-health-check-operator_use-the-vsphere-problem-detector-operator" class="book toc2 toc-left navmap-has-right-toc">
+<body id="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -542,7 +542,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_plan.html">Plan</a>
-
 <ul class="sectlevel2">
 <li><a href="size-control-plane-infrastructure-con_size-control-plane-infrastructure.html">Size control plane infrastructure</a>
 </li>
@@ -571,6 +570,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
+</li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html"><span class="toc-current">Overriding resource utilization measurements</span></a>
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
@@ -852,8 +853,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
@@ -869,29 +868,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -989,7 +990,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1139,7 +1140,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1564,6 +1565,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
+
 <ul class="sectlevel2">
 <li><a href="allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state-con_allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.html">Allow the configuration drift to remain and return the node to ready state</a>
 </li>
@@ -1614,8 +1616,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="post-install-etcd-tasks_defragment-etcd-data.html">etcd tasks</a>
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
-</li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html"><span class="toc-current">About the Node Health Check Operator</span></a>
 </li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
@@ -1741,222 +1741,56 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understanding-nhc-operator-workflow_use-the-vsphere-problem-detector-operator">Understanding the Node Health Check Operator workflow</a></li><li class="level-4"><a href="#how-nhc-prevent-conflict-with-mhc_use-the-vsphere-problem-detector-operator">About how node health checks prevent conflicts with machine health checks</a></li><li class="level-4"><a href="#control-plane-fencing-node-health-check-operator_use-the-vsphere-problem-detector-operator">Control plane fencing</a></li><li class="level-4"><a href="#eco-node-health-check-operator-creating-node-health-check_use-the-vsphere-problem-detector-operator">Creating a node health check</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-override_override-resource-util-hosted-cluster">Overriding resource utilization measurements for a hosted cluster</a></li><li class="level-4"><a href="#hcp-disable-metrics_override-resource-util-hosted-cluster">Disabling the metric service monitoring</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="about-node-health-check-operator_use-the-vsphere-problem-detector-operator">About the Node Health Check Operator</h3>
+<h3 id="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster">Overriding resource utilization measurements</h3>
 <div class="paragraph _abstract">
-<p>The Node Health Check Operator detects the health of the nodes in a cluster. The <code>NodeHealthCheck</code> controller creates the <code>NodeHealthCheck</code> custom resource (CR), which defines a set of criteria and thresholds to determine the health of a node.</p>
-</div>
-<div class="paragraph">
-<p>The Node Health Check Operator also installs the Self Node Remediation Operator as a default remediation provider.</p>
-</div>
-<div class="paragraph">
-<p>When the Node Health Check Operator detects an unhealthy node, it creates a remediation CR that triggers the remediation provider. For example, the controller creates the <code>SelfNodeRemediation</code> CR, which triggers the Self Node Remediation Operator to remediate the unhealthy node.</p>
-</div>
-<div class="paragraph">
-<p>The <code>NodeHealthCheck</code> CR resembles the following YAML file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: remediation.medik8s.io/v1alpha1
-kind: NodeHealthCheck
-metadata:
-  name: nodehealthcheck-sample
-spec:
-  minHealthy: 51% <img src="data:image/png;base64," alt="1">
-  pauseRequests: <img src="data:image/png;base64," alt="2">
-    - &lt;pause-test-cluster&gt;
-  remediationTemplate: <img src="data:image/png;base64," alt="3">
-    apiVersion: self-node-remediation.medik8s.io/v1alpha1
-    name: self-node-remediation-resource-deletion-template
-    namespace: openshift-operators
-    kind: SelfNodeRemediationTemplate
-  selector: <img src="data:image/png;base64," alt="4">
-    matchExpressions:
-      - key: node-role.kubernetes.io/worker
-        operator: Exists
-  unhealthyConditions: <img src="data:image/png;base64," alt="5">
-    - type: Ready
-      status: "False"
-      duration: 300s <img src="data:image/png;base64," alt="6">
-    - type: Ready
-      status: Unknown
-      duration: 300s <img src="data:image/png;base64," alt="6"></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Specifies the amount of healthy nodes(in percentage or number) required for a remediation provider to concurrently remediate nodes in the targeted pool. If the number of healthy nodes equals to or exceeds the limit set by <code>minHealthy</code>, remediation occurs. The default value is 51%.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>Prevents any new remediation from starting, while allowing any ongoing remediations to persist. The default value is empty. However, you can enter an array of strings that identify the cause of pausing the remediation. For example, <code>pause-test-cluster</code>.
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>During the upgrade process, nodes in the cluster might become temporarily unavailable and get identified as unhealthy. In the case of worker nodes, when the Operator detects that the cluster is upgrading, it stops remediating new unhealthy nodes to prevent such nodes from rebooting.</p>
-</div>
-</td>
-</tr>
-</table>
-</div></td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="3"></td>
-<td>Specifies a remediation template from the remediation provider. For example, from the Self Node Remediation Operator.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="4"></td>
-<td>Specifies a <code>selector</code> that matches labels or expressions that you want to check. The default value is empty, which selects all nodes.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="5"></td>
-<td>Specifies a list of the conditions that determine whether a node is considered unhealthy.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="6"></td>
-<td>Specifies the timeout duration for a node condition. If a condition is met for the duration of the timeout, the node will be remediated. Long timeouts can result in long periods of downtime for a workload on an unhealthy node.</td>
-</tr>
-</table>
+<p>The set of baseline measurements for resource utilization can vary in each hosted cluster. Ensure that you understand the resource utilization needed for your deployment.</p>
 </div>
 <div class="sect3">
-<h4 id="understanding-nhc-operator-workflow_use-the-vsphere-problem-detector-operator">Understanding the Node Health Check Operator workflow</h4>
-<div class="paragraph">
-<p>When a node is identified as unhealthy, the Node Health Check Operator checks how many other nodes are unhealthy. If the number of healthy nodes exceeds the amount that is specified in the <code>minHealthy</code> field of the <code>NodeHealthCheck</code> CR, the controller creates a remediation CR from the details that are provided in the external remediation template by the remediation provider. After remediation, the kubelet updates the node&#8217;s health status.</p>
-</div>
-<div class="paragraph">
-<p>When the node turns healthy, the controller deletes the external remediation template.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="how-nhc-prevent-conflict-with-mhc_use-the-vsphere-problem-detector-operator">About how node health checks prevent conflicts with machine health checks</h4>
-<div class="paragraph">
-<p>When both, node health checks and machine health checks are deployed, the node health check avoids conflict with the machine health check.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform deploys <code>machine-api-termination-handler</code> as the default <code>MachineHealthCheck</code> resource.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The following list summarizes the system behavior when node health checks and machine health checks are deployed:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>If only the default machine health check exists, the node health check continues to identify unhealthy nodes. However, the node health check ignores unhealthy nodes in a Terminating state. The default machine health check handles the unhealthy nodes with a Terminating state.</p>
-<div class="listingblock">
-<div class="title">Example log message</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">INFO MHCChecker	ignoring unhealthy Node, it is terminating and will be handled by MHC	{"NodeName": "node-1.example.com"}</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If the default machine health check is modified (for example, the <code>unhealthyConditions</code> is  <code>Ready</code>), or if additional machine health checks are created, the node health check is disabled.</p>
-<div class="listingblock">
-<div class="title">Example log message</div>
-<div class="content">
-<pre>INFO controllers.NodeHealthCheck disabling NHC in order to avoid conflict with custom MHCs configured in the cluster {"NodeHealthCheck": "/nhc-worker-default"}</pre>
-</div>
-</div>
-</li>
-<li>
-<p>When, again, only the default machine health check exists, the node health check is re-enabled.</p>
-<div class="listingblock">
-<div class="title">Example log message</div>
-<div class="content">
-<pre>INFO controllers.NodeHealthCheck re-enabling NHC, no conflicting MHC configured in the cluster {"NodeHealthCheck": "/nhc-worker-default"}</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="control-plane-fencing-node-health-check-operator_use-the-vsphere-problem-detector-operator">Control plane fencing</h4>
+<h4 id="hcp-override_override-resource-util-hosted-cluster">Overriding resource utilization measurements for a hosted cluster</h4>
 <div class="paragraph _abstract">
-<p>In earlier releases, you could enable Self Node Remediation and Node Health Check on worker nodes. In the event of node failure, you can now also follow remediation strategies on control plane nodes.</p>
-</div>
-<div class="paragraph">
-<p>Do not use the same <code>NodeHealthCheck</code> CR for worker nodes and control plane nodes. Grouping worker nodes and control plane nodes together can result in incorrect evaluation of the minimum healthy node count, and cause unexpected or missing remediations. This is because of the way the Node Health Check Operator handles control plane nodes. You should group the control plane nodes in their own group and the worker nodes in their own group. If required, you can also create multiple groups of worker nodes.</p>
-</div>
-<div class="paragraph">
-<p>Considerations for remediation strategies:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Avoid Node Health Check configurations that involve multiple configurations overlapping the same nodes because they can result in unexpected behavior. This suggestion applies to both worker and control plane nodes.</p>
-</li>
-<li>
-<p>The Node Health Check Operator implements a hardcoded limitation of remediating a maximum of one control plane node at a time. Multiple control plane nodes should not be remediated at the same time.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="eco-node-health-check-operator-creating-node-health-check_use-the-vsphere-problem-detector-operator">Creating a node health check</h4>
-<div class="paragraph _abstract">
-<p>Using the web console, you can create a node health check to identify unhealthy nodes and specify the remediation type and strategy to fix them.</p>
+<p>You can override resource utilization measurements based on the type and pace of your cluster workload.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From the <strong>Administrator</strong> perspective of the Red&#160;Hat OpenShift Container Platform web console, click <strong>Compute</strong> &#8594; <strong>NodeHealthChecks</strong> &#8594; <strong>CreateNodeHealthCheck</strong>.</p>
-</li>
-<li>
-<p>Specify whether to configure the node health check using the <strong>Form view</strong>  or the <strong>YAML view</strong>.</p>
-</li>
-<li>
-<p>Enter a <strong>Name</strong> for the node health check. The name must consist of lower case, alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character.</p>
-</li>
-<li>
-<p>Specify the <strong>Remediator</strong> type, and <strong>Self node remediation</strong> or <strong>Other</strong>. The Self node remediation option is part of the Self Node Remediation Operator that is installed with the Node Health Check Operator. Selecting <strong>Other</strong> requires an <strong>API version</strong>, <strong>Kind</strong>, <strong>Name</strong>, and <strong>Namespace</strong> to be entered, which then points to the remediation template resource of a remediator.</p>
-</li>
-<li>
-<p>Make a <strong>Nodes</strong> selection by specifying the labels of the nodes you want to remediate. The selection matches labels that you want to check. If more than one label is specified, the nodes must contain each label. The default value is empty, which selects both worker and control-plane nodes.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
+<p>Create the <code>ConfigMap</code> resource by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;your-config-map-file.yaml&gt;</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>When creating a node health check with the Self Node Remediation Operator, you must select either <code>node-role.kubernetes.io/worker</code> or <code>node-role.kubernetes.io/control-plane</code> as the value.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Replace <code>&lt;your-config-map-file.yaml&gt;</code> with the name of your YAML file that contains your <code>hcp-sizing-baseline</code> config map.</p>
 </div>
 </li>
 <li>
-<p>Specify the minimum number of healthy nodes, using either a percentage or a number, required for a <strong>NodeHealthCheck</strong> to remediate nodes in the targeted pool. If the number of healthy nodes equals to or exceeds the limit set by <strong>Min healthy</strong>, remediation occurs. The default value is 51%.</p>
+<p>Create the <code>hcp-sizing-baseline</code> config map in the <code>local-cluster</code> namespace to specify the measurements you want to override. Your config map might resemble the following YAML file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: hcp-sizing-baseline
+  namespace: local-cluster
+data:
+  incrementalCPUUsagePer1KQPS: "9.0"
+  memoryRequestPerHCP: "18"
+  minimumQPSPerHCP: "50.0"</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Specify a list of <strong>Unhealthy conditions</strong> that if a node meets determines whether the node is considered unhealthy, and requires remediation. You can specify the <strong>Type</strong>, <strong>Status</strong> and <strong>Duration</strong>. You can also create your own custom type.</p>
-</li>
-<li>
-<p>Click <strong>Create</strong> to create the node health check.</p>
+<p>Delete the <code>hypershift-addon-agent</code> deployment to restart the <code>hypershift-addon-agent</code> pod by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete deployment hypershift-addon-agent \
+  -n open-cluster-management-agent-addon</code></pre>
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -1964,14 +1798,99 @@ spec:
 <div class="title">Verification</div>
 <ul>
 <li>
-<p>Navigate to the <strong>Compute</strong> &#8594; <strong>NodeHealthCheck</strong> page and verify that the corresponding node health check is listed, and their status displayed. Once created, node health checks can be paused, modified, and deleted.</p>
+<p>Observe the <code>hypershift-addon-agent</code> pod logs. Verify that the overridden measurements are updated in the config map by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs hypershift-addon-agent -n open-cluster-management-agent-addon</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your logs might resemble the following output:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">2024-01-05T19:41:05.392Z	INFO	agent.agent-reconciler	agent/agent.go:793	setting cpuRequestPerHCP to 5
+2024-01-05T19:41:05.392Z	INFO	agent.agent-reconciler	agent/agent.go:802	setting memoryRequestPerHCP to 18
+2024-01-05T19:53:54.070Z	INFO	agent.agent-reconciler	agent/hcp_capacity_calculation.go:141	The worker nodes have 12.000000 vCPUs
+2024-01-05T19:53:54.070Z	INFO	agent.agent-reconciler	agent/hcp_capacity_calculation.go:142	The worker nodes have 49.173369 GB memory</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the overridden measurements are not updated properly in the <code>hcp-sizing-baseline</code> config map, you might see the following error message in the <code>hypershift-addon-agent</code> pod logs:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example error</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">2024-01-05T19:53:54.052Z	ERROR	agent.agent-reconciler	agent/agent.go:788	failed to get configmap from the hub. Setting the HCP sizing baseline with default values.	{"error": "configmaps \"hcp-sizing-baseline\" not found"}</code></pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="hcp-disable-metrics_override-resource-util-hosted-cluster">Disabling the metric service monitoring</h4>
+<div class="paragraph _abstract">
+<p>After you enable the <code>hypershift-addon</code> managed cluster add-on, metric service monitoring is configured by default so that Red&#160;Hat OpenShift Container Platform monitoring can gather metrics from <code>hypershift-addon</code>. If needed, you can disable metric service monitoring.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to your hub cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc login</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit the <code>hypershift-addon-deploy-config</code> add-on deployment configuration specification by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit addondeploymentconfig hypershift-addon-deploy-config \
+  -n multicluster-engine</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add the <code>disableMetrics=true</code> customized variable to the specification, as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: addon.open-cluster-management.io/v1alpha1
+kind: AddOnDeploymentConfig
+metadata:
+  name: hypershift-addon-deploy-config
+  namespace: multicluster-engine
+spec:
+  customizedVariables:
+  - name: hcMaxNumber
+    value: "80"
+  - name: hcThresholdNumber
+    value: "60"
+  - name: disableMetrics
+    value: "true"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>disableMetrics=true</code> customized variable disables metric service monitoring for both new and existing <code>hypershift-addon</code> managed cluster add-ons.</p>
+</div>
+</li>
+<li>
+<p>Apply the changes to the configuration specification by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a> →</p>
+<p>← Previous: <a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a> →</p>
 </div>
 </div>
 <div id="footer">
