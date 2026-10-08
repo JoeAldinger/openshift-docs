@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update" class="book toc2 toc-left navmap-has-right-toc">
+<body id="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -490,6 +490,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
 </li>
 <li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
+</li>
+<li><a href="review-multiarch-tuning-operator-releases-con_review-multiarch-tuning-operator-releases.html">Review Multiarch Tuning Operator releases</a>
 </li>
 </ul>
 </li>
@@ -608,7 +610,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
-
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
@@ -648,7 +649,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
+<li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html"><span class="toc-current">Install a cluster with multi-architecture support</span></a>
+</li>
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+</li>
+<li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -720,7 +725,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned.html">About installations in restricted networks</a>
 </li>
-<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare Metal as a Service for OpenShift</a>
+<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare-Metal-as-a-Service for OpenShift</a>
 </li>
 <li><a href="install-on-aws-upi-intro_install-on-aws-upi.html">Install on AWS with user-provisioned infrastructure</a>
 </li>
@@ -936,6 +941,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
+<li><a href="gathering-data-cluster-update_gather-data-about-a-cluster-update.html">Gathering data about your cluster update</a>
+</li>
 </ul>
 </li>
 <li><a href="_migrate.html">Migrate</a>
@@ -1084,6 +1091,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
 </li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
+</li>
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
@@ -1212,6 +1221,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a>
 </li>
 <li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-aws-cluster-con_add-multi-architecture-compute-machine-set-to-aws-cluster.html">Add a multi-architecture compute machine set to an AWS cluster</a>
 </li>
 <li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
 </li>
@@ -1662,6 +1673,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
 </li>
+<li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
+</li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
 <li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
@@ -1671,6 +1684,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
+</li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
@@ -1682,6 +1697,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
+
 <ul class="sectlevel2">
 <li><a href="allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state-con_allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.html">Allow the configuration drift to remain and return the node to ready state</a>
 </li>
@@ -1707,7 +1723,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
 </li>
@@ -1723,21 +1739,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_replace-failed-bare-metal-control-plane-nodes-without-bmc-credentials.html">Re-enabling the etcd quorum guard</a>
 </li>
 <li><a href="querying-operator-status-after-installation_troubleshoot-extension-installation.html">Querying Operator status after installation</a>
 </li>
+<li><a href="troubleshooting-s2i_troubleshoot-source-to-image-builds.html">Troubleshooting the Source-to-Image process</a>
+</li>
 <li><a href="setting-resource-requests-for-a-nodeagent-pod_evaluate-pod-health.html">Setting resource requests for a nodeAgent pod</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data.html">etcd tasks</a>
 </li>
-<li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
-</li>
-<li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html"><span class="toc-current">Gathering bootstrap node diagnostic data</span></a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a>
 </li>
@@ -1749,7 +1763,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
-<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="nw-networkpolicy-project-defaults_troubleshoot-web-terminal-startup-failures.html">Add network policies to the new project template</a>
 </li>
@@ -1807,7 +1821,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_investigate-an-active-cluster-issue-troubleshoot-cluster-issues.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
+<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gather Operator logs</a>
 </li>
 <li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
@@ -1817,7 +1831,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
-<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data-automatically-defragment-etcd-data.html">etcd tasks</a>
 </li>
@@ -1865,159 +1879,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#gathering-s2i-diagnostic-data_gather-data-about-a-cluster-update">Gathering Source-to-Image diagnostic data</a></li><li class="level-4"><a href="#gathering-application-diagnostic-data_gather-data-about-a-cluster-update">Gathering application diagnostic data to investigate application failures</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installing-a-cluster-with-multiarch-support_install-a-cluster-with-multi-architecture-support">Install a cluster with multi-architecture support</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update">Gathering bootstrap node diagnostic data</h3>
+<h3 id="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support">Install a cluster with multi-architecture support</h3>
 <div class="paragraph _abstract">
-<p>When experiencing bootstrap-related issues, you can gather <code>bootkube.service</code> <code>journald</code> unit logs and container logs from the bootstrap node.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have SSH access to your bootstrap node.</p>
-</li>
-<li>
-<p>You have the fully qualified domain name of the bootstrap node.</p>
-</li>
-<li>
-<p>If you are hosting Ignition configuration files by using an HTTP server, you must have the HTTP server&#8217;s fully qualified domain name and the port number. You must also have SSH access to the HTTP host.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>If you have access to the bootstrap node&#8217;s console, monitor the console until the node reaches the login prompt.</p>
-</li>
-<li>
-<p>Verify the Ignition file configuration.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If you are hosting Ignition configuration files by using an HTTP server.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Verify the bootstrap node Ignition file URL. Replace <code>&lt;http_server_fqdn&gt;</code> with HTTP server&#8217;s fully qualified domain name:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ curl -I http://&lt;http_server_fqdn&gt;:&lt;port&gt;/bootstrap.ign</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>-I</code> option returns the header only. If the Ignition file is available on the specified URL, the command returns <code>200 OK</code> status. If it is not available, the command returns <code>404 file not found</code>.</p>
-</div>
-</li>
-<li>
-<p>To verify that the Ignition file was received by the bootstrap node, query the HTTP server logs on the serving host. For example, if you are using an Apache web server to serve Ignition files, enter the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ grep -is 'bootstrap.ign' /var/log/httpd/access_log</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If the bootstrap Ignition file is received, the associated <code>HTTP GET</code> log message will include a <code>200 OK</code> success status, indicating that the request succeeded.</p>
-</div>
-</li>
-<li>
-<p>If the Ignition file was not received, check that the Ignition files exist and that they have the appropriate file and web server permissions on the serving host directly.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>If you are using a cloud provider mechanism to inject Ignition configuration files into hosts as part of their initial deployment.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Review the bootstrap node&#8217;s console to determine if the mechanism is injecting the bootstrap node Ignition file correctly.</p>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Verify the availability of the bootstrap node&#8217;s assigned storage device.</p>
-</li>
-<li>
-<p>Verify that the bootstrap node has been assigned an IP address from the DHCP server.</p>
-</li>
-<li>
-<p>Collect <code>bootkube.service</code> journald unit logs from the bootstrap node. Replace <code>&lt;bootstrap_fqdn&gt;</code> with the bootstrap node&#8217;s fully qualified domain name:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;bootstrap_fqdn&gt; journalctl -b -f -u bootkube.service</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>bootkube.service</code> log on the bootstrap node outputs etcd <code>connection refused</code> errors, indicating that the bootstrap server is unable to connect to etcd on control plane nodes. After etcd has started on each control plane node and the nodes have joined the cluster, the errors should stop.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Collect logs from the bootstrap node containers.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Collect the logs using <code>podman</code> on the bootstrap node. Replace <code>&lt;bootstrap_fqdn&gt;</code> with the bootstrap node&#8217;s fully qualified domain name:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;bootstrap_fqdn&gt; 'for pod in $(sudo podman ps -a -q); do sudo podman logs $pod; done'</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>If the bootstrap process fails, verify the following.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>You can resolve <code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;</code> from the installation host.</p>
-</li>
-<li>
-<p>The load balancer proxies port 6443 connections to bootstrap and control plane nodes. Ensure that the proxy configuration meets Red&#160;Hat OpenShift Container Platform installation requirements.</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
+<p>You can install an Red&#160;Hat OpenShift Container Platform cluster with support for configuring multi-architecture compute machines. Configuring the installation program to use the <code>multi</code> payload lets you deploy control plane and compute nodes with the CPU architectures that your workloads require.</p>
 </div>
 <div class="sect3">
-<h4 id="gathering-s2i-diagnostic-data_gather-data-about-a-cluster-update">Gathering Source-to-Image diagnostic data</h4>
+<h4 id="installing-a-cluster-with-multiarch-support_install-a-cluster-with-multi-architecture-support">Install a cluster with multi-architecture support</h4>
 <div class="paragraph _abstract">
-<p>The S2I tool runs a build pod and a deployment pod in sequence. The deployment pod is responsible for deploying the application pods based on the application container image created in the build stage.</p>
-</div>
-<div class="paragraph">
-<p>Watch build, deployment and application pod status to determine where in the S2I process a failure occurs. Then, focus diagnostic data collection accordingly.</p>
+<p>You can install a cluster with multi-architecture support to use compute machines with different Central Processing Unit (CPU) architectures. Modifying your configuration file helps ensure your control plane and worker nodes deploy with the correct architecture.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+<p>You installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
 <li>
-<p>Your API service is still functional.</p>
+<p>You have the Red&#160;Hat OpenShift Container Platform installation program.</p>
 </li>
 <li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+<p>You downloaded the pull secret for your cluster.</p>
 </li>
 </ul>
 </div>
@@ -2025,271 +1909,65 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Watch the pod status throughout the S2I process to determine at which stage a failure occurs:</p>
+<p>Check that the <code>openshift-install</code> binary is using the <code>multi</code> payload by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -w</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./openshift-install version</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">./openshift-install 4.22.0
+built from commit abc123etc
+release image quay.io/openshift-release-dev/ocp-release@sha256:abc123wxyzetc
+release architecture multi
+default architecture amd64</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Use the <code>-w</code> flag to monitor pods for changes until you quit the command using <code>Ctrl+C</code>.</p>
+<p>The output must contain <code>release architecture multi</code> to indicate that the <code>openshift-install</code> binary is using the <code>multi</code> payload.</p>
 </div>
 </li>
 <li>
-<p>Review a failed pod&#8217;s logs for errors.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>If the build pod fails</strong>, review the build pod&#8217;s logs:</p>
+<p>Update the <code>install-config.yaml</code> file to configure the architecture for the nodes.</p>
 <div class="listingblock">
+<div class="title">Sample <code>install-config.yaml</code> file with multi-architecture configuration</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -f pod/&lt;application_name&gt;-&lt;build_number&gt;-build</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+baseDomain: example.openshift.com
+compute:
+- architecture: amd64
+  hyperthreading: Enabled
+  name: worker
+  platform: {}
+  replicas: 3
+controlPlane:
+  architecture: arm64
+  name: master
+  platform: {}
+  replicas: 3
+# ...</code></pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>Alternatively, you can review the build configuration&#8217;s logs using <code>oc logs -f bc/&lt;application_name&gt;</code>. The build configuration&#8217;s logs include the logs from the build pod.</p>
+<p>where:</p>
 </div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p><strong>If the deployment pod fails</strong>, review the deployment pod&#8217;s logs:</p>
-<div class="listingblock">
+<div class="openblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -f pod/&lt;application_name&gt;-&lt;build_number&gt;-deploy</code></pre>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>compute.architecture</code></dt>
+<dd>
+<p>Specifies the architecture of the worker node. You can set this field to either <code>arm64</code> or <code>amd64</code>.</p>
+</dd>
+<dt class="hdlist1"><code>controlPlane.architecture</code></dt>
+<dd>
+<p>Specifies the control plane node architecture. You can set this field to either <code>arm64</code> or <code>amd64</code>.</p>
+</dd>
+</dl>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Alternatively, you can review the deployment configuration&#8217;s logs using <code>oc logs -f dc/&lt;application_name&gt;</code>. This outputs logs from the deployment pod until the deployment pod completes successfully. The command outputs logs from the application pods if you run it after the deployment pod has completed. After a deployment pod completes, its logs can still be accessed by running <code>oc logs -f pod/&lt;application_name&gt;-&lt;build_number&gt;-deploy</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p><strong>If an application pod fails, or if an application is not behaving as expected within a running application pod</strong>, review the application pod&#8217;s logs:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -f pod/&lt;application_name&gt;-&lt;build_number&gt;-&lt;random_string&gt;</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="gathering-application-diagnostic-data_gather-data-about-a-cluster-update">Gathering application diagnostic data to investigate application failures</h4>
-<div class="paragraph _abstract">
-<p>Application failures can occur within running application pods. In these situations, you can retrieve diagnostic information with these strategies:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Review events relating to the application pods.</p>
-</li>
-<li>
-<p>Review the logs from the application pods, including application-specific log files that are not collected by the OpenShift Logging framework.</p>
-</li>
-<li>
-<p>Test application functionality interactively and run diagnostic tools in an application container.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>List events relating to a specific application pod. The following example retrieves events for an application pod named <code>my-app-1-akdlg</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe pod/my-app-1-akdlg</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Review logs from an application pod:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -f pod/my-app-1-akdlg</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Query specific logs within a running application pod. Logs that are sent to stdout are collected by the OpenShift Logging framework and are included in the output of the preceding command. The following query is only required for logs that are not sent to stdout.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If an application log can be accessed without root privileges within a pod, concatenate the log file as follows:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec my-app-1-akdlg -- cat /var/log/my-application.log</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If root access is required to view an application log, you can start a debug container with root privileges and then view the log file from within the container. Start the debug container from the project&#8217;s <code>DeploymentConfig</code> object. Pod users typically run with non-root privileges, but running troubleshooting pods with temporary root privileges can be useful during issue investigation:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug dc/my-deployment-configuration --as-root -- cat /var/log/my-application.log</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can access an interactive shell with root access within the debug pod if you run <code>oc debug dc/&lt;deployment_configuration&gt; --as-root</code> without appending <code>-- &lt;command&gt;</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Test application functionality interactively and run diagnostic tools, in an application container with an interactive shell.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Start an interactive shell on the application container:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec -it my-app-1-akdlg /bin/bash</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Test application functionality interactively from within the shell. For example, you can run the container&#8217;s entry point command and observe the results. Then, test changes from the command line directly, before updating the source code and rebuilding the application container through the S2I process.</p>
-</li>
-<li>
-<p>Run diagnostic binaries available within the container.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Root privileges are required to run some diagnostic binaries. In these situations you can start a debug pod with root access, based on a problematic pod&#8217;s <code>DeploymentConfig</code> object, by running <code>oc debug dc/&lt;deployment_configuration&gt; --as-root</code>. Then, you can run diagnostic binaries as root from within the debug pod.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>If diagnostic binaries are not available within a container, you can run a host&#8217;s diagnostic binaries within a container&#8217;s namespace by using <code>nsenter</code>. The following example runs <code>ip ad</code> within a container&#8217;s namespace, using the host`s <code>ip</code> binary.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Enter into a debug session on the target node. This step instantiates a debug pod called <code>&lt;node_name&gt;-debug</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Set <code>/host</code> as the root directory within the debug shell. The debug pod mounts the host&#8217;s root file system in <code>/host</code> within the pod. By changing the root directory to <code>/host</code>, you can run binaries contained in the host&#8217;s executable paths:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># chroot /host</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Accessing cluster nodes by using SSH is not recommended. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to access nodes using <code>ssh core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;</code> instead.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Determine the target container ID:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># crictl ps</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Determine the container&#8217;s process ID. In this example, the target container ID is <code>a7fe32346b120</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># crictl inspect a7fe32346b120 --output yaml | grep 'pid:' | awk '{print $2}'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run <code>ip ad</code> within the container&#8217;s namespace, using the host&#8217;s <code>ip</code> binary. This example uses <code>31150</code> as the container&#8217;s process ID. The <code>nsenter</code> command enters the namespace of a target process and runs a command in its namespace. Because the target process in this example is a container&#8217;s process ID, the <code>ip ad</code> command is run in the container&#8217;s namespace from the host:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># nsenter -n -t 31150 -- ip ad</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Running a host&#8217;s diagnostic binaries within a container&#8217;s namespace is only possible if you are using a privileged container such as a debug node.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
 </div>
 </li>
 </ol>
@@ -2297,12 +1975,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a> →</p>
+<p>← Previous: <a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-08 14:25:16 -0400
+Last updated 2026-10-08 16:45:45 -0400
 </div>
 </div>
 <style>
