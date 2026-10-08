@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="machine-about-phases_understand-the-machine-lifecycle" class="book toc2 toc-left navmap-has-right-toc">
+<body id="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -580,7 +580,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -941,6 +941,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_migrate.html">Migrate</a>
 </li>
 <li><a href="_administer.html">Administer</a>
+
 <ul class="sectlevel2">
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
@@ -950,7 +951,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -990,6 +991,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1024,7 +1031,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html"><span class="toc-current">Machine phases</span></a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1080,7 +1087,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
 </li>
@@ -1168,13 +1174,81 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
+</li>
+<li><a href="configure-dns-records-in-a-private-zone-con_configure-dns-records-in-a-private-zone.html">Configure DNS records in a private zone</a>
+</li>
+<li><a href="set-the-ingress-controller-to-private-con_set-the-ingress-controller-to-private.html">Set the Ingress Controller to private</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-azure-con_restrict-the-api-server-to-private-for-azure.html">Restrict the API server to private for Azure</a>
+</li>
+<li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
+</li>
+<li><a href="identity-provider-overview_prepare-a-cluster-for-user-access.html">Identity providers in Red&#160;Hat OpenShift Container Platform</a>
+</li>
+<li><a href="manage-workloads-using-taints-and-tolerations-con_manage-workloads-using-taints-and-tolerations.html">Manage workloads using taints and tolerations</a>
+</li>
+<li><a href="infrastructure-components_move-workloads-to-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+</li>
+<li><a href="registry-configuring-private-storage-endpoint-azure_configure-a-private-storage-endpoint-on-azure.html">Configure a private storage endpoint on Azure</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-iro-discovery-con_configure-private-storage-endpoint-with-iro-discovery.html">Configure a private storage endpoint by using Image Registry Operator discovery</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a>
+</li>
+<li><a href="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters.html"><span class="toc-current">Configuring your cluster with multi-architecture compute machines</span></a>
+</li>
+<li><a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
+</li>
+<li><a href="multi-architecture-gather-info-about-workloads_configure-the-multiarch-tuning-operator.html">Multiarch Tuning Operator pod labels and architecture support overview</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-cli-con_install-multiarch-tuning-operator-via-cli.html">Install the Multiarch Tuning Operator by using the CLI</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
+</li>
+<li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
+</li>
+<li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+</li>
+<li><a href="modify-number-of-unavailable-worker-nodes-con_modify-number-of-unavailable-worker-nodes.html">Modify the number of unavailable worker nodes</a>
+</li>
+<li><a href="manage-cluster-overcommitment-con_manage-cluster-overcommitment.html">Manage cluster overcommitment</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-operator.html">Image registry removed during installation</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-after-installation.html">Image registry removed during installation</a>
+</li>
+<li><a href="configure-registry-storage-by-platform-con_configure-registry-storage-by-platform.html">Configure registry storage by platform</a>
+</li>
+<li><a href="odc-customizing-user-perspectives_enable-the-developer-perspective.html">Customize user perspectives</a>
+</li>
+<li><a href="set-user-preferences-con_set-user-preferences.html">Set user preferences</a>
+</li>
+<li><a href="configure-theme-and-language-preferences-con_configure-theme-and-language-preferences.html">Configure theme and language preferences</a>
+</li>
+<li><a href="configure-the-web-console-con_configure-the-web-console.html">Configure the web console</a>
+</li>
+<li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
+</li>
+<li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
 </ul>
 </li>
@@ -1183,9 +1257,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Understand network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1353,19 +1453,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
 </li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
 </li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
 </li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
 </li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1464,7 +1564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1504,7 +1604,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1512,11 +1612,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1601,6 +1715,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
+</li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
@@ -1629,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1665,6 +1781,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
+</li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_connectivity-troubleshooting-12-identify-traffic-blocked-by-network-policies.html">Connection health checks that are performed</a>
@@ -1691,7 +1809,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1721,6 +1845,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1735,131 +1865,374 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machine-about-lifecycle_understand-the-machine-lifecycle">The machine lifecycle</a></li><li class="level-4"><a href="#machine-determine-phase-cli_understand-the-machine-lifecycle">Determining the phase of a machine by using the CLI</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#multi-architecture-verifying-cluster-compatibility_create-multi-architecture-compute-clusters">Verifying cluster compatibility</a></li><li class="level-4"><a href="#multi-architecture-scheduling_create-multi-architecture-compute-clusters">Scheduled workloads on clusters with multi-architecture compute machines</a></li><li class="level-5"><a href="#multi-architecture-scheduling-examples_create-multi-architecture-compute-clusters">Sample multi-architecture node workload deployments</a></li><li class="level-4"><a href="#multi-architecture-import-imagestreams_create-multi-architecture-compute-clusters">Import manifest lists in image streams on your multi-architecture compute machines</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="machine-about-phases_understand-the-machine-lifecycle">Machine phases</h3>
+<h3 id="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters">Configuring your cluster with multi-architecture compute machines</h3>
 <div class="paragraph _abstract">
-<p>Understanding machine lifecycle phases can help you troubleshoot machine issues. As a machine moves through its lifecycle, it passes through different phases. Each phase is a basic representation of the state of the machine.</p>
+<p>To create a cluster with multi-architecture compute machines with different installation options and platforms, see the documentation references.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>Provisioning</code></dt>
-<dd>
-<p>There is a request to provision a new machine. The machine does not yet exist and does not have an instance, a provider ID, or an address.</p>
-</dd>
-<dt class="hdlist1"><code>Provisioned</code></dt>
-<dd>
-<p>The machine exists and has a provider ID or an address. The cloud provider has created an instance for the machine. The machine has not yet become a node and the <code>status.nodeRef</code> section of the machine object is not yet populated.</p>
-</dd>
-<dt class="hdlist1"><code>Running</code></dt>
-<dd>
-<p>The machine exists and has a provider ID or address. Ignition has run successfully and the cluster machine approver has approved a certificate signing request (CSR). The machine has become a node and the <code>status.nodeRef</code> section of the machine object contains node details.</p>
-</dd>
-<dt class="hdlist1"><code>Deleting</code></dt>
-<dd>
-<p>There is a request to delete the machine. The machine object has a <code>DeletionTimestamp</code> field that indicates the time of the deletion request.</p>
-</dd>
-<dt class="hdlist1"><code>Failed</code></dt>
-<dd>
-<p>There is an unrecoverable problem with the machine. This can happen, for example, if the cloud provider deletes the instance for the machine.</p>
-</dd>
-</dl>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 545. Cluster with multi-architecture compute machine installation options</caption>
+<colgroup>
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Documentation section</th>
+<th class="tableblock halign-left valign-top">Platform</th>
+<th class="tableblock halign-left valign-top">User-provisioned installation</th>
+<th class="tableblock halign-left valign-top">Installer-provisioned installation</th>
+<th class="tableblock halign-left valign-top">Control Plane</th>
+<th class="tableblock halign-left valign-top">Compute node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Creating a cluster with multi-architecture compute machines on Azure"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Azure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code> or <code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code>, <code>x86_64</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Creating a cluster with multi-architecture compute machines on AWS"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amazon Web Services (AWS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code> or <code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code>, <code>x86_64</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Creating a cluster with multi-architecture compute machines on Google Cloud"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code> or <code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code>, <code>x86_64</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">"Creating a cluster with multi-architecture compute machines on bare metal, IBM Power, or IBM Z"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bare metal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code> or <code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aarch64</code>, <code>x86_64</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Power</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code> or <code>ppc64le</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code>, <code>ppc64le</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code> or <code>s390x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code>, <code>s390x</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Creating a cluster with multi-architecture compute machines on IBM Z&#174; and IBM&#174; LinuxONE with z/VM"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z&#174; and IBM&#174; LinuxONE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code>, <code>s390x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code>, <code>s390x</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Creating a cluster with multi-architecture compute machines on IBM Z&#174; and IBM&#174; LinuxONE with RHEL KVM"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z&#174; and IBM&#174; LinuxONE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code>, <code>s390x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code>, <code>s390x</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Creating a cluster with multi-architecture compute machines on IBM Power&#174;"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Power&#174;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code>, <code>ppc64le</code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect3">
-<h4 id="machine-about-lifecycle_understand-the-machine-lifecycle">The machine lifecycle</h4>
+<h4 id="multi-architecture-verifying-cluster-compatibility_create-multi-architecture-compute-clusters">Verifying cluster compatibility</h4>
 <div class="paragraph _abstract">
-<p>Understanding the machine lifecycle can help you troubleshoot machine issues. The lifecycle begins with the request to provision a machine and continues until the machine no longer exists.</p>
-</div>
-<div class="paragraph">
-<p>The machine lifecycle proceeds in the following order. Interruptions due to errors or lifecycle hooks are not included in this overview.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>There is a request to provision a new machine for one of the following reasons:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>A cluster administrator scales a machine set such that it requires additional machines.</p>
-</li>
-<li>
-<p>An autoscaling policy scales machine set such that it requires additional machines.</p>
-</li>
-<li>
-<p>A machine that is managed by a machine set fails or is deleted and the machine set creates a replacement to maintain the required number of machines.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The machine enters the <code>Provisioning</code> phase.</p>
-</li>
-<li>
-<p>The infrastructure provider creates an instance for the machine.</p>
-</li>
-<li>
-<p>The machine has a provider ID or address and enters the <code>Provisioned</code> phase.</p>
-</li>
-<li>
-<p>The Ignition configuration file is processed.</p>
-</li>
-<li>
-<p>The kubelet issues a certificate signing request (CSR).</p>
-</li>
-<li>
-<p>The cluster machine approver approves the CSR.</p>
-</li>
-<li>
-<p>The machine becomes a node and enters the <code>Running</code> phase.</p>
-</li>
-<li>
-<p>An existing machine is slated for deletion for one of the following reasons:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>A user with <code>cluster-admin</code> permissions uses the <code>oc delete machine</code> command.</p>
-</li>
-<li>
-<p>The machine gets a <code>machine.openshift.io/delete-machine</code> annotation.</p>
-</li>
-<li>
-<p>The machine set that manages the machine marks it for deletion to reduce the replica count as part of reconciliation.</p>
-</li>
-<li>
-<p>The cluster autoscaler identifies a node that is unnecessary to meet the deployment needs of the cluster.</p>
-</li>
-<li>
-<p>A machine health check is configured to replace an unhealthy machine.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The machine enters the <code>Deleting</code> phase, in which it is marked for deletion but is still present in the API.</p>
-</li>
-<li>
-<p>The machine controller removes the instance from the infrastructure provider.</p>
-</li>
-<li>
-<p>The machine controller deletes the <code>Node</code> object.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machine-determine-phase-cli_understand-the-machine-lifecycle">Determining the phase of a machine by using the CLI</h4>
-<div class="paragraph _abstract">
-<p>To troubleshoot issues with a machine, you can find the phase of a machine by using the OpenShift CLI (<code>oc</code>).</p>
+<p>Before you can start adding compute nodes of different architectures to your cluster, you must verify that your cluster is multi-architecture compatible.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to an Red&#160;Hat OpenShift Container Platform cluster using an account with <code>cluster-admin</code> permissions.</p>
+<p>You installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
 <li>
-<p>You have installed the <code>oc</code> CLI.</p>
+<p>IBM Power only: Ensure that you meet the following prerequisites:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When using multiple architectures, hosts for Red&#160;Hat OpenShift Container Platform nodes must share the same storage layer. If they do not have the same storage layer, use a storage provider such as <code>nfs-provisioner</code>.</p>
+</li>
+<li>
+<p>You should limit the number of network hops between the compute and control plane as much as possible.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You can check that your cluster uses the architecture payload by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release info -o jsonpath="{ .metadata.metadata}"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>If you see the following output, your cluster is using the multi-architecture payload:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">{
+ "release.openshift.io/architecture": "multi",
+ "url": "https://access.redhat.com/errata/&lt;errata_version&gt;"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then begin adding multi-arch compute nodes to your cluster.</p>
+</div>
+</li>
+<li>
+<p>If you see the following output, your cluster is not using the multi-architecture payload:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">{
+ "url": "https://access.redhat.com/errata/&lt;errata_version&gt;"
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To migrate your cluster so the cluster supports multi-architecture compute machines, see "Migrating to a cluster with multi-architecture compute machines".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="multi-architecture-scheduling_create-multi-architecture-compute-clusters">Scheduled workloads on clusters with multi-architecture compute machines</h4>
+<div class="paragraph _abstract">
+<p>When you deploy workloads on a cluster with compute nodes that use different architectures, you must align pod architecture with the architecture of the underlying node. Your workload might also require additional configuration to particular resources depending on the underlying node architecture.</p>
+</div>
+<div class="paragraph">
+<p>You can use the Multiarch Tuning Operator to enable architecture-aware scheduling of workloads on clusters with multi-architecture compute machines. The Multiarch Tuning Operator implements additional scheduler predicates in the pod specifications based on the architectures that the pods can support at creation time.</p>
+</div>
+<div class="sect4">
+<h5 id="multi-architecture-scheduling-examples_create-multi-architecture-compute-clusters">Sample multi-architecture node workload deployments</h5>
+<div class="paragraph _abstract">
+<p>Scheduling a workload to an appropriate node based on architecture works in the same way as scheduling based on any other node characteristic.
+Consider the following options when determining how to schedule your workloads.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Using <code>nodeAffinity</code> to schedule nodes with specific architectures</dt>
+<dd>
+<p>You can allow a workload to be scheduled on only a set of nodes with architectures supported by its images. You can set the <code>spec.affinity.nodeAffinity</code> field in your pod&#8217;s template specification.</p>
+<div class="listingblock">
+<div class="title">Example deployment with node affinity set</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata: # ...
+spec:
+   # ...
+  template:
+     # ...
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+                - arm64
+# ...</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>values</code> parameter specifies the supported architectures. Valid values include <code>amd64</code>, <code>arm64</code>, or both values.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Tainting each node for a specific architecture</dt>
+<dd>
+<p>You can taint a node to avoid the node scheduling workloads that are incompatible with its architecture. When your cluster uses a <code>MachineSet</code> object, you can add parameters to the <code>.spec.template.spec.taints</code> field to avoid workloads being scheduled on nodes with non-supported architectures.</p>
+<div class="paragraph">
+<p>Before you add a taint to a node, you must scale down the <code>MachineSet</code> object or remove existing available machines. For more information, see <em>Modifying a compute machine set</em>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example machine set with taint set</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata: # ...
+spec:
+  # ...
+  template:
+    # ...
+    spec:
+      # ...
+      taints:
+      - effect: NoSchedule
+        key: multiarch.openshift.io/arch
+        value: arm64</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also set a taint on a specific node by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm taint nodes &lt;node-name&gt; multiarch.openshift.io/arch=arm64:NoSchedule</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Creating a default toleration in a namespace</dt>
+<dd>
+<p>When a node or machine set has a taint, only workloads that tolerate that taint can be scheduled. You can annotate a namespace so all of the workloads get the same default toleration by running the following command:</p>
+<div class="listingblock">
+<div class="title">Example default toleration set on a namespace</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc annotate namespace my-namespace \
+  'scheduler.alpha.kubernetes.io/defaultTolerations'='[{"operator": "Exists", "effect": "NoSchedule", "key": "multiarch.openshift.io/arch"}]'</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Tolerating architecture taints in workloads</dt>
+<dd>
+<p>When a node or machine set has a taint, only workloads that tolerate that taint can be scheduled. You can configure your workload with a <code>toleration</code> so that it is scheduled on nodes with specific architecture taints.</p>
+<div class="listingblock">
+<div class="title">Example deployment with toleration set</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata: # ...
+spec:
+  # ...
+  template:
+    # ...
+    spec:
+      tolerations:
+      - key: "multiarch.openshift.io/arch"
+        value: "arm64"
+        operator: "Equal"
+        effect: "NoSchedule"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example deployment can be scheduled on nodes and machine sets that have the <code>multiarch.openshift.io/arch=arm64</code> taint specified.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Using node affinity with taints and tolerations</dt>
+<dd>
+<p>When a scheduler computes the set of nodes to schedule a pod, tolerations can broaden the set while node affinity restricts the set. If you set a taint on nodes that have a specific architecture, you must also add a toleration to workloads that you want to be scheduled there.</p>
+<div class="listingblock">
+<div class="title">Example deployment with node affinity and toleration set</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata: # ...
+spec:
+  # ...
+  template:
+    # ...
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+                - arm64
+      tolerations:
+      - key: "multiarch.openshift.io/arch"
+        value: "arm64"
+        operator: "Equal"
+        effect: "NoSchedule"</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="multi-architecture-import-imagestreams_create-multi-architecture-compute-clusters">Import manifest lists in image streams on your multi-architecture compute machines</h4>
+<div class="paragraph _abstract">
+<p>On an Red&#160;Hat OpenShift Container Platform {product-version} cluster with multi-architecture compute machines, the image streams in the cluster do not import manifest lists automatically. You must manually change the default <code>importMode</code> option to the <code>PreserveOriginal</code> option to import the manifest list.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
 </ul>
 </div>
@@ -1867,26 +2240,53 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Procedure</div>
 <ul>
 <li>
-<p>List the machines on the cluster by running the following command:</p>
+<p>Enter a command similar to the following example command to patch the <code>ImageStream</code> cli-artifacts so that the <code>cli-artifacts:latest</code> image stream tag is imported as a manifest list:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machine -n openshift-machine-api</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch is/cli-artifacts -n openshift -p '{"spec":{"tags":[{"name":"latest","importPolicy":{"importMode":"PreserveOriginal"}}]}}'</code></pre>
 </div>
 </div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>You can check that the manifest lists imported properly by inspecting the image stream tag. The following command lists the individual architecture manifests for a particular tag.</p>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                                      PHASE     TYPE         REGION      ZONE         AGE
-mycluster-5kbsp-master-0                  Running   m6i.xlarge   us-west-1   us-west-1a   4h55m
-mycluster-5kbsp-master-1                  Running   m6i.xlarge   us-west-1   us-west-1b   4h55m
-mycluster-5kbsp-master-2                  Running   m6i.xlarge   us-west-1   us-west-1a   4h55m
-mycluster-5kbsp-worker-us-west-1a-fmx8t   Running   m6i.xlarge   us-west-1   us-west-1a   4h51m
-mycluster-5kbsp-worker-us-west-1a-m889l   Running   m6i.xlarge   us-west-1   us-west-1a   4h51m
-mycluster-5kbsp-worker-us-west-1b-c8qzm   Running   m6i.xlarge   us-west-1   us-west-1b   4h51m</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get istag cli-artifacts:latest -n openshift -oyaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>PHASE</code> column of the output contains the phase of each machine.</p>
+<p>If the <code>dockerImageManifests</code> object is present, the manifest list imported successfully.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output of the <code>dockerImageManifests</code> object</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">dockerImageManifests:
+  - architecture: amd64
+    digest: sha256:16d4c96c52923a9968fbfa69425ec703aff711f1db822e4e9788bf5d2bee5d77
+    manifestSize: 1252
+    mediaType: application/vnd.docker.distribution.manifest.v2+json
+    os: linux
+  - architecture: arm64
+    digest: sha256:6ec8ad0d897bcdf727531f7d0b716931728999492709d19d8b09f0d90d57f626
+    manifestSize: 1252
+    mediaType: application/vnd.docker.distribution.manifest.v2+json
+    os: linux
+  - architecture: ppc64le
+    digest: sha256:65949e3a80349cdc42acd8c5b34cde6ebc3241eae8daaeea458498fedb359a6a
+    manifestSize: 1252
+    mediaType: application/vnd.docker.distribution.manifest.v2+json
+    os: linux
+  - architecture: s390x
+    digest: sha256:75f4fa21224b5d5d511bea8f92dfa8e1c00231e5c81ab95e83c3013d245d1719
+    manifestSize: 1252
+    mediaType: application/vnd.docker.distribution.manifest.v2+json
+    os: linux</code></pre>
+</div>
 </div>
 </li>
 </ul>
@@ -1894,12 +2294,12 @@ mycluster-5kbsp-worker-us-west-1b-c8qzm   Running   m6i.xlarge   us-west-1   us-
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a> →</p>
+<p>← Previous: <a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-07 15:23:15 -0400
+Last updated 2026-10-08 14:25:16 -0400
 </div>
 </div>
 <style>

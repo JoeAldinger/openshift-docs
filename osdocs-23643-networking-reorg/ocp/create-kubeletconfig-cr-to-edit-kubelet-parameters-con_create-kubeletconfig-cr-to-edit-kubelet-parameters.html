@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="understanding-multiple-networks-con_plan-a-multiple-network-architecture" class="book toc2 toc-left navmap-has-right-toc">
+<body id="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -544,6 +544,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_plan.html">Plan</a>
+
 <ul class="sectlevel2">
 <li><a href="size-control-plane-infrastructure-con_size-control-plane-infrastructure.html">Size control plane infrastructure</a>
 </li>
@@ -579,7 +580,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html"><span class="toc-current">Multiple networks with the OVN-K CNI</span></a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -950,7 +951,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -990,6 +991,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1024,7 +1031,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1080,7 +1087,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
 </li>
@@ -1168,13 +1174,81 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
+</li>
+<li><a href="configure-dns-records-in-a-private-zone-con_configure-dns-records-in-a-private-zone.html">Configure DNS records in a private zone</a>
+</li>
+<li><a href="set-the-ingress-controller-to-private-con_set-the-ingress-controller-to-private.html">Set the Ingress Controller to private</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-azure-con_restrict-the-api-server-to-private-for-azure.html">Restrict the API server to private for Azure</a>
+</li>
+<li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
+</li>
+<li><a href="identity-provider-overview_prepare-a-cluster-for-user-access.html">Identity providers in Red&#160;Hat OpenShift Container Platform</a>
+</li>
+<li><a href="manage-workloads-using-taints-and-tolerations-con_manage-workloads-using-taints-and-tolerations.html">Manage workloads using taints and tolerations</a>
+</li>
+<li><a href="infrastructure-components_move-workloads-to-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+</li>
+<li><a href="registry-configuring-private-storage-endpoint-azure_configure-a-private-storage-endpoint-on-azure.html">Configure a private storage endpoint on Azure</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-iro-discovery-con_configure-private-storage-endpoint-with-iro-discovery.html">Configure a private storage endpoint by using Image Registry Operator discovery</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a>
+</li>
+<li><a href="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
+</li>
+<li><a href="multi-architecture-gather-info-about-workloads_configure-the-multiarch-tuning-operator.html">Multiarch Tuning Operator pod labels and architecture support overview</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-cli-con_install-multiarch-tuning-operator-via-cli.html">Install the Multiarch Tuning Operator by using the CLI</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
+</li>
+<li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
+</li>
+<li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html"><span class="toc-current">Create a KubeletConfig CR to edit kubelet parameters</span></a>
+</li>
+<li><a href="modify-number-of-unavailable-worker-nodes-con_modify-number-of-unavailable-worker-nodes.html">Modify the number of unavailable worker nodes</a>
+</li>
+<li><a href="manage-cluster-overcommitment-con_manage-cluster-overcommitment.html">Manage cluster overcommitment</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-operator.html">Image registry removed during installation</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-after-installation.html">Image registry removed during installation</a>
+</li>
+<li><a href="configure-registry-storage-by-platform-con_configure-registry-storage-by-platform.html">Configure registry storage by platform</a>
+</li>
+<li><a href="odc-customizing-user-perspectives_enable-the-developer-perspective.html">Customize user perspectives</a>
+</li>
+<li><a href="set-user-preferences-con_set-user-preferences.html">Set user preferences</a>
+</li>
+<li><a href="configure-theme-and-language-preferences-con_configure-theme-and-language-preferences.html">Configure theme and language preferences</a>
+</li>
+<li><a href="configure-the-web-console-con_configure-the-web-console.html">Configure the web console</a>
+</li>
+<li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
+</li>
+<li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
 </ul>
 </li>
@@ -1183,9 +1257,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Understand network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1353,19 +1453,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
 </li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
 </li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
 </li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
 </li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1464,7 +1564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1504,7 +1604,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1512,11 +1612,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1601,6 +1715,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
+</li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
@@ -1629,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1665,6 +1781,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
+</li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_connectivity-troubleshooting-12-identify-traffic-blocked-by-network-policies.html">Connection health checks that are performed</a>
@@ -1691,7 +1809,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1721,6 +1845,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1735,263 +1865,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#how-primary-and-secondary-networks-work-con_how-primary-and-secondary-networks-work">How primary and secondary networks work</a></li><li class="level-5"><a href="#nw-udn-overview_how-primary-and-secondary-networks-work">Overview of user-defined networks</a></li><li class="level-5"><a href="#nw-udn-l2-l3_how-primary-and-secondary-networks-work">Layer 2 and layer 3 topologies</a></li><li class="level-4"><a href="#when-to-add-a-secondary-network-con_when-to-add-a-secondary-network">When to add a secondary network</a></li><li class="level-5"><a href="#nw-udn-benefits_when-to-add-a-secondary-network">Benefits of a user-defined network</a></li><li class="level-4"><a href="#choosing-user-defined-networks-vs-network-attachment-definitions-con_choosing-user-defined-networks-vs-network-attachment-definitions">Choose between user-defined networks and network attachment definitions</a></li><li class="level-5"><a href="#support-matrix-for-udn-nad_choosing-user-defined-networks-vs-network-attachment-definitions">UserDefinedNetwork and NetworkAttachmentDefinition support matrix</a></li><li class="level-5"><a href="#limitations-for-udn_choosing-user-defined-networks-vs-network-attachment-definitions">Limitations of a user-defined network</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-kubeletconfig-cr-to-edit-kubelet-parameters">Create a KubeletConfig CR to edit kubelet parameters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="understanding-multiple-networks-con_plan-a-multiple-network-architecture">Multiple networks with the OVN-K CNI</h3>
+<h3 id="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters">Create a KubeletConfig CR to edit kubelet parameters</h3>
 <div class="paragraph _abstract">
-<p>By default, OVN-Kubernetes serves as the Container Network Interface (CNI) of an Red&#160;Hat OpenShift Container Platform cluster. This network interface is what administrators use to create default networks.</p>
-</div>
-<div class="paragraph">
-<p>Both user-defined networks and Network Attachment Definitions can serve as the following network types:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Primary networks</strong>: Act as the primary network for the pod. By default, all traffic passes through the primary network unless you have configured a pod route to send traffic through other networks.</p>
-</li>
-<li>
-<p><strong>Secondary networks</strong>: Act as secondary, non-default networks for a pod. Secondary networks offer separate interfaces dedicated to specific traffic types or purposes. Only pod traffic that you explicitly configure to use a secondary network routes through its interface.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The following diagram shows a cluster that has an existing default network infrastructure that uses a physical network interface, <code>eth0</code>, to connect to two namespaces. Pods or virtual machines (VMs) in one namespace run in isolation from pods or VMs in the other namespace. You can create only one primary network. However, you can create multiple secondary networks for each namespace.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="Diagram showing namespaces with multiple secondary UDNs">
-</div>
-<div class="title">Figure 15. Diagram showing namespaces with multiple secondary UDNs</div>
-</div>
-<div class="paragraph">
-<p>During cluster installation, Red&#160;Hat OpenShift Container Platform administrators can configure alternative default secondary pod networks by leveraging the Multus CNI plugin. With Multus, you can use multiple CNI plugins such as ipvlan, macvlan, or Network Attachment Definitions together to serve as secondary networks for pods.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>User-defined networks are only supported when OVN-Kubernetes is used as the CNI. UDNs are not supported for use with other CNIs.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>You can define an secondary network based on the available CNI plugins and attach one or more of these networks to your pods. You can define more than one secondary network for your cluster depending on your needs. This gives you flexibility when you configure pods that deliver network functionality, such as switching or routing. For more information:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For a complete list of supported CNI plugins, see "Secondary networks in Red&#160;Hat OpenShift Container Platform".</p>
-</li>
-<li>
-<p>For information about user-defined networks, see "About user-defined networks (UDNs)".</p>
-</li>
-<li>
-<p>For information about Network Attachment Definitions, see "Creating primary networks by using a NetworkAttachmentDefinition".</p>
-</li>
-</ul>
+<p>You can change kubelet settings such as <code>maxPods</code>, <code>podPidsLimit</code>, and <code>containerLogMaxSize</code> by creating a <code>KubeletConfig</code> object. The Machine Config Operator applies the object to every node in the machine config pool that the object selects.</p>
 </div>
 <div class="sect3">
-<h4 id="how-primary-and-secondary-networks-work-con_how-primary-and-secondary-networks-work">How primary and secondary networks work</h4>
+<h4 id="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-kubeletconfig-cr-to-edit-kubelet-parameters">Create a KubeletConfig CR to edit kubelet parameters</h4>
 <div class="paragraph _abstract">
-<p>User-defined networks (UDNs) extend OVN-Kubernetes with custom layer&#160;2 and layer&#160;3 segments that can serve as either a primary or a secondary network for a pod. Understanding how these segments relate to default pod connectivity helps you plan where traffic flows.</p>
-</div>
-<div class="sect4">
-<h5 id="nw-udn-overview_how-primary-and-secondary-networks-work">Overview of user-defined networks</h5>
-<div class="paragraph _abstract">
-<p>Cluster administrators can create primary or secondary networks that span namespaces by using the <code>ClusterUserDefinedNetwork</code> CR, while developers can define secondary networks at the namespace level by using the <code>UserDefinedNetwork</code> CR.</p>
-</div>
-<div class="paragraph">
-<p>Before the implementation of user-defined networks (UDN), the OVN-Kubernetes CNI plugin for Red&#160;Hat OpenShift Container Platform only supported a layer 3 topology on the primary or <em>main</em> network. Due to Kubernetes design principles: all pods are attached to the main network, all pods communicate with each other by their IP addresses, and inter-pod traffic is restricted according to network policy.</p>
-</div>
-<div class="paragraph">
-<p>While the Kubernetes design is useful for simple deployments, this layer 3 topology restricts customization of primary network segment configurations, especially for modern multi-tenant deployments.</p>
-</div>
-<div class="paragraph">
-<p>UDN improves the flexibility and segmentation capabilities of the default layer 3 topology for a Kubernetes pod network by enabling custom layer 2 and layer 3 network segments, where all these segments are isolated by default. These segments act as either primary or secondary networks for container pods and virtual machines that use the default OVN-Kubernetes CNI plugin. UDNs enable a wide range of network architectures and topologies, enhancing network flexibility, security, and performance.</p>
-</div>
-<div class="paragraph">
-<p>The following sections further emphasize the benefits and limitations of user-defined networks, the best practices when creating a <code>ClusterUserDefinedNetwork</code> or <code>UserDefinedNetwork</code> CR, how to create the CR, and additional configuration details that might be relevant to your deployment.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="nw-udn-l2-l3_how-primary-and-secondary-networks-work">Layer 2 and layer 3 topologies</h5>
-<div class="paragraph _abstract">
-<p>A layer 2 topology creates a distributed virtual switch across cluster nodes for live migration of virtual machines (VMs) within the same subnet. A layer 3 topology creates unique segments per node with routing between them.</p>
-</div>
-<div class="paragraph">
-<p>In a flat layer 2 topology, virtual machines and pods connect to the virtual switch so that all these components can communicate with each other within the same subnet. This topology is useful for the live migration of VMs across nodes in the cluster. The following diagram shows a flat layer 2 topology with two nodes that use the virtual switch for live migration purposes:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="A flat layer 2 topology with a virtual switch so that virtual machines in node-1 to node-2 can communicate with each other">
-</div>
-<div class="title">Figure 16. A flat layer 2 topology that uses a virtual switch for component communication</div>
-</div>
-<div class="paragraph">
-<p>If you decide not to specify a layer 2 subnet, then you must manually configure IP addresses for each pod in your cluster. When you do not specify a layer 2 subnet, port security is limited to preventing Media Access Control (MAC) spoofing only, and does not include IP spoofing. A layer 2 topology creates a single broadcast domain that can be challenging in large network environments, where the topology might cause a broadcast storm that can degrade network performance.</p>
-</div>
-<div class="paragraph">
-<p>To access more configurable options for your network, you can integrate a layer 2 topology with a user-defined network (UDN). The following diagram shows two nodes that use a UDN with a layer 2 topology that includes pods that exist on each node. Each node includes two interfaces:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A node interface, which is a compute node that connects networking components to the node.</p>
-</li>
-<li>
-<p>An Open vSwitch (OVS) bridge such as <code>br-ex</code>, which creates an layer 2 OVN switch so that pods can communicate with each other and share resources.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>An external switch connects these two interfaces, while the gateway or router handles routing traffic between the external switch and the layer 2 OVN switch. VMs and pods in a node can use the UDN to communicate with each other. The layer 2 OVN switch handles node traffic over a UDN so that live migrate of a VM from one node to another is possible.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="A UDN that uses a layer 2 topology for migrating a VM from node-1 to node-2">
-</div>
-<div class="title">Figure 17. A user-defined network (UDN) that uses a layer 2 topology</div>
-</div>
-<div class="paragraph">
-<p>A layer 3 topology creates a unique layer 2 segment for each node in a cluster. The layer 3 routing mechanism interconnects these segments so that virtual machines and pods that are hosted on different nodes can communicate with each other. A layer 3 topology can effectively manage large broadcast domains by assigning each domain to a specific node, so that broadcast traffic has a reduced scope. To configure a layer 3 topology, you must configure <code>cidr</code> and <code>hostSubnet</code> parameters.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="when-to-add-a-secondary-network-con_when-to-add-a-secondary-network">When to add a secondary network</h4>
-<div class="paragraph _abstract">
-<p>You can use a secondary network in situations where you require network isolation, including data plane and control plane separation. Identify these cases before you provision, so that you isolate or dedicate traffic without breaking cluster connectivity.</p>
-</div>
-<div class="sect4">
-<h5 id="nw-udn-benefits_when-to-add-a-secondary-network">Benefits of a user-defined network</h5>
-<div class="paragraph _abstract">
-<p>User-defined networks enable tenant isolation by providing each namespace with its own isolated primary network, reducing cross-tenant traffic risks and simplifying network management by eliminating the need for complex network policies.</p>
-</div>
-<div class="paragraph">
-<p>User-defined networks offer the following benefits:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Enhanced network isolation for security</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Tenant isolation</strong>: Namespaces can have their own isolated primary network, similar to how tenants are isolated in Red Hat OpenStack Platform (RHOSP). This improves security by reducing the risk of cross-tenant traffic.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Network flexibility</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Layer 2 and layer 3 support</strong>: Cluster administrators can configure primary networks as layer 2 or layer 3 network types.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Simplified network management</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Reduced network configuration complexity</strong>: With user-defined networks, the need for complex network policies are eliminated because isolation can be achieved by grouping workloads in different networks.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Advanced capabilities</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Consistent and selectable IP addressing</strong>: Users can specify and reuse IP subnets across different namespaces and clusters, providing a consistent networking environment.</p>
-</li>
-<li>
-<p><strong>Support for multiple networks</strong>: The user-defined networking feature allows administrators to connect multiple namespaces to a single network, or to create distinct networks for different sets of namespaces.</p>
-</li>
-<li>
-<p><strong>Virtual machine reachability over CUDN</strong>: When you attach virtual machines (VM)s to a layer 2 <code>ClusterUserDefinedNetwork</code> with BGP route advertisements enabled, you can publish VM routes to the provider network and import routes back, avoiding per‑node static routes while improving VM ingress and egress reachability.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Simplification of application migration from Red Hat OpenStack Platform (RHOSP)</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Network parity</strong>: With user-defined networking, the migration of applications from OpenStack to Red&#160;Hat OpenShift Container Platform is simplified by providing similar network isolation and configuration options.</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Developers and administrators can create a user-defined network that is namespace scoped using the custom resource. An overview of the process is as follows:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>An administrator creates a namespace for a user-defined network with the <code>k8s.ovn.org/primary-user-defined-network</code> label.</p>
-</li>
-<li>
-<p>The <code>UserDefinedNetwork</code> CR is created by either the cluster administrator or the user.</p>
-</li>
-<li>
-<p>The user creates pods in the namespace.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="choosing-user-defined-networks-vs-network-attachment-definitions-con_choosing-user-defined-networks-vs-network-attachment-definitions">Choose between user-defined networks and network attachment definitions</h4>
-<div class="paragraph _abstract">
-<p>Red&#160;Hat OpenShift Container Platform offers two models for defining custom networks: user-defined networks (UDNs) and <code>NetworkAttachmentDefinition</code> objects. Compare what each model supports, and the limitations of UDNs, before you build.</p>
-</div>
-<div class="sect4">
-<h5 id="support-matrix-for-udn-nad_choosing-user-defined-networks-vs-network-attachment-definitions">UserDefinedNetwork and NetworkAttachmentDefinition support matrix</h5>
-<div class="paragraph _abstract">
-<p>You can use user defined networks and network attachment definitions to define and configure customized networks for your needs.</p>
-</div>
-<div class="paragraph">
-<p>By creating <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> custom resources (CRs), cluster administrators can complete the following tasks:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create customizable network configurations</p>
-</li>
-<li>
-<p>Define their own network topologies</p>
-</li>
-<li>
-<p>Ensure network isolation</p>
-</li>
-<li>
-<p>Manage IP addressing for workloads</p>
-</li>
-<li>
-<p>Configure advanced network features</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>By creating a <code>ClusterUserDefinedNetwork</code> CR, administrators can create and define secondary networks that span multiple namespaces at the cluster level.</p>
-</div>
-<div class="paragraph">
-<p>User-defined networks and network attachment definitions can serve as both the primary and secondary network interface, and each support <code>layer2</code> and <code>layer3</code> topologies.</p>
+<p>You can use a <code>KubeletConfig</code> custom resource (CR) to edit a kubelet parameters without modifing the kubelet configuration directly.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2001,1209 +1885,437 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>As of Red&#160;Hat OpenShift Container Platform 4.19, the use of the <code>Localnet</code> topology by <code>ClusterUserDefinedNetwork</code> CRs is generally available. This configuration is the preferred method for connecting physical networks to virtual networks. Or, you can use the <code>NetworkAttachmentDefinition</code> CR to create secondary networks with <code>Localnet</code> topologies.</p>
+<p>As the fields in the <code>kubeletConfig</code> object are passed directly to the kubelet from upstream Kubernetes, the kubelet validates those values directly. Invalid values in the <code>kubeletConfig</code> object might cause cluster nodes to become unavailable. For valid values, see the <a href="https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/">Kubernetes documentation</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The following section highlights the supported features of the <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs when used as either the primary or secondary network. A separate table for the <code>ClusterUserDefinedNetwork</code> CR is also included.</p>
+<p>Consider the following guidance:</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 56. Primary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit an existing <code>KubeletConfig</code> CR to modify existing settings or add new settings, instead of creating a CR for each change. It is recommended that you create a CR only to modify a different machine config pool, or for changes that are intended to be temporary, so that you can revert the changes.</p>
+</li>
+<li>
+<p>Create one <code>KubeletConfig</code> CR for each machine config pool with all the config changes you want for that pool.</p>
+</li>
+<li>
+<p>As needed, create multiple <code>KubeletConfig</code> CRs with a limit of 10 per cluster. For the first <code>KubeletConfig</code> CR, the Machine Config Operator (MCO) creates a machine config appended with <code>kubelet</code>. With each subsequent CR, the controller creates another <code>kubelet</code> machine config with a numeric suffix. For example, if you have a <code>kubelet</code> machine config with a <code>-2</code> suffix, the next <code>kubelet</code> machine config is appended with <code>-3</code>.</p>
+<div class="admonitionblock important">
+<table>
 <tr>
-<th class="tableblock halign-center valign-top">Network feature</th>
-<th class="tableblock halign-center valign-top">Layer2 topology</th>
-<th class="tableblock halign-center valign-top">Layer3 topology</th>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Machine Config Operator does not merge multiple <code>KubeletConfig</code> CRs that target the same machine config pool. Each CR generates a separate machine config that writes the kubelet configuration. The most recently created <code>KubeletConfig</code> CR takes precedence and overrides the kubelet settings from earlier CRs for that pool.</p>
+</div>
+<div class="paragraph">
+<p>To apply multiple kubelet settings to the same pool, include all of the settings in a single <code>KubeletConfig</code> CR.</p>
+</div>
+</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>east-west traffic</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>north-south traffic</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Persistent IPs</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Services</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Routes</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>EgressIP</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Multicast</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>NetworkPolicy</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>MultinetworkPolicy</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-</tbody>
 </table>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are applying a kubelet or container runtime config to a custom machine config pool, the custom role in the <code>machineConfigSelector</code> must match the name of the custom machine config pool.</p>
+</div>
+<div class="paragraph">
+<p>For example, because the following custom machine config pool is named <code>infra</code>, the custom role must also be <code>infra</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  name: infra
+spec:
+  machineConfigSelector:
+    matchExpressions:
+      - {key: machineconfiguration.openshift.io/role, operator: In, values: [worker,infra]}
+# ...</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you want to delete the machine configs, delete them in reverse order to avoid exceeding the limit. For example, you delete the <code>kubelet-3</code> machine config before deleting the <code>kubelet-2</code> machine config.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have a machine config with a <code>kubelet-9</code> suffix, and you create another <code>KubeletConfig</code> CR, a new machine config is not created, even if there are fewer than 10 <code>kubelet</code> machine configs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example command and output show a <code>KubeletConfig</code> CR:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfig</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                      AGE
+set-kubelet-config        15m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example command and output show a <code>KubeletConfig</code> machine config:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get mc | grep kubelet</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
+99-worker-generated-kubelet-1                  b5c5119de007945b6fe6fb215db3b8e2ceb12511   3.5.0             26m
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following procedure is an example to show how to configure the maximum number of pods per node, the maximum PIDs per node, and the maximum container log size size on the worker nodes.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Prerequisites</div>
+<ol class="arabic">
+<li>
+<p>Obtain the label associated with the static <code>MachineConfigPool</code> CR for the type of node you want to configure.
+Perform one of the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>View the machine config pool:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe machineconfigpool &lt;name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe machineconfigpool worker</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  creationTimestamp: 2019-02-08T14:52:39Z
+  generation: 1
+  labels:
+    custom-kubelet: set-kubelet-config</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>metadata.labels</code> parameter specifies labels you can use with a <code>KubeletConfig</code> CR.</p>
+</div>
+</li>
+<li>
+<p>If the label is not present, add a key/value pair:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc label machineconfigpool worker custom-kubelet=set-kubelet-config</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>View the available machine configuration objects that you can select:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineconfig</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the two kubelet-related configs are <code>01-master-kubelet</code> and <code>01-worker-kubelet</code>.</p>
+</div>
+</li>
+<li>
+<p>Check the current value for the maximum pods per node:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node &lt;node_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node ci-ln-5grqprb-f76d1-ncnqq-worker-a-mdv94</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look for <code>value: pods: &lt;value&gt;</code> in the <code>Allocatable</code> stanza:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Allocatable:
+ attachable-volumes-aws-ebs:  25
+ cpu:                         3500m
+ hugepages-1Gi:               0
+ hugepages-2Mi:               0
+ memory:                      15341844Ki
+ pods:                        250</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure the worker nodes as needed:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a YAML file similar to the following that contains the kubelet configuration:</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Kubelet configurations that target a specific machine config pool also affect any dependent pools. For example, creating a kubelet configuration for the pool containing worker nodes will also apply to any subset pools, including the pool containing infrastructure nodes. To avoid this, you must create a new machine config pool with a selection expression that only includes worker nodes, and have your kubelet configuration target this new pool.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: set-kubelet-config
+spec:
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+  kubeletConfig:
+      podPidsLimit: 8192
+      containerLogMaxSize: 50Mi
+      maxPods: 500</code></pre>
+</div>
+</div>
 <div class="paragraph">
 <p>where:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Multicast</dt>
+<dt class="hdlist1"><code>spec.machineConfigPoolSelector.matchLabels</code></dt>
 <dd>
-<p>Must be enabled in the namespace, and it is only available between OVN-Kubernetes network pods. For more information, see "About multicast".</p>
+<p>Specifies the label from the machine config pool.</p>
 </dd>
-<dt class="hdlist1"><code>NetworkPolicy</code> resource</dt>
+<dt class="hdlist1"><code>spec.kubeletConfig</code></dt>
 <dd>
-<p>When creating a <code>ClusterUserDefinedNetwork</code> CR with a primary network type, network policies must be created <em>after</em> the <code>UserDefinedNetwork</code> CR.</p>
+<p>Specifies the kubelet configuration. For example:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Use <code>podPidsLimit</code> to set the maximum number of PIDs in any pod.</p>
+</li>
+<li>
+<p>Use <code>containerLogMaxSize</code> to set the maximum size of the container log file before it is rotated.</p>
+</li>
+<li>
+<p>Use <code>maxPods</code> to set the maximum pods per node.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The rate at which the kubelet talks to the API server depends on queries per second (QPS) and burst values. The default values, <code>50</code> for <code>kubeAPIQPS</code> and <code>100</code> for <code>kubeAPIBurst</code>, are sufficient if there are limited pods running on each node. It is recommended to update the kubelet QPS and burst rates if there are enough CPU and memory resources on the node.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: set-kubelet-config
+spec:
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+  kubeletConfig:
+    maxPods: &lt;pod_count&gt;
+    kubeAPIBurst: &lt;burst_rate&gt;
+    kubeAPIQPS: &lt;QPS&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </dd>
 </dl>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 57. Secondary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top">Network feature</th>
-<th class="tableblock halign-center valign-top">Layer2 topology</th>
-<th class="tableblock halign-center valign-top">Layer3 topology</th>
-<th class="tableblock halign-center valign-top">Localnet topology</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>east-west traffic</p>
+</li>
+<li>
+<p>Update the machine config pool for workers with the label:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc label machineconfigpool worker custom-kubelet=set-kubelet-config</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the <code>KubeletConfig</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f change-maxPods-cr.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that the <code>KubeletConfig</code> object is created:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfig</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                      AGE
+set-kubelet-config        15m</code></pre>
 </div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003; (<code>NetworkAttachmentDefinition</code> CR only)</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>north-south traffic</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003; (<code>NetworkAttachmentDefinition</code> CR only)</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Persistent IPs</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003; (<code>NetworkAttachmentDefinition</code> CR only)</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Services</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Routes</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>EgressIP</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Multicast</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>NetworkPolicy</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>MultinetworkPolicy</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003; (<code>NetworkAttachmentDefinition</code> CR only)</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The Localnet topology is unavailable for use with the <code>UserDefinedNetwork</code> CR. It is only supported on secondary networks for <code>NetworkAttachmentDefinition</code> CRs.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 58. Support matrix for <code>ClusterUserDefinedNetwork</code> CRs</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top">Network feature</th>
-<th class="tableblock halign-center valign-top">Layer2 topology</th>
-<th class="tableblock halign-center valign-top">Layer3 topology</th>
-<th class="tableblock halign-center valign-top">Localnet topology</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>east-west traffic</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>north-south traffic</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Persistent IPs</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Services</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Routes</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>EgressIP</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>Multicast</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>MultinetworkPolicy</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>X</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p><code>NetworkPolicy</code> resource</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
-<p>&#10003;</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Multicast</dt>
-<dd>
-<p>must be enabled in the namespace, and it is only available between OVN-Kubernetes network pods. For more information, see "About multicast".</p>
-</dd>
-<dt class="hdlist1"><code>NetworkPolicy</code> resource</dt>
-<dd>
-<p>When creating a <code>ClusterUserDefinedNetwork</code> CR with a primary network type, network policies must be created <em>after</em> the <code>UserDefinedNetwork</code> CR.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect4">
-<h5 id="limitations-for-udn_choosing-user-defined-networks-vs-network-attachment-definitions">Limitations of a user-defined network</h5>
-<div class="paragraph _abstract">
-<p>User-defined networks (UDNs) have limitations including DNS resolution behavior, restricted access to default network services, network policy constraints between isolated networks, and the requirement to create namespaces and networks before pods.</p>
 </div>
 <div class="paragraph">
-<p>Consider the following limitations before implementing a UDN.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>DNS limitations</strong>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>DNS lookups for pods resolve to the pod&#8217;s IP address on the cluster default network. Even if a pod is part of a user-defined network, DNS lookups will not resolve to the pod&#8217;s IP address on that user-defined network. However, DNS lookups for services and external entities will function as expected.</p>
-</li>
-<li>
-<p>When a pod is assigned to a primary UDN, it can access the Kubernetes API (KAPI) and DNS services on the cluster&#8217;s default network.</p>
-</li>
-</ul>
+<p>Depending on the number of worker nodes in the cluster, wait for the worker nodes to be rebooted one by one. For a cluster with 3 worker nodes, this could take about 10 to 15 minutes.</p>
 </div>
 </li>
 <li>
-<p><strong>Initial network assignment</strong>: You must create the namespace and network before creating pods. Assigning a namespace with pods to a new network or creating a UDN in an existing namespace will not be accepted by OVN-Kubernetes.</p>
-</li>
-</ul>
+<p>Verify that the changes are applied to the node:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check on a worker node that the <code>maxPods</code> value changed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node &lt;node_name&gt;</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Health check limitations</strong>: Kubelet health checks are performed by the cluster default network, which does not confirm the network connectivity of the primary interface on the pod. Consequently, scenarios where a pod appears healthy by the default network, but has broken connectivity on the primary interface, are possible with user-defined networks.</p>
-</li>
-<li>
-<p><strong>Network policy limitations</strong>: Network policies that enable traffic between namespaces connected to different user-defined primary networks are not effective. These traffic policies do not take effect because there is no connectivity between these isolated networks.</p>
-</li>
-<li>
-<p><strong>Creation and modification limitation</strong>: The <code>ClusterUserDefinedNetwork</code> CR and the <code>UserDefinedNetwork</code> CR cannot be modified after being created.</p>
-</li>
-<li>
-<p><strong>Default network service access</strong>: A user-defined network pod is isolated from the default network, which means that most default network services are inaccessible. For example, a user-defined network pod cannot currently access the Red&#160;Hat OpenShift Container Platform image registry. Because of this limitation, source-to-image builds do not work in a user-defined network namespace. Additionally, other functions do not work, including functions to create applications based on the source code in a Git repository, such as <code>oc new-app &lt;command&gt;</code>, and functions to create applications from an Red&#160;Hat OpenShift Container Platform template that use source-to-image builds. This limitation might also affect other <code>openshift-*.svc</code> services.</p>
-</li>
-<li>
-<p><strong>Connectivity limitation</strong>: NodePort services on user-defined networks are not guaranteed isolation. For example, NodePort traffic from a pod to a service on the same node is not accessible, whereas traffic from a pod on a different node succeeds.</p>
-</li>
-<li>
-<p><strong>Unclear error message for IP address exhaustion</strong>: When the subnet of a user-defined network runs out of available IP addresses, new pods fail to start. When this occurs, the following error is returned: <code>Warning: Failed to create pod sandbox</code>. This error message does not clearly specify that IP depletion is the cause. To confirm the issue, you can check the <strong>Events</strong> page in the pod&#8217;s namespace on the Red&#160;Hat OpenShift Container Platform web console, where an explicit message about subnet exhaustion is reported.</p>
-</li>
-<li>
-<p><strong>Layer2 egress IP limitations</strong> (<code>UserDefinedNetwork</code> CRs only):</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Egress IP does not work without a default gateway.</p>
-</li>
-<li>
-<p>Egress IP does not work on Google Cloud.</p>
-</li>
-<li>
-<p>Egress IP does not work with multiple gateways and instead will forward all traffic to a single gateway.</p>
-</li>
-</ul>
 </div>
 </li>
-</ul>
+<li>
+<p>Locate the <code>Allocatable</code> stanza:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"> ...
+Allocatable:
+  attachable-volumes-gce-pd:  127
+  cpu:                        3500m
+  ephemeral-storage:          123201474766
+  hugepages-1Gi:              0
+  hugepages-2Mi:              0
+  memory:                     14225400Ki
+  pods:                       500
+ ...</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>In this example, the <code>pods</code> parameter should report the value you set in the <code>KubeletConfig</code> object.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Verify the change in the <code>KubeletConfig</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfigs set-kubelet-config -o yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This should show a status of <code>True</code> and <code>type:Success</code>, as shown in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  kubeletConfig:
+    containerLogMaxSize: 50Mi
+    maxPods: 500
+    podPidsLimit: 8192
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+status:
+  conditions:
+  - lastTransitionTime: "2021-06-30T17:04:07Z"
+    message: Success
+    status: "True"
+    type: Success</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a> →</p>
+<p>← Previous: <a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="modify-number-of-unavailable-worker-nodes-con_modify-number-of-unavailable-worker-nodes.html">Modify the number of unavailable worker nodes</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-07 15:23:15 -0400
+Last updated 2026-10-08 14:25:16 -0400
 </div>
 </div>
 <style>
