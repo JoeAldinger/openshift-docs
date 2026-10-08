@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs" class="book toc2 toc-left navmap-has-right-toc">
+<body id="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1595,7 +1595,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="nw-how-nw-iface-selected_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">How the network interface is selected</a>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1663,7 +1663,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="investigating-kernel-crashes.html">Investigating kernel crashes</a>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html"><span class="toc-current">Troubleshoot operating system issues</span></a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1691,13 +1691,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
-<li><a href="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html"><span class="toc-current">About sosreport</span></a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
 </li>
-<li><a href="support-network-trace-methods_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Network trace methods</a>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
 </li>
-<li><a href="about-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">About Toolbx</a>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1741,86 +1741,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#support-generating-a-sosreport-archive_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Generating a sosreport archive for an Red Hat OpenShift Container Platform cluster node</a></li><li class="level-4"><a href="#querying-bootstrap-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying bootstrap node journal logs</a></li><li class="level-4"><a href="#querying-cluster-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying cluster node journal logs</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#investigating-kernel-crashes">Investigating kernel crashes</a></li><li class="level-4"><a href="#enabling-kdump">Enabling kdump</a></li><li class="level-4"><a href="#enabling-kdump-day-one">Enabling kdump on day-1</a></li><li class="level-4"><a href="#troubleshooting-kdump-testing-analyzing_troubleshoot-operating-system-issues">Testing and analyzing kdump</a></li><li class="level-4"><a href="#debugging-ignition_troubleshoot-operating-system-issues">Debugging Ignition failures</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">About sosreport</h3>
+<h3 id="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues">Troubleshoot operating system issues</h3>
 <div class="paragraph _abstract">
-<p><code>sosreport</code> is a tool that collects configuration details, system information, and diagnostic data from Red&#160;Hat Enterprise Linux (RHEL) and Red Hat Enterprise Linux CoreOS (RHCOS) systems. <code>sosreport</code> provides a standardized way to collect diagnostic information relating to a node, which can then be provided to Red Hat Support for issue diagnosis.</p>
-</div>
-<div class="paragraph">
-<p>In some support interactions, Red Hat Support may ask you to collect a <code>sosreport</code> archive for a specific Red&#160;Hat OpenShift Container Platform node. For example, it might sometimes be necessary to review system logs or other node-specific data that is not included within the output of <code>oc adm must-gather</code>.</p>
+<p>When a node experiences a kernel crash or fails to start correctly, you investigate the cause by enabling kdump, analyzing crash dumps, and debugging Ignition configuration so that the node returns to a healthy state.</p>
 </div>
 <div class="sect3">
-<h4 id="support-generating-a-sosreport-archive_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Generating a sosreport archive for an Red&#160;Hat OpenShift Container Platform cluster node</h4>
+<h4 id="investigating-kernel-crashes">Investigating kernel crashes</h4>
 <div class="paragraph _abstract">
-<p>The recommended way to generate a <code>sosreport</code> for an Red&#160;Hat OpenShift Container Platform {product-version} cluster node is through a debug pod.</p>
+<p>The <code>kdump</code> service, included in the <code>kexec-tools</code> package, provides a crash-dumping mechanism. You can use this service to save the contents of a system&#8217;s memory for later analysis.</p>
 </div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>You have SSH access to your hosts.</p>
-</li>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You have a Red Hat standard or premium Subscription.</p>
-</li>
-<li>
-<p>You have a Red Hat Customer Portal account.</p>
-</li>
-<li>
-<p>You have an existing Red Hat Support case ID.</p>
-</li>
-</ul>
+</div>
+<div class="sect3">
+<h4 id="enabling-kdump">Enabling kdump</h4>
+<div class="paragraph _abstract">
+<p>RHCOS ships with the <code>kexec-tools</code> package, but manual configuration is required to enable the <code>kdump</code> service.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Obtain a list of cluster nodes:</p>
+<p>To reserve memory for the crash kernel during the first kernel booting, provide kernel arguments by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Enter into a debug session on the target node. This step instantiates a debug pod called <code>&lt;node_name&gt;-debug</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To enter into a debug session on the target node that is tainted with the <code>NoExecute</code> effect, add a toleration to a dummy namespace, and start the debug pod in the dummy namespace:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc new-project dummy</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch namespace dummy --type=merge -p '{"metadata": {"annotations": { "scheduler.alpha.kubernetes.io/defaultTolerations": "[{\"operator\": \"Exists\"}]"}}}'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Set <code>/host</code> as the root directory within the debug shell. The debug pod mounts the host&#8217;s root file system in the <code>/host</code> directory within the pod. By changing the root directory to <code>/host</code>, you can run binaries contained in the host&#8217;s executable paths:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># chroot /host</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># rpm-ostree kargs --append='crashkernel=256M'</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1831,7 +1777,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Accessing cluster nodes by using SSH is not recommended. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to access nodes using <code>ssh core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;</code> instead.</p>
+<p>For the <code>ppc64le</code> platform, the recommended value for <code>crashkernel</code> is <code>crashkernel=2G-4G:384M,4G-16G:512M,16G-64G:1G,64G-128G:2G,128G-:4G</code>.</p>
 </div>
 </td>
 </tr>
@@ -1839,235 +1785,262 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>Collect a <code>sosreport</code> archive.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>Optional: To write the crash dump over the network or to some other location, rather than to the default local <code>/var/crash</code> location, edit the <code>/etc/kdump.conf</code> configuration file.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If your node uses LUKS-encrypted devices, you must use network dumps as kdump does not support saving crash dumps to LUKS-encrypted devices.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For details on configuring the <code>kdump</code> service, see the comments in <code>/etc/sysconfig/kdump</code>, <code>/etc/kdump.conf</code>, and the <code>kdump.conf</code> manual page.
+Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel#configuring-the-kdump-target_configuring-kdump-on-the-command-line">RHEL kdump documentation</a> for further information on configuring the dump target.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have multipathing enabled on your primary disk, the dump target must be either an NFS or SSH server and you must exclude the multipath module from your <code>/etc/kdump.conf</code> configuration file.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
 <li>
-<p>Run the <code>sos report</code> command to collect necessary troubleshooting data on <code>crio</code> and <code>podman</code>:</p>
+<p>Enable the <code>kdump</code> systemd service.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># sudo sos report -k crio.all=on -k crio.logs=on  -k podman.all=on -k podman.logs=on</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># systemctl enable kdump.service</code></pre>
 </div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">where</dt>
-<dd>
+</li>
+<li>
+<p>Reboot your system.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># systemctl reboot</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Ensure that kdump has loaded a crash kernel by checking that the <code>kdump.service</code> systemd service has started and exited successfully and that the command, <code>cat /sys/kernel/kexec_crash_loaded</code>, prints the value <code>1</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="enabling-kdump-day-one">Enabling kdump on day-1</h4>
+<div class="paragraph _abstract">
+<p>The <code>kdump</code> service is intended to be enabled per node to debug kernel problems. Because there are costs to having kdump enabled, and these costs accumulate with each additional kdump-enabled node, it is recommended that the <code>kdump</code> service only be enabled on each node as needed. Potential costs of enabling the <code>kdump</code> service on each node include:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>-k</code> enables you to define <code>sosreport</code> plugin parameters outside of the defaults.</p>
+<p>Less available RAM due to memory being reserved for the crash kernel.</p>
+</li>
+<li>
+<p>Node unavailability while the kernel is dumping the core.</p>
+</li>
+<li>
+<p>Additional storage space being used to store the crash dumps.</p>
 </li>
 </ul>
 </div>
-</dd>
-</dl>
+<div class="paragraph">
+<p>If you are aware of the downsides and trade-offs of having the <code>kdump</code> service enabled, it is possible to enable kdump in a cluster-wide fashion. Although machine-specific machine configs are not yet supported, you can use a <code>systemd</code> unit in a <code>MachineConfig</code> object as a day-1 customization and have kdump enabled on all nodes in the cluster. You can create a <code>MachineConfig</code> object and inject that object into the set of manifest files used by Ignition during cluster setup.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Architecture-specific kernel arguments must be considered when enabling kdump.</p>
+</div>
+<div class="paragraph">
+<p>For the ppc64le platform:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the following recommended value for the <code>crashkernel</code> parameter:</p>
+<div class="paragraph">
+<p><code>crashkernel=2G-4G:384M,4G-16G:512M,16G-64G:1G,64G-128G:2G,128G-:4G</code></p>
 </div>
 </li>
 <li>
-<p>Optional: To include information on OVN-Kubernetes networking configurations from a node in your report, run the following command:</p>
+<p>In the <code>KDUMP_COMMANDLINE_APPEND</code> setting, replace <code>nr_cpus=1</code> with <code>maxcpus=1</code> because the <code>nr_cpus</code> parameter is not supported on this platform. Ensure that these adjustments are applied when configuring kdump on ppc64le systems.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See "Customizing nodes" in the <em>Installing &#8594; Installation configuration</em> section for more information and examples on how to use Ignition configs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a Butane config file, <code>99-worker-kdump.bu</code>, that configures and enables kdump. This creates a <code>MachineConfig</code> object for cluster-wide configuration:</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <a href="https://coreos.github.io/butane/specs/">Butane version</a> you specify in the config file should match the Red&#160;Hat OpenShift Container Platform version and always ends in <code>0</code>. For example, <code>{product-version}.0</code>. See "Creating machine configs with Butane" for information about Butane.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># sudo sos report --all-logs</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Press <strong>Enter</strong> when prompted, to continue.</p>
-</li>
-<li>
-<p>Provide the Red Hat Support case ID. <code>sosreport</code> adds the ID to the archive&#8217;s file name.</p>
-</li>
-<li>
-<p>The <code>sosreport</code> output provides the archive&#8217;s location and checksum. The following sample output references support case ID <code>01234567</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Your sosreport has been generated and saved in:
-  /var/tmp/sosreport-my-cluster-node-01234567-2020-05-28-eyjknxt.tar.xz
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">variant: openshift
+version: {product-version}.0
+metadata:
+  name: 99-worker-kdump
+  labels:
+    machineconfiguration.openshift.io/role: worker
+openshift:
+  kernel_arguments:
+    - crashkernel=256M
+storage:
+  files:
+    - path: /etc/kdump.conf
+      mode: 0644
+      overwrite: true
+      contents:
+        inline: |
+          path /var/crash
+          core_collector makedumpfile -l --message-level 7 -d 31
 
-The checksum is: 382ffc167510fd71b4f12a4f40b97a4e</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Provide the <code>sosreport</code> archive to Red Hat Support for analysis, using one of the following methods.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Upload the file to an existing Red Hat support case.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Concatenate the <code>sosreport</code> archive by running the <code>oc debug node/&lt;node_name&gt;</code> command and redirect the output to a file. This command assumes you have exited the previous <code>oc debug</code> session:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node -- bash -c 'cat /var/tmp/sosreport-my-cluster-node-01234567-2020-05-28-eyjknxt.tar.xz' &gt; /tmp/sosreport-my-cluster-node-01234567-2020-05-28-eyjknxt.tar.xz</code></pre>
+    - path: /etc/sysconfig/kdump
+      mode: 0644
+      overwrite: true
+      contents:
+        inline: |
+          KDUMP_COMMANDLINE_REMOVE="hugepages hugepagesz slub_debug quiet log_buf_len swiotlb"
+          KDUMP_COMMANDLINE_APPEND="irqpoll nr_cpus=1 reset_devices cgroup_disable=memory mce=off numa=off udev.children-max=2 panic=10 rootflags=nofail acpi_no_memhotplug transparent_hugepage=never nokaslr novmcoredd hest_disable"
+          KEXEC_ARGS="-s"
+          KDUMP_IMG="vmlinuz"
+
+systemd:
+  units:
+    - name: kdump.service
+      enabled: true</code></pre>
 </div>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">where</dt>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>The debug container mounts the host&#8217;s root directory at <code>/host</code>. Reference the absolute path from the debug container&#8217;s root directory, including <code>/host</code>, when specifying target files for concatenation.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Transferring a <code>sosreport</code> archive from a cluster node by using <code>scp</code> is not recommended. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to copy a <code>sosreport</code> archive from a node by running <code>scp core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;:&lt;file_path&gt; &lt;local_path&gt;</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Navigate to an existing support case within <a href="https://access.redhat.com/support/cases/#/case/list">the <strong>Customer Support</strong> page</a> of the Red Hat Customer Portal.</p>
-</li>
-<li>
-<p>Select <strong>Attach files</strong> and follow the prompts to upload the file.</p>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="querying-bootstrap-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying bootstrap node journal logs</h4>
-<div class="paragraph _abstract">
-<p>If you experience bootstrap-related issues, you can gather <code>bootkube.service</code> <code>journald</code> unit logs and container logs from the bootstrap node.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have SSH access to your bootstrap node.</p>
-</li>
-<li>
-<p>You have the fully qualified domain name of the bootstrap node.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Query <code>bootkube.service</code> <code>journald</code> unit logs from a bootstrap node during Red&#160;Hat OpenShift Container Platform installation. Replace <code>&lt;bootstrap_fqdn&gt;</code> with the bootstrap node&#8217;s fully qualified domain name:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;bootstrap_fqdn&gt; journalctl -b -f -u bootkube.service</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>bootkube.service</code> log on the bootstrap node outputs etcd <code>connection refused</code> errors, indicating that the bootstrap server is unable to connect to etcd on control plane nodes. After etcd has started on each control plane node and the nodes have joined the cluster, the errors should stop.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Collect logs from the bootstrap node containers using <code>podman</code> on the bootstrap node. Replace <code>&lt;bootstrap_fqdn&gt;</code> with the bootstrap node&#8217;s fully qualified domain name:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;bootstrap_fqdn&gt; 'for pod in $(sudo podman ps -a -q); do sudo podman logs $pod; done'</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="querying-cluster-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying cluster node journal logs</h4>
-<div class="paragraph _abstract">
-<p>You can gather <code>journald</code> unit logs and other logs within <code>/var/log</code> on individual cluster nodes.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>Your API service is still functional.</p>
-</li>
-<li>
-<p>You have SSH access to your hosts.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Query <code>kubelet</code> <code>journald</code> unit logs from Red&#160;Hat OpenShift Container Platform cluster nodes. The following example queries control plane nodes only:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm node-logs --role=master -u kubelet  <img src="data:image/png;base64," alt="1"></code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>kubelet</code></dt>
 <dd>
-<p>Replace as appropriate to query other unit logs.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Replace <code>worker</code> with <code>master</code> in both locations when creating a <code>MachineConfig</code> object for control plane nodes.</p>
+</li>
+<li>
+<p>Provide kernel arguments to reserve memory for the crash kernel. You can add other kernel arguments if necessary. For the <code>ppc64le</code> platform, the recommended value for <code>crashkernel</code> is <code>crashkernel=2G-4G:384M,4G-16G:512M,16G-64G:1G,64G-128G:2G,128G-:4G</code>.</p>
+</li>
+<li>
+<p>If you want to change the contents of <code>/etc/kdump.conf</code> from the default, include this section and modify the <code>inline</code> subsection accordingly.</p>
+</li>
+<li>
+<p>If you want to change the contents of <code>/etc/sysconfig/kdump</code> from the default, include this section and modify the <code>inline</code> subsection accordingly.</p>
+</li>
+<li>
+<p>For the <code>ppc64le</code> platform, replace <code>nr_cpus=1</code> with <code>maxcpus=1</code>, which is not supported on this platform.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To export the dumps to NFS targets, some kernel modules must be explicitly added to the configuration file:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>/etc/kdump.conf</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">nfs server.example.com:/export/cores
+core_collector makedumpfile -l --message-level 7 -d 31
+extra_bins /sbin/mount.nfs
+extra_modules nfs nfsv3 nfs_layout_nfsv41_files blocklayoutdriver nfs_layout_flexfiles nfs_layout_nfsv41_files</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
 </dd>
 </dl>
 </div>
 </li>
 <li>
-<p>Collect logs from specific subdirectories under <code>/var/log/</code> on cluster nodes.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Retrieve a list of logs contained within a <code>/var/log/</code> subdirectory. The following example lists files in <code>/var/log/openshift-apiserver/</code> on all control plane nodes:</p>
+<p>Use Butane to generate a machine config YAML file, <code>99-worker-kdump.yaml</code>, containing the configuration to be delivered to the nodes:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm node-logs --role=master --path=openshift-apiserver</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ butane 99-worker-kdump.bu -o 99-worker-kdump.yaml</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Inspect a specific log within a <code>/var/log/</code> subdirectory. The following example outputs <code>/var/log/openshift-apiserver/audit.log</code> contents from all control plane nodes:</p>
+<p>Put the YAML file into the <code>&lt;installation_directory&gt;/manifests/</code> directory during cluster setup. You can also create this <code>MachineConfig</code> object after cluster setup with the YAML file:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm node-logs --role=master --path=openshift-apiserver/audit.log</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f 99-worker-kdump.yaml</code></pre>
 </div>
 </div>
 </li>
-<li>
-<p>If the API is not functional, review the logs on each node using SSH instead. The following example tails <code>/var/log/openshift-apiserver/audit.log</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;master-node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt; sudo tail -f /var/log/openshift-apiserver/audit.log</code></pre>
+</ol>
 </div>
+</div>
+<div class="sect3">
+<h4 id="troubleshooting-kdump-testing-analyzing_troubleshoot-operating-system-issues">Testing and analyzing kdump</h4>
+<div class="paragraph _abstract">
+<p>After configuring kdump, you can test the configuration and analyze core dumps using the RHEL documentation.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel#testing-the-kdump-configuration_configuring-kdump-on-the-command-line">Testing the kdump configuration</a> section in the RHEL documentation for kdump.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/analyzing-a-core-dump_managing-monitoring-and-updating-the-kernel">Analyzing a core dump</a> section in the RHEL documentation for kdump.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2077,14 +2050,35 @@ The checksum is: 382ffc167510fd71b4f12a4f40b97a4e</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Accessing cluster nodes by using SSH is not recommended. Before attempting to collect diagnostic data over SSH, review whether the data collected by running <code>oc adm must gather</code> and other <code>oc</code> commands is sufficient instead. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to access nodes using <code>ssh core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;</code>.</p>
+<p>It is recommended to perform vmcore analysis on a separate RHEL system.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+</div>
+<div class="sect3">
+<h4 id="debugging-ignition_troubleshoot-operating-system-issues">Debugging Ignition failures</h4>
+<div class="paragraph _abstract">
+<p>If a machine cannot be provisioned, Ignition fails and RHCOS will boot into the emergency shell. Use the following procedure to get debugging information.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Run the following command to show which service units failed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ systemctl --failed</code></pre>
+</div>
+</div>
 </li>
-</ol>
+<li>
+<p>Optional: Run the following command on an individual service unit to find out more information:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ journalctl -u &lt;unit&gt;.service</code></pre>
+</div>
 </div>
 </li>
 </ol>
@@ -2092,12 +2086,12 @@ The checksum is: 382ffc167510fd71b4f12a4f40b97a4e</code></pre>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="support-network-trace-methods_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Network trace methods</a> →</p>
+<p>← Previous: <a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 08:37:43 -0400
+Last updated 2026-10-07 15:23:15 -0400
 </div>
 </div>
 <style>

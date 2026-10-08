@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="investigating-kernel-crashes" class="book toc2 toc-left navmap-has-right-toc">
+<body id="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1595,7 +1595,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="nw-how-nw-iface-selected_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">How the network interface is selected</a>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1663,7 +1663,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="investigating-kernel-crashes.html"><span class="toc-current">Investigating kernel crashes</span></a>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1691,13 +1691,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
-<li><a href="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">About sosreport</a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
 </li>
-<li><a href="support-network-trace-methods_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Network trace methods</a>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
 </li>
-<li><a href="about-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">About Toolbx</a>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html"><span class="toc-current">Use the host toolbox for diagnostics</span></a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1741,300 +1741,86 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#enabling-kdump">Enabling kdump</a></li><li class="level-4"><a href="#enabling-kdump-day-one">Enabling kdump on day-1</a></li><li class="level-4"><a href="#troubleshooting-kdump-testing-analyzing_troubleshoot-operating-system-issues">Testing and analyzing kdump</a></li><li class="level-4"><a href="#debugging-ignition_troubleshoot-operating-system-issues">Debugging Ignition failures</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics">About Toolbx</a></li><li class="level-4"><a href="#installing-packages-to-a-toolbox-container_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics">Installing packages to a Toolbx container</a></li><li class="level-4"><a href="#starting-an-alternative-image-with-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics">Starting an alternative image with Toolbx</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="investigating-kernel-crashes">Investigating kernel crashes</h3>
+<h3 id="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics">Use the host toolbox for diagnostics</h3>
 <div class="paragraph _abstract">
-<p>The <code>kdump</code> service, included in the <code>kexec-tools</code> package, provides a crash-dumping mechanism. You can use this service to save the contents of a system&#8217;s memory for later analysis.</p>
+<p>When you need diagnostic tools that are not available on a Red&#160;Hat OpenShift Container Platform node by default, you use the toolbox container to run commands directly on the host, install additional packages, or start an alternative diagnostic image.</p>
 </div>
 <div class="sect3">
-<h4 id="enabling-kdump">Enabling kdump</h4>
+<h4 id="about-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics">About Toolbx</h4>
 <div class="paragraph _abstract">
-<p>RHCOS ships with the <code>kexec-tools</code> package, but manual configuration is required to enable the <code>kdump</code> service.</p>
+<p>Toolbx is a tool for creating persistent containers on a Red Hat Enterprise Linux CoreOS (RHCOS) system. Because RHCOS is immutable, you can use Toolbx containers to install and run your favorite debugging or administration tools, even if they are not included in the RHCOS base image.</p>
+</div>
+<div class="paragraph">
+<p>You can use Toolbx to gather diagnostic information and provide it to Red Hat Support.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installing-packages-to-a-toolbox-container_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics">Installing packages to a Toolbx container</h4>
+<div class="paragraph _abstract">
+<p>You can collect node-specific data that requires a support tool that is not part of the image by using Toolbx to install additional packages.</p>
+</div>
+<div class="paragraph">
+<p>By default, running the <code>toolbox enter -y</code> command starts a Toolbx container with the default Red Hat Universal Base Image (UBI) for the matching Red&#160;Hat Enterprise Linux (RHEL) version, for example, <code>registry.access.redhat.com/ubi10/toolbox:10.2</code>. If the package you need is not in that base image, you can launch a Toolbx container and install that package.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You can access your system as a user with root privileges.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>To reserve memory for the crash kernel during the first kernel booting, provide kernel arguments by entering the following command:</p>
+<p>Access a node by running the following command.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># rpm-ostree kargs --append='crashkernel=256M'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt;</code></pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>For the <code>ppc64le</code> platform, the recommended value for <code>crashkernel</code> is <code>crashkernel=2G-4G:384M,4G-16G:512M,16G-64G:1G,64G-128G:2G,128G-:4G</code>.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Replace <code>&lt;node_name&gt;</code> with the name of the node.</p>
 </div>
 </li>
 <li>
-<p>Optional: To write the crash dump over the network or to some other location, rather than to the default local <code>/var/crash</code> location, edit the <code>/etc/kdump.conf</code> configuration file.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If your node uses LUKS-encrypted devices, you must use network dumps as kdump does not support saving crash dumps to LUKS-encrypted devices.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>For details on configuring the <code>kdump</code> service, see the comments in <code>/etc/sysconfig/kdump</code>, <code>/etc/kdump.conf</code>, and the <code>kdump.conf</code> manual page.
-Also refer to the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel#configuring-the-kdump-target_configuring-kdump-on-the-command-line">RHEL kdump documentation</a> for further information on configuring the dump target.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you have multipathing enabled on your primary disk, the dump target must be either an NFS or SSH server and you must exclude the multipath module from your <code>/etc/kdump.conf</code> configuration file.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Enable the <code>kdump</code> systemd service.</p>
+<p>Access the host namespaces by using the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># systemctl enable kdump.service</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# nsenter -a -t 1</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Reboot your system.</p>
+<p>Enter a Toolbx container to execute commands by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># systemctl reboot</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">-sh-5.2# toolbox enter -y</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Ensure that kdump has loaded a crash kernel by checking that the <code>kdump.service</code> systemd service has started and exited successfully and that the command, <code>cat /sys/kernel/kexec_crash_loaded</code>, prints the value <code>1</code>.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="enabling-kdump-day-one">Enabling kdump on day-1</h4>
-<div class="paragraph _abstract">
-<p>The <code>kdump</code> service is intended to be enabled per node to debug kernel problems. Because there are costs to having kdump enabled, and these costs accumulate with each additional kdump-enabled node, it is recommended that the <code>kdump</code> service only be enabled on each node as needed. Potential costs of enabling the <code>kdump</code> service on each node include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Less available RAM due to memory being reserved for the crash kernel.</p>
-</li>
-<li>
-<p>Node unavailability while the kernel is dumping the core.</p>
-</li>
-<li>
-<p>Additional storage space being used to store the crash dumps.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If you are aware of the downsides and trade-offs of having the <code>kdump</code> service enabled, it is possible to enable kdump in a cluster-wide fashion. Although machine-specific machine configs are not yet supported, you can use a <code>systemd</code> unit in a <code>MachineConfig</code> object as a day-1 customization and have kdump enabled on all nodes in the cluster. You can create a <code>MachineConfig</code> object and inject that object into the set of manifest files used by Ignition during cluster setup.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Architecture-specific kernel arguments must be considered when enabling kdump.</p>
-</div>
-<div class="paragraph">
-<p>For the ppc64le platform:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Use the following recommended value for the <code>crashkernel</code> parameter:</p>
-<div class="paragraph">
-<p><code>crashkernel=2G-4G:384M,4G-16G:512M,16G-64G:1G,64G-128G:2G,128G-:4G</code></p>
-</div>
-</li>
-<li>
-<p>In the <code>KDUMP_COMMANDLINE_APPEND</code> setting, replace <code>nr_cpus=1</code> with <code>maxcpus=1</code> because the <code>nr_cpus</code> parameter is not supported on this platform. Ensure that these adjustments are applied when configuring kdump on ppc64le systems.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>See "Customizing nodes" in the <em>Installing &#8594; Installation configuration</em> section for more information and examples on how to use Ignition configs.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a Butane config file, <code>99-worker-kdump.bu</code>, that configures and enables kdump. This creates a <code>MachineConfig</code> object for cluster-wide configuration:</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <a href="https://coreos.github.io/butane/specs/">Butane version</a> you specify in the config file should match the Red&#160;Hat OpenShift Container Platform version and always ends in <code>0</code>. For example, <code>{product-version}.0</code>. See "Creating machine configs with Butane" for information about Butane.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<p>Install the additional package, such as <code>wget</code>, by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">variant: openshift
-version: {product-version}.0
-metadata:
-  name: 99-worker-kdump
-  labels:
-    machineconfiguration.openshift.io/role: worker
-openshift:
-  kernel_arguments:
-    - crashkernel=256M
-storage:
-  files:
-    - path: /etc/kdump.conf
-      mode: 0644
-      overwrite: true
-      contents:
-        inline: |
-          path /var/crash
-          core_collector makedumpfile -l --message-level 7 -d 31
-
-    - path: /etc/sysconfig/kdump
-      mode: 0644
-      overwrite: true
-      contents:
-        inline: |
-          KDUMP_COMMANDLINE_REMOVE="hugepages hugepagesz slub_debug quiet log_buf_len swiotlb"
-          KDUMP_COMMANDLINE_APPEND="irqpoll nr_cpus=1 reset_devices cgroup_disable=memory mce=off numa=off udev.children-max=2 panic=10 rootflags=nofail acpi_no_memhotplug transparent_hugepage=never nokaslr novmcoredd hest_disable"
-          KEXEC_ARGS="-s"
-          KDUMP_IMG="vmlinuz"
-
-systemd:
-  units:
-    - name: kdump.service
-      enabled: true</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">⬢ [root@toolbx /]# dnf install -y &lt;package_name&gt;</code></pre>
 </div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">where</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Replace <code>worker</code> with <code>master</code> in both locations when creating a <code>MachineConfig</code> object for control plane nodes.</p>
-</li>
-<li>
-<p>Provide kernel arguments to reserve memory for the crash kernel. You can add other kernel arguments if necessary. For the <code>ppc64le</code> platform, the recommended value for <code>crashkernel</code> is <code>crashkernel=2G-4G:384M,4G-16G:512M,16G-64G:1G,64G-128G:2G,128G-:4G</code>.</p>
-</li>
-<li>
-<p>If you want to change the contents of <code>/etc/kdump.conf</code> from the default, include this section and modify the <code>inline</code> subsection accordingly.</p>
-</li>
-<li>
-<p>If you want to change the contents of <code>/etc/sysconfig/kdump</code> from the default, include this section and modify the <code>inline</code> subsection accordingly.</p>
-</li>
-<li>
-<p>For the <code>ppc64le</code> platform, replace <code>nr_cpus=1</code> with <code>maxcpus=1</code>, which is not supported on this platform.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>To export the dumps to NFS targets, some kernel modules must be explicitly added to the configuration file:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example <code>/etc/kdump.conf</code> file</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">nfs server.example.com:/export/cores
-core_collector makedumpfile -l --message-level 7 -d 31
-extra_bins /sbin/mount.nfs
-extra_modules nfs nfsv3 nfs_layout_nfsv41_files blocklayoutdriver nfs_layout_flexfiles nfs_layout_nfsv41_files</code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Use Butane to generate a machine config YAML file, <code>99-worker-kdump.yaml</code>, containing the configuration to be delivered to the nodes:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ butane 99-worker-kdump.bu -o 99-worker-kdump.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Put the YAML file into the <code>&lt;installation_directory&gt;/manifests/</code> directory during cluster setup. You can also create this <code>MachineConfig</code> object after cluster setup with the YAML file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f 99-worker-kdump.yaml</code></pre>
-</div>
+<p>Replace <code>&lt;package_name&gt;</code> with the name of the additional package.</p>
 </div>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect3">
-<h4 id="troubleshooting-kdump-testing-analyzing_troubleshoot-operating-system-issues">Testing and analyzing kdump</h4>
+<h4 id="starting-an-alternative-image-with-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics">Starting an alternative image with Toolbx</h4>
 <div class="paragraph _abstract">
-<p>After configuring kdump, you can test the configuration and analyze core dumps using the RHEL documentation.</p>
-</div>
-<div class="paragraph">
-<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel#testing-the-kdump-configuration_configuring-kdump-on-the-command-line">Testing the kdump configuration</a> section in the RHEL documentation for kdump.</p>
-</div>
-<div class="paragraph">
-<p>See the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/analyzing-a-core-dump_managing-monitoring-and-updating-the-kernel">Analyzing a core dump</a> section in the RHEL documentation for kdump.</p>
+<p>The Toolbx commands create a container from the default Red Hat Universal Base Image (UBI) Toolbx image for the matching Red&#160;Hat Enterprise Linux (RHEL) version. You can create a container from an alternative image by running the <code>toolbox create</code> command with the path to the image you want to run.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2044,35 +1830,89 @@ extra_modules nfs nfsv3 nfs_layout_nfsv41_files blocklayoutdriver nfs_layout_fle
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is recommended to perform vmcore analysis on a separate RHEL system.</p>
+<p>Running older RHEL-based images is not supported on Red&#160;Hat OpenShift Container Platform {product-version}.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="debugging-ignition_troubleshoot-operating-system-issues">Debugging Ignition failures</h4>
-<div class="paragraph _abstract">
-<p>If a machine cannot be provisioned, Ignition fails and RHCOS will boot into the emergency shell. Use the following procedure to get debugging information.</p>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You can access your system as a user with root privileges.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Run the following command to show which service units failed:</p>
+<p>Access a node by running the following command.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ systemctl --failed</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace <code>&lt;node_name&gt;</code> with the name of the node.</p>
+</div>
+</li>
+<li>
+<p>Access the host namespaces by using the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# nsenter -a -t 1</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Optional: Run the following command on an individual service unit to find out more information:</p>
+<p>Specify the image to use as an alternative image by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ journalctl -u &lt;unit&gt;.service</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">-sh-5.2# toolbox create --image &lt;image-url&gt; &lt;image_name&gt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Replace <code>&lt;image-url&gt;</code> with path to the alternative image you want to use. Optionally, specify a name for the resulting Toolbx container. If you do not specify a name, Toolbx assigns a name.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example command</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">-sh-5.2# toolbox create --image quay.io/toolbx/ubuntu-toolbox:latest ubuntu-dev</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If an existing <code>toolbox</code> container is already running, Toolbx outputs an error. Remove the existing Toolbx container by running the <code>toolbox rm &lt;name&gt;</code> command, where <code>&lt;name&gt;</code> is the name of the container. Then spawn a new toolbox container.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Created container: ubuntu-dev
+Enter with: toolbox enter ubuntu-dev</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enter the Toolbx container by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">-sh-5.2# toolbox enter &lt;container_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace <code>&lt;container_name&gt;</code> with the name of the container.</p>
 </div>
 </li>
 </ol>
@@ -2080,12 +1920,12 @@ extra_modules nfs nfsv3 nfs_layout_nfsv41_files blocklayoutdriver nfs_layout_fle
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a> →</p>
+<p>← Previous: <a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (&lt;code&gt;oc&lt;/code&gt;) log levels</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 08:37:43 -0400
+Last updated 2026-10-07 15:23:15 -0400
 </div>
 </div>
 <style>

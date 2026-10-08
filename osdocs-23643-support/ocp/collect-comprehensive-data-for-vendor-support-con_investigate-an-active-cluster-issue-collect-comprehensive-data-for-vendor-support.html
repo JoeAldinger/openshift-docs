@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support" class="book toc2 toc-left navmap-has-right-toc">
+<body id="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1595,7 +1595,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="nw-how-nw-iface-selected_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">How the network interface is selected</a>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1663,7 +1663,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="investigating-kernel-crashes.html">Investigating kernel crashes</a>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1691,13 +1691,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html"><span class="toc-current">Using the must-gather tool</span></a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html"><span class="toc-current">Collect comprehensive data for vendor support</span></a>
 </li>
-<li><a href="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">About sosreport</a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
 </li>
-<li><a href="support-network-trace-methods_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Network trace methods</a>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
 </li>
-<li><a href="about-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">About Toolbx</a>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1741,10 +1741,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#oadp-cli-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Collect diagnostic data</a></li><li class="level-4"><a href="#hcp-must-gather-day-2_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering Red Hat OpenShift Container Platform data for a hosted cluster</a></li><li class="level-4"><a href="#about-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">About the must-gather tool</a></li><li class="level-5"><a href="#support_gathering_data_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering data about your cluster for Red Hat Support</a></li><li class="level-4"><a href="#support-must-gather-targeted-collection_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Reducing the size of must-gather output</a></li><li class="level-5"><a href="#support-must-gather-targeted-collection-gathering-data_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering data for specific resources</a></li><li class="level-5"><a href="#must-gather-flags_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Must-gather flags</a></li><li class="level-5"><a href="#gathering-data-specific-features_gathering-cluster-data">Gathering data about specific features</a></li><li class="level-5"><a href="#gathering-data-network-logs_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering network logs</a></li><li class="level-5"><a href="#must-gather-storage-limit_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Changing the must-gather storage limit</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Using the must-gather tool</a></li><li class="level-4"><a href="#oadp-cli-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Collect diagnostic data</a></li><li class="level-4"><a href="#hcp-must-gather-day-2_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering Red Hat OpenShift Container Platform data for a hosted cluster</a></li><li class="level-4"><a href="#about-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">About the must-gather tool</a></li><li class="level-5"><a href="#support_gathering_data_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering data about your cluster for Red Hat Support</a></li><li class="level-4"><a href="#support-must-gather-targeted-collection_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Reducing the size of must-gather output</a></li><li class="level-5"><a href="#support-must-gather-targeted-collection-gathering-data_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering data for specific resources</a></li><li class="level-5"><a href="#must-gather-flags_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Must-gather flags</a></li><li class="level-5"><a href="#gathering-data-specific-features_gathering-cluster-data">Gathering data about specific features</a></li><li class="level-5"><a href="#gathering-data-network-logs_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Gathering network logs</a></li><li class="level-5"><a href="#must-gather-storage-limit_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Changing the must-gather storage limit</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Using the must-gather tool</h3>
+<h3 id="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Collect comprehensive data for vendor support</h3>
+<div class="paragraph _abstract">
+<p>When you cannot resolve a cluster issue yourself, you collect comprehensive diagnostic data so that Red Hat support can reproduce and diagnose the problem. You use tools such as <code>oc adm must-gather</code>, the Insights Operator log gatherer, and targeted image-specific gather commands to capture logs, events, and cluster state.</p>
+</div>
+<div class="sect3">
+<h4 id="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Using the must-gather tool</h4>
 <div class="paragraph _abstract">
 <p>Run the <code>must-gather</code> tool with the default configuration, timeout, and insecure TLS options. To use an option, add a flag corresponding to that option in the <code>must-gather</code> command.</p>
 </div>
@@ -1855,6 +1860,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 </ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="oadp-cli-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support">Collect diagnostic data</h4>
@@ -2742,12 +2748,12 @@ Logging Operator in your cluster. For OpenShift Logging, run the following comma
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">About sosreport</a> →</p>
+<p>← Previous: <a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 08:37:43 -0400
+Last updated 2026-10-07 15:23:15 -0400
 </div>
 </div>
 <style>

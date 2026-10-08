@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="nw-how-nw-iface-selected_troubleshoot-network-issues-diagnose-node-networking-and-ovs" class="book toc2 toc-left navmap-has-right-toc">
+<body id="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1595,7 +1595,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="nw-how-nw-iface-selected_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html"><span class="toc-current">How the network interface is selected</span></a>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1663,7 +1663,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="investigating-kernel-crashes.html">Investigating kernel crashes</a>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1691,13 +1691,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
-<li><a href="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">About sosreport</a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html"><span class="toc-current">Collect host sosreports and journal logs</span></a>
 </li>
-<li><a href="support-network-trace-methods_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Network trace methods</a>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
 </li>
-<li><a href="about-toolbox_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">About Toolbx</a>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1741,598 +1741,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#overriding-default-node-ip-selection-logic_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Optional: Overriding the default node IP selection logic</a></li><li class="level-4"><a href="#configuring-ovnk-use-second-ovs-bridge_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Configuring OVN-Kubernetes to use a secondary OVS bridge</a></li><li class="level-4"><a href="#nw-troubleshoot-ovs_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Troubleshooting Open vSwitch issues</a></li><li class="level-5"><a href="#configuring-ovs-log-level-temp_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Configuring the Open vSwitch log level temporarily</a></li><li class="level-5"><a href="#configuring-ovs-log-level-permanently_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Configuring the Open vSwitch log level permanently</a></li><li class="level-5"><a href="#displaying-ovs-logs_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Displaying Open vSwitch logs</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">About sosreport</a></li><li class="level-4"><a href="#support-generating-a-sosreport-archive_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Generating a sosreport archive for an Red Hat OpenShift Container Platform cluster node</a></li><li class="level-4"><a href="#querying-bootstrap-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying bootstrap node journal logs</a></li><li class="level-4"><a href="#querying-cluster-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying cluster node journal logs</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="nw-how-nw-iface-selected_troubleshoot-network-issues-diagnose-node-networking-and-ovs">How the network interface is selected</h3>
+<h3 id="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Collect host sosreports and journal logs</h3>
 <div class="paragraph _abstract">
-<p>For installations on bare metal or with virtual machines that have more than one network interface controller (NIC), the NIC that Red&#160;Hat OpenShift Container Platform uses for communication with the Kubernetes API server is determined by the <code>nodeip-configuration.service</code> service unit that is run by systemd when the node boots. The <code>nodeip-configuration.service</code> selects the IP from the interface associated with the default route.</p>
-</div>
-<div class="paragraph">
-<p>After the <code>nodeip-configuration.service</code> service determines the correct NIC, the service creates the <code>/etc/systemd/system/kubelet.service.d/20-nodenet.conf</code> file. The <code>20-nodenet.conf</code> file sets the <code>KUBELET_NODE_IP</code> environment variable to the IP address that the service selected.</p>
-</div>
-<div class="paragraph">
-<p>When the kubelet service starts, it reads the value of the environment variable from the <code>20-nodenet.conf</code> file and sets the IP address as the value of the <code>--node-ip</code> kubelet command-line argument. As a result, the kubelet service uses the selected IP address as the node IP address.</p>
-</div>
-<div class="paragraph">
-<p>If hardware or networking is reconfigured after installation, or if there is a networking layout where the node IP should not come from the default route interface, it is possible for the <code>nodeip-configuration.service</code> service to select a different NIC after a reboot. In some cases, you might be able to detect that a different NIC is selected by reviewing the <code>INTERNAL-IP</code> column in the output from the <code>oc get nodes -o wide</code> command.</p>
-</div>
-<div class="paragraph">
-<p>If network communication is disrupted or misconfigured because a different NIC is selected, you might receive the following error: <code>EtcdCertSignerControllerDegraded</code>. You can create a hint file that includes the <code>NODEIP_HINT</code> variable to override the default IP selection logic. For more information, see Optional: Overriding the default node IP selection logic.</p>
+<p>When a problem appears to originate at the host operating system level, you generate a sosreport archive on the affected node and collect journal logs from bootstrap and cluster nodes so that Red Hat support can analyze low-level system state.</p>
 </div>
 <div class="sect3">
-<h4 id="overriding-default-node-ip-selection-logic_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Optional: Overriding the default node IP selection logic</h4>
+<h4 id="about-sosreport_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">About sosreport</h4>
 <div class="paragraph _abstract">
-<p>To override the default IP selection logic, you can create a hint file that includes the <code>NODEIP_HINT</code> variable to override the default IP selection logic. Creating a hint file allows you to select a specific node IP address from the interface in the subnet of the IP address specified in the <code>NODEIP_HINT</code> variable.</p>
+<p><code>sosreport</code> is a tool that collects configuration details, system information, and diagnostic data from Red&#160;Hat Enterprise Linux (RHEL) and Red Hat Enterprise Linux CoreOS (RHCOS) systems. <code>sosreport</code> provides a standardized way to collect diagnostic information relating to a node, which can then be provided to Red Hat Support for issue diagnosis.</p>
 </div>
 <div class="paragraph">
-<p>For example, if a node has two interfaces, <code>eth0</code> with an address of <code>10.0.0.10/24</code>, and <code>eth1</code> with an address of <code>192.0.2.5/24</code>, and the default route points to <code>eth0</code> (<code>10.0.0.10</code>),the node IP address would normally use the <code>10.0.0.10</code> IP address.</p>
-</div>
-<div class="paragraph">
-<p>Users can configure the <code>NODEIP_HINT</code> variable to point at a known IP in the subnet, for example, a subnet gateway such as <code>192.0.2.1</code> so that the other subnet, <code>192.0.2.0/24</code>, is selected. As a result, the <code>192.0.2.5</code> IP address on <code>eth1</code> is used for the node.</p>
-</div>
-<div class="paragraph">
-<p>The following procedure shows how to override the default node IP selection logic.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Add a hint file to your <code>/etc/default/nodeip-configuration</code> file, for example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NODEIP_HINT=192.0.2.1</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Do not use the exact IP address of a node as a hint, for example, <code>192.0.2.5</code>. Using the exact IP address of a node causes the node using the hint IP address to fail to configure correctly.</p>
-</li>
-<li>
-<p>The IP address in the hint file is only used to determine the correct subnet. It will not receive traffic as a result of appearing in the hint file.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Generate the <code>base-64</code> encoded content by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo -n 'NODEIP_HINT=192.0.2.1' | base64 -w0</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Tk9ERUlQX0hJTlQ9MTkyLjAuMCxxxx==</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Activate the hint by creating a machine config manifest for both <code>master</code> and <code>worker</code> roles before deploying the cluster:</p>
-<div class="listingblock">
-<div class="title">99-nodeip-hint-master.yaml</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
-  labels:
-    machineconfiguration.openshift.io/role: master
-  name: 99-nodeip-hint-master
-spec:
-  config:
-    ignition:
-      version: 3.2.0
-    storage:
-      files:
-      - contents:
-          source: data:text/plain;charset=utf-8;base64,&lt;encoded_content&gt;
-        mode: 0644
-        overwrite: true
-        path: /etc/default/nodeip-configuration</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">99-nodeip-hint-worker.yaml</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
- labels:
-   machineconfiguration.openshift.io/role: worker
-   name: 99-nodeip-hint-worker
-spec:
- config:
-   ignition:
-     version: 3.2.0
-   storage:
-     files:
-     - contents:
-         source: data:text/plain;charset=utf-8;base64,&lt;encoded_content&gt;
-       mode: 0644
-       overwrite: true
-       path: /etc/default/nodeip-configuration</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.config.storage.files.contents.source.&lt;encoded_content&gt;</code></dt>
-<dd>
-<p>Replace this placeholder with the base64-encoded content of the <code>/etc/default/nodeip-configuration</code> file, for example, <code>Tk9ERUlQX0hJTlQ9MTkyLjAuMCxxxx==</code>. Note that a space is not acceptable after the comma and before the encoded content.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Save the manifest to the directory where you store your cluster configuration, for example, <code>~/clusterconfigs</code>.</p>
-</li>
-<li>
-<p>Deploy the cluster.</p>
-</li>
-</ol>
+<p>In some support interactions, Red Hat Support may ask you to collect a <code>sosreport</code> archive for a specific Red&#160;Hat OpenShift Container Platform node. For example, it might sometimes be necessary to review system logs or other node-specific data that is not included within the output of <code>oc adm must-gather</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="configuring-ovnk-use-second-ovs-bridge_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Configuring OVN-Kubernetes to use a secondary OVS bridge</h4>
+<h4 id="support-generating-a-sosreport-archive_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Generating a sosreport archive for an Red&#160;Hat OpenShift Container Platform cluster node</h4>
 <div class="paragraph _abstract">
-<p>You can create an additional or <em>secondary</em> Open vSwitch (OVS) bridge, <code>br-ex1</code>, that OVN-Kubernetes manages and the Multiple External Gateways (MEG) implementation uses for defining external gateways for an Red&#160;Hat OpenShift Container Platform node. You can define a MEG in an <code>AdminPolicyBasedExternalRoute</code> custom resource (CR). The MEG implementation provides a pod with access to multiple gateways, equal-cost multipath (ECMP) routes, and the Bidirectional Forwarding Detection (BFD) implementation.</p>
-</div>
-<div class="paragraph">
-<p>Consider a use case for pods impacted by the Multiple External Gateways (MEG) feature and you want to egress traffic to a different interface, for example <code>br-ex1</code>, on a node. Egress traffic for pods not impacted by MEG get routed to the default OVS <code>br-ex</code> bridge.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Currently, MEG is unsupported for use with other egress features, such as egress IP, egress firewalls, or egress routers. Attempting to use MEG with egress features like egress IP can result in routing and traffic flow conflicts. This occurs because of how OVN-Kubernetes handles routing and source network address translation (SNAT). This results in inconsistent routing and might break connections in some environments where the return path must patch the incoming path.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>You must define the additional bridge in an interface definition of a machine configuration manifest file. The Machine Config Operator uses the manifest to create a new file at <code>/etc/ovnk/extra_bridge</code> on the host. The new file includes the name of the network interface that the additional OVS bridge configures for a node.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Do not use the <code>nmstate</code> API to make configuration changes to the secondary interface that is defined in the <code>/etc/ovnk/extra_bridge</code> directory path. The <code>configure-ovs.sh</code> configuration script creates and manages OVS bridge interfaces, so any interruptive changes to these interfaces by the <code>nmstate</code> API can lead to network configuration instability.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>After you create and edit the manifest file, the Machine Config Operator completes tasks in the following order:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Drains nodes in singular order based on the selected machine configuration pool.</p>
-</li>
-<li>
-<p>Injects Ignition configuration files into each node, so that each node receives the additional <code>br-ex1</code> bridge network configuration.</p>
-</li>
-<li>
-<p>Verify that the <code>br-ex</code> MAC address matches the MAC address for the interface that <code>br-ex</code> uses for the network connection.</p>
-</li>
-<li>
-<p>Executes the <code>configure-ovs.sh</code> shell script that references the new interface definition.</p>
-</li>
-<li>
-<p>Adds <code>br-ex</code> and <code>br-ex1</code> to the host node.</p>
-</li>
-<li>
-<p>Uncordons the nodes.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>After all the nodes return to the <code>Ready</code> state and the OVN-Kubernetes Operator detects and configures <code>br-ex</code> and <code>br-ex1</code>, the Operator applies the <code>k8s.ovn.org/l3-gateway-config</code> annotation to each node.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>For more information about useful situations for the additional <code>br-ex1</code> bridge and a situation that always requires the default <code>br-ex</code> bridge, see "Configuration for a localnet topology".</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Optional: Create an interface connection that your additional bridge, <code>br-ex1</code>, can use by completing the following steps. The example steps show the creation of a new bond and its dependent interfaces that are all defined in a machine configuration manifest file. The additional bridge uses the <code>MachineConfig</code> object to form a additional bond interface.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Do not use the Kubernetes NMState Operator or a <code>NodeNetworkConfigurationPolicy</code> (NNCP) manifest file to define the additional interface. Ensure that the additional interface or sub-interfaces when defining a <code>bond</code> interface are not used by an existing <code>br-ex</code> OVN Kubernetes network deployment.</p>
-</div>
-<div class="paragraph">
-<p>You cannot make configuration changes to the <code>br-ex</code> bridge or its underlying interfaces as a postinstallation task. As a workaround, use a secondary network interface connected to your host or switch.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create the following interface definition files. These files get added to a machine configuration manifest file so that host nodes can access the definition files.</p>
-<div class="listingblock">
-<div class="title">Example of the first interface definition file that is named <code>eno1.config</code></div>
-<div class="content">
-<pre class="highlight"><code class="language-ini" data-lang="ini">[connection]
-id=eno1
-type=ethernet
-interface-name=eno1
-master=bond1
-slave-type=bond
-autoconnect=true
-autoconnect-priority=20</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example of the second interface definition file that is named <code>eno2.config</code></div>
-<div class="content">
-<pre class="highlight"><code class="language-ini" data-lang="ini">[connection]
-id=eno2
-type=ethernet
-interface-name=eno2
-master=bond1
-slave-type=bond
-autoconnect=true
-autoconnect-priority=20</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example of the second bond interface definition file that is named <code>bond1.config</code></div>
-<div class="content">
-<pre class="highlight"><code class="language-ini" data-lang="ini">[connection]
-id=bond1
-type=bond
-interface-name=bond1
-autoconnect=true
-connection.autoconnect-slaves=1
-autoconnect-priority=20
-
-[bond]
-mode=802.3ad
-miimon=100
-xmit_hash_policy="layer3+4"
-
-[ipv4]
-method=auto</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Convert the definition files to Base64 encoded strings by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ base64 &lt;directory_path&gt;/en01.config</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ base64 &lt;directory_path&gt;/eno2.config</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ base64 &lt;directory_path&gt;/bond1.config</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Prepare the environment variables. Replace <code>&lt;machine_role&gt;</code> with the node role, such as <code>worker</code>, and replace <code>&lt;interface_name&gt;</code> with the name of your additional <code>br-ex</code> bridge name.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export ROLE=&lt;machine_role&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Define each interface definition in a machine configuration manifest file:</p>
-<div class="listingblock">
-<div class="title">Example of a machine configuration file with definitions added for <code>bond1</code>, <code>eno1</code>, and <code>en02</code></div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
-  labels:
-    machineconfiguration.openshift.io/role: ${worker}
-  name: 12-${ROLE}-sec-bridge-cni
-spec:
-  config:
-    ignition:
-      version: 3.2.0
-    storage:
-      files:
-      - contents:
-          source: data:;base64,&lt;base-64-encoded-contents-for-bond1.conf&gt;
-        path: /etc/NetworkManager/system-connections/bond1.nmconnection
-        filesystem: root
-        mode: 0600
-      - contents:
-          source: data:;base64,&lt;base-64-encoded-contents-for-eno1.conf&gt;
-        path: /etc/NetworkManager/system-connections/eno1.nmconnection
-        filesystem: root
-        mode: 0600
-      - contents:
-          source: data:;base64,&lt;base-64-encoded-contents-for-eno2.conf&gt;
-        path: /etc/NetworkManager/system-connections/eno2.nmconnection
-        filesystem: root
-        mode: 0600
-# ...</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a machine configuration manifest file for configuring the network plugin by entering the following command in your terminal:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;machine_config_file_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create an Open vSwitch (OVS) bridge, <code>br-ex1</code>, on nodes by using the OVN-Kubernetes network plugin to create an <code>extra_bridge</code> file`. Ensure that you save the file in the <code>/etc/ovnk/extra_bridge</code> path of the host. The file must state the interface name that supports the additional bridge and not the default interface that supports <code>br-ex</code>, which holds the primary IP address of the node.</p>
-<div class="listingblock">
-<div class="title">Example configuration for the <code>extra_bridge</code> file, <code>/etc/ovnk/extra_bridge</code>, that references a additional interface</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">bond1</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a machine configuration manifest file that defines the existing static interface that hosts <code>br-ex1</code> on any nodes restarted on your cluster:</p>
-<div class="listingblock">
-<div class="title">Example of a machine configuration file that defines <code>bond1</code> as the interface for hosting <code>br-ex1</code></div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
-  labels:
-    machineconfiguration.openshift.io/role: ${worker}
-  name: 12-worker-extra-bridge
-spec:
-  config:
-    ignition:
-      version: 3.2.0
-    storage:
-      files:
-        - path: /etc/ovnk/extra_bridge
-          mode: 0420
-          overwrite: true
-          contents:
-            source: data:text/plain;charset=utf-8,bond1
-          filesystem: root</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the machine-configuration to your selected nodes:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;machine_config_file_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: You can override the <code>br-ex</code> selection logic for nodes by creating a machine configuration file that in turn creates a <code>/var/lib/ovnk/iface_default_hint</code> resource.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The resource lists the name of the interface that <code>br-ex</code> selects for your cluster. By default, <code>br-ex</code> selects the primary interface for a node based on boot order and the IP address subnet in the machine network. Certain machine network configurations might require that <code>br-ex</code> continues to select the default interfaces or bonds for a host node.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create a machine configuration file on the host node to override the default interface.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Only create this machine configuration file for the purposes of changing the <code>br-ex</code> selection logic. Using this file to change the IP addresses of existing nodes in your cluster is not supported.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Example of a machine configuration file that overrides the default interface</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
-  labels:
-    machineconfiguration.openshift.io/role: ${worker}
-  name: 12-worker-br-ex-override
-spec:
-  config:
-    ignition:
-      version: 3.2.0
-    storage:
-      files:
-        - path: /var/lib/ovnk/iface_default_hint
-          mode: 0420
-          overwrite: true
-          contents:
-            source: data:text/plain;charset=utf-8,bond0
-          filesystem: root</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Ensure <code>bond0</code> exists on the node before you apply the machine configuration file to the node.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Before you apply the configuration to all new nodes in your cluster, reboot the host node to verify that <code>br-ex</code> selects the intended interface and does not conflict with the new interfaces that you defined on <code>br-ex1</code>.</p>
-</li>
-<li>
-<p>Apply the machine configuration file to all new nodes in your cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;machine_config_file_name&gt;</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Identify the IP addresses of nodes with the <code>exgw-ip-addresses</code> label in your cluster to verify that the nodes use the additional bridge instead of the default bridge:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes -o json | grep --color exgw-ip-addresses</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">"k8s.ovn.org/l3-gateway-config":
-   \"exgw-ip-address\":\"172.xx.xx.yy/24\",\"next-hops\":[\"xx.xx.xx.xx\"],</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Observe that the additional bridge exists on target nodes by reviewing the network interface names on the host node:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host sh -c "ip a | grep mtu | grep br-ex"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Starting pod/worker-1-debug ...
-To use host binaries, run `chroot /host`
-# ...
-5: br-ex: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
-6: br-ex1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: If you use <code>/var/lib/ovnk/iface_default_hint</code>, check that the MAC address of <code>br-ex</code> matches the MAC address of the primary selected interface:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host sh -c "ip a | grep -A1 -E 'br-ex|bond0'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output that shows the primary interface for <code>br-ex</code> as <code>bond0</code></div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Starting pod/worker-1-debug ...
-To use host binaries, run `chroot /host`
-# ...
-sh-5.1# ip a | grep -A1 -E 'br-ex|bond0'
-2: bond0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel master ovs-system state UP group default qlen 1000
-    link/ether fa:16:3e:47:99:98 brd ff:ff:ff:ff:ff:ff
---
-5: br-ex: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/ether fa:16:3e:47:99:98 brd ff:ff:ff:ff:ff:ff
-    inet 10.xx.xx.xx/21 brd 10.xx.xx.255 scope global dynamic noprefixroute br-ex</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nw-troubleshoot-ovs_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Troubleshooting Open vSwitch issues</h4>
-<div class="paragraph _abstract">
-<p>To troubleshoot some Open vSwitch (OVS) issues, you might need to configure the log level to include more information.</p>
-</div>
-<div class="paragraph">
-<p>If you modify the log level on a node temporarily, be aware that you can receive log messages from the machine config daemon on the node like the following example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">E0514 12:47:17.998892    2281 daemon.go:1350] content mismatch for file /etc/systemd/system/ovs-vswitchd.service: [Unit]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To avoid the log messages related to the mismatch, revert the log level change after you complete your troubleshooting.</p>
-</div>
-<div class="sect4">
-<h5 id="configuring-ovs-log-level-temp_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Configuring the Open vSwitch log level temporarily</h5>
-<div class="paragraph _abstract">
-<p>For short-term troubleshooting, you can configure the Open vSwitch (OVS) log level temporarily.
-The following procedure does not require rebooting the node.
-In addition, the configuration change does not persist whenever you reboot the node.</p>
-</div>
-<div class="paragraph">
-<p>After you perform this procedure to change the log level, you can receive log messages from the machine config daemon that indicate a content mismatch for the <code>ovs-vswitchd.service</code>.
-To avoid the log messages, repeat this procedure and set the log level to the original value.</p>
+<p>The recommended way to generate a <code>sosreport</code> for an Red&#160;Hat OpenShift Container Platform {product-version} cluster node is through a debug pod.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2341,7 +1769,19 @@ To avoid the log messages, repeat this procedure and set the log level to the or
 <p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
 </li>
 <li>
+<p>You have SSH access to your hosts.</p>
+</li>
+<li>
 <p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have a Red Hat standard or premium Subscription.</p>
+</li>
+<li>
+<p>You have a Red Hat Customer Portal account.</p>
+</li>
+<li>
+<p>You have an existing Red Hat Support case ID.</p>
 </li>
 </ul>
 </div>
@@ -2349,104 +1789,185 @@ To avoid the log messages, repeat this procedure and set the log level to the or
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Start a debug pod for a node:</p>
+<p>Obtain a list of cluster nodes:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Set <code>/host</code> as the root directory within the debug shell. The debug pod mounts the root file system from the host in <code>/host</code> within the pod. By changing the root directory to <code>/host</code>, you can run binaries from the host file system:</p>
+<p>Enter into a debug session on the target node. This step instantiates a debug pod called <code>&lt;node_name&gt;-debug</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To enter into a debug session on the target node that is tainted with the <code>NoExecute</code> effect, add a toleration to a dummy namespace, and start the debug pod in the dummy namespace:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc new-project dummy</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch namespace dummy --type=merge -p '{"metadata": {"annotations": { "scheduler.alpha.kubernetes.io/defaultTolerations": "[{\"operator\": \"Exists\"}]"}}}'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set <code>/host</code> as the root directory within the debug shell. The debug pod mounts the host&#8217;s root file system in the <code>/host</code> directory within the pod. By changing the root directory to <code>/host</code>, you can run binaries contained in the host&#8217;s executable paths:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal"># chroot /host</code></pre>
 </div>
 </div>
-</li>
-<li>
-<p>View the current syslog level for OVS modules:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ovs-appctl vlog/list</code></pre>
-</div>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The following example output shows the log level for syslog set to <code>info</code>.</p>
+<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Accessing cluster nodes by using SSH is not recommended. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to access nodes using <code>ssh core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;</code> instead.</p>
 </div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Collect a <code>sosreport</code> archive.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Run the <code>sos report</code> command to collect necessary troubleshooting data on <code>crio</code> and <code>podman</code>:</p>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">                 console    syslog    file
-                 -------    ------    ------
-backtrace          OFF       INFO       INFO
-bfd                OFF       INFO       INFO
-bond               OFF       INFO       INFO
-bridge             OFF       INFO       INFO
-bundle             OFF       INFO       INFO
-bundles            OFF       INFO       INFO
-cfm                OFF       INFO       INFO
-collectors         OFF       INFO       INFO
-command_line       OFF       INFO       INFO
-connmgr            OFF       INFO       INFO
-conntrack          OFF       INFO       INFO
-conntrack_tp       OFF       INFO       INFO
-coverage           OFF       INFO       INFO
-ct_dpif            OFF       INFO       INFO
-daemon             OFF       INFO       INFO
-daemon_unix        OFF       INFO       INFO
-dns_resolve        OFF       INFO       INFO
-dpdk               OFF       INFO       INFO
-...</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># sudo sos report -k crio.all=on -k crio.logs=on  -k podman.all=on -k podman.logs=on</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">where</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-k</code> enables you to define <code>sosreport</code> plugin parameters outside of the defaults.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Optional: To include information on OVN-Kubernetes networking configurations from a node in your report, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># sudo sos report --all-logs</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Specify the log level in the <code>/etc/systemd/system/ovs-vswitchd.service.d/10-ovs-vswitchd-restart.conf</code> file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">Restart=always
-ExecStartPre=-/bin/sh -c '/usr/bin/chown -R :$${OVS_USER_ID##*:} /var/lib/openvswitch'
-ExecStartPre=-/bin/sh -c '/usr/bin/chown -R :$${OVS_USER_ID##*:} /etc/openvswitch'
-ExecStartPre=-/bin/sh -c '/usr/bin/chown -R :$${OVS_USER_ID##*:} /run/openvswitch'
-ExecStartPost=-/usr/bin/ovs-appctl vlog/set syslog:dbg
-ExecReload=-/usr/bin/ovs-appctl vlog/set syslog:dbg</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the preceding example, the log level is set to <code>dbg</code>.
-Change the last two lines by setting <code>syslog:&lt;log_level&gt;</code> to <code>off</code>, <code>emer</code>, <code>err</code>, <code>warn</code>, <code>info</code>, or <code>dbg</code>. The <code>off</code> log level filters out all log messages.</p>
-</div>
+<p>Press <strong>Enter</strong> when prompted, to continue.</p>
 </li>
 <li>
-<p>Restart the service:</p>
+<p>Provide the Red Hat Support case ID. <code>sosreport</code> adds the ID to the archive&#8217;s file name.</p>
+</li>
+<li>
+<p>The <code>sosreport</code> output provides the archive&#8217;s location and checksum. The following sample output references support case ID <code>01234567</code>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># systemctl daemon-reload</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># systemctl restart ovs-vswitchd</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Your sosreport has been generated and saved in:
+  /var/tmp/sosreport-my-cluster-node-01234567-2020-05-28-eyjknxt.tar.xz
+
+The checksum is: 382ffc167510fd71b4f12a4f40b97a4e</code></pre>
 </div>
 </div>
 </li>
 </ol>
 </div>
+</li>
+<li>
+<p>Provide the <code>sosreport</code> archive to Red Hat Support for analysis, using one of the following methods.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Upload the file to an existing Red Hat support case.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Concatenate the <code>sosreport</code> archive by running the <code>oc debug node/&lt;node_name&gt;</code> command and redirect the output to a file. This command assumes you have exited the previous <code>oc debug</code> session:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node -- bash -c 'cat /var/tmp/sosreport-my-cluster-node-01234567-2020-05-28-eyjknxt.tar.xz' &gt; /tmp/sosreport-my-cluster-node-01234567-2020-05-28-eyjknxt.tar.xz</code></pre>
 </div>
-<div class="sect4">
-<h5 id="configuring-ovs-log-level-permanently_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Configuring the Open vSwitch log level permanently</h5>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">where</dt>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>The debug container mounts the host&#8217;s root directory at <code>/host</code>. Reference the absolute path from the debug container&#8217;s root directory, including <code>/host</code>, when specifying target files for concatenation.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Transferring a <code>sosreport</code> archive from a cluster node by using <code>scp</code> is not recommended. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to copy a <code>sosreport</code> archive from a node by running <code>scp core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;:&lt;file_path&gt; &lt;local_path&gt;</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to an existing support case within <a href="https://access.redhat.com/support/cases/#/case/list">the <strong>Customer Support</strong> page</a> of the Red Hat Customer Portal.</p>
+</li>
+<li>
+<p>Select <strong>Attach files</strong> and follow the prompts to upload the file.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="querying-bootstrap-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying bootstrap node journal logs</h4>
 <div class="paragraph _abstract">
-<p>For long-term changes to the Open vSwitch (OVS) log level, you can change the log level permanently.</p>
+<p>If you experience bootstrap-related issues, you can gather <code>bootkube.service</code> <code>journald</code> unit logs and container logs from the bootstrap node.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+<p>You have SSH access to your bootstrap node.</p>
 </li>
 <li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+<p>You have the fully qualified domain name of the bootstrap node.</p>
 </li>
 </ul>
 </div>
@@ -2454,63 +1975,42 @@ Change the last two lines by setting <code>syslog:&lt;log_level&gt;</code> to <c
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create a file, such as <code>99-change-ovs-loglevel.yaml</code>, with a <code>MachineConfig</code> object like the following example:</p>
+<p>Query <code>bootkube.service</code> <code>journald</code> unit logs from a bootstrap node during Red&#160;Hat OpenShift Container Platform installation. Replace <code>&lt;bootstrap_fqdn&gt;</code> with the bootstrap node&#8217;s fully qualified domain name:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
-  labels:
-    machineconfiguration.openshift.io/role: master
-  name: 99-change-ovs-loglevel
-spec:
-  config:
-    ignition:
-      version: 3.2.0
-    systemd:
-      units:
-      - dropins:
-        - contents: |
-            [Service]
-              ExecStartPost=-/usr/bin/ovs-appctl vlog/set syslog:dbg
-              ExecReload=-/usr/bin/ovs-appctl vlog/set syslog:dbg
-          name: 20-ovs-vswitchd-restart.conf
-        name: ovs-vswitchd.service</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;bootstrap_fqdn&gt; journalctl -b -f -u bootkube.service</code></pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>where:</p>
+<p>The <code>bootkube.service</code> log on the bootstrap node outputs etcd <code>connection refused</code> errors, indicating that the bootstrap server is unable to connect to etcd on control plane nodes. After etcd has started on each control plane node and the nodes have joined the cluster, the errors should stop.</p>
 </div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><code>metadata.labels.machineconfiguration.openshift.io/role:: After you perform this procedure to configure control plane nodes, repeat the procedure and set the role to `worker</code> to configure worker nodes.</p>
-</li>
-<li>
-<p><code>spec.systemmd.units.dropins.contents.ExecStartPost</code>:: Set the <code>syslog:&lt;log_level&gt;</code> value. Log levels are <code>off</code>, <code>emer</code>, <code>err</code>, <code>warn</code>, <code>info</code>, or <code>dbg</code>. Setting the value to <code>off</code> filters out all log messages.</p>
-</li>
-</ul>
-</div>
-</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>Apply the machine config:</p>
+<p>Collect logs from the bootstrap node containers using <code>podman</code> on the bootstrap node. Replace <code>&lt;bootstrap_fqdn&gt;</code> with the bootstrap node&#8217;s fully qualified domain name:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f 99-change-ovs-loglevel.yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;bootstrap_fqdn&gt; 'for pod in $(sudo podman ps -a -q); do sudo podman logs $pod; done'</code></pre>
 </div>
 </div>
 </li>
 </ol>
 </div>
 </div>
-<div class="sect4">
-<h5 id="displaying-ovs-logs_troubleshoot-network-issues-diagnose-node-networking-and-ovs">Displaying Open vSwitch logs</h5>
+<div class="sect3">
+<h4 id="querying-cluster-node-journal-logs_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs">Querying cluster node journal logs</h4>
 <div class="paragraph _abstract">
-<p>Use the following procedure to display Open vSwitch (OVS) logs.</p>
+<p>You can gather <code>journald</code> unit logs and other logs within <code>/var/log</code> on individual cluster nodes.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2521,49 +2021,89 @@ spec:
 <li>
 <p>You have installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
+<li>
+<p>Your API service is still functional.</p>
+</li>
+<li>
+<p>You have SSH access to your hosts.</p>
+</li>
 </ul>
 </div>
-<div class="ulist">
+<div class="olist arabic">
 <div class="title">Procedure</div>
-<ul>
+<ol class="arabic">
 <li>
-<p>Run one of the following commands:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Display the logs by using the <code>oc</code> command from outside the cluster:</p>
+<p>Query <code>kubelet</code> <code>journald</code> unit logs from Red&#160;Hat OpenShift Container Platform cluster nodes. The following example queries control plane nodes only:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm node-logs &lt;node_name&gt; -u ovs-vswitchd</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm node-logs --role=master -u kubelet  <img src="data:image/png;base64," alt="1"></code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>kubelet</code></dt>
+<dd>
+<p>Replace as appropriate to query other unit logs.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Collect logs from specific subdirectories under <code>/var/log/</code> on cluster nodes.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Retrieve a list of logs contained within a <code>/var/log/</code> subdirectory. The following example lists files in <code>/var/log/openshift-apiserver/</code> on all control plane nodes:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm node-logs --role=master --path=openshift-apiserver</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Display the logs after logging on to a node in the cluster:</p>
+<p>Inspect a specific log within a <code>/var/log/</code> subdirectory. The following example outputs <code>/var/log/openshift-apiserver/audit.log</code> contents from all control plane nodes:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># journalctl -b -f -u ovs-vswitchd.service</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm node-logs --role=master --path=openshift-apiserver/audit.log</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>If the API is not functional, review the logs on each node using SSH instead. The following example tails <code>/var/log/openshift-apiserver/audit.log</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh core@&lt;master-node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt; sudo tail -f /var/log/openshift-apiserver/audit.log</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>One way to log on to a node is by using the <code>oc debug node/&lt;node_name&gt;</code> command.</p>
+<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Accessing cluster nodes by using SSH is not recommended. Before attempting to collect diagnostic data over SSH, review whether the data collected by running <code>oc adm must gather</code> and other <code>oc</code> commands is sufficient instead. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to access nodes using <code>ssh core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;</code>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </li>
-</ul>
-</div>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a> →</p>
+<p>← Previous: <a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 08:37:43 -0400
+Last updated 2026-10-07 15:23:15 -0400
 </div>
 </div>
 <style>
