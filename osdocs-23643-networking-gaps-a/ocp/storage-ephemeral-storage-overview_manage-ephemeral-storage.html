@@ -1272,6 +1272,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_networking.html">Networking</a>
 
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -2212,7 +2214,7 @@ metadata:
 <p>When a CSI driver has the <code>csi-ephemeral-volume-profile</code> label, pods using the CSI driver to mount CSI ephemeral volumes must run in a namespace that enforces a pod security standard of equal or greater permission. If the namespace enforces a more restrictive standard, the CSI Volume Admission plugin denies admission. The following table describes the enforcement behavior for different pod security profiles for given label values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 657. Pod security profile enforcement</caption>
+<caption class="title">Table 659. Pod security profile enforcement</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2255,7 +2257,7 @@ metadata:
 <p>The CSI Volume Admission plugin can warn you if the CSI driver’s effective profile is more permissive than the pod security warning profile for the pod namespace. The following table shows when a warning occurs for different pod security profiles for given label values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 658. Pod security profile warning</caption>
+<caption class="title">Table 660. Pod security profile warning</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2298,7 +2300,7 @@ metadata:
 <p>The CSI Volume Admission plugin can apply audit annotations to the pod if the CSI driver’s effective profile is more permissive than the pod security audit profile for the pod namespace. The following table shows the audit annotation applied for different pod security profiles for given label values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 659. Pod security profile audit</caption>
+<caption class="title">Table 661. Pod security profile audit</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2587,7 +2589,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:24:08 -0400
+Last updated 2026-10-13 10:33:25 -0400
 </div>
 </div>
 <style>
