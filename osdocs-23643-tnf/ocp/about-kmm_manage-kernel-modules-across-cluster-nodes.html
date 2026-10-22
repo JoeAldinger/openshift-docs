@@ -1058,7 +1058,15 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html"><span class="toc-current">About the Kernel Module Management Operator</span></a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1895,7 +1903,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#kmm-install_manage-kernel-modules-across-cluster-nodes">Install the Kernel Module Management Operator</a></li><li class="level-5"><a href="#kmm-install-using-web-console_manage-kernel-modules-across-cluster-nodes">Installing the Kernel Module Management Operator using the web console</a></li><li class="level-5"><a href="#kmm-install-using-cli_manage-kernel-modules-across-cluster-nodes">Installing the Kernel Module Management Operator by using the CLI</a></li><li class="level-5"><a href="#kmm-install-older-version_manage-kernel-modules-across-cluster-nodes">Install the Kernel Module Management Operator on earlier versions of Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#kmm-uninstalling-kmmo_manage-kernel-modules-across-cluster-nodes">Uninstalling the Kernel Module Management Operator</a></li><li class="level-5"><a href="#kmm-uninstalling-kmmo-red-hat-catalog_manage-kernel-modules-across-cluster-nodes">Uninstalling a Red Hat catalog installation</a></li><li class="level-5"><a href="#kmm-uninstalling-kmmo-cli_manage-kernel-modules-across-cluster-nodes">Uninstalling a CLI installation</a></li><li class="level-4"><a href="#kmm-deploy-kernel-modules_manage-kernel-modules-across-cluster-nodes">Kernel module deployment</a></li><li class="level-4"><a href="#kmm-customizing-upgrades-for-kernel-modules_manage-kernel-modules-across-cluster-nodes">Customize upgrades for kernel modules</a></li><li class="level-4"><a href="#kmm-debugging-and-troubleshooting_manage-kernel-modules-across-cluster-nodes">Debugging and troubleshooting</a></li><li class="level-4"><a href="#kmm-troubleshooting_manage-kernel-modules-across-cluster-nodes">Troubleshooting KMM</a></li><li class="level-4"><a href="#kmm-using-tolerations-for-kernel-module-scheduling_apply-taints-and-tolerations-for-kernel-module-pods">Using tolerations for kernel module scheduling</a></li><li class="level-5"><a href="#kmm-applying-tolerations-to-kernel-module-pods_apply-taints-and-tolerations-for-kernel-module-pods">Applying tolerations to kernel module pods</a></li><li class="level-4"><a href="#kmm-setting-soft-dependencies-between-kernel-modules_configure-kernel-module-soft-dependencies">Set soft dependencies between kernel modules</a></li><li class="level-4"><a href="#configure-kmm-operator-settings-con_configure-kmm-operator-settings">Configure KMM Operator settings</a></li><li class="level-5"><a href="#kmm-configuring-kmmo_configure-kmm-operator-settings">Configuring the Kernel Module Management Operator</a></li><li class="level-6"><a href="#kmm-setting-kernel-firmware-search-path_configure-kmm-operator-settings">Setting the kernel firmware search path</a></li><li class="level-6"><a href="#kmm-tuning-the-module-resource_configure-kmm-operator-settings">Tuning the Module resource</a></li><li class="level-4"><a href="#kmm-using-tolerations-for-kernel-module-scheduling_add-tolerations-for-kmm-operator-on-tainted-worker-nodes">Using tolerations for kernel module scheduling</a></li><li class="level-5"><a href="#kmm-applying-tolerations-to-kernel-module-pods_add-tolerations-for-kmm-operator-on-tainted-worker-nodes">Applying tolerations to kernel module pods</a></li><li class="level-4"><a href="#kmm-creating-module-cr_create-module-cr-to-define-a-kernel-module">The Module custom resource definition</a></li><li class="level-5"><a href="#kmm-example-cr_create-module-cr-to-define-a-kernel-module">Example Module CR</a></li><li class="level-4"><a href="#kmm-creating-kmod-image_build-kmod-images-for-kernel-modules">Creating a kmod image</a></li><li class="level-5"><a href="#kmm-running-depmod_build-kmod-images-for-kernel-modules">Running depmod</a></li><li class="level-6"><a href="#kmm-building-in-cluster_build-kmod-images-for-kernel-modules">Building in the cluster</a></li><li class="level-6"><a href="#kmm-using-driver-toolkit_build-kmod-images-for-kernel-modules">Using the Driver Toolkit</a></li><li class="level-6"><a href="#kmm-building-a-kmod-image_build-kmod-images-for-kernel-modules">Building a kmod image</a></li><li class="level-4"><a href="#kmm-replacing-in-tree-modules-with-out-of-tree-modules_replace-in-tree-modules-with-out-of-tree-versions">Replacing in-tree modules with out-of-tree modules</a></li><li class="level-5"><a href="#kmm-using-intree-modules_replace-in-tree-modules-with-out-of-tree-versions">Using in-tree modules with the device plugin</a></li><li class="level-5"><a href="#kmm-symbolic-links-for-in-tree-dependencies_replace-in-tree-modules-with-out-of-tree-versions">Symbolic links for in-tree dependencies</a></li><li class="level-4"><a href="#manage-firmware-files-for-kernel-modules-con_manage-firmware-files-for-kernel-modules">Manage firmware files for kernel modules</a></li><li class="level-5"><a href="#kmm-setting-kernel-firmware-search-path_manage-firmware-files-for-kernel-modules">Setting the kernel firmware search path</a></li><li class="level-5"><a href="#kmm-firmware-support_manage-firmware-files-for-kernel-modules">KMM firmware support</a></li><li class="level-6"><a href="#kmm-configuring-the-lookup-path-on-nodes_manage-firmware-files-for-kernel-modules">Configuring the lookup path on nodes</a></li><li class="level-6"><a href="#kmm-building-a-kmod-image_manage-firmware-files-for-kernel-modules">Building a kmod image</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#kmm-install_manage-kernel-modules-across-cluster-nodes">Install the Kernel Module Management Operator</a></li><li class="level-5"><a href="#kmm-install-using-web-console_manage-kernel-modules-across-cluster-nodes">Installing the Kernel Module Management Operator using the web console</a></li><li class="level-5"><a href="#kmm-install-using-cli_manage-kernel-modules-across-cluster-nodes">Installing the Kernel Module Management Operator by using the CLI</a></li><li class="level-5"><a href="#kmm-install-older-version_manage-kernel-modules-across-cluster-nodes">Install the Kernel Module Management Operator on earlier versions of Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#kmm-uninstalling-kmmo_manage-kernel-modules-across-cluster-nodes">Uninstalling the Kernel Module Management Operator</a></li><li class="level-5"><a href="#kmm-uninstalling-kmmo-red-hat-catalog_manage-kernel-modules-across-cluster-nodes">Uninstalling a Red Hat catalog installation</a></li><li class="level-5"><a href="#kmm-uninstalling-kmmo-cli_manage-kernel-modules-across-cluster-nodes">Uninstalling a CLI installation</a></li><li class="level-4"><a href="#kmm-deploy-kernel-modules_manage-kernel-modules-across-cluster-nodes">Kernel module deployment</a></li><li class="level-4"><a href="#kmm-security_manage-kernel-modules-across-cluster-nodes">Security and permissions</a></li><li class="level-5"><a href="#serviceaccounts-and-securitycontextconstraint_manage-kernel-modules-across-cluster-nodes">ServiceAccounts and SecurityContextConstraints</a></li><li class="level-5"><a href="#pod-security-standards_manage-kernel-modules-across-cluster-nodes">Pod security standards</a></li><li class="level-4"><a href="#kmm-customizing-upgrades-for-kernel-modules_manage-kernel-modules-across-cluster-nodes">Customize upgrades for kernel modules</a></li><li class="level-4"><a href="#kmm-debugging-and-troubleshooting_manage-kernel-modules-across-cluster-nodes">Debugging and troubleshooting</a></li><li class="level-4"><a href="#kmm-troubleshooting_manage-kernel-modules-across-cluster-nodes">Troubleshooting KMM</a></li><li class="level-4"><a href="#kmm-using-tolerations-for-kernel-module-scheduling_apply-taints-and-tolerations-for-kernel-module-pods">Using tolerations for kernel module scheduling</a></li><li class="level-5"><a href="#kmm-applying-tolerations-to-kernel-module-pods_apply-taints-and-tolerations-for-kernel-module-pods">Applying tolerations to kernel module pods</a></li><li class="level-4"><a href="#kmm-setting-soft-dependencies-between-kernel-modules_configure-kernel-module-soft-dependencies">Set soft dependencies between kernel modules</a></li><li class="level-4"><a href="#configure-kmm-operator-settings-con_configure-kmm-operator-settings">Configure KMM Operator settings</a></li><li class="level-5"><a href="#kmm-configuring-kmmo_configure-kmm-operator-settings">Configuring the Kernel Module Management Operator</a></li><li class="level-6"><a href="#kmm-setting-kernel-firmware-search-path_configure-kmm-operator-settings">Setting the kernel firmware search path</a></li><li class="level-6"><a href="#kmm-tuning-the-module-resource_configure-kmm-operator-settings">Tuning the Module resource</a></li><li class="level-4"><a href="#kmm-using-tolerations-for-kernel-module-scheduling_add-tolerations-for-kmm-operator-on-tainted-worker-nodes">Using tolerations for kernel module scheduling</a></li><li class="level-5"><a href="#kmm-applying-tolerations-to-kernel-module-pods_add-tolerations-for-kmm-operator-on-tainted-worker-nodes">Applying tolerations to kernel module pods</a></li><li class="level-4"><a href="#kmm-creating-module-cr_create-module-cr-to-define-a-kernel-module">The Module custom resource definition</a></li><li class="level-5"><a href="#kmm-example-cr_create-module-cr-to-define-a-kernel-module">Example Module CR</a></li><li class="level-4"><a href="#kmm-creating-kmod-image_build-kmod-images-for-kernel-modules">Creating a kmod image</a></li><li class="level-5"><a href="#kmm-running-depmod_build-kmod-images-for-kernel-modules">Running depmod</a></li><li class="level-6"><a href="#kmm-building-in-cluster_build-kmod-images-for-kernel-modules">Building in the cluster</a></li><li class="level-6"><a href="#kmm-using-driver-toolkit_build-kmod-images-for-kernel-modules">Using the Driver Toolkit</a></li><li class="level-6"><a href="#kmm-building-a-kmod-image_build-kmod-images-for-kernel-modules">Building a kmod image</a></li><li class="level-4"><a href="#kmm-replacing-in-tree-modules-with-out-of-tree-modules_replace-in-tree-modules-with-out-of-tree-versions">Replacing in-tree modules with out-of-tree modules</a></li><li class="level-5"><a href="#kmm-using-intree-modules_replace-in-tree-modules-with-out-of-tree-versions">Using in-tree modules with the device plugin</a></li><li class="level-5"><a href="#kmm-symbolic-links-for-in-tree-dependencies_replace-in-tree-modules-with-out-of-tree-versions">Symbolic links for in-tree dependencies</a></li><li class="level-4"><a href="#manage-firmware-files-for-kernel-modules-con_manage-firmware-files-for-kernel-modules">Manage firmware files for kernel modules</a></li><li class="level-5"><a href="#kmm-setting-kernel-firmware-search-path_manage-firmware-files-for-kernel-modules">Setting the kernel firmware search path</a></li><li class="level-5"><a href="#kmm-firmware-support_manage-firmware-files-for-kernel-modules">KMM firmware support</a></li><li class="level-6"><a href="#kmm-configuring-the-lookup-path-on-nodes_manage-firmware-files-for-kernel-modules">Configuring the lookup path on nodes</a></li><li class="level-6"><a href="#kmm-building-a-kmod-image_manage-firmware-files-for-kernel-modules">Building a kmod image</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="about-kmm_manage-kernel-modules-across-cluster-nodes">About the Kernel Module Management Operator</h3>
@@ -2374,6 +2382,89 @@ kmm-operator-controller           1/1   1           1         97s</code></pre>
 <p>Runs <code>modprobe</code> with the specified arguments to perform the necessary action.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="kmm-security_manage-kernel-modules-across-cluster-nodes">Security and permissions</h4>
+<div class="paragraph _abstract">
+<p>KMM security and permissions govern how privileged workloads load kernel modules on Red&#160;Hat OpenShift Container Platform nodes. Review <code>ServiceAccount</code>, <code>SecurityContextConstraint</code>, and pod security requirements before deploying <code>Module</code> resources.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Loading kernel modules is a highly sensitive operation.
+After they are loaded, kernel modules have all possible permissions to do any kind of operation on the node.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="serviceaccounts-and-securitycontextconstraint_manage-kernel-modules-across-cluster-nodes">ServiceAccounts and SecurityContextConstraints</h5>
+<div class="paragraph">
+<p>Kernel Module Management (KMM) creates a privileged workload to load the kernel modules on nodes.
+That workload needs <code>ServiceAccounts</code> allowed to use the <code>privileged</code> <code>SecurityContextConstraint</code> (SCC) resource.</p>
+</div>
+<div class="paragraph">
+<p>The authorization model for that workload depends on the namespace of the <code>Module</code> resource, as well as its spec.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the <code>.spec.moduleLoader.serviceAccountName</code> or <code>.spec.devicePlugin.serviceAccountName</code> fields are set, they are always used.</p>
+</li>
+<li>
+<p>If those fields are not set, then:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the <code>Module</code> resource is created in the Operator&#8217;s namespace (<code>openshift-kmm</code> by default), then KMM uses its default, powerful <code>ServiceAccounts</code> to run the worker and device plugin pods.</p>
+</li>
+<li>
+<p>If the <code>Module</code> resource is created in any other namespace, then KMM runs the pods with the namespace&#8217;s <code>default</code> <code>ServiceAccount</code>. The <code>Module</code> resource cannot run a privileged workload unless you manually enable it to use the <code>privileged</code> SCC.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>openshift-kmm</code> is a trusted namespace.</p>
+</div>
+<div class="paragraph">
+<p>When setting up RBAC permissions, remember that any user or <code>ServiceAccount</code> creating a <code>Module</code> resource in the <code>openshift-kmm</code> namespace results in KMM automatically running privileged workloads on potentially all nodes in the cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To allow any <code>ServiceAccount</code> to use the <code>privileged</code> SCC and run worker or device plugin pods, you can use the <code>oc adm policy</code> command, as in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-scc-to-user privileged -z "${serviceAccountName}" [ -n "${namespace}" ]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="pod-security-standards_manage-kernel-modules-across-cluster-nodes">Pod security standards</h5>
+<div class="paragraph">
+<p>OpenShift runs a synchronization mechanism that sets the namespace Pod Security level automatically based on
+the security contexts in use. No action is needed.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -3707,7 +3798,7 @@ COPY --from=builder /firmware /firmware</code></pre>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="configure-nfd-feature-sources-and-detection-con_configure-nfd-feature-sources-and-detection.html">Configure NFD feature sources and detection</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a> →</p>
+<p>← Previous: <a href="configure-nfd-feature-sources-and-detection-con_configure-nfd-feature-sources-and-detection.html">Configure NFD feature sources and detection</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -3718,7 +3809,7 @@ COPY --from=builder /firmware /firmware</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 13:08:48 -0400
+Last updated 2026-10-22 14:56:55 -0400
 </div>
 </div>
 <style>

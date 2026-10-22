@@ -1058,7 +1058,15 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -3985,15 +3993,15 @@ The reference configuration includes the cert-manager Operator to optionally man
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift GitOps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.21</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cert-manager Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.20</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Logging Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.7</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Data Foundation</p></td>
@@ -4001,29 +4009,26 @@ The reference configuration includes the cert-manager Operator to optionally man
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SR-IOV Network Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MetalLB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NMState Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NUMA-aware scheduler</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 </tr>
 </tbody>
 </table>
 <div class="ulist">
 <ul>
 <li>
-<p>OpenShift Data Foundation is expected to be updated to 4.22 when the aligned OpenShift Data Foundation version is released.</p>
-</li>
-<li>
-<p>The Cluster Logging Operator is expected to be updated to 6.6 when the aligned version is released.</p>
+<p>OpenShift Data Foundation is expected to be updated to 5.0 when the aligned OpenShift Data Foundation version is released.</p>
 </li>
 <li>
 <p>The cert-manager Operator and Red&#160;Hat OpenShift GitOps Operator are platform-agnostic operators.
@@ -4464,7 +4469,7 @@ The container image has both the required CRs, and the optional CRs, for the tel
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -it registry.redhat.io/openshift4/openshift-telco-core-rds-rhel9:v4.22 | base64 -d | tar xv -C out</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -it registry.redhat.io/openshift4/openshift-telco-core-rds-rhel9:v5.0 | base64 -d | tar xv -C out</code></pre>
 </div>
 </div>
 </li>
@@ -5348,7 +5353,7 @@ No patched CRs</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 13:08:48 -0400
+Last updated 2026-10-22 14:56:55 -0400
 </div>
 </div>
 <style>
