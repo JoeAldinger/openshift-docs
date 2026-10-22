@@ -477,44 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/ocp-jobs/install-a-two-node-cluster-with-fencing.adoc:32
-    include::ocp-jobs/verify-fencing-after-installing-a-two-node-cluster.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/ocp-jobs/verify-fencing-after-installing-a-two-node-cluster.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1903,7 +1867,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-two-node-fencing-minimum-resource-requirements_install-a-two-node-cluster-with-fencing">Minimum resource requirements for installing a two-node OpenShift cluster with fencing</a></li><li class="level-4"><a href="#installation-dns-user-infra_installing-two-node-fencing">User-provisioned DNS requirements</a></li><li class="level-5"><a href="#installation-dns-user-infra-example_installing-two-node-fencing">Example DNS configuration for user-provisioned clusters</a></li><li class="level-4"><a href="#installation-installer-user-infra_install-a-two-node-cluster-with-fencing">Installer-provisioned DNS requirements</a></li><li class="level-4"><a href="#creating-manifest-custom-br-ex_install-a-two-node-cluster-with-fencing">Creating a manifest object for a customized br-ex bridge</a></li><li class="level-4"><a href="#two-node-ingress-lb-configuration_install-a-two-node-cluster-with-fencing">Configuring an Ingress load balancer for a two-node cluster with fencing</a></li><li class="level-4"><a href="#sample-install-config-two-node-fencing-ipi_install-a-two-node-cluster-with-fencing">Sample install-config.yaml file for a two-node installer-provisioned infrastructure cluster with fencing</a></li><li class="level-4"><a href="#sample-install-config-two-node-fencing-upi_install-a-two-node-cluster-with-fencing">Sample install-config.yaml file for a two-node user-provisioned infrastructure cluster with fencing</a></li><li class="level-4"><a href="#sample-install-config-two-node-fencing-abi_install-a-two-node-cluster-with-fencing">Sample install-config.yaml file for a two-node cluster with fencing for Agent-based Installer</a></li><li class="level-4"><a href="#sample-agent-config-two-node-fencing-abi_install-a-two-node-cluster-with-fencing">Sample agent-config.yaml file for a two-node cluster with fencing for Agent-based Installer</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-two-node-fencing-minimum-resource-requirements_install-a-two-node-cluster-with-fencing">Minimum resource requirements for installing a two-node OpenShift cluster with fencing</a></li><li class="level-4"><a href="#installation-dns-user-infra_installing-two-node-fencing">User-provisioned DNS requirements</a></li><li class="level-5"><a href="#installation-dns-user-infra-example_installing-two-node-fencing">Example DNS configuration for user-provisioned clusters</a></li><li class="level-4"><a href="#installation-installer-user-infra_install-a-two-node-cluster-with-fencing">Installer-provisioned DNS requirements</a></li><li class="level-4"><a href="#creating-manifest-custom-br-ex_install-a-two-node-cluster-with-fencing">Creating a manifest object for a customized br-ex bridge</a></li><li class="level-4"><a href="#two-node-ingress-lb-configuration_install-a-two-node-cluster-with-fencing">Configuring an Ingress load balancer for a two-node cluster with fencing</a></li><li class="level-4"><a href="#sample-install-config-two-node-fencing-ipi_install-a-two-node-cluster-with-fencing">Sample install-config.yaml file for a two-node installer-provisioned infrastructure cluster with fencing</a></li><li class="level-4"><a href="#sample-install-config-two-node-fencing-upi_install-a-two-node-cluster-with-fencing">Sample install-config.yaml file for a two-node user-provisioned infrastructure cluster with fencing</a></li><li class="level-4"><a href="#sample-install-config-two-node-fencing-abi_install-a-two-node-cluster-with-fencing">Sample install-config.yaml file for a two-node cluster with fencing for Agent-based Installer</a></li><li class="level-4"><a href="#sample-agent-config-two-node-fencing-abi_install-a-two-node-cluster-with-fencing">Sample agent-config.yaml file for a two-node cluster with fencing for Agent-based Installer</a></li><li class="level-4"><a href="#fencing-validator-script-overview_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script overview</a></li><li class="level-5"><a href="#fencing-validator-script-prerequisites_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script prerequisites</a></li><li class="level-5"><a href="#command-line-options-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Command-line options for fencing validator script</a></li><li class="level-5"><a href="#fencing-validator-script-for-non-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for non-disruptive checks</a></li><li class="level-5"><a href="#fencing-validator-script-for-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for disruptive checks</a></li><li class="level-5"><a href="#exit-codes-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Exit codes for fencing-validator script</a></li><li class="level-5"><a href="#transport-mode-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Transport mode for fencing validator script</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing">Install a two-node cluster with fencing</h3>
@@ -3101,8 +3065,419 @@ hosts:
         table-id: 254</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="fencing-validator-script-overview_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script overview</h4>
+<div class="paragraph _abstract">
+<p>A two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF) relies on the Shoot The Other Node In The Head (STONITH) mechanism to ensure data integrity during node failures. If the fencing subsystem is misconfigured, the cluster might fail to recover safely, resulting in data corruption or a split-brain scenario.</p>
+</div>
 <div class="paragraph">
-<p>Unresolved directive in ocp-jobs/install-a-two-node-cluster-with-fencing.adoc - include::ocp-jobs/verify-fencing-after-installing-a-two-node-cluster.adoc[leveloffset=+1]</p>
+<p>Before the introduction of this utility, administrators or support engineers had to manually verify several subsystems, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pacemaker status</p>
+</li>
+<li>
+<p>STONITH device configurations</p>
+</li>
+<li>
+<p>Daemon health</p>
+</li>
+<li>
+<p>etcd quorum</p>
+</li>
+<li>
+<p>Fencing secrets</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>fencing_validator</code> script automates these manual checks into a single command, providing clear pass or fail results and descriptive error messages to reduce troubleshooting time and human error.</p>
+</div>
+<div class="paragraph">
+<p>The <code>fencing_validator</code> is a Bash-based diagnostic utility available on every control-plane node in a TNF Red&#160;Hat OpenShift Container Platform cluster. As a health check tool for the fencing subsystem, it verifies that the STONITH stack is correctly configured and operational.</p>
+</div>
+<div class="paragraph">
+<p>The script is located at <code>/usr/local/bin/fencing_validator</code> on both control-plane nodes. The script is automatically installed by the Machine Config Operator (MCO). There is no manual installation step required.</p>
+</div>
+<div class="paragraph">
+<p>When you deploy a TNF cluster, the MCO renders a set of <code>MachineConfig</code> manifests specific to that topology. One of these manifests is <code>fencing-validator.yaml</code>, located in the MCO source at <code>templates/master/00-master/two-node-with-fencing/files/fencing-validator.yaml</code>. This <code>MachineConfig</code> writes the script to <code>/usr/local/bin/fencing_validator</code> with executable mode <code>0755</code> on every control-plane node.
+The script is available as soon as the node has finished applying its <code>MachineConfig</code>, that is, after initial deployment or after any MCO-driven reboot.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The script is deployed on TNF clusters only. It does not appear on standard HA clusters, Single-node OpenShift, or Two-Node with Arbiter clusters.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can use the script for the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Post-deployment validation: Use the utility to verify that the TNF configuration is correct and fully functional after deployment.</p>
+</li>
+<li>
+<p>Troubleshooting: Identify the specific underlying issues when a TNF setup fails to operate as expected.</p>
+</li>
+<li>
+<p>Pre-upgrade validation: Confirm the health of the fencing stack to ensure the cluster is stable enough to proceed with a version upgrade.</p>
+</li>
+<li>
+<p>Support interactions: Execute the script and provide the output to support engineers to facilitate the rapid resolution of technical issues.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="fencing-validator-script-prerequisites_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script prerequisites</h5>
+<div class="paragraph _abstract">
+<p>Use the <code>fencing_validator</code> script to verify your fencing configuration on a two-node Red&#160;Hat OpenShift Container Platform cluster. This script, deployed automatically by the Machine Config Operator, ensures that power management interfaces are correctly configured to prevent data corruption during a node failure. To run it, ensure the <code>jq</code> utility is installed, and you have both Kubernetes API access (<code>oc</code>) and SSH access to the control-plane nodes.</p>
+</div>
+<div class="paragraph">
+<p>You can see what the script would do without actually performing any validation for TNF by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator --dry-run</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="command-line-options-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Command-line options for fencing validator script</h5>
+<div class="paragraph _abstract">
+<p>To quickly verify a high-availability configuration of your two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF), you can review the available command-line options and environment variables for the <code>fencing_validator</code> script. This reference helps you customize your connection methods, set execution timeouts, and safely test node reboots to ensure your fencing mechanism is reliable before moving to production.</p>
+</div>
+<div class="paragraph">
+<p>You can see different command-line options for the <code>fencing_ validator</code> script by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator --help</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following table details command-line options for the <code>oc debug node</code> command:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--user</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSH username for remote node access. The default value is <code>core</code>. Optionally, you can use <code>SSH_USER</code> environment variable to set the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--ssh-key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to SSH private key. Optionally, you can use the <code>SSH_KEY</code> environment variable to set the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--kubeconfig</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to kubeconfig file. Optionally, you can use the <code>KUBECONFIG</code> environment variable to set the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--transport</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How the script connects to the other node. The possible values are <code>auto</code>, <code>ssh</code>, and <code>ocdebug</code>. The default value is <code>auto</code>. Optionally, you can use the <code>TRANSPORT</code> environment variable to set the value. For more information, see "Transport mode for fencing validator script".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--timeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum wait time for recovery loops. Optionally, you can use the <code>TIMEOUT</code> environment variable to set the value. By default, it is 1200 seconds or 20 minutes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--hosts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated pair of node hostnames or IP addresses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--host-a</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Explicitly set the first node.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--host-b</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Explicitly set the second node.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--disruptive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable destructive fencing tests (reboots nodes). Optionally, you can use the <code>DISRUPTIVE</code> environment variable to set the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--dry-run</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Show what could be the result of the <code>fencing_validator</code> script without doing actual validations. Optionally, you can use the <code>DRY_RUN</code> environment variable to set the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-h</code>, <code>--help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Show usage information.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can set all the flags by using the following environment variables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>IP_A / IP_B</code>: set host addresses directly</p>
+</li>
+<li>
+<p><code>OC_BIN</code>: custom <code>oc</code> binary path</p>
+</li>
+<li>
+<p><code>OC_REQ_TIMEOUT</code>: per-API-call timeout. The default value is 10 seconds.</p>
+</li>
+<li>
+<p><code>CMD_EXEC_TIMEOUT_SECS</code>: per-command timeout. The default value is 60 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="fencing-validator-script-for-non-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for non-disruptive checks</h5>
+<div class="paragraph _abstract">
+<p>To ensure your two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF) remains highly available without risking downtime, you can run the <code>fencing_validator</code> script in validation mode. This script performs a series of read-only health checks to verify cluster quorum, daemon health, and STONITH device status without disrupting active services.</p>
+</div>
+<div class="paragraph">
+<p>The simplest way to run the script is from a debug session on either control plane node by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command does not reboot or fence any nodes. These checks are read-only and safe to run at any time. They run the following non-disruptive checks and report the results:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>OpenShift version check</strong> - Confirms the cluster is running Red&#160;Hat OpenShift Container Platform 4.20.0 or later.</p>
+</li>
+<li>
+<p><strong>Node count check</strong> - Confirms exactly 2 control-plane nodes exist.</p>
+</li>
+<li>
+<p><strong>Transport connectivity</strong> - Establishes a connection to both nodes (via SSH or <code>oc debug</code>).</p>
+</li>
+<li>
+<p><strong>STONITH device check</strong> - Verifies that STONITH devices are present and enabled in Pacemaker.</p>
+</li>
+<li>
+<p><strong>Pacemaker status</strong> - Confirms both nodes are reporting ONLINE in the Pacemaker cluster.</p>
+</li>
+<li>
+<p><strong>Daemon health</strong> - Checks that <code>corosync</code>, <code>pacemaker</code>, and <code>pcsd</code> services are active on both nodes.</p>
+</li>
+<li>
+<p><strong>etcd quorum</strong> - Verifies that etcd has 2 healthy voting members and the cluster has quorum.</p>
+</li>
+<li>
+<p><strong>Fencing secrets</strong> - Confirms that the fencing credential secrets (used by STONITH to authenticate to the BMC/IPMI) exist and are correctly bound to each node.</p>
+<div class="paragraph">
+<p>When all non-disruptive checks pass, the output resembles the following:</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">[INFO]
+====
+OpenShift version: 4.20.0 - OK [INFO]  Detected 2 control-plane nodes [INFO]  Transport: ssh [OK]    STONITH devices found and enabled [OK]    Both nodes ONLINE in Pacemaker [OK]    All daemons healthy on both nodes [OK]    etcd quorum healthy (2/2 voters) [OK]    Fencing secrets correctly bound [INFO]  All non-disruptive checks passed When something fails:
+====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+When non-disruptive checks fail, the output resembles the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">[INFO]
+====
+OpenShift version: 4.20.0 - OK [INFO]  Detected 2 control-plane nodes [INFO]  Transport: ssh [ERROR] No STONITH devices found - fencing is not configured
+====</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="fencing-validator-script-for-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for disruptive checks</h5>
+<div class="paragraph _abstract">
+<p>You can validate your cluster&#8217;s resilience and perform disruptive checks from a peer node by using the <code>fencing_validator</code> script. By executing these simulated failures, you can ensure your high-availability environment correctly isolates and recovers from errors.</p>
+</div>
+<div class="paragraph">
+<p>You can trigger the Shoot The Other Node In The Head (STONITH) action for the failed node and cut off its access to shared resources and prevent data corruption by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ pcs stonith fence &lt;node&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can check whether a two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF) setup actually works by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator --disruptive</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>--disruptive</code> flag fences each control plane node one at a time and verifies recovery. The <code>--disruptive</code> flag performs the STONITH fence operations such as power cycle or VM reset. It does not perform graceful shutdown, and causes temporary workload disruption.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The fencing validator script with <code>--disruptive</code> flag runs the following checks:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Fence Node A</strong> - Triggers STONITH to reboot the first control-plane node.</p>
+</li>
+<li>
+<p><strong>Verify NotReady</strong> - Waits for Kubernetes to report the node A as <code>NotReady</code>, which confirms the reboot happened.</p>
+</li>
+<li>
+<p><strong>Verify recovery</strong> - Waits for the node A to come back to the <code>Ready</code> state, rejoin the Pacemaker cluster as <code>ONLINE</code>, and for etcd to regain quorum.</p>
+</li>
+<li>
+<p><strong>Post-recovery daemon check</strong> - Re-checks all daemons are healthy after recovery.</p>
+</li>
+<li>
+<p><strong>Fence Node B</strong> - Triggers STONITH to reboot the second node.</p>
+</li>
+<li>
+<p>. <strong>Verify NotReady</strong> - Waits for Kubernetes to report the node B as <code>NotReady</code>, which confirms the reboot happened.</p>
+</li>
+<li>
+<p><strong>Verify recovery</strong> - Waits for the node B to come back to the <code>Ready</code> state, rejoin the Pacemaker cluster as <code>ONLINE</code>, and for etcd to regain quorum.</p>
+</li>
+<li>
+<p><strong>Post-recovery daemon check</strong> - Re-checks all daemons are healthy after recovery.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="exit-codes-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Exit codes for fencing-validator script</h5>
+<div class="paragraph _abstract">
+<p>The <code>fencing_validator</code> script uses specific exit codes so automation and support tooling can programmatically determine what went wrong.</p>
+</div>
+<div class="paragraph">
+<p>The following table lists the specific exit codes that the <code>fencing_validator</code> script returns, mapping each numerical value to its corresponding diagnostic state to assist with automated troubleshooting.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Exit code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All checks passed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic or unexpected failure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STONITH devices are missing or not enabled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One or both nodes are not ONLINE in Pacemaker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One or more required daemons (corosync, pacemaker, pcsd) are not running</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">etcd does not have quorum or not all members are healthy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fencing secrets are missing or do not match the expected nodes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="transport-mode-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Transport mode for fencing validator script</h5>
+<div class="paragraph _abstract">
+<p>The <code>fencing_validator</code> script connects to control-plane nodes to run validation commands. Use the <code>--transport</code> flag or the <code>TRANSPORT</code> environment variable to define the connection method.</p>
+</div>
+<div class="paragraph">
+<p>The <code>--transport</code> flag supports the following options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>auto</code>: This is the default option. The script first attempts <code>SSH</code> to both nodes. If <code>SSH</code> succeeds, it uses <code>SSH</code> for the session. If <code>SSH</code> fails, it falls back to <code>oc debug</code>. If neither works on both nodes, the script exits with an error.</p>
+</li>
+<li>
+<p><code>ssh</code>: This option uses <code>SSH</code> to connect as the user defined by <code>--user</code>. The <code>--user</code> value defaults to <code>core</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Permissions: Requires password-less <code>sudo</code> access on all nodes.</p>
+</li>
+<li>
+<p>Automation: The script runs in <code>BatchMode</code>, disables interactive prompts, and skips host-key checking.</p>
+</li>
+<li>
+<p>Authentication: Use the <code>--ssh-key</code> flag to provide a specific SSH key for all connections.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>oc debug</code>: Connects by running the following command against each node:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node&gt; --chroot /host</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You do not need SSH access. The <code>fencing_validator</code> script only requires a valid <code>KUBECONFIG</code> with <code>cluster-admin</code> privileges.</p>
+</div>
+<div class="paragraph">
+<p>For non-disruptive checks, both transports behave identically. However, the transport mode is critical when using the <code>--disruptive</code> option. During these tests, the script dispatches the <code>fence</code> command asynchronously using <code>systemd-run</code> or no hup as a fallback. This fire-and-forget method ensures the command completes even if the <code>oc debug</code> session terminates when the node fences.</p>
+</div>
 </div>
 </div>
 </div>
@@ -3118,7 +3493,7 @@ hosts:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 14:56:55 -0400
+Last updated 2026-10-22 15:10:24 -0400
 </div>
 </div>
 <style>
