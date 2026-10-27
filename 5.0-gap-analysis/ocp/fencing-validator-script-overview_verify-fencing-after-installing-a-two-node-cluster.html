@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace" class="book toc2 toc-left navmap-has-right-toc">
+<body id="fencing-validator-script-overview_verify-fencing-after-installing-a-two-node-cluster" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -600,7 +600,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
-
 <ul class="sectlevel2">
 <li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
@@ -639,6 +638,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
+</li>
+<li><a href="fencing-validator-script-overview_verify-fencing-after-installing-a-two-node-cluster.html"><span class="toc-current">Fencing validator script overview</span></a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
@@ -1708,6 +1709,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
+
 <ul class="sectlevel2">
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -1769,8 +1771,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
-</li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
@@ -1808,8 +1808,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
-</li>
-<li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html"><span class="toc-current">Add the network attachment definition to your pods</span></a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1893,241 +1891,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-ovn-kubernetes-pod-connectivity-checks_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Checking the OVN-Kubernetes pod network connectivity</a></li><li class="level-4"><a href="#nw-network-flows-create_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Adding destinations for network flows collectors</a></li><li class="level-4"><a href="#nw-ovn-kubernetes-observability_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Checking OVN-Kubernetes network traffic with OVS sampling using the CLI</a></li><li class="level-5"><a href="#observability-ovs-sampling-flags_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">OVN-Kubernetes network traffic with OVS sampling flags</a></li><li class="level-4"><a href="#nw-ovn-kubernetes-install-ovnkube-trace-local_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Installing the ovnkube-trace on local host</a></li><li class="level-4"><a href="#nw-ovn-kubernetes-running-ovnkube-trace_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Running ovnkube-trace</a></li><li class="level-4"><a href="#nw-ovn-kubernetes-ovnkube-trace-default-deny_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Testing a default deny policy with ovnkube-trace</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#fencing-validator-script-prerequisites_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script prerequisites</a></li><li class="level-4"><a href="#command-line-options-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Command-line options for fencing validator script</a></li><li class="level-4"><a href="#fencing-validator-script-for-non-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for non-disruptive checks</a></li><li class="level-4"><a href="#fencing-validator-script-for-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for disruptive checks</a></li><li class="level-4"><a href="#exit-codes-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Exit codes for fencing-validator script</a></li><li class="level-4"><a href="#transport-mode-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Transport mode for fencing validator script</a></li><li class="level-4"><a href="#tnf-monitoring-overview_verify-fencing-after-installing-a-two-node-cluster">Overview of monitoring in a two-node OpenShift cluster with fencing</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Add the network attachment definition to your pods</h3>
+<h3 id="fencing-validator-script-overview_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script overview</h3>
 <div class="paragraph _abstract">
-<p>After you create the machine config pool, the <code>SriovNetworkPoolConfig</code> and <code>SriovNetworkNodePolicy</code> custom resources, and the network attachment definition, you can apply these configurations to your pods by adding the network attachment definition to your pod specifications.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>In the pod specification, add the <code>.metadata.annotations.k8s.v1.cni.cncf.io/networks</code> field and specify the network attachment definition you created for hardware offloading:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">....
-metadata:
-  annotations:
-    v1.multus-cni.io/default-network: &lt;namespace&gt;/&lt;net_attach_def_name&gt;</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;namespace&gt;/&lt;net_attach_def_name&gt;</code> specifies the namespace and name of the network attachment definition you created for hardware offloading.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="sect3">
-<h4 id="nw-ovn-kubernetes-pod-connectivity-checks_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Checking the OVN-Kubernetes pod network connectivity</h4>
-<div class="paragraph _abstract">
-<p>To verify pod network connectivity in Red&#160;Hat OpenShift Container Platform, you can inspect <code>PodNetworkConnectivityCheck</code> resources in the <code>openshift-network-diagnostics</code> namespace.</p>
+<p>A two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF) relies on the Shoot The Other Node In The Head (STONITH) mechanism to ensure data integrity during node failures. If the fencing subsystem is misconfigured, the cluster might fail to recover safely, resulting in data corruption or a split-brain scenario.</p>
 </div>
 <div class="paragraph">
-<p>The connectivity check controller, in Red&#160;Hat OpenShift Container Platform 4.10 and later, orchestrates connection verification checks in your cluster. These include Kubernetes API, OpenShift API and individual nodes. The results for the connection tests are stored in <code>PodNetworkConnectivity</code> objects in the <code>openshift-network-diagnostics</code> namespace. Connection tests are performed every minute in parallel.</p>
+<p>Before the introduction of this utility, administrators or support engineers had to manually verify several subsystems, including:</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to the OpenShift CLI (<code>oc</code>).</p>
+<p>Pacemaker status</p>
 </li>
 <li>
-<p>You are logged in to the cluster with the <code>cluster-admin</code> role.</p>
+<p>STONITH device configurations</p>
 </li>
 <li>
-<p>You have installed <code>jq</code>.</p>
+<p>Daemon health</p>
+</li>
+<li>
+<p>etcd quorum</p>
+</li>
+<li>
+<p>Fencing secrets</p>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To list the current <code>PodNetworkConnectivityCheck</code> objects, enter the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get podnetworkconnectivitychecks -n openshift-network-diagnostics</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the most recent success for each connection object by using the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get podnetworkconnectivitychecks -n openshift-network-diagnostics \
--o json | jq '.items[]| .spec.targetEndpoint,.status.successes[0]'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the most recent failures for each connection object by using the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get podnetworkconnectivitychecks -n openshift-network-diagnostics \
--o json | jq '.items[]| .spec.targetEndpoint,.status.failures[0]'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the most recent outages for each connection object by using the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get podnetworkconnectivitychecks -n openshift-network-diagnostics \
--o json | jq '.items[]| .spec.targetEndpoint,.status.outages[0]'</code></pre>
-</div>
+<div class="paragraph">
+<p>The <code>fencing_validator</code> script automates these manual checks into a single command, providing clear pass or fail results and descriptive error messages to reduce troubleshooting time and human error.</p>
 </div>
 <div class="paragraph">
-<p>The connectivity check controller also logs metrics from these checks into Prometheus.</p>
-</div>
-</li>
-<li>
-<p>View all the metrics by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec prometheus-k8s-0 -n openshift-monitoring -- \
-promtool query instant  http://localhost:9090 \
-'{component="openshift-network-diagnostics"}'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the latency between the source pod and the openshift api service for the last 5 minutes:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec prometheus-k8s-0 -n openshift-monitoring -- \
-promtool query instant  http://localhost:9090 \
-'{component="openshift-network-diagnostics"}'</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nw-network-flows-create_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Adding destinations for network flows collectors</h4>
-<div class="paragraph _abstract">
-<p>As a cluster administrator, you can configure the Cluster Network Operator (CNO) to send network flows metadata about the pod network to a network flows collector.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You are logged in to the cluster with a user with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You have a network flows collector and know the IP address and port that it listens on.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a patch file that specifies the network flows collector type and the IP address and port information of the collectors:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">spec:
-  exportNetworkFlows:
-    netFlow:
-      collectors:
-        - 192.168.1.99:2056</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Configure the CNO with the network flows collectors:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch network.operator cluster --type merge -p "$(cat &lt;file_name&gt;.yaml)"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">network.operator.openshift.io/cluster patched</code></pre>
-</div>
-</div>
-</li>
-</ol>
+<p>The <code>fencing_validator</code> is a Bash-based diagnostic utility available on every control-plane node in a TNF Red&#160;Hat OpenShift Container Platform cluster. As a health check tool for the fencing subsystem, it verifies that the STONITH stack is correctly configured and operational.</p>
 </div>
 <div class="paragraph">
-<div class="title">Verification</div>
-<p>Verification is not typically necessary. You can run the following command to confirm that Open vSwitch (OVS) on each node is configured to send network flows records to one or more collectors.</p>
+<p>The script is located at <code>/usr/local/bin/fencing_validator</code> on both control-plane nodes. The script is automatically installed by the Machine Config Operator (MCO). There is no manual installation step required.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>View the Operator configuration to confirm that the <code>exportNetworkFlows</code> field is configured:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get network.operator cluster -o jsonpath="{.spec.exportNetworkFlows}"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">{"netFlow":{"collectors":["192.168.1.99:2056"]}}</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the network flows configuration in OVS from each node:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ for pod in $(oc get pods -n openshift-ovn-kubernetes -l app=ovnkube-node -o jsonpath='{range@.items[*]}{.metadata.name}{"\n"}{end}');
-  do ;
-    echo;
-    echo $pod;
-    oc -n openshift-ovn-kubernetes exec -c ovnkube-controller $pod \
-      -- bash -c 'for type in ipfix sflow netflow ; do ovs-vsctl find $type ; done';
-done</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ovnkube-node-xrn4p
-_uuid               : a4d2aaca-5023-4f3d-9400-7275f92611f9
-active_timeout      : 60
-add_id_to_interface : false
-engine_id           : []
-engine_type         : []
-external_ids        : {}
-targets             : ["192.168.1.99:2056"]
-
-ovnkube-node-z4vq9
-_uuid               : 61d02fdb-9228-4993-8ff5-b27f01a29bd6
-active_timeout      : 60
-add_id_to_interface : false
-engine_id           : []
-engine_type         : []
-external_ids        : {}
-targets             : ["192.168.1.99:2056"]-
-
-...</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nw-ovn-kubernetes-observability_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Checking OVN-Kubernetes network traffic with OVS sampling using the CLI</h4>
-<div class="paragraph _abstract">
-<p>To trace OVN-Kubernetes network traffic with OVS sampling in Red&#160;Hat OpenShift Container Platform, you can enable the <code>OVNObservability</code> feature gate and run <code>ovnkube-observ</code> from an <code>ovnkube-node</code> pod.</p>
+<div class="paragraph">
+<p>When you deploy a TNF cluster, the MCO renders a set of <code>MachineConfig</code> manifests specific to that topology. One of these manifests is <code>fencing-validator.yaml</code>, located in the MCO source at <code>templates/master/00-master/two-node-with-fencing/files/fencing-validator.yaml</code>. This <code>MachineConfig</code> writes the script to <code>/usr/local/bin/fencing_validator</code> with executable mode <code>0755</code> on every control-plane node.
+The script is available as soon as the node has finished applying its <code>MachineConfig</code>, that is, after initial deployment or after any MCO-driven reboot.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -2137,211 +1941,65 @@ targets             : ["192.168.1.99:2056"]-
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Checking OVN-Kubernetes network traffic with OVS sampling is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+<p>The script is deployed on TNF clusters only. It does not appear on standard HA clusters, Single-node OpenShift, or Two-Node with Arbiter clusters.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>OVN-Kubernetes network traffic can be viewed with OVS sampling via the CLI for the following network APIs:</p>
+<p>You can use the script for the following:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>NetworkPolicy</code></p>
+<p>Post-deployment validation: Use the utility to verify that the TNF configuration is correct and fully functional after deployment.</p>
 </li>
 <li>
-<p><code>AdminNetworkPolicy</code></p>
+<p>Troubleshooting: Identify the specific underlying issues when a TNF setup fails to operate as expected.</p>
 </li>
 <li>
-<p><code>BaselineAdminNetworkPolicy</code></p>
+<p>Pre-upgrade validation: Confirm the health of the fencing stack to ensure the cluster is stable enough to proceed with a version upgrade.</p>
 </li>
 <li>
-<p><code>UserDefinedNetwork</code> isolation</p>
-</li>
-<li>
-<p><code>EgressFirewall</code></p>
-</li>
-<li>
-<p>Multicast ACLs.</p>
+<p>Support interactions: Execute the script and provide the output to support engineers to facilitate the rapid resolution of technical issues.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Scripts for these networking events are found in the <code>/usr/bin/ovnkube-observ</code> path of each OVN-Kubernetes node.</p>
-</div>
-<div class="paragraph">
-<p>Although both the Network Observability Operator and checking OVN-Kubernetes network traffic with OVS sampling are good for debuggability, the Network Observability Operator is intended for observing network events. Alternatively, checking OVN-Kubernetes network traffic with OVS sampling using the CLI is intended to help with packet tracing; it can also be used while the Network Observability Operator is installed, however that is not a requirement.</p>
-</div>
-<div class="paragraph">
-<p>Administrators can add the <code>--add-ovs-collect</code> option to view network traffic across the node, or pass in additional flags to filter result for specific pods. Additional flags can be found in the "OVN-Kubernetes network traffic with OVS sampling flags" section.</p>
-</div>
-<div class="paragraph">
-<p>Use the following procedure to view OVN-Kubernetes network traffic using the CLI.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You are logged in to the cluster as a user with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You have created a source pod and a destination pod and ran traffic between them.</p>
-</li>
-<li>
-<p>You have created at least one of the following network APIs: <code>NetworkPolicy</code>, <code>AdminNetworkPolicy</code>, <code>BaselineAdminNetworkPolicy</code>, <code>UserDefinedNetwork</code> isolation, multicast, or egress firewalls.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To enable the <code>OVNObservability</code> with OVS sampling feature, enable <code>TechPreviewNoUpgrade</code> feature set in the <code>FeatureGate</code> CR named <code>cluster</code> by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch --type=merge --patch '{"spec": {"featureSet": "TechPreviewNoUpgrade"}}' featuregate/cluster</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">featuregate.config.openshift.io/cluster patched</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm that the <code>OVNObservability</code> feature is enabled by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get featuregate cluster -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">  featureGates:
-# ...
-    enabled:
-    - name: OVNObservability</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Obtain a list of the pods inside of the namespace in which you have created one of the relevant network APIs by entering the following command. Note the <code>NODE</code> name of the pods, as they are used in the following step.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n &lt;namespace&gt; -o wide</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME              READY   STATUS    RESTARTS   AGE     IP            NODE                                       NOMINATED NODE   READINESS GATES
-destination-pod   1/1     Running   0          53s     10.131.0.23   ci-ln-1gqp7b2-72292-bb9dv-worker-a-gtmpc   &lt;none&gt;           &lt;none&gt;
-source-pod        1/1     Running   0          56s     10.131.0.22   ci-ln-1gqp7b2-72292-bb9dv-worker-a-gtmpc   &lt;none&gt;           &lt;none&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Obtain a list of OVN-Kubernetes pods and locate the pod that shares the same <code>NODE</code> as the pods from the previous step by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-ovn-kubernetes -o wide</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME
-...                             READY   STATUS    RESTARTS      AGE   IP           NODE                                       NOMINATED NODE
-ovnkube-node-jzn5b              8/8     Running   1 (34m ago)   37m   10.0.128.2   ci-ln-1gqp7b2-72292-bb9dv-worker-a-gtmpc   &lt;none&gt;
-...</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Open a bash shell inside of the <code>ovnkube-node</code> pod by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec -it &lt;pod_name&gt; -n openshift-ovn-kubernetes -- bash</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>While inside of the <code>ovnkube-node</code> pod, you can run the <code>ovnkube-observ -add-ovs-collector</code> script to show network events using the OVS collector. For example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># /usr/bin/ovnkube-observ -add-ovs-collector</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
-2024/12/02 19:41:41.327584 OVN-K message: Allowed by default allow from local node policy, direction ingress
-2024/12/02 19:41:41.327593 src=10.131.0.2, dst=10.131.0.6
-
-2024/12/02 19:41:41.327692 OVN-K message: Allowed by default allow from local node policy, direction ingress
-2024/12/02 19:41:41.327715 src=10.131.0.6, dst=10.131.0.2
-...</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>You can filter the content by type, such as source pods, by entering the following command with the <code>-filter-src-ip</code> flag and your pod&#8217;s IP address. For example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># /usr/bin/ovnkube-observ -add-ovs-collector -filter-src-ip &lt;pod_ip_address&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
-Found group packets, id 14
-2024/12/10 16:27:12.456473 OVN-K message: Allowed by admin network policy allow-egress-group1, direction Egress
-2024/12/10 16:27:12.456570 src=10.131.0.22, dst=10.131.0.23
-
-2024/12/10 16:27:14.484421 OVN-K message: Allowed by admin network policy allow-egress-group1, direction Egress
-2024/12/10 16:27:14.484428 src=10.131.0.22, dst=10.131.0.23
-
-2024/12/10 16:27:12.457222 OVN-K message: Allowed by network policy test:allow-ingress-from-specific-pod, direction Ingress
-2024/12/10 16:27:12.457228 src=10.131.0.22, dst=10.131.0.23
-
-2024/12/10 16:27:12.457288 OVN-K message: Allowed by network policy test:allow-ingress-from-specific-pod, direction Ingress
-2024/12/10 16:27:12.457299 src=10.131.0.22, dst=10.131.0.23
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For a full list of flags that can be passed in with <code>/usr/bin/ovnkube-observ</code>, see "OVN-Kubernetes network traffic with OVS sampling flags".</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="sect4">
-<h5 id="observability-ovs-sampling-flags_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">OVN-Kubernetes network traffic with OVS sampling flags</h5>
+<div class="sect3">
+<h4 id="fencing-validator-script-prerequisites_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script prerequisites</h4>
 <div class="paragraph _abstract">
-<p>To filter OVN-Kubernetes traffic samples from <code>ovnkube-observ</code>, you can pass command line flags that limit output and collector options.</p>
+<p>Use the <code>fencing_validator</code> script to verify your fencing configuration on a two-node Red&#160;Hat OpenShift Container Platform cluster. This script, deployed automatically by the Machine Config Operator, ensures that power management interfaces are correctly configured to prevent data corruption during a node failure. To run it, ensure the <code>jq</code> utility is installed, and you have both Kubernetes API access (<code>oc</code>) and SSH access to the control-plane nodes.</p>
 </div>
 <div class="paragraph">
-<p>After you have opened a bash shell inside of the <code>ovnkube-node</code> pod, the following flags are available and can be appended using the following syntax:</p>
+<p>You can see what the script would do without actually performing any validation for TNF by running the following command:</p>
 </div>
 <div class="listingblock">
-<div class="title">Command syntax</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># /usr/bin/ovnkube-observ &lt;flag&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator --dry-run</code></pre>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="command-line-options-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Command-line options for fencing validator script</h4>
+<div class="paragraph _abstract">
+<p>To quickly verify a high-availability configuration of your two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF), you can review the available command-line options and environment variables for the <code>fencing_validator</code> script. This reference helps you customize your connection methods, set execution timeouts, and safely test node reboots to ensure your fencing mechanism is reliable before moving to production.</p>
+</div>
+<div class="paragraph">
+<p>You can see different command-line options for the <code>fencing_ validator</code> script by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator --help</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following table details command-line options for the <code>oc debug node</code> command:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
 </colgroup>
 <thead>
 <tr>
@@ -2351,570 +2009,343 @@ Found group packets, id 14
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-h</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a complete list flags that can be used with the <code>usr/bin/ovnkube-observ</code> command.
-`</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--user</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSH username for remote node access. The default value is <code>core</code>. Optionally, you can use <code>SSH_USER</code> environment variable to set the value.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-add-ovs-collector</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add OVS collector to enable sampling. Use with caution. Make sure no one else is using observability.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--ssh-key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to SSH private key. Optionally, you can use the <code>SSH_KEY</code> environment variable to set the value.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-enable-enrichment</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enrich samples with NBDB data. Defaults to <code>true</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--kubeconfig</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to kubeconfig file. Optionally, you can use the <code>KUBECONFIG</code> environment variable to set the value.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-filter-dst-ip</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filter only packets to a given destination IP.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--transport</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How the script connects to the other node. The possible values are <code>auto</code>, <code>ssh</code>, and <code>ocdebug</code>. The default value is <code>auto</code>. Optionally, you can use the <code>TRANSPORT</code> environment variable to set the value. For more information, see "Transport mode for fencing validator script".</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-filter-src-ip</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filters only packets from a given source IP.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--timeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum wait time for recovery loops. Optionally, you can use the <code>TIMEOUT</code> environment variable to set the value. By default, it is 1200 seconds or 20 minutes.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-log-cookie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Print raw sample cookie with psample group_id.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--hosts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated pair of node hostnames or IP addresses.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-output-file</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Output file to write the samples to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--host-a</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Explicitly set the first node.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-print-full-packet</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Print full received packet. When false, only source and destination IPs are printed with every sample.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--host-b</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Explicitly set the second node.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--disruptive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable destructive fencing tests (reboots nodes). Optionally, you can use the <code>DISRUPTIVE</code> environment variable to set the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--dry-run</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Show what could be the result of the <code>fencing_validator</code> script without doing actual validations. Optionally, you can use the <code>DRY_RUN</code> environment variable to set the value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-h</code>, <code>--help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Show usage information.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can set all the flags by using the following environment variables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>IP_A / IP_B</code>: set host addresses directly</p>
+</li>
+<li>
+<p><code>OC_BIN</code>: custom <code>oc</code> binary path</p>
+</li>
+<li>
+<p><code>OC_REQ_TIMEOUT</code>: per-API-call timeout. The default value is 10 seconds.</p>
+</li>
+<li>
+<p><code>CMD_EXEC_TIMEOUT_SECS</code>: per-command timeout. The default value is 60 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="fencing-validator-script-for-non-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for non-disruptive checks</h4>
+<div class="paragraph _abstract">
+<p>To ensure your two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF) remains highly available without risking downtime, you can run the <code>fencing_validator</code> script in validation mode. This script performs a series of read-only health checks to verify cluster quorum, daemon health, and STONITH device status without disrupting active services.</p>
+</div>
+<div class="paragraph">
+<p>The simplest way to run the script is from a debug session on either control plane node by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command does not reboot or fence any nodes. These checks are read-only and safe to run at any time. They run the following non-disruptive checks and report the results:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>OpenShift version check</strong> - Confirms the cluster is running Red&#160;Hat OpenShift Container Platform 4.20.0 or later.</p>
+</li>
+<li>
+<p><strong>Node count check</strong> - Confirms exactly 2 control-plane nodes exist.</p>
+</li>
+<li>
+<p><strong>Transport connectivity</strong> - Establishes a connection to both nodes (via SSH or <code>oc debug</code>).</p>
+</li>
+<li>
+<p><strong>STONITH device check</strong> - Verifies that STONITH devices are present and enabled in Pacemaker.</p>
+</li>
+<li>
+<p><strong>Pacemaker status</strong> - Confirms both nodes are reporting ONLINE in the Pacemaker cluster.</p>
+</li>
+<li>
+<p><strong>Daemon health</strong> - Checks that <code>corosync</code>, <code>pacemaker</code>, and <code>pcsd</code> services are active on both nodes.</p>
+</li>
+<li>
+<p><strong>etcd quorum</strong> - Verifies that etcd has 2 healthy voting members and the cluster has quorum.</p>
+</li>
+<li>
+<p><strong>Fencing secrets</strong> - Confirms that the fencing credential secrets (used by STONITH to authenticate to the BMC/IPMI) exist and are correctly bound to each node.</p>
+<div class="paragraph">
+<p>When all non-disruptive checks pass, the output resembles the following:</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">[INFO]
+====
+OpenShift version: 4.20.0 - OK [INFO]  Detected 2 control-plane nodes [INFO]  Transport: ssh [OK]    STONITH devices found and enabled [OK]    Both nodes ONLINE in Pacemaker [OK]    All daemons healthy on both nodes [OK]    etcd quorum healthy (2/2 voters) [OK]    Fencing secrets correctly bound [INFO]  All non-disruptive checks passed When something fails:
+====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+When non-disruptive checks fail, the output resembles the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">[INFO]
+====
+OpenShift version: 4.20.0 - OK [INFO]  Detected 2 control-plane nodes [INFO]  Transport: ssh [ERROR] No STONITH devices found - fencing is not configured
+====</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="fencing-validator-script-for-disruptive-checks_verify-fencing-after-installing-a-two-node-cluster">Fencing validator script for disruptive checks</h4>
+<div class="paragraph _abstract">
+<p>You can validate your cluster&#8217;s resilience and perform disruptive checks from a peer node by using the <code>fencing_validator</code> script. By executing these simulated failures, you can ensure your high-availability environment correctly isolates and recovers from errors.</p>
+</div>
+<div class="paragraph">
+<p>You can trigger the Shoot The Other Node In The Head (STONITH) action for the failed node and cut off its access to shared resources and prevent data corruption by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ pcs stonith fence &lt;node&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can check whether a two-node Red&#160;Hat OpenShift Container Platform cluster with fencing (TNF) setup actually works by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; --chroot /host /usr/local/bin/fencing_validator --disruptive</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>--disruptive</code> flag fences each control plane node one at a time and verifies recovery. The <code>--disruptive</code> flag performs the STONITH fence operations such as power cycle or VM reset. It does not perform graceful shutdown, and causes temporary workload disruption.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The fencing validator script with <code>--disruptive</code> flag runs the following checks:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Fence Node A</strong> - Triggers STONITH to reboot the first control-plane node.</p>
+</li>
+<li>
+<p><strong>Verify NotReady</strong> - Waits for Kubernetes to report the node A as <code>NotReady</code>, which confirms the reboot happened.</p>
+</li>
+<li>
+<p><strong>Verify recovery</strong> - Waits for the node A to come back to the <code>Ready</code> state, rejoin the Pacemaker cluster as <code>ONLINE</code>, and for etcd to regain quorum.</p>
+</li>
+<li>
+<p><strong>Post-recovery daemon check</strong> - Re-checks all daemons are healthy after recovery.</p>
+</li>
+<li>
+<p><strong>Fence Node B</strong> - Triggers STONITH to reboot the second node.</p>
+</li>
+<li>
+<p>. <strong>Verify NotReady</strong> - Waits for Kubernetes to report the node B as <code>NotReady</code>, which confirms the reboot happened.</p>
+</li>
+<li>
+<p><strong>Verify recovery</strong> - Waits for the node B to come back to the <code>Ready</code> state, rejoin the Pacemaker cluster as <code>ONLINE</code>, and for etcd to regain quorum.</p>
+</li>
+<li>
+<p><strong>Post-recovery daemon check</strong> - Re-checks all daemons are healthy after recovery.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="exit-codes-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Exit codes for fencing-validator script</h4>
+<div class="paragraph _abstract">
+<p>The <code>fencing_validator</code> script uses specific exit codes so automation and support tooling can programmatically determine what went wrong.</p>
+</div>
+<div class="paragraph">
+<p>The following table lists the specific exit codes that the <code>fencing_validator</code> script returns, mapping each numerical value to its corresponding diagnostic state to assist with automated troubleshooting.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Exit code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All checks passed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic or unexpected failure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STONITH devices are missing or not enabled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One or both nodes are not ONLINE in Pacemaker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One or more required daemons (corosync, pacemaker, pcsd) are not running</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">etcd does not have quorum or not all members are healthy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fencing secrets are missing or do not match the expected nodes</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
 <div class="sect3">
-<h4 id="nw-ovn-kubernetes-install-ovnkube-trace-local_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Installing the ovnkube-trace on local host</h4>
+<h4 id="transport-mode-for-fencing-validator-script_verify-fencing-after-installing-a-two-node-cluster">Transport mode for fencing validator script</h4>
 <div class="paragraph _abstract">
-<p>To run <code>ovnkube-trace</code> from your local host against a cluster, you can copy the binary from an <code>ovnkube-control-plane</code> pod and use familiar Kubernetes namespace and pod arguments.</p>
+<p>The <code>fencing_validator</code> script connects to control-plane nodes to run validation commands. Use the <code>--transport</code> flag or the <code>TRANSPORT</code> environment variable to define the connection method.</p>
 </div>
 <div class="paragraph">
-<p>The <code>ovnkube-trace</code> tool traces packet simulations for arbitrary UDP or TCP traffic between points in an OVN-Kubernetes driven Red&#160;Hat OpenShift Container Platform cluster.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You are logged in to the cluster with <code>cluster-admin</code> privileges.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a pod variable by using the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  POD=$(oc get pods -n openshift-ovn-kubernetes -l app=ovnkube-control-plane -o name | head -1 | awk -F '/' '{print $NF}')</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the following command on your local host to copy the binary from the <code>ovnkube-control-plane</code> pods:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  oc cp -n openshift-ovn-kubernetes $POD:/usr/bin/ovnkube-trace -c ovnkube-cluster-manager ovnkube-trace</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you are using Red&#160;Hat Enterprise Linux (RHEL) 8 to run the <code>ovnkube-trace</code> tool, you must copy the file <code>/usr/lib/rhel8/ovnkube-trace</code> to your local host.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Make <code>ovnkube-trace</code> executable by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  chmod +x ovnkube-trace</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Display the options available with <code>ovnkube-trace</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  ./ovnkube-trace -help</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Usage of ./ovnkube-trace:
-  -addr-family string
-    	Address family (ip4 or ip6) to be used for tracing (default "ip4")
-  -dst string
-    	dest: destination pod name
-  -dst-ip string
-    	destination IP address (meant for tests to external targets)
-  -dst-namespace string
-    	k8s namespace of dest pod (default "default")
-  -dst-port string
-    	dst-port: destination port (default "80")
-  -kubeconfig string
-    	absolute path to the kubeconfig file
-  -loglevel string
-    	loglevel: klog level (default "0")
-  -ovn-config-namespace string
-    	namespace used by ovn-config itself
-  -service string
-    	service: destination service name
-  -skip-detrace
-    	skip ovn-detrace command
-  -src string
-    	src: source pod name
-  -src-namespace string
-    	k8s namespace of source pod (default "default")
-  -tcp
-    	use tcp transport protocol
-  -udp
-    	use udp transport protocol</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The command-line arguments supported are familiar Kubernetes constructs, such as namespaces, pods, services so you do not need to find the MAC address, the IP address of the destination nodes, or the ICMP type.</p>
-</div>
-<div class="paragraph">
-<p>The log levels are:</p>
+<p>The <code>--transport</code> flag supports the following options:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>0 (minimal output)</p>
+<p><code>auto</code>: This is the default option. The script first attempts <code>SSH</code> to both nodes. If <code>SSH</code> succeeds, it uses <code>SSH</code> for the session. If <code>SSH</code> fails, it falls back to <code>oc debug</code>. If neither works on both nodes, the script exits with an error.</p>
 </li>
 <li>
-<p>2 (more verbose output showing results of trace commands)</p>
+<p><code>ssh</code>: This option uses <code>SSH</code> to connect as the user defined by <code>--user</code>. The <code>--user</code> value defaults to <code>core</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Permissions: Requires password-less <code>sudo</code> access on all nodes.</p>
 </li>
 <li>
-<p>5 (debug output)</p>
+<p>Automation: The script runs in <code>BatchMode</code>, disables interactive prompts, and skips host-key checking.</p>
+</li>
+<li>
+<p>Authentication: Use the <code>--ssh-key</code> flag to provide a specific SSH key for all connections.</p>
 </li>
 </ul>
 </div>
 </li>
-</ol>
+<li>
+<p><code>oc debug</code>: Connects by running the following command against each node:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node&gt; --chroot /host</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You do not need SSH access. The <code>fencing_validator</code> script only requires a valid <code>KUBECONFIG</code> with <code>cluster-admin</code> privileges.</p>
+</div>
+<div class="paragraph">
+<p>For non-disruptive checks, both transports behave identically. However, the transport mode is critical when using the <code>--disruptive</code> option. During these tests, the script dispatches the <code>fence</code> command asynchronously using <code>systemd-run</code> or no hup as a fallback. This fire-and-forget method ensures the command completes even if the <code>oc debug</code> session terminates when the node fences.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="nw-ovn-kubernetes-running-ovnkube-trace_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Running ovnkube-trace</h4>
+<h4 id="tnf-monitoring-overview_verify-fencing-after-installing-a-two-node-cluster">Overview of monitoring in a two-node OpenShift cluster with fencing</h4>
 <div class="paragraph _abstract">
-<p>To simulate packet forwarding in an OVN logical network, you can run <code>ovnkube-trace</code> with source and destination pods, ports, and log levels.</p>
+<p>You can monitor the fencing layer of your two-node Red&#160;Hat OpenShift Container Platform cluster by using the same observability tools you use for the rest of the cluster.</p>
 </div>
 <div class="paragraph">
-<p>The examples in the following procedure show DNS resolution and default-deny network policy troubleshooting.</p>
+<p>Integrated Prometheus metrics and alerts for Pacemaker help you detect node failures, fence device issues, and resource problems before they compromise high availability.</p>
+</div>
+<div class="paragraph">
+<p>TNF monitoring reflects the state of the Pacemaker cluster:</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+<p>Pacemaker cluster membership and expected node count: This is not the <code>etcd</code> raft membership, which fluctuates by design during fencing and recovery.</p>
 </li>
 <li>
-<p>You are logged in to the cluster with a user with <code>cluster-admin</code> privileges.</p>
+<p>Node availability, maintenance, and standby state: This is distinct from the state of Red&#160;Hat OpenShift Container Platform nodes.</p>
 </li>
 <li>
-<p>You have installed the <code>ovnkube-trace</code> binary on your local host.</p>
+<p>Fence device health for each node.</p>
+</li>
+<li>
+<p>The state of Pacemaker-managed resources, such as <code>etcd</code>, as reported by the resource agent.</p>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Start a web service in the default namespace by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc run web --namespace=default --image=quay.io/openshifttest/nginx --labels="app=web" --expose --port=80</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>List the pods running in the <code>openshift-dns</code> namespace:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-dns</code></pre>
-</div>
+<div class="paragraph">
+<p>Every TNF metric name is prefixed with <code>tnf_</code> and is grouped by level: <code>tnf_cluster_*</code>, <code>tnf_node_*</code>, and <code>tnf_resource_*</code>. Each metric is a gauge that mirrors a Pacemaker condition, where <code>1</code> means the condition is true (the healthy state) and <code>0</code> means the condition is not true.</p>
 </div>
 <div class="paragraph">
-<p>The output is similar to the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                  READY   STATUS    RESTARTS   AGE
-dns-default-8s42x     2/2     Running   0          5h8m
-dns-default-mdw6r     2/2     Running   0          4h58m
-dns-default-p8t5h     2/2     Running   0          4h58m
-dns-default-rl6nk     2/2     Running   0          5h8m
-dns-default-xbgqx     2/2     Running   0          5h8m
-dns-default-zv8f6     2/2     Running   0          4h58m
-node-resolver-62jjb   1/1     Running   0          5h8m
-node-resolver-8z4cj   1/1     Running   0          4h59m
-node-resolver-bq244   1/1     Running   0          5h8m
-node-resolver-hc58n   1/1     Running   0          4h59m
-node-resolver-lm6z4   1/1     Running   0          5h8m
-node-resolver-zfx5k   1/1     Running   0          5h</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the following <code>ovnkube-trace</code> command to verify DNS resolution is working:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./ovnkube-trace \
-  -src-namespace default \
-  -src web \
-  -dst-namespace openshift-dns \
-  -dst dns-default-p8t5h \
-  -udp -dst-port 53 \
-  -loglevel 0</code></pre>
-</div>
+<p>TNF alerts are delivered as part of the cluster Etcd Operator alerting rules, in a <code>tnf-pacemaker.rules</code> group that is separate from the standard <code>etcd</code> alerts. The alerts fire only on TNF. Each alert targets a specific leaf condition, such as a node being offline or a fence device being unavailable, so that the firing alert names the actionable problem rather than a generic cluster unhealthy rollup.</p>
 </div>
 <div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>-src-namespace</code></dt>
-<dd>
-<p>Specifies namespace of the source pod.</p>
-</dd>
-<dt class="hdlist1"><code>-src</code></dt>
-<dd>
-<p>Specifies source pod name.</p>
-</dd>
-<dt class="hdlist1"><code>-dst-namespace</code></dt>
-<dd>
-<p>Specifies namespace of destination pod.</p>
-</dd>
-<dt class="hdlist1"><code>-dst</code></dt>
-<dd>
-<p>Specifies destination pod name.</p>
-</dd>
-<dt class="hdlist1"><code>-udp</code></dt>
-<dd>
-<p>Specifies use of the <code>udp</code> transport protocol. Port 53 is the port the DNS service uses.</p>
-</dd>
-<dt class="hdlist1"><code>-loglevel</code></dt>
-<dd>
-<p>Specifies the log level to 0 (0 is minimal and 5 is debug).</p>
-<div class="paragraph">
-<p>If the <code>src&amp;dst</code> pod lands on the same node, the output is similar to the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ovn-trace source pod to destination pod indicates success from web to dns-default-p8t5h
-ovn-trace destination pod to source pod indicates success from dns-default-p8t5h to web
-ovs-appctl ofproto/trace source pod to destination pod indicates success from web to dns-default-p8t5h
-ovs-appctl ofproto/trace destination pod to source pod indicates success from dns-default-p8t5h to web
-ovn-detrace source pod to destination pod indicates success from web to dns-default-p8t5h
-ovn-detrace destination pod to source pod indicates success from dns-default-p8t5h to web</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If the <code>src&amp;dst</code> pod lands on a different node, the output is similar to the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ovn-trace source pod to destination pod indicates success from web to dns-default-8s42x
-ovn-trace (remote) source pod to destination pod indicates success from web to dns-default-8s42x
-ovn-trace destination pod to source pod indicates success from dns-default-8s42x to web
-ovn-trace (remote) destination pod to source pod indicates success from dns-default-8s42x to web
-ovs-appctl ofproto/trace source pod to destination pod indicates success from web to dns-default-8s42x
-ovs-appctl ofproto/trace destination pod to source pod indicates success from dns-default-8s42x to web
-ovn-detrace source pod to destination pod indicates success from web to dns-default-8s42x
-ovn-detrace destination pod to source pod indicates success from dns-default-8s42x to web</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output indicates success from the deployed pod to the DNS port and also indicates that it is
-successful going back in the other direction. So you know bi-directional traffic is supported on UDP port 53 if my web pod wants to do dns resolution from core DNS.</p>
-</div>
-<div class="paragraph">
-<p>If for example that did not work and you wanted to get the <code>ovn-trace</code>, the <code>ovs-appctl</code> of <code>proto/trace</code> and <code>ovn-detrace</code>, and more debug type information increase the log level to 2 and run the command again as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./ovnkube-trace \
-  -src-namespace default \
-  -src web \
-  -dst-namespace openshift-dns \
-  -dst dns-default-467qw \
-  -udp -dst-port 53 \
-  -loglevel 2</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output from this increased log level is too much to list here. In a failure situation the output of this command shows which flow is dropping that traffic. For example an egress or ingress network policy may be configured on the cluster that does not allow that traffic.</p>
-</div>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nw-ovn-kubernetes-ovnkube-trace-default-deny_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace">Testing a default deny policy with ovnkube-trace</h4>
-<div class="paragraph _abstract">
-<p>To verify that an ingress default deny network policy blocks traffic in Red&#160;Hat OpenShift Container Platform, you can run <code>ovnkube-trace</code> with a higher log level and read the ACL debug output. You can add an allow policy for labeled namespaces and confirm that traffic succeeds.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You are logged in to the cluster with a user with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You have installed the <code>ovnkube-trace</code> binary on your local host.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create the following YAML that defines a <code>deny-by-default</code> policy to deny ingress from all pods in all namespaces. Save the YAML in the <code>deny-by-default.yaml</code> file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: deny-by-default
-  namespace: default
-spec:
-  podSelector: {}
-  ingress: []</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the policy by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f deny-by-default.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">networkpolicy.networking.k8s.io/deny-by-default created</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Start a web service in the <code>default</code> namespace by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc run web --namespace=default --image=quay.io/openshifttest/nginx --labels="app=web" --expose --port=80</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the following command to create the <code>prod</code> namespace:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create namespace prod</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the following command to label the <code>prod</code> namespace:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc label namespace/prod purpose=production</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>To deploy an <code>alpine</code> image in the <code>prod</code> namespace and start a shell, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc run test-6459 --namespace=prod --rm -i -t --image=alpine -- sh</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Open another terminal session.</p>
-</li>
-<li>
-<p>In this new terminal session run <code>ovn-trace</code> to verify the failure in communication between the source pod <code>test-6459</code> running in namespace <code>prod</code> and destination pod running in the <code>default</code> namespace:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./ovnkube-trace \
- -src-namespace prod \
- -src test-6459 \
- -dst-namespace default \
- -dst web \
- -tcp -dst-port 80 \
- -loglevel 0</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ovn-trace source pod to destination pod indicates failure from test-6459 to web</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Increase the log level to 2 to expose the reason for the failure by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./ovnkube-trace \
- -src-namespace prod \
- -src test-6459 \
- -dst-namespace default \
- -dst web \
- -tcp -dst-port 80 \
- -loglevel 2</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
-------------------------------------------------
- 3. ls_out_acl_hint (northd.c:7454): !ct.new &amp;&amp; ct.est &amp;&amp; !ct.rpl &amp;&amp; ct_mark.blocked == 0, priority 4, uuid 12efc456
-    reg0[8] = 1;
-    reg0[10] = 1;
-    next;
- 5. ls_out_acl_action (northd.c:7835): reg8[30..31] == 0, priority 500, uuid 69372c5d
-    reg8[30..31] = 1;
-    next(4);
- 5. ls_out_acl_action (northd.c:7835): reg8[30..31] == 1, priority 500, uuid 2fa0af89
-    reg8[30..31] = 2;
-    next(4);
- 4. ls_out_acl_eval (northd.c:7691): reg8[30..31] == 2 &amp;&amp; reg0[10] == 1 &amp;&amp; (outport == @a16982411286042166782_ingressDefaultDeny), priority 2000, uuid 447d0dab
-    reg8[17] = 1;
-    ct_commit { ct_mark.blocked = 1; };
-    next;
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:
-<code>ct_commit { ct_mark.blocked = 1; };</code>:: Specifies that ingress traffic is blocked due to the default deny policy being in place.</p>
-</div>
-</li>
-<li>
-<p>Create a policy that allows traffic from all pods in a particular namespaces with a label <code>purpose=production</code>. Save the YAML in the <code>web-allow-prod.yaml</code> file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: web-allow-prod
-  namespace: default
-spec:
-  podSelector:
-    matchLabels:
-      app: web
-  policyTypes:
-  - Ingress
-  ingress:
-  - from:
-    - namespaceSelector:
-        matchLabels:
-          purpose: production</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the policy by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f web-allow-prod.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run <code>ovnkube-trace</code> to verify that traffic is now allowed by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./ovnkube-trace \
- -src-namespace prod \
- -src test-6459 \
- -dst-namespace default \
- -dst web \
- -tcp -dst-port 80 \
- -loglevel 0</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ovn-trace source pod to destination pod indicates success from test-6459 to web
-ovn-trace destination pod to source pod indicates success from web to test-6459
-ovs-appctl ofproto/trace source pod to destination pod indicates success from test-6459 to web
-ovs-appctl ofproto/trace destination pod to source pod indicates success from web to test-6459
-ovn-detrace source pod to destination pod indicates success from test-6459 to web
-ovn-detrace destination pod to source pod indicates success from web to test-6459</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the following command in the shell that was opened in step six to connect nginx to the web-server:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ wget -qO- --timeout=2 http://web.default</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Welcome to nginx!&lt;/title&gt;
-&lt;style&gt;
-  body {
-    width: 35em;
-    margin: 0 auto;
-    font-family: Tahoma, Verdana, Arial, sans-serif;
-  }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
-&lt;p&gt;If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.&lt;/p&gt;
-
-&lt;p&gt;For online documentation and support please refer to
-&lt;a href="http://nginx.org/"&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
-Commercial support is available at
-&lt;a href="http://nginx.com/"&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Thank you for using nginx.&lt;/em&gt;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
-</div>
-</li>
-</ol>
+<p>You do not need to configure anything to enable TNF metrics and alerts. They are active automatically on a cluster that uses the TNF topology.</p>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a> →</p>
+<p>← Previous: <a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2925,7 +2356,7 @@ Commercial support is available at
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-27 08:49:53 -0400
+Last updated 2026-10-27 09:51:13 -0400
 </div>
 </div>
 <style>

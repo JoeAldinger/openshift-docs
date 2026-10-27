@@ -640,6 +640,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
+<li><a href="fencing-validator-script-overview_verify-fencing-after-installing-a-two-node-cluster.html">Fencing validator script overview</a>
+</li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
 <li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
@@ -1769,8 +1771,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
-</li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
@@ -1808,8 +1808,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
-</li>
-<li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -2078,7 +2076,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1156. Flags for the <code>oc oadp must-gather</code> command</caption>
+<caption class="title">Table 1160. Flags for the <code>oc oadp must-gather</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2422,7 +2420,7 @@ openshift-must-gather-5drcj    must-gather-s8sdh    2/2     Running     0       
 <p>The flags listed in the following table are available to use with the <code>oc adm must-gather</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1157. Red&#160;Hat OpenShift Container Platform flags for <code>oc adm must-gather</code></caption>
+<caption class="title">Table 1161. Red&#160;Hat OpenShift Container Platform flags for <code>oc adm must-gather</code></caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2510,7 +2508,7 @@ openshift-must-gather-5drcj    must-gather-s8sdh    2/2     Running     0       
 <p>You can gather debugging information about specific features by using the <code>oc adm must-gather</code> CLI command with the <code>--image</code> or <code>--image-stream</code> argument. The <code>must-gather</code> tool supports multiple images, so you can gather data about more than one feature by running a single command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1158. Supported must-gather images</caption>
+<caption class="title">Table 1162. Supported must-gather images</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2961,7 +2959,7 @@ Logging Operator in your cluster. For OpenShift Logging, run the following comma
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-27 08:49:53 -0400
+Last updated 2026-10-27 09:51:13 -0400
 </div>
 </div>
 <style>

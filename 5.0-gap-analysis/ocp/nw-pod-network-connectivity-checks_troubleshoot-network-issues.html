@@ -640,6 +640,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
+<li><a href="fencing-validator-script-overview_verify-fencing-after-installing-a-two-node-cluster.html">Fencing validator script overview</a>
+</li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
 <li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
@@ -1769,8 +1771,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html"><span class="toc-current">Connection health checks that are performed</span></a>
 </li>
-<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
-</li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
@@ -1808,8 +1808,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
-</li>
-<li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1893,7 +1891,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-pod-network-connectivity-implementation_troubleshoot-network-issues">Implementation of connection health checks</a></li><li class="level-4"><a href="#nw-pod-network-connectivity-configuration_troubleshoot-network-issues">Configuring pod connectivity check placement</a></li><li class="level-4"><a href="#ai-driven-networking-troubleshooting_troubleshoot-network-issues">AI-driven networking troubleshooting</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-pod-network-connectivity-implementation_troubleshoot-network-issues">Implementation of connection health checks</a></li><li class="level-4"><a href="#nw-pod-network-connectivity-configuration_troubleshoot-network-issues">Configuring pod connectivity check placement</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="nw-pod-network-connectivity-checks_troubleshoot-network-issues">Connection health checks that are performed</h3>
@@ -2075,59 +2073,9 @@ network-check-target-z2sfx              1/1     Running   0          9h      10.
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="ai-driven-networking-troubleshooting_troubleshoot-network-issues">AI-driven networking troubleshooting</h4>
-<div class="paragraph _abstract">
-<p>AI-driven network troubleshooting uses large language models (LLMs) and the Model Context Protocol (MCP) to automate root-cause analysis across Network Ingress and DNS (NIDS) components.</p>
-</div>
-<div class="paragraph">
-<p>The netedge toolset of the Red&#160;Hat OpenShift Container Platform MCP server provides AI-driven networking troubleshooting rather than a separate service for this capability. The system disables this toolset by default, so you must explicitly enable the toolset if you want to use its functionality.</p>
-</div>
-<div class="paragraph">
-<p>AI-driven networking troubleshooting is not a separate service. The netedge toolset of the Red&#160;Hat OpenShift Container Platform MCP server provides this service. The service is disabled by default so to use the service you must explicitly enable the service.</p>
-</div>
-<div class="paragraph">
-<p>The following list highlights the key characteristics of the netedge toolset within the Red&#160;Hat OpenShift Container Platform MCP server:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Read-Only Safety: Strictly restricted by RBAC to non-mutating operations (<code>get</code>, <code>list</code>, <code>describe</code>, and <code>logs</code>).</p>
-</li>
-<li>
-<p>Multi-Layer Coverage: Inspects IngressControllers, HAProxy routers, CoreDNS, Gateway API, and Prometheus metrics.</p>
-</li>
-<li>
-<p>Flexible Execution: Supports real-time analysis on live clusters and offline post-mortems by using <code>must-gather</code> or <code>sosreport</code> archives.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The netedge toolset in the MCP server translates natural language requests into structured, read-only diagnostic commands.</p>
-</div>
-<div class="paragraph">
-<p>The following workflow provides an example of using the netedge toolset in the MCP server to troubleshoot an issue:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>User Request:</strong> An engineer submits a troubleshooting query to an MCP-compliant LLM client.</p>
-</li>
-<li>
-<p><strong>Tool Execution:</strong> The LLM selects and invokes safe MCP tools, such as <code>inspect_route</code> or <code>get_service_endpoints</code>.</p>
-</li>
-<li>
-<p><strong>Cluster Inspection:</strong> The MCP server executes non-mutating inspection commands on the cluster and returns structured JSON.</p>
-</li>
-<li>
-<p><strong>Analysis:</strong> The LLM evaluates the output and provides a direct root-cause diagnosis.</p>
-</li>
-</ol>
-</div>
-</div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="troubleshoot-containers-troubleshoot-crio-issues-con_troubleshoot-containers-troubleshoot-crio-issues.html">Troubleshoot CRI-O issues</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a> →</p>
+<p>← Previous: <a href="troubleshoot-containers-troubleshoot-crio-issues-con_troubleshoot-containers-troubleshoot-crio-issues.html">Troubleshoot CRI-O issues</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2138,7 +2086,7 @@ network-check-target-z2sfx              1/1     Running   0          9h      10.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-27 08:49:53 -0400
+Last updated 2026-10-27 09:51:13 -0400
 </div>
 </div>
 <style>
