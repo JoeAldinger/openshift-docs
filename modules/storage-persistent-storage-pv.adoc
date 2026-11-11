@@ -48,7 +48,7 @@ $ oc get pv <pv_name> -o jsonpath='{.spec.claimRef.name}'
 == Types of PVs
 
 +
-[role="pr:openshift-enterprise pr:openshift-origin pr:openshift-dedicated pr:microshift"]
+[role="pr:openshift-enterprise pr:openshift-origin pr:openshift-dedicated"]
 {product-title} supports the following persistent volume plugins:
 +
 [role="pr:openshift-rosa pr:openshift-rosa-hcp"]
@@ -57,55 +57,26 @@ $ oc get pv <pv_name> -o jsonpath='{.spec.claimRef.name}'
 // * GlusterFS
 // * Ceph RBD
 // * OpenStack Cinder
-* AWS Elastic Block Store (EBS), which is installed by default.
-[role="pr:openshift-enterprise pr:openshift-origin pr:openshift-rosa pr:openshift-rosa-hcp"]
-* AWS Elastic File Store (EFS)
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* Azure Disk
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* Azure File
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* Cinder
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* Fibre Channel
-[role="pr:openshift-enterprise pr:openshift-origin pr:openshift-dedicated pr:microshift"]
-* GCP Persistent Disk
-[role="pr:openshift-enterprise pr:openshift-origin pr:openshift-dedicated pr:microshift"]
-* GCP Filestore
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* {ibm-power-server-title} Block
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* {ibm-cloud-name} VPC Block
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* HostPath
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* iSCSI
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* Local volume
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* {lvms}
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* NFS
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* OpenStack Manila
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* {rh-storage-first}
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* CIFS/SMB
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* VMware vSphere
+* [.pr:openshift-enterprise .pr:openshift-origin .pr:openshift-dedicated .pr:openshift-rosa .pr:openshift-rosa-hcp]#{empty}# AWS Elastic Block Store (EBS), which is installed by default.
+* [.pr:openshift-enterprise .pr:openshift-origin .pr:openshift-rosa .pr:openshift-rosa-hcp]#{empty}# AWS Elastic File Store (EFS)
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Azure Disk
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Azure File
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Cinder
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Fibre Channel
+* [.pr:openshift-enterprise .pr:openshift-origin .pr:openshift-dedicated]#{empty}# GCP Persistent Disk
+* [.pr:openshift-enterprise .pr:openshift-origin .pr:openshift-dedicated]#{empty}# GCP Filestore
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# {ibm-power-server-title} Block
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# {ibm-cloud-name} VPC Block
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# HostPath
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# iSCSI
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Local volume
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# {lvms}
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# NFS
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# OpenStack Manila
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# {rh-storage-first}
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# CIFS/SMB
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# VMware vSphere
 // * Local
-
-[IMPORTANT,role="pr:microshift"]
-====
-*Types of PVs*
-
-{product-title} supports the following persistent volume plugins:
-
-* AWS Elastic Block Store (EBS), which is installed by default.
-* GCP Persistent Disk
-* GCP Filestore
-====
 
 [role="pr:openshift-rosa pr:openshift-rosa-hcp"]
 {product-title} functions with Kubernetes Container Storage Interface (CSI) compatible volume provisioners from other storage vendors. For more information about CSI drivers in {product-title}, see "Configuring CSI volumes".
@@ -133,11 +104,9 @@ All volumes with the same modes are grouped, and then sorted by size, smallest t
 ====
 Volume access modes describe volume capabilities. They are not enforced constraints. The storage provider is responsible for runtime errors resulting from invalid use of the resource. Errors in the provider show up at runtime as mount errors.
 
-[role="pr:openshift-enterprise pr:openshift-origin pr:microshift"]
-For example, NFS offers `ReadWriteOnce` access mode. If you want to use the volume's ROX capability, mark the claims as `ReadOnlyMany`.
+[.pr:openshift-enterprise .pr:openshift-origin]#{empty}# For example, NFS offers `ReadWriteOnce` access mode. If you want to use the volume's ROX capability, mark the claims as `ReadOnlyMany`.
 
-[role="pr:openshift-enterprise pr:openshift-origin pr:microshift"]
-iSCSI and Fibre Channel volumes do not currently have any fencing mechanisms. You must ensure the volumes are only used by one node at a time. In certain situations, such as draining a node, the volumes can be used simultaneously by two nodes. Before draining the node, delete the pods that use the volumes.
+[.pr:openshift-enterprise .pr:openshift-origin]#{empty}# iSCSI and Fibre Channel volumes do not currently have any fencing mechanisms. You must ensure the volumes are only used by one node at a time. In certain situations, such as draining a node, the volumes can be used simultaneously by two nodes. Before draining the node, delete the pods that use the volumes.
 ====
 
 The following table lists the access modes:
@@ -236,12 +205,10 @@ The following table lists the access modes:
 // GCE Persistent Disks, or Openstack Cinder PVs.
 --
 
-[NOTE,role="pr:microshift"]
-====
-*Supported access modes*
+[id="supported-access-modes_{context}",role="pr:microshift"]
+== Supported access modes
 
-LVMS is the only CSI plugin {product-title} supports. The hostPath and LVs built in to {OCP} also support RWO.
-====
+[.pr:microshift]#{empty}# LVMS is the only CSI plugin {product-title} supports. The hostPath and LVs built in to {OCP} also support RWO.
 
 
 [id="pv-phase_{context}"]
@@ -319,26 +286,20 @@ The following PV types support mount options:
 // * Ceph RBD
 * AWS Elastic Block Store (EBS)
 * AWS Elastic File Storage (EFS)
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* Azure Disk
-* Azure File
-* Cinder
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Azure Disk
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Azure File
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Cinder
 
-[role="pr:openshift-enterprise pr:openshift-origin pr:openshift-dedicated"]
-* GCE Persistent Disk
+* [.pr:openshift-enterprise .pr:openshift-origin .pr:openshift-dedicated]#{empty}# GCE Persistent Disk
 
-[role="pr:openshift-enterprise pr:openshift-origin"]
-* iSCSI
-* Local volume
-* NFS
-* {rh-storage-first} (Ceph RBD only)
-* CIFS/SMB
-* VMware vSphere
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# iSCSI
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Local volume
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# NFS
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# {rh-storage-first} (Ceph RBD only)
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# CIFS/SMB
+* [.pr:openshift-enterprise .pr:openshift-origin]#{empty}# VMware vSphere
 +
-[NOTE,role="pr:openshift-enterprise pr:openshift-origin"]
-====
-Fibre Channel and HostPath PVs do not support mount options.
-====
+[.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Fibre Channel and HostPath PVs do not support mount options.
 
 [role="pr:microshift"]
 .Mount options example
@@ -361,7 +322,5 @@ volumeBindingMode: WaitForFirstConsumer
 allowVolumeExpansion: true
 ----
 
-[NOTE,role="pr:microshift"]
-====
+[role="pr:microshift"]
 The `mountOptions` parameter values are not validated. Incorrect values cause the mount to fail and an event to be logged to the PVC.
-====
