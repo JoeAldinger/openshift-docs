@@ -16,8 +16,7 @@ To create CSI-provisioned persistent volumes that mount to these supported stora
 The AWS EFS CSI driver is not installed by default, and must be installed manually. For instructions about installing the AWS EFS CSI driver, see "Setting up the AWS Elastic File Service CSI Driver Operator".
 ====
 
-[role="pr:openshift-enterprise pr:openshift-origin pr:openshift-rosa pr:openshift-rosa-hcp pr:microshift"]
-The following table describes the CSI drivers that are installed with {product-title}, supported by {product-title}, and which CSI features they support, such as volume snapshots and resize.
+The following table describes the CSI drivers that are [.pr:openshift-enterprise .pr:openshift-origin .pr:openshift-rosa .pr:openshift-rosa-hcp .pr:microshift]#installed with {product-title},# supported by {product-title}, and which CSI features they support, such as volume snapshots and resize.
 
 [IMPORTANT,role="pr:openshift-enterprise pr:openshift-origin pr:openshift-dedicated pr:microshift"]
 ====

@@ -41,18 +41,16 @@ If you attach persistent volumes that have high file counts to pods, those pods 
 more information, see the Red{nbsp}Hat Knowledgebase article "When using Persistent Volumes with high file counts in OpenShift, why do pods fail to start or take an excessive amount of time to achieve "Ready" state?".
 ====
 
-[IMPORTANT,role="pr:openshift-enterprise pr:openshift-origin"]
-====
-*Storage Object in Use Protection*
+[id="pvcprotection_{context}",role="pr:openshift-enterprise pr:openshift-origin"]
+== Storage Object in Use Protection
 
-The Storage Object in Use Protection feature ensures that PVCs in active use by a pod and PVs that are bound to PVCs are not removed from the system, as this can result in data loss.
+[.pr:openshift-enterprise .pr:openshift-origin]#{empty}# The Storage Object in Use Protection feature ensures that PVCs in active use by a pod and PVs that are bound to PVCs are not removed from the system, as this can result in data loss.
 
-Storage Object in Use Protection is enabled by default.
+[.pr:openshift-enterprise .pr:openshift-origin]#{empty}# Storage Object in Use Protection is enabled by default.
 
-A PVC is in active use by a pod when a `Pod` object exists that uses the PVC.
+[.pr:openshift-enterprise .pr:openshift-origin]#{empty}# A PVC is in active use by a pod when a `Pod` object exists that uses the PVC.
 
-If a user deletes a PVC that is in active use by a pod, the PVC is not removed immediately. PVC removal is postponed until the PVC is no longer actively used by any pods. Also, if a cluster admin deletes a PV that is bound to a PVC, the PV is not removed immediately. PV removal is postponed until the PV is no longer bound to a PVC.
-====
+[.pr:openshift-enterprise .pr:openshift-origin]#{empty}# If a user deletes a PVC that is in active use by a pod, the PVC is not removed immediately. PVC removal is postponed until the PVC is no longer actively used by any pods. Also, if a cluster admin deletes a PV that is bound to a PVC, the PV is not removed immediately. PV removal is postponed until the PV is no longer bound to a PVC.
 
 [id="releasing_{context}"]
 == Release a persistent volume
